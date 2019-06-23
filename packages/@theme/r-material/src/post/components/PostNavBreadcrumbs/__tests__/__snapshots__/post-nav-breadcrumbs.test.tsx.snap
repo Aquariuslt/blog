@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@theme/r-material: post/component: PostNavBreadcrumbs # should mount correctly 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(Paper))
+    className="makeStyles-paper-2"
+    elevation={0}
+  >
+    <WithStyles(ForwardRef(Breadcrumbs))
+      area-label="Breadcrumb"
+      component="nav"
+    >
+      <WithStyles(ForwardRef(Link))
+        color="inherit"
+        component="a"
+        href="/categories"
+        key="/categories"
+      >
+        Categories
+      </WithStyles(ForwardRef(Link))>
+      <WithStyles(ForwardRef(Link))
+        color="textPrimary"
+        component="a"
+        href="/categories/some-category"
+        key="/categories/some-category"
+      >
+        Some-category
+      </WithStyles(ForwardRef(Link))>
+    </WithStyles(ForwardRef(Breadcrumbs))>
+  </WithStyles(ForwardRef(Paper))>
+</div>
+`;
+
+exports[`@theme/r-material: post/component: PostNavBreadcrumbs # should mount with long path and render last one as activated 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(Paper))
+    className="makeStyles-paper-2"
+    elevation={0}
+  >
+    <WithStyles(ForwardRef(Breadcrumbs))
+      area-label="Breadcrumb"
+      component="nav"
+    >
+      <WithStyles(ForwardRef(Link))
+        color="inherit"
+        component="a"
+        href="/posts"
+        key="/posts"
+      >
+        Posts
+      </WithStyles(ForwardRef(Link))>
+      <WithStyles(ForwardRef(Link))
+        color="inherit"
+        component="a"
+        href="/posts/2019"
+        key="/posts/2019"
+      >
+        2019
+      </WithStyles(ForwardRef(Link))>
+      <WithStyles(ForwardRef(Link))
+        color="inherit"
+        component="a"
+        href="/posts/2019/06"
+        key="/posts/2019/06"
+      >
+        06
+      </WithStyles(ForwardRef(Link))>
+      <WithStyles(ForwardRef(Link))
+        color="textPrimary"
+        component="a"
+        href="/posts/2019/06/05"
+        key="/posts/2019/06/05"
+      >
+        05
+      </WithStyles(ForwardRef(Link))>
+    </WithStyles(ForwardRef(Breadcrumbs))>
+  </WithStyles(ForwardRef(Paper))>
+</div>
+`;
