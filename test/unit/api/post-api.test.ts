@@ -49,4 +49,40 @@ describe('api: post-api', (): void => {
     const postResponse = await postApi.loadPost(permalink || '');
     expect(postResponse.data).toEqual(mockPost);
   });
+
+  it('# should load posts with empty path params', async (): Promise<void> => {
+    const mock = new MockAdapter(axios);
+    mock.onGet('/api/v1/posts.json').reply(200, mockPosts);
+    const postsResponse = await postApi.loadPosts('');
+    expect(postsResponse.data).toEqual(mockPosts);
+  });
+
+  it('# should load posts with `/` as path params', async (): Promise<void> => {
+    const mock = new MockAdapter(axios);
+    mock.onGet('/api/v1/posts.json').reply(200, mockPosts);
+    const postsResponse = await postApi.loadPosts('/');
+    expect(postsResponse.data).toEqual(mockPosts);
+  });
+
+  it('# should load posts with categories path params', async (): Promise<void> => {
+    const mock = new MockAdapter(axios);
+    mock.onGet('/api/v1/categories/c.json').reply(200, mockPosts);
+    const postsResponse = await postApi.loadPosts('/categories/c');
+    expect(postsResponse.data).toEqual(mockPosts);
+  });
+
+  it('# should load posts with tags path params', async (): Promise<void> => {
+    const mock = new MockAdapter(axios);
+    mock.onGet('/api/v1/tags/t.json').reply(200, mockPosts);
+    const postsResponse = await postApi.loadPosts('/tags/t');
+    expect(postsResponse.data).toEqual(mockPosts);
+  });
+
+  it('# should load posts with posts permalink as path params', async (): Promise<void> => {
+    const mock = new MockAdapter(axios);
+    mock.onGet('/api/v1/posts/2018/12.json').reply(200, mockPosts);
+    const postsResponse = await postApi.loadPosts('/posts/2018/12');
+    expect(postsResponse.data).toEqual(mockPosts);
+  });
+
 });

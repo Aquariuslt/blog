@@ -1,6 +1,6 @@
 import postApi from '@/api/post-api';
 
-import {action, computed, observable, runInAction} from 'mobx';
+import { action, computed, observable, runInAction } from 'mobx';
 
 export class PostStore {
   @observable private $posts: BlogApiModel.PostsOverview = [];
@@ -13,8 +13,8 @@ export class PostStore {
   }
 
 
-  @action loadPosts(): void {
-    postApi.loadAllPosts().then(
+  @action loadPosts(path: string): void {
+    postApi.loadPosts(path).then(
       (apiResult): void => {
         runInAction(
           (): void => {

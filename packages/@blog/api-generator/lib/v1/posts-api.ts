@@ -12,7 +12,7 @@ const buildCategoriesQueryLink = (category): string => CATEGORIES_API_PREFIX + '
 const buildTagsQueryLink = (tag): string => TAGS_API_PREFIX + '/' + tag;
 const buildByYearLink = (created: string): string => API_PREFIX + POSTS_API_PREFIX + '/' + format(new Date(_.clone(created)), 'YYYY');
 const buildByMonthLink = (created: string): string => API_PREFIX + POSTS_API_PREFIX + '/' + format(new Date(_.clone(created)), 'YYYY/MM');
-
+const buildByDayLink = (created: string): string => API_PREFIX + POSTS_API_PREFIX + '/' + format(new Date(_.clone(created)), 'YYYY/MM/DD');
 
 const fillPermalink = (data: BlogModel.Post[]): void => {
   _.each(data, (post): void => {
@@ -60,10 +60,13 @@ function generatePostsOverview(data: BlogModel.Post[]): BlogApiModel.PostsOvervi
   const allPosts = reduceSizes(data);
   const byYearPostMap = _.groupBy(allPosts, (post): string => buildByYearLink(post.metadata.created));
   const byMonthPostMap = _.groupBy(allPosts, (post): string => buildByMonthLink(post.metadata.created));
+  const byDayPostMap = _.groupBy(allPosts, (post): string => buildByDayLink(post.metadata.created));
   return _.merge({},
     { [API_PREFIX + POSTS_API_PREFIX]: allPosts },
     byYearPostMap,
-    byMonthPostMap);
+    byMonthPostMap,
+    byDayPostMap
+  );
 }
 
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom';
+import { match, Route } from 'react-router-dom';
 import { ReactNode } from 'react';
 
 export interface RouteConfig {
@@ -7,6 +7,10 @@ export interface RouteConfig {
   component: ReactNode | JSX.Element;
   exact?: boolean;
 }
+
+export type PropsWithRoute<P> = P & {
+  match: match;
+};
 
 let allRoutes: RouteConfig[] = [];
 
@@ -19,7 +23,12 @@ function RouteWithSubRoutes(route): JSX.Element {
     <Route
       path={route.path}
       exact={route.exact}
-      render={(props): JSX.Element => <route.component {...props} routes={route.routes} />}
+      render={(props): JSX.Element => (
+        <route.component
+          {...props}
+          routes={route.routes}
+        />
+      )}
     />
   );
 }

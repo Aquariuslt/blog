@@ -4,13 +4,15 @@ exports[`@theme/r-material: post/component: PostCard # should mount correctly 1`
 <WithStyles(ForwardRef(Grid))
   className="makeStyles-root-1"
   item={true}
-  lg={3}
-  md={4}
-  sm={6}
-  xl={2}
+  lg={12}
+  md={12}
+  sm={12}
+  xl={12}
   xs={12}
 >
-  <WithStyles(ForwardRef(Card))>
+  <WithStyles(ForwardRef(Card))
+    className="makeStyles-card-2"
+  >
     <WithStyles(ForwardRef(CardActionArea))
       href=""
     >

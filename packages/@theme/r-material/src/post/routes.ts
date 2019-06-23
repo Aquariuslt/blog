@@ -1,6 +1,4 @@
 import Posts from './containers/Posts';
-import Categories from './containers/Categories';
-import Tags from './containers/Tags';
 
 const routes = [
   {
@@ -9,21 +7,33 @@ const routes = [
     component: Posts
   },
   {
-    path: '/categories',
+    path: '/posts',
     exact: true,
-    component: Categories
-  },
-  {
-    path: '/categories/:category',
     component: Posts
   },
   {
-    path: '/tags',
+    path: '/posts/:year',
     exact: true,
-    component: Tags
+    component: Posts
+  },
+  {
+    path: '/posts/:year/:month',
+    exact: true,
+    component: Posts
+  },
+  {
+    path: '/posts/:year/:month/:day',
+    exact: true,
+    component: Posts
+  },
+  {
+    path: '/categories/:category',
+    exact: true,
+    component: Posts
   },
   {
     path: '/tags/:tag',
+    exact: true,
     component: Posts
   }
 ];

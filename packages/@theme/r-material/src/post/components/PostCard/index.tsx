@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {createStyles, makeStyles, Theme} from '@material-ui/core';
-import {StyleRules} from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core';
+import { StyleRules } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
@@ -22,6 +22,11 @@ const useStyles = makeStyles(
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper
       },
+      card: {
+        maxWidth: 800,
+        marginLeft: 8,
+        marginRight: 8
+      },
       icon: {
         color: 'rgba(255, 255, 255, 0.54)'
       }
@@ -37,10 +42,10 @@ const PostCard: React.ComponentType<PostCardProps> = (props: PostCardProps): JSX
     <Grid
       item
       xs={12}
-      sm={6}
-      md={4}
-      lg={3}
-      xl={2}
+      sm={12}
+      md={12}
+      lg={12}
+      xl={12}
       className={classes.root}
     >
       <Card className={classes.card}>
