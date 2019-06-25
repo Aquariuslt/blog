@@ -41,21 +41,20 @@ const Posts: React.ComponentType<PropsWithRoute<PostsProps>> = inject('postStore
 
       return (
         <div className={classes.root}>
-          {
-            needShowBreadcrumb &&
-            <PostNavBreadcrumbs path={props.match.url}/>
-          }
-
           <Grid
             container
             spacing={1}
-            className={classes.gridList}
           >
-            {posts.map(
-              (post: BlogModel.Post): JSX.Element => (
-                <PostCard key={post.filename} {...post} />
+            {
+              needShowBreadcrumb &&
+              <PostNavBreadcrumbs path={props.match.url}/>
+            }
+            {
+              posts.map((post: BlogModel.Post): JSX.Element => (
+                  <PostCard key={post.filename} {...post} />
+                )
               )
-            )}
+            }
           </Grid>
         </div>
       );

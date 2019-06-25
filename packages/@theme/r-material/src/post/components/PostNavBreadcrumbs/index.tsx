@@ -5,6 +5,7 @@ import { capitalize } from 'lodash';
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
 import { StyleRules } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 export interface PostNavBreadcrumbsProps {
   path: string;
@@ -19,13 +20,18 @@ interface BreadcrumbLink {
 const useStyles = makeStyles((theme: Theme): StyleRules =>
   createStyles({
     root: {
-      minWidth: 400,
-      maxWidth: 800,
-      justifyContent: 'left',
-      flexWrap: 'wrap'
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      overflow: 'hidden',
+      backgroundColor: theme.palette.background.paper
     },
-    paper: {
-      padding: theme.spacing(1, 2)
+    breadcrumbs: {
+      maxWidth: 800,
+      paddingTop: 8,
+      paddingBottom: 8,
+      paddingLeft: 16,
+      paddingRight: 16
     }
   })
 );
@@ -52,23 +58,36 @@ const PostNavBreadcrumbs: React.ComponentType<PostNavBreadcrumbsProps> = (props:
       key={link.to}
       component="a"
       href={link.to}
-      color={link.activated ? 'textPrimary' :'inherit'}
+      color={link.activated ? 'textPrimary' : 'inherit'}
     >
       {link.label}
     </Link>
   ));
 
   return (
-    <div className={classes.root}>
-      <Paper elevation={0} className={classes.paper}>
-        <Breadcrumbs
-          component="nav"
-          area-label="Breadcrumb"
-        >
-          {links}
-        </Breadcrumbs>
-      </Paper>
-    </div>
+    <Grid
+      container
+      className={classes.root}
+    >
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        className={classes.breadcrumbs}
+      >
+        <Paper elevation={0}>
+          <Breadcrumbs
+            component="nav"
+            area-label="Breadcrumb"
+          >
+            {links}
+          </Breadcrumbs>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 };
 

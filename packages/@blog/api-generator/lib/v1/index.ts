@@ -1,10 +1,9 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import * as _ from 'lodash';
-
+import * as log from 'fancy-log';
 
 import persistUtil from '../utils/persist-util';
-
 import postsApi from './posts-api';
 import seoApi from './seo-api';
 
@@ -22,6 +21,7 @@ async function handleFeatures(posts: BlogModel.Post[], features: Config.Features
       return async function(): Promise<BlogModel.Post> {
         if (_.isUndefined(post.metadata.cover)) {
           post.metadata.cover = await galleryApi.getPhoto(post.filename);
+          log.info('Generate cover image for post:', post.filename, post.metadata.cover);
         }
         return post;
       };
