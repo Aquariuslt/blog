@@ -86,6 +86,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.2",
     "gulp-yaml": "^2.0.3",
+    "highlight.js": "^9.15.8",
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.19.1",
     "jest": "^24.7.1",

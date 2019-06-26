@@ -29,13 +29,19 @@ const webpackDevConfig = merge(webpackBaseConfig, {
     rules: [
       {
         test: /\.less$/,
-        include: [pathUtil.resolve(baseConfig.dir.src), pathUtil.resolve(baseConfig.dir.packages)],
-        use: ['css-loader', 'postcss-loader', 'less-loader']
+        include: [
+          pathUtil.resolve(baseConfig.dir.src),
+          pathUtil.resolve(baseConfig.dir.packages)
+        ],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
       },
       {
         test: /\.css$/,
-        include: [pathUtil.resolve(baseConfig.dir.src), pathUtil.resolve(baseConfig.dir.packages)],
-        use: ['css-loader', 'postcss-loader']
+        include: [
+          pathUtil.resolve(baseConfig.dir.src),
+          pathUtil.resolve(baseConfig.dir.packages)
+        ],
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       }
     ]
   },

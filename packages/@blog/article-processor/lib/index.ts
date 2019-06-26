@@ -1,10 +1,11 @@
 import * as uslug from 'uslug';
 import * as MarkdownIt from 'markdown-it';
 import * as AnchorPlugin from 'markdown-it-anchor';
-import {DetectImagesPlugin, MetadataPlugin, SummaryPlugin, TOCPlugin} from '@utils/markdown-it-plugins';
+import { DetectImagesPlugin, MetadataPlugin, SummaryPlugin, TOCPlugin } from '@utils/markdown-it-plugins';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as logger from 'fancy-log';
+import * as hljs from 'highlight.js';
 import scanner from './scanner';
 
 const uslugify = (input): string => {
@@ -12,7 +13,20 @@ const uslugify = (input): string => {
 };
 
 function createInstance(): MarkdownIt {
-  return MarkdownIt()
+  return MarkdownIt({
+    langPrefix: 'hljs ',
+    highlight: function(str, lang): string {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return hljs.highlight(lang, str).value;
+        } catch (__) {
+
+        }
+      }
+
+      return '';
+    }
+  })
     .use(MetadataPlugin)
     .use(SummaryPlugin)
     .use(TOCPlugin)
@@ -57,4 +71,4 @@ export default {
 
 export {
   scanner
-}
+};

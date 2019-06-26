@@ -4,6 +4,7 @@ import { PostStore } from '../../stores/post.store';
 import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
 import { PropsWithRoute } from '../../../router';
 import { inject, observer } from 'mobx-react';
+import PostContent from '../../components/PostContent';
 
 
 type PostDetailProps = {} & {
@@ -12,7 +13,15 @@ type PostDetailProps = {} & {
 
 const useStyles = makeStyles(
   (theme: Theme): StyleRules =>
-    createStyles({})
+    createStyles({
+      root: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper
+      }
+    })
 );
 
 
@@ -26,12 +35,8 @@ const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject(
 
 
       return (
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: props.postStore.detail.html
-            }}
-          />
+        <div className={classes.root}>
+          <PostContent html={props.postStore.detail.html}/>
         </div>
       );
     }
