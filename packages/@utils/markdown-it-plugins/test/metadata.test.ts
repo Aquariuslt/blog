@@ -30,4 +30,5 @@ describe('@utils/markdown-it-metadata', (): void => {
     const md = MarkdownIt().use(MetadataPlugin);
     md.parse(sample);
   });
+
 });

@@ -6,9 +6,9 @@ created: 2017-05-05
 updated: 2017-05-05
 category: Blog
 tags:
- - Blog
- - Vue
- - PWA
+- Blog
+- Vue
+- PWA
 ```
 
 ## Change Log

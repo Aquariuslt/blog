@@ -18,7 +18,6 @@ const LOCAL_IP = '127.0.0.1';
 
 const webpackDevConfig = merge(webpackBaseConfig, {
   mode: 'development',
-  devtool: 'inline-source-map',
   output: {
     path: pathUtil.resolve(baseConfig.dir.build),
     publicPath: PROTOCOL + LOCAL_IP + ':' + baseConfig.dev.port + '/',

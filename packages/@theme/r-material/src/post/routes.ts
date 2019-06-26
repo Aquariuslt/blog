@@ -1,4 +1,5 @@
 import Posts from './containers/Posts';
+import PostDetail from './containers/PostDetail';
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: '/tags/:tag',
     exact: true,
     component: Posts
+  },
+  {
+    path: '/posts/:year/:month/:day/:filename',
+    exact: true,
+    component: PostDetail
   }
 ];
 

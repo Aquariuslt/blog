@@ -1,5 +1,5 @@
 import * as yaml from 'js-yaml';
-import {format} from 'date-fns';
+import { format } from 'date-fns';
 
 const METADATA_RE = /```metadata\n([\s\S]*?)```/g;
 
@@ -20,8 +20,6 @@ function detectMetadata(md): void {
     }
 
 
-    state.src = state.src.replace(METADATA_RE, '');
-
     if (state.env) {
       const matchContent = matches[1];
       const metadata = parse(matchContent);
@@ -29,12 +27,24 @@ function detectMetadata(md): void {
       metadata.created = format(metadata.created, 'YYYY-MM-DD');
       metadata.updated = format(metadata.updated, 'YYYY-MM-DD');
 
-
       state.env.metadata = metadata;
     }
 
     return false;
   });
+
+  /**
+   * override renderer rules
+   * */
+  const DEFAULT_CODE_BLOCK_RENDERER = md.renderer.rules.fence;
+
+  md.renderer.rules.fence = function(tokens, index, options, env, self): string {
+    const token = tokens[index];
+    if (token.info === 'metadata') {
+      return '';
+    }
+    return DEFAULT_CODE_BLOCK_RENDERER(tokens, index, options, env, self);
+  };
 }
 
 

@@ -11,14 +11,6 @@ function loadAllPosts(): AxiosPromise<PostsOverview> {
   return axios.get(`${API_POST_PREFIX}${API_SUFFIX}`);
 }
 
-function loadPosts(path: string): AxiosPromise<PostsOverview> {
-  if (path === '/' || path === '') {
-    return loadAllPosts();
-  }
-  path = trim(path, '/');
-  return axios.get(`${API_QUERY_PREFIX}${path}${API_SUFFIX}`);
-}
-
 
 function findPosts(year: string, month?: string): AxiosPromise<PostsOverview> {
   const url = month ? `${API_POST_PREFIX}/${year}/${month}${API_SUFFIX}` : `${API_POST_PREFIX}/${year}${API_SUFFIX}`;
@@ -30,9 +22,24 @@ function loadPost(permalink: string): AxiosPromise<Post> {
 }
 
 
+function loadPosts(path: string): AxiosPromise<PostsOverview> {
+  if (path === '/' || path === '') {
+    return loadAllPosts();
+  }
+  path = trim(path, '/');
+  return axios.get(`${API_QUERY_PREFIX}${path}${API_SUFFIX}`);
+}
+
+function loadPostDetail(path: string): AxiosPromise<Post> {
+  path = trim(path, '/');
+  return axios.get(`${API_QUERY_PREFIX}${path}${API_SUFFIX}`);
+}
+
+
 export default {
   findPosts,
   loadAllPosts,
   loadPosts,
-  loadPost
+  loadPost,
+  loadPostDetail
 };

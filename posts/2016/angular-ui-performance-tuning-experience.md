@@ -6,8 +6,8 @@ created: 2016-04-30
 updated: 2016-04-30
 category: Blog
 tags:
-  - Angular
-  - JavaScript
+- Angular
+- JavaScript
 ```
 
 ## Background

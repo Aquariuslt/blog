@@ -85,4 +85,14 @@ describe('api: post-api', (): void => {
     expect(postsResponse.data).toEqual(mockPosts);
   });
 
+  it('# should load post detail with match url', async (): Promise<void> => {
+    const mock = new MockAdapter(axios);
+    const queryPath = '/posts/2015/12/08/some-post-name';
+    mock.onGet(`/api/v1${queryPath}.json`).reply(200, mockPost);
+
+    expect(queryPath).not.toBeUndefined();
+    const postResponse = await postApi.loadPostDetail(queryPath);
+    expect(postResponse.data).toEqual(mockPost);
+  });
+
 });
