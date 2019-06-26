@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { registerRoutes, attachRoutes } from '../router';
+import { attachRoutes, registerRoutes } from '../router';
 
 describe('@theme/r-material: router', (): void => {
   it('# should add register module like vue-router correctly', (): void => {

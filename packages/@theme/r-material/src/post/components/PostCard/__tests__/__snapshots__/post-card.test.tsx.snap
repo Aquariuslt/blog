@@ -3,46 +3,51 @@
 exports[`@theme/r-material: post/component: PostCard # should mount correctly 1`] = `
 <WithStyles(ForwardRef(Grid))
   className="makeStyles-root-1"
-  item={true}
-  lg={12}
-  md={12}
-  sm={12}
-  xl={12}
-  xs={12}
+  container={true}
 >
-  <WithStyles(ForwardRef(Card))
-    className="makeStyles-card-2"
+  <WithStyles(ForwardRef(Grid))
+    className="makeStyles-root-1"
+    item={true}
+    lg={12}
+    md={12}
+    sm={12}
+    xl={12}
+    xs={12}
   >
-    <WithStyles(ForwardRef(CardActionArea))
-      href=""
+    <WithStyles(ForwardRef(Card))
+      className="makeStyles-card-2"
     >
-      <WithStyles(ForwardRef(CardContent))>
-        <WithStyles(ForwardRef(Typography))
-          component="h2"
-          gutterBottom={true}
-          variant="h5"
-        >
-          Spring 整合 Apache Shiro 实现各等级的权限管理
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Typography))
-          color="textSecondary"
-          component="p"
-          variant="body2"
-        >
-          ## Background
+      <WithStyles(ForwardRef(CardActionArea))
+        href=""
+      >
+        <WithStyles(ForwardRef(CardContent))>
+          <WithStyles(ForwardRef(Typography))
+            component="h2"
+            gutterBottom={true}
+            variant="h5"
+          >
+            Spring 整合 Apache Shiro 实现各等级的权限管理
+          </WithStyles(ForwardRef(Typography))>
+          <WithStyles(ForwardRef(Typography))
+            color="textSecondary"
+            component="p"
+            variant="body2"
+          >
+            ## Background
 前几个月在做一个常规的权限隔离功能的时候,恰好使用过Apache Shiro.
 Apache Shiro 是一款Java的安全框架,通常用作Web应用的权限校验,身份验证.
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(CardContent))>
-    </WithStyles(ForwardRef(CardActionArea))>
-    <WithStyles(ForwardRef(CardActions))>
-      <WithStyles(ForwardRef(Button))
-        href="/posts/2015/10/25/apache-shiro-spring-integration"
-        size="small"
-      >
-        More
-      </WithStyles(ForwardRef(Button))>
-    </WithStyles(ForwardRef(CardActions))>
-  </WithStyles(ForwardRef(Card))>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(CardContent))>
+      </WithStyles(ForwardRef(CardActionArea))>
+      <WithStyles(ForwardRef(CardActions))>
+        <WithStyles(ForwardRef(Button))
+          href="/posts/2015/10/25/apache-shiro-spring-integration"
+          size="small"
+        >
+          More
+        </WithStyles(ForwardRef(Button))>
+      </WithStyles(ForwardRef(CardActions))>
+    </WithStyles(ForwardRef(Card))>
+  </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;

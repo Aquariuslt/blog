@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { mount } from 'enzyme';
 import { ReactNode } from 'react';
+import { mount } from 'enzyme';
 import { Provider } from 'mobx-react';
 import App from '../src/App';
 import navigationStore from '../src/core/stores/navigation.store';
@@ -9,7 +9,7 @@ import navigationStore from '../src/core/stores/navigation.store';
 describe('@theme/r-material:App', (): void => {
   it('# should mount App with empty route correctly', (): void => {
     const routes = [];
-    const wrapper = mount(<App routes={routes} navigationStore={navigationStore} />);
+    const wrapper = mount(<App routes={routes} navigationStore={navigationStore}/>);
 
     expect(wrapper.props().routes).toEqual([]);
   });
@@ -24,7 +24,7 @@ describe('@theme/r-material:App', (): void => {
       }
     ];
 
-    const wrapper = mount(<App routes={routes} navigationStore={navigationStore} />);
+    const wrapper = mount(<App routes={routes} navigationStore={navigationStore}/>);
     expect(wrapper.props().routes).toHaveLength(1);
   });
 
@@ -40,7 +40,7 @@ describe('@theme/r-material:App', (): void => {
 
     mount(
       <Provider navigationStore={navigationStore}>
-        <App routes={routes} />
+        <App routes={routes}/>
       </Provider>
     );
   });
@@ -57,7 +57,7 @@ describe('@theme/r-material:App', (): void => {
 
     mount(
       <Provider navigationStore={undefined}>
-        <App routes={routes} />
+        <App routes={routes}/>
       </Provider>
     );
   });

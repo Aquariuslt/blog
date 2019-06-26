@@ -20,7 +20,8 @@ const useStyles = makeStyles(
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper
+        backgroundColor: theme.palette.background.paper,
+        paddingBottom: 8
       },
       card: {
         maxWidth: 800,
@@ -40,43 +41,48 @@ const PostCard: React.ComponentType<PostCardProps> = (props: PostCardProps): JSX
 
   return (
     <Grid
-      item
-      xs={12}
-      sm={12}
-      md={12}
-      lg={12}
-      xl={12}
+      container
       className={classes.root}
     >
-      <Card className={classes.card}>
-        <CardActionArea
-          href=""
-        >
-          {
-            props.metadata.cover &&
-            <CardMedia
-              component="img"
-              alt={props.metadata.title}
-              height="140"
-              image={props.metadata.cover}
-              title={props.metadata.title}
-            />
-          }
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {props.metadata.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {props.summary}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button href={POST_URL_PREFIX + props.permalink} size="small">
-            More
-          </Button>
-        </CardActions>
-      </Card>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        className={classes.root}
+      >
+        <Card className={classes.card}>
+          <CardActionArea
+            href=""
+          >
+            {
+              props.metadata.cover &&
+              <CardMedia
+                component="img"
+                alt={props.metadata.title}
+                height="140"
+                image={props.metadata.cover}
+                title={props.metadata.title}
+              />
+            }
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {props.metadata.title}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {props.summary}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Button href={POST_URL_PREFIX + props.permalink} size="small">
+              More
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </Grid>
   );
 };

@@ -21,14 +21,14 @@ const FALLBACK_TYPE = 'menu';
  */
 const BundledIcon: React.ComponentType<BundleIconProps> = (props: BundleIconProps): JSX.Element => {
   const bundledMap = {
-    menu: <Menu />,
-    chevronLeft: <ChevronLeft />,
-    starBorder: <StarBorder />,
-    expandLess: <ExpandLess />,
-    expandMore: <ExpandMore />,
-    category: <Category />,
-    bookmark: <Bookmark />,
-    info: <Info />
+    menu: <Menu/>,
+    chevronLeft: <ChevronLeft/>,
+    starBorder: <StarBorder/>,
+    expandLess: <ExpandLess/>,
+    expandMore: <ExpandMore/>,
+    category: <Category/>,
+    bookmark: <Bookmark/>,
+    info: <Info/>
   };
 
   const detectIconType = (): string => {

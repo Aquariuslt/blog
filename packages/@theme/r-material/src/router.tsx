@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { match, Route } from 'react-router-dom';
 import { ReactNode } from 'react';
+import { match, Route } from 'react-router-dom';
 
 export interface RouteConfig {
   path: string;

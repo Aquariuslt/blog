@@ -17,9 +17,8 @@ const POST_DETAIL_HOLDER: BlogModel.Post = {
 };
 
 export class PostStore {
-  @observable private $posts: BlogApiModel.PostsOverview = [];
   @observable loaded: boolean = false;
-
+  @observable private $posts: BlogApiModel.PostsOverview = [];
   @observable private $detail: BlogModel.Post = POST_DETAIL_HOLDER;
 
 

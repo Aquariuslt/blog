@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import classnames from 'classnames';
-import { makeStyles, useTheme, Theme, StyleRules } from '@material-ui/core/styles';
+import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -11,8 +12,6 @@ import RoutingItemList from '../RoutingItemList';
 import BundledIcon from '../../components/BundledIcon';
 
 import { NavMenu } from '../../stores/navigation.store';
-import { ReactNode } from 'react';
-import { PropsWithChildren } from 'react';
 
 interface NavigationProps {
   title: string;

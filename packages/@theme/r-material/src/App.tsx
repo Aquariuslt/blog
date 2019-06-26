@@ -30,7 +30,7 @@ export default class App extends React.Component<AppProps> {
           title={site.title}
           menus={menus}
           profile={
-            <Profile name={site.author} avatar={site.avatar} description={site.description} subtitle={site.subtitle} />
+            <Profile name={site.author} avatar={site.avatar} description={site.description} subtitle={site.subtitle}/>
           }
         >
           <div>

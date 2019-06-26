@@ -19,7 +19,7 @@ window['_____APP_STATE_____'] = store;
 ReactDOM.render(
   <Provider {...store}>
     <ThemeProvider theme={theme}>
-      <App routes={attachRoutes()} />
+      <App routes={attachRoutes()}/>
     </ThemeProvider>
   </Provider>,
   document.getElementById('app')

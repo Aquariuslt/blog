@@ -1,8 +1,8 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { PostStore } from '../../stores/post.store';
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
 import { inject, observer } from 'mobx-react';
-import { useEffect } from 'react';
 import { StyleRules } from '@material-ui/core/styles';
 import PostCard from '../../components/PostCard';
 import Grid from '@material-ui/core/Grid';
@@ -41,21 +41,16 @@ const Posts: React.ComponentType<PropsWithRoute<PostsProps>> = inject('postStore
 
       return (
         <div className={classes.root}>
-          <Grid
-            container
-            spacing={1}
-          >
-            {
-              needShowBreadcrumb &&
-              <PostNavBreadcrumbs path={props.match.url}/>
-            }
-            {
-              posts.map((post: BlogModel.Post): JSX.Element => (
-                  <PostCard key={post.filename} {...post} />
-                )
+          {
+            needShowBreadcrumb &&
+            <PostNavBreadcrumbs path={props.match.url}/>
+          }
+          {
+            posts.map((post: BlogModel.Post): JSX.Element => (
+                <PostCard key={post.filename} {...post} />
               )
-            }
-          </Grid>
+            )
+          }
         </div>
       );
     }

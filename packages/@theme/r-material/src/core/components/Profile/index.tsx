@@ -23,7 +23,7 @@ const Profile: React.ComponentType<ProfileProps> = (props: ProfileProps): JSX.El
 
   return (
     <Grid container justify="center" alignItems="center">
-      <Avatar component="div" alt={props.name} src={props.avatar} className={classes.avatar} />
+      <Avatar component="div" alt={props.name} src={props.avatar} className={classes.avatar}/>
     </Grid>
   );
 };

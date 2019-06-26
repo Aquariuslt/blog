@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Theme, useTheme, StyleRules, makeStyles } from '@material-ui/core/styles';
+import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
 import { NavMenuItem } from '../../stores/navigation.store';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -32,9 +32,9 @@ const RoutingItem: React.ComponentType<RoutingItemProps> = (props: RoutingItemPr
   return (
     <ListItem button component={RouterLink} className={classes.nested} to={props.link}>
       <ListItemIcon>
-        <BundledIcon type="starBorder" />
+        <BundledIcon type="starBorder"/>
       </ListItemIcon>
-      <ListItemText primary={props.name} />
+      <ListItemText primary={props.name}/>
     </ListItem>
   );
 };

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Theme, useTheme, StyleRules, makeStyles } from '@material-ui/core/styles';
+import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -37,10 +37,10 @@ const RoutingItemList: React.ComponentType<RoutingItemListProps> = (props: Routi
     <List component="nav" className={classes.root}>
       <ListItem component="div" button onClick={toggleOpen} aria-label="Toggle Menu">
         <ListItemIcon>
-          <BundledIcon type={props.icon || 'menu'} />
+          <BundledIcon type={props.icon || 'menu'}/>
         </ListItemIcon>
-        <ListItemText primary={props.name} />
-        {open ? <BundledIcon type="expandLess" /> : <BundledIcon type="expandMore" />}
+        <ListItemText primary={props.name}/>
+        {open ? <BundledIcon type="expandLess"/> : <BundledIcon type="expandMore"/>}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>

@@ -8,6 +8,7 @@ export interface NavMenu {
   description?: string;
   child: NavMenuItem[];
 }
+
 export interface NavMenuItem {
   name: string;
   link: string;

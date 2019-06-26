@@ -11,7 +11,7 @@ describe('@theme/r-material: core/components: RoutingItem', (): void => {
     const mockName = 'routing menu';
     const mockLink = '/to/somewhere';
 
-    const wrapper = Enzyme.shallow(<RoutingItem name={mockName} link={mockLink} />);
+    const wrapper = Enzyme.shallow(<RoutingItem name={mockName} link={mockLink}/>);
 
     expect(wrapper).toMatchSnapshot();
   });
