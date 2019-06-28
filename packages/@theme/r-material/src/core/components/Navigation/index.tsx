@@ -56,7 +56,7 @@ const useStyles = makeStyles(
     drawerHeader: {
       display: 'flex',
       alignItems: 'center',
-      padding: '0 8px',
+      padding: theme.spacing(0,1),
       ...theme.mixins.toolbar,
       justifyContent: 'flex-end'
     },
@@ -65,7 +65,7 @@ const useStyles = makeStyles(
       marginBottom: '4px'
     },
     drawerButton: {
-      padding: '8px'
+      padding: theme.spacing(1)
     },
     content: {
       flexGrow: 1,

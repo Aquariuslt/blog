@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core';
-import { StyleRules } from '@material-ui/core/styles';
+import { createStyles, makeStyles, StyleRules ,Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
@@ -10,7 +9,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 
+import styles from '../../../styles';
+
 type PostCardProps = BlogModel.Post;
+
 
 const useStyles = makeStyles(
   (theme: Theme): StyleRules =>
@@ -24,7 +26,7 @@ const useStyles = makeStyles(
         paddingBottom: 8
       },
       card: {
-        maxWidth: 800,
+        maxWidth: styles.content.maxWidth,
         marginLeft: 8,
         marginRight: 8
       },

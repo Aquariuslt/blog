@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { PostStore } from '../../stores/post.store';
-import { createStyles, makeStyles, Theme } from '@material-ui/core';
+import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
 import { inject, observer } from 'mobx-react';
-import { StyleRules } from '@material-ui/core/styles';
-import PostCard from '../../components/PostCard';
-import Grid from '@material-ui/core/Grid';
+
+import { PostStore } from '../../stores/post.store';
 import { PropsWithRoute } from '../../../router';
+
+import PostCard from '../../components/PostCard';
 import PostNavBreadcrumbs from '../../components/PostNavBreadcrumbs';
 
 type PostsProps = {} & {
@@ -26,9 +26,9 @@ const useStyles = makeStyles(
     })
 );
 
-const Posts: React.ComponentType<PropsWithRoute<PostsProps>> = inject('postStore')(
-  observer(
-    (props: PropsWithRoute<PostsProps>): JSX.Element => {
+const Posts: React.ComponentType<PropsWithRoute<PostsProps>> =
+  inject('postStore')(
+  observer((props: PropsWithRoute<PostsProps>): JSX.Element => {
       const classes = useStyles();
 
       useEffect((): void => {
@@ -54,7 +54,6 @@ const Posts: React.ComponentType<PropsWithRoute<PostsProps>> = inject('postStore
         </div>
       );
     }
-  )
-);
+));
 
 export default Posts;

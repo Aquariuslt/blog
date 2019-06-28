@@ -1,5 +1,7 @@
 import tagApi from '@/api/tag-api';
+
 import { action, observable, runInAction } from 'mobx';
+
 import navigationStore, { NavMenu, NavMenuItem } from '../../core/stores/navigation.store';
 
 export class TagStore {

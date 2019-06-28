@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { inject, observer } from 'mobx-react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { RouteConfig, RouteWithSubRoutes } from './router';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Navigation from './core/components/Navigation';
+import Profile from './core/components/Profile';
 
 import * as config from '@/config.json';
+import { RouteConfig, RouteWithSubRoutes } from './router';
 import { NavigationStore, NavMenu } from './core/stores/navigation.store';
-import Profile from './core/components/Profile';
 
 interface AppProps {
   routes: RouteConfig[];
@@ -26,6 +27,7 @@ export default class App extends React.Component<AppProps> {
 
     return (
       <Router>
+        <CssBaseline />
         <Navigation
           title={site.title}
           menus={menus}

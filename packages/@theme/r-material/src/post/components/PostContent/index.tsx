@@ -1,10 +1,12 @@
 import './md.css';
 import * as React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core';
-import { StyleRules } from '@material-ui/core/styles';
+import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+
+
+import styles from '../../../styles';
 
 interface PostContentProps {
   html: string;
@@ -18,15 +20,11 @@ const useStyles = makeStyles(
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
-        paddingBottom: 8
-      },
-      card: {
-        maxWidth: 800
+        backgroundColor: theme.palette.background.paper
       },
       content: {
-        maxWidth: 800,
-        width: '100vw'
+        maxWidth: styles.content.maxWidth,
+        width: `calc(100vw - ${theme.spacing(2)}px)`
       }
     })
 );
@@ -50,7 +48,6 @@ const PostContent: React.ComponentType<PostContentProps> = (props: PostContentPr
         className={classes.root}
       >
         <Card
-          className={classes.card}
         >
           <CardContent
             className={classes.content + ' markdown-body'}

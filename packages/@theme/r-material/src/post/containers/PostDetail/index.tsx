@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { PostStore } from '../../stores/post.store';
-import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
-import { PropsWithRoute } from '../../../router';
 import { inject, observer } from 'mobx-react';
+import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
+import { PostStore } from '../../stores/post.store';
+import { PropsWithRoute } from '../../../router';
+
 import PostContent from '../../components/PostContent';
 
 

@@ -2,8 +2,9 @@ import * as React from 'react';
 import { ReactNode } from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'mobx-react';
-import App from '../src/App';
-import navigationStore from '../src/core/stores/navigation.store';
+
+import App from '../App';
+import navigationStore from '../core/stores/navigation.store';
 
 
 describe('@theme/r-material:App', (): void => {

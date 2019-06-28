@@ -16,10 +16,12 @@ import App from './App';
 // For easier debugging
 window['_____APP_STATE_____'] = store;
 
+const routes = attachRoutes();
+
 ReactDOM.render(
   <Provider {...store}>
     <ThemeProvider theme={theme}>
-      <App routes={attachRoutes()}/>
+      <App routes={routes}/>
     </ThemeProvider>
   </Provider>,
   document.getElementById('app')

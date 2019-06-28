@@ -1,11 +1,13 @@
 import * as React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
-import { NavMenuItem } from '../../stores/navigation.store';
+
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
+
+import { NavMenuItem } from '../../stores/navigation.store';
 import BundledIcon from '../../components/BundledIcon';
-import { Link as RouterLink } from 'react-router-dom';
 
 type RoutingItemProps = NavMenuItem;
 
