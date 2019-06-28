@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { capitalize } from 'lodash';
+import { createStyles, makeStyles, StyleRules ,Theme } from '@material-ui/core/styles';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
-import { capitalize } from 'lodash';
-import { createStyles, makeStyles, Theme } from '@material-ui/core';
-import { StyleRules } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+
+import styles from '../../../styles';
 
 export interface PostNavBreadcrumbsProps {
   path: string;
@@ -27,11 +28,8 @@ const useStyles = makeStyles((theme: Theme): StyleRules =>
       backgroundColor: theme.palette.background.paper
     },
     breadcrumbs: {
-      maxWidth: 800,
-      paddingTop: 8,
-      paddingBottom: 8,
-      paddingLeft: 16,
-      paddingRight: 16
+      maxWidth: styles.content.maxWidth,
+      padding: theme.spacing(1, 1)
     }
   })
 );
