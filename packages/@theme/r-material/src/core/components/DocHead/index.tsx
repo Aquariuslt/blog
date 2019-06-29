@@ -19,16 +19,23 @@ const DEFAULT_DOC_HEAD = {
 
 const DOC_HEAD_BASE_KEY = '__DOC_HEAD_BASE_KEY__';
 const TITLE_SPLIT_KEY = ' | ';
+const KEYWORD_JOIN_KEY = ',';
 
 const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.Element => {
 
-
   const getTitle = (propsTitle, baseTitle): string => {
-    if (propsTitle === baseTitle || baseTitle === '') {
-      return propsTitle;
-    } else {
-      return [propsTitle, baseTitle].join(TITLE_SPLIT_KEY);
+    const showBaseTitle = (propsTitle === baseTitle || propsTitle === '');
+    const showPropsTitle = (baseTitle === '');
+
+    if (showBaseTitle) {
+      return baseTitle;
     }
+
+    if (showPropsTitle) {
+      return propsTitle;
+    }
+
+    return [propsTitle, baseTitle].join(TITLE_SPLIT_KEY);
   };
 
   const getDescription = (propsDesc, baseDesc): string => {
@@ -38,7 +45,7 @@ const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.El
   const getKeywords = (propsKeywords, baseKeywords): string => {
     return [propsKeywords, baseKeywords]
       .filter((item): boolean => !(item === undefined))
-      .join(',');
+      .join(KEYWORD_JOIN_KEY);
   };
 
 
