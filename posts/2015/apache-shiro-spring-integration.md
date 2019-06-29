@@ -10,6 +10,7 @@ tags:
 - Security
 - Shiro
 - Java
+cover: https://picsum.photos/id/927/800/300
 ```
 
 

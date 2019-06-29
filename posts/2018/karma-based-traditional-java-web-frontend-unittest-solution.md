@@ -15,6 +15,7 @@ tags:
 - Spring
 - JSF
 - SpringMVC
+cover: https://picsum.photos/id/220/800/300
 ```
 
 TL;DR

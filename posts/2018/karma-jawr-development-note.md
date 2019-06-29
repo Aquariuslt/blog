@@ -11,7 +11,7 @@ tags:
 - AngularJS
 - JavaScript
 - JAWR
-
+cover: https://picsum.photos/id/31/800/300
 ```
 
 ## Background

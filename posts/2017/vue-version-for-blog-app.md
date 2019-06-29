@@ -9,6 +9,7 @@ tags:
 - Blog
 - Vue
 - PWA
+cover: https://picsum.photos/id/57/800/300
 ```
 
 ## Change Log

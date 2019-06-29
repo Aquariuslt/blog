@@ -8,6 +8,7 @@ category: Debug
 tags:
 - Node
 - Linux
+cover: https://picsum.photos/id/306/800/300
 ```
 
 ## Background

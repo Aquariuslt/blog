@@ -10,7 +10,7 @@ tags:
 - Blog
 - VPS
 - Node
-
+cover: https://picsum.photos/id/953/800/300
 ```
 
 

@@ -13,6 +13,7 @@ tags:
 - Gulp
 - Github
 - Blog
+cover: https://picsum.photos/id/83/800/300
 ```
 
 # Latest Update on Blog App

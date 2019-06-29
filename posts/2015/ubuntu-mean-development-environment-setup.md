@@ -9,6 +9,7 @@ tags:
 - Ubuntu
 - Linux
 - IntelliJ IDEA
+cover: https://picsum.photos/id/873/800/300
 ```
 
 

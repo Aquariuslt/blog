@@ -8,6 +8,7 @@ category: Blog
 tags:
 - Java
 - Apache
+cover: https://picsum.photos/id/221/800/300
 ```
 
 

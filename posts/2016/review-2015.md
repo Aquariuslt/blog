@@ -7,7 +7,7 @@ updated: 2016-01-01
 category: Others
 tags:
 - Diary
-
+cover: https://picsum.photos/id/500/800/300
 ```
 
 > 2016 新年伊始,回顾 2015 年时间线.

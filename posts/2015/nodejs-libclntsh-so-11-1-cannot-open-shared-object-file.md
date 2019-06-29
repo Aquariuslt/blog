@@ -10,7 +10,7 @@ tags:
 - Linux
 - Oracle
 - Node
-
+cover: https://picsum.photos/id/76/800/300
 ```
 
 

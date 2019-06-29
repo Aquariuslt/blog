@@ -8,7 +8,7 @@ category: Note
 tags:
 - Java
 - Google
-
+cover: https://picsum.photos/id/51/800/300
 ```
 
 今早结束的 Google CodeJam 2016 资格赛. 由于智商问题和加班了一天,所以只能水出前面两道水题. 但是还是稍微涨了点姿势. 记录下解题的过程和一些小彩蛋.

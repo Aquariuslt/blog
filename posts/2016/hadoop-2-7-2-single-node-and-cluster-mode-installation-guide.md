@@ -8,7 +8,7 @@ category: Note
 tags:
 - Hadoop
 - Linux
-
+cover: https://picsum.photos/id/278/800/300
 ```
 
 ## Background
