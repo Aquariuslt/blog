@@ -97,4 +97,18 @@ gulp.task('build:dev-api', (done): void => {
   }
 );
 
-gulp.task('build', gulp.series('clean:dist', 'build:config', 'build:api', 'build:webpack'));
+gulp.task('build:cname', (done): void => {
+  logger.info('Generating CNAME file');
+  const configPath = pathUtil.resolve('') + '/' + 'config.yml';
+  const config = configProcessor.read(configPath);
+
+  const CNAME_FILENAME = 'CNAME';
+  const hostname = config.site.host;
+  const distPath = pathUtil.resolve('') + '/' + config.build.directory.public;
+
+  fs.writeFileSync(distPath + '/' + CNAME_FILENAME, hostname);
+
+  done();
+});
+
+gulp.task('build', gulp.series('clean:dist', 'build:config', 'build:api', 'build:webpack', 'build:cname'));

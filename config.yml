@@ -1,7 +1,7 @@
 version: 1.0.0
 
 site:
-  host: https://blog.aquariuslt.com
+  host: blog.aquariuslt.com
   title: Aquariuslt Blog
   author: Aquariuslt
   avatar: https://avatars2.githubusercontent.com/u/6554061?s=460&v=4
