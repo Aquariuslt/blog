@@ -30,8 +30,7 @@
       "properties": {
         "host": {
           "type": "string",
-          "format": "url",
-          "description": "Your host, e.g. http://your-site.com or https://my-site.com."
+          "description": "Your host, e.g. your-site.com or my-site.com."
         },
         "title": {
           "type": "string",

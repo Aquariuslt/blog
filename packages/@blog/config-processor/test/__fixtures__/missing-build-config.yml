@@ -2,7 +2,7 @@ version: 1.0.0
 
 
 site:
-  host: http://blog.awesome.com
+  host: blog.awesome.com
   title: some awe-some website
   subtitle: some sub title
   description: hello, this my blog

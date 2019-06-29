@@ -7,7 +7,6 @@ describe('@blog/config-parser: parser', (): void => {
   const CORRECT_CONFIG_PATH = path.join(__dirname, './__fixtures__/correct-config.yml');
   const MISSING_BUILD_CONFIG_PATH = path.join(__dirname, './__fixtures__/missing-build-config.yml');
   const MISSING_SITE_CONFIG_PATH = path.join(__dirname, './__fixtures__/missing-site-config.yml');
-  const INVALID_HOST_CONFIG_PATH = path.join(__dirname, './__fixtures__/invalid-host-format-config.yml');
   const NO_FEATURE_CONFIG_PATH = path.join(__dirname, './__fixtures__/no-feature-config.yml');
   const ENABLE_GALLERY_CONFIG = path.join(__dirname, './__fixtures__/enable-gallery-config.yml');
 
@@ -27,12 +26,6 @@ describe('@blog/config-parser: parser', (): void => {
     expect((): void => {
       parser.read(MISSING_BUILD_CONFIG_PATH);
     }).toThrowError('data should have required property \'build\'');
-  });
-
-  it('# should throw invalid formatting for `site.host` and expected format is url', (): void => {
-    expect((): void => {
-      parser.read(INVALID_HOST_CONFIG_PATH);
-    }).toThrowError('data.site.host should match format \"url\"');
   });
 
   it('# should resolve features when config contains optional `features` field', (): void => {

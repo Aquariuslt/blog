@@ -14,6 +14,8 @@ const FEEDS_JSON_URL = '/feed/json';
 
 const ROBOTS_TEXT_URL = '/robots.txt';
 
+const PROTOCOL_PREFIX = 'https://';
+
 const buildPostPermalink = (created: string, filename: string): string =>
   POSTS_URL_PREFIX + '/' + format(new Date(created), 'YYYY/MM/DD') + '/' + filename;
 
@@ -38,9 +40,9 @@ function generateFeedsApi(config: Config.Site, data: BlogModel.Post[]): BlogApiM
     language: config.language,
     copyright: config.copyright,
     feedLinks: {
-      rss: config.host + '/' + FEEDS_RSS2_URL,
-      atom: config.host + '/' + FEEDS_ATOM_URL,
-      json: config.host + '/' + FEEDS_JSON_URL
+      rss: PROTOCOL_PREFIX + config.host + '/' + FEEDS_RSS2_URL,
+      atom: PROTOCOL_PREFIX + config.host + '/' + FEEDS_ATOM_URL,
+      json: PROTOCOL_PREFIX + config.host + '/' + FEEDS_JSON_URL
     }
   });
 
@@ -59,7 +61,7 @@ function generateSiteMapApi(config: Config.Site, data: BlogModel.Post[]): BlogAp
     url: buildPostPermalink(post.metadata.created, post.filename)
   });
 
-  const hostname = config.host;
+  const hostname = PROTOCOL_PREFIX + config.host;
 
   const sitemap = sm.createSitemap({
     hostname,
@@ -73,7 +75,7 @@ function generateSiteMapApi(config: Config.Site, data: BlogModel.Post[]): BlogAp
 
 async function generateRobotsTxt(config: Config.Site): Promise<object> {
   const robotsTxtContent = await robotstxt({
-    sitemap: config.host + SITEMAP_URL,
+    sitemap: PROTOCOL_PREFIX + config.host + SITEMAP_URL,
     host: config.host
   });
   return {
