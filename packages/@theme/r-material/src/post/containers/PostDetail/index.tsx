@@ -6,6 +6,8 @@ import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/s
 import { PostStore } from '../../stores/post.store';
 import { PropsWithRoute } from '../../../router';
 
+import DocHead from '../../../core/components/DocHead';
+
 import PostContent from '../../components/PostContent';
 import PostTOC from '../../components/PostTOC';
 import PostComment from '../../components/PostComment';
@@ -58,6 +60,11 @@ const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject(
 
       return (
         <div className={classes.root}>
+          <DocHead
+            title={post.metadata.title}
+            description={post.summary}
+            keywords={post.metadata.tags && post.metadata.tags.join(',')}
+          />
           <div className={classes.content}>
             <PostContent html={post.html}/>
             {

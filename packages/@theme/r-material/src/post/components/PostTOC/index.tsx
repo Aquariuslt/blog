@@ -36,11 +36,11 @@ const useStyles = makeStyles((theme: Theme): StyleRules => ({
       borderLeft: '4px solid transparent',
       boxSizing: 'content-box',
       '&:hover': {
-        borderLeft: `4px solid ${theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[900]}`,
+        borderLeft: `4px solid ${theme.palette.grey[200]}`,
         cursor: 'pointer'
       },
       '&$active,&:active': {
-        borderLeft: `4px solid ${theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[800]}`
+        borderLeft: `4px solid ${theme.palette.grey[200]}`
       }
     }
   })

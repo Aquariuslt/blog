@@ -36,12 +36,18 @@ function collapseHeading(headingItems: ContentItem[]): ContentItem[] {
 
   // 2. fill children
   const newHeadingItems: ContentItem[] = [];
-  headingItems.map((headingItem): void => {
-    if (headingItem.pid === ROOT_PID) {
+  headingItems.forEach((headingItem): void => {
+    const isRoot = headingItem.pid === ROOT_PID;
+    const isChild = headingItem.pid !== ROOT_PID;
+
+    if (isRoot) {
       newHeadingItems.push(headingItem);
-    } else if (headingItem.pid !== undefined) {
+    }
+
+    if (isChild && headingItem.pid !== undefined) {
       headingItems[headingItem.pid].children.push(headingItem);
     }
+
   });
 
   return newHeadingItems;

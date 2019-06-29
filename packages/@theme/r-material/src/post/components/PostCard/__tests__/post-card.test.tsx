@@ -15,4 +15,14 @@ describe('@theme/r-material: post/component: PostCard', (): void => {
     const wrapper = Enzyme.shallow(<PostCard {...samplePost} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+
+  it('# should mount with cover correctly', (): void => {
+
+    const postWoCover = Object.assign({}, samplePost);
+    postWoCover.metadata['cover'] = 'https://picsum.photos/id/126/800/300';
+
+    const wrapper = Enzyme.shallow(<PostCard {...samplePost} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
