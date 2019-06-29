@@ -6,8 +6,9 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import Link from '@material-ui/core/Link';
+
 import RoutingItemList from '../RoutingItemList';
 import BundledIcon from '../../components/BundledIcon';
 
@@ -40,6 +41,12 @@ const useStyles = makeStyles(
         duration: theme.transitions.duration.enteringScreen
       })
     },
+    title: {
+      '&:hover': {
+        cursor: 'pointer',
+        textDecoration: 'none'
+      }
+    },
     menuButton: {
       marginRight: theme.spacing(2)
     },
@@ -56,7 +63,7 @@ const useStyles = makeStyles(
     drawerHeader: {
       display: 'flex',
       alignItems: 'center',
-      padding: theme.spacing(0,1),
+      padding: theme.spacing(0, 1),
       ...theme.mixins.toolbar,
       justifyContent: 'flex-end'
     },
@@ -84,6 +91,7 @@ const useStyles = makeStyles(
     }
   })
 );
+
 
 const Navigation: React.ComponentType<NavigationProps> = (
   props: PropsWithChildren<NavigationProps>
@@ -121,9 +129,16 @@ const Navigation: React.ComponentType<NavigationProps> = (
           >
             <BundledIcon type="menu"/>
           </IconButton>
-          <Typography variant="h6" color="inherit" noWrap>
+
+          <Link
+            component="a"
+            href="/"
+            variant="h6"
+            color="inherit"
+            className={classes.title}
+          >
             {props.title}
-          </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer

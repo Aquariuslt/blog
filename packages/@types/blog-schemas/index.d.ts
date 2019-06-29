@@ -143,6 +143,7 @@ declare namespace BlogModel {
 
   export interface ContentItem {
     id: string;
+    label: string;
     position?: number;
     level: number;
     pid?: number;

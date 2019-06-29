@@ -15,15 +15,11 @@ const uslugify = (input): string => {
 function createInstance(): MarkdownIt {
   return MarkdownIt({
     langPrefix: 'hljs ',
+    // TODO: consider move to a single handle function
     highlight: function(str, lang): string {
       if (lang && hljs.getLanguage(lang)) {
-        try {
-          return hljs.highlight(lang, str).value;
-        } catch (__) {
-
-        }
+        return hljs.highlight(lang, str).value;
       }
-
       return '';
     }
   })

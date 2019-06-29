@@ -18,6 +18,7 @@
     {
       "level": 1,
       "id": "spring-整合-apache-shiro-实现各等级的权限管理",
+      "label": "Spring 整合 Apache Shiro 实现各等级的权限管理",
       "position": 0,
       "children": [],
       "pid": -1

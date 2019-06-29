@@ -39,7 +39,7 @@ function collapseHeading(headingItems: ContentItem[]): ContentItem[] {
   headingItems.map((headingItem): void => {
     if (headingItem.pid === ROOT_PID) {
       newHeadingItems.push(headingItem);
-    } else if (headingItem.pid) {
+    } else if (headingItem.pid !== undefined) {
       headingItems[headingItem.pid].children.push(headingItem);
     }
   });
@@ -66,6 +66,7 @@ function generateTOC(md): void {
         const headingId = uslug(headingContent);
 
         headingItems.push({
+          label: headingContent,
           level: headingLevel,
           id: headingId,
           position: headingPosition++,

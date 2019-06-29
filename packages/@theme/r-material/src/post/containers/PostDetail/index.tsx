@@ -2,11 +2,16 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { inject, observer } from 'mobx-react';
 import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
+
 import { PostStore } from '../../stores/post.store';
 import { PropsWithRoute } from '../../../router';
 
 import PostContent from '../../components/PostContent';
+import PostTOC from '../../components/PostTOC';
+import PostComment from '../../components/PostComment';
 
+
+import * as  config from '@/config.json';
 
 type PostDetailProps = {} & {
   postStore: PostStore;
@@ -17,9 +22,24 @@ const useStyles = makeStyles(
     createStyles({
       root: {
         display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
+        flexWrap: 'nowrap',
+        justifyContent: 'center',
         overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper
+      },
+      nav: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-end',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper
+      },
+      content: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        overflow: 'hidden',
+        padding: 0,
         backgroundColor: theme.palette.background.paper
       }
     })
@@ -34,10 +54,25 @@ const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject(
         props.postStore.loadPost(props.match.url);
       }, [props.match.url]);
 
+      const post = props.postStore.detail;
 
       return (
         <div className={classes.root}>
-          <PostContent html={props.postStore.detail.html}/>
+          <div className={classes.content}>
+            <PostContent html={post.html}/>
+            {
+              config.features.disqus &&
+              <PostComment
+                shortname={config.features.disqus}
+                identifier={props.match.url.replace(/\//g, '-')}
+                title={post.metadata.title}
+                url={location.href}
+              />
+            }
+          </div>
+          <div className={classes.nav}>
+            <PostTOC contents={post.toc}/>
+          </div>
         </div>
       );
     }

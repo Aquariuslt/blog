@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@theme/r-material: post/component: PostTOC # should mount correctly 1`] = `
+<nav
+  className="makeStyles-root-1"
+>
+  <ContentLink
+    id="google-codejam-2016-qualification"
+    key="google-codejam-2016-qualification"
+    label="Google CodeJam 2016 Qualification"
+    level={1}
+    pid={-1}
+    position={0}
+  >
+    <Component />
+    <Component />
+    <Component />
+  </ContentLink>
+</nav>
+`;
+
+exports[`@theme/r-material: post/component: PostTOC # should mount w/o contents correctly 1`] = `
+<nav
+  className="makeStyles-root-1"
+/>
+`;

@@ -31,3 +31,14 @@ tags:
 ##### 第五标题
 
 第五标题内容
+
+```java
+public class Test{
+  
+}
+```
+
+
+```aidl
+// The aidl language should not in hljs bundled range
+```

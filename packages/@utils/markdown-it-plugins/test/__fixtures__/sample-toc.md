@@ -14,7 +14,6 @@
 
 ## Third
 
-# Second Section
 
 ## First in Second Section
 

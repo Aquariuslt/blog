@@ -18,4 +18,17 @@ describe('@utils/markdown-it-toc', (): void => {
     const md = MarkdownIt().use(TOCPlugin);
     md.parse(sample);
   });
+
+  it('# should detect level 2 contents', (): void => {
+    const md = MarkdownIt().use(TOCPlugin);
+
+    const context = {};
+
+    md.parse(sample, context);
+
+    const toc = context['toc'];
+
+    expect(toc[0]).toHaveProperty('children');
+    expect(toc[0].children).toHaveLength(4);
+  });
 });

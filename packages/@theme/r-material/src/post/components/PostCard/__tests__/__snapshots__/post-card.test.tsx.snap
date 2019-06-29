@@ -18,7 +18,7 @@ exports[`@theme/r-material: post/component: PostCard # should mount correctly 1`
       className="makeStyles-card-2"
     >
       <WithStyles(ForwardRef(CardActionArea))
-        href=""
+        href="/posts/2015/10/25/apache-shiro-spring-integration"
       >
         <WithStyles(ForwardRef(CardContent))>
           <WithStyles(ForwardRef(Typography))
@@ -41,10 +41,10 @@ Apache Shiro 是一款Java的安全框架,通常用作Web应用的权限校验,�
       </WithStyles(ForwardRef(CardActionArea))>
       <WithStyles(ForwardRef(CardActions))>
         <WithStyles(ForwardRef(Button))
-          href="/posts/2015/10/25/apache-shiro-spring-integration"
+          href=""
           size="small"
         >
-          More
+          2015-10-25
         </WithStyles(ForwardRef(Button))>
       </WithStyles(ForwardRef(CardActions))>
     </WithStyles(ForwardRef(Card))>

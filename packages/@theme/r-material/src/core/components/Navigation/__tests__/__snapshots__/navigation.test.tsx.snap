@@ -12,7 +12,7 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
         aria-label="Open drawer"
-        className="makeStyles-menuButton-4"
+        className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
         href=""
@@ -22,32 +22,34 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
           type="menu"
         />
       </WithStyles(ForwardRef(IconButton))>
-      <WithStyles(ForwardRef(Typography))
+      <WithStyles(ForwardRef(Link))
+        className="makeStyles-title-4"
         color="inherit"
-        noWrap={true}
+        component="a"
+        href="/"
         variant="h6"
       >
         title
-      </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Link))>
     </WithStyles(ForwardRef(Toolbar))>
   </WithStyles(ForwardRef(AppBar))>
   <WithStyles(ForwardRef(Drawer))
     anchor="left"
-    className="makeStyles-drawer-6"
+    className="makeStyles-drawer-7"
     classes={
       Object {
-        "paper": "makeStyles-drawerPaper-7",
+        "paper": "makeStyles-drawerPaper-8",
       }
     }
     open={false}
     variant="persistent"
   >
     <div
-      className="makeStyles-drawerHeader-8"
+      className="makeStyles-drawerHeader-9"
     >
       <WithStyles(ForwardRef(IconButton))
         aria-label="Close drawer"
-        className="makeStyles-drawerButton-10"
+        className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
       >
@@ -58,10 +60,10 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
     </div>
   </WithStyles(ForwardRef(Drawer))>
   <main
-    className="makeStyles-content-11"
+    className="makeStyles-content-12"
   >
     <div
-      className="makeStyles-drawerSpace-9"
+      className="makeStyles-drawerSpace-10"
     />
   </main>
 </div>
@@ -79,7 +81,7 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
         aria-label="Open drawer"
-        className="makeStyles-menuButton-4 makeStyles-hide-5"
+        className="makeStyles-menuButton-5 makeStyles-hide-6"
         color="inherit"
         edge="start"
         href=""
@@ -89,32 +91,34 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
           type="menu"
         />
       </WithStyles(ForwardRef(IconButton))>
-      <WithStyles(ForwardRef(Typography))
+      <WithStyles(ForwardRef(Link))
+        className="makeStyles-title-4"
         color="inherit"
-        noWrap={true}
+        component="a"
+        href="/"
         variant="h6"
       >
         title
-      </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Link))>
     </WithStyles(ForwardRef(Toolbar))>
   </WithStyles(ForwardRef(AppBar))>
   <WithStyles(ForwardRef(Drawer))
     anchor="left"
-    className="makeStyles-drawer-6"
+    className="makeStyles-drawer-7"
     classes={
       Object {
-        "paper": "makeStyles-drawerPaper-7",
+        "paper": "makeStyles-drawerPaper-8",
       }
     }
     open={true}
     variant="persistent"
   >
     <div
-      className="makeStyles-drawerHeader-8"
+      className="makeStyles-drawerHeader-9"
     >
       <WithStyles(ForwardRef(IconButton))
         aria-label="Close drawer"
-        className="makeStyles-drawerButton-10"
+        className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
       >
@@ -125,10 +129,10 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
     </div>
   </WithStyles(ForwardRef(Drawer))>
   <main
-    className="makeStyles-content-11 makeStyles-contentShift-12"
+    className="makeStyles-content-12 makeStyles-contentShift-13"
   >
     <div
-      className="makeStyles-drawerSpace-9"
+      className="makeStyles-drawerSpace-10"
     />
   </main>
 </div>
@@ -146,7 +150,7 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
         aria-label="Open drawer"
-        className="makeStyles-menuButton-4"
+        className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
         href=""
@@ -156,32 +160,34 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
           type="menu"
         />
       </WithStyles(ForwardRef(IconButton))>
-      <WithStyles(ForwardRef(Typography))
+      <WithStyles(ForwardRef(Link))
+        className="makeStyles-title-4"
         color="inherit"
-        noWrap={true}
+        component="a"
+        href="/"
         variant="h6"
       >
         title
-      </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Link))>
     </WithStyles(ForwardRef(Toolbar))>
   </WithStyles(ForwardRef(AppBar))>
   <WithStyles(ForwardRef(Drawer))
     anchor="left"
-    className="makeStyles-drawer-6"
+    className="makeStyles-drawer-7"
     classes={
       Object {
-        "paper": "makeStyles-drawerPaper-7",
+        "paper": "makeStyles-drawerPaper-8",
       }
     }
     open={false}
     variant="persistent"
   >
     <div
-      className="makeStyles-drawerHeader-8"
+      className="makeStyles-drawerHeader-9"
     >
       <WithStyles(ForwardRef(IconButton))
         aria-label="Close drawer"
-        className="makeStyles-drawerButton-10"
+        className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
       >
@@ -230,10 +236,10 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
     />
   </WithStyles(ForwardRef(Drawer))>
   <main
-    className="makeStyles-content-11"
+    className="makeStyles-content-12"
   >
     <div
-      className="makeStyles-drawerSpace-9"
+      className="makeStyles-drawerSpace-10"
     />
   </main>
 </div>
@@ -251,7 +257,7 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
         aria-label="Open drawer"
-        className="makeStyles-menuButton-4"
+        className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
         href=""
@@ -261,28 +267,30 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
           type="menu"
         />
       </WithStyles(ForwardRef(IconButton))>
-      <WithStyles(ForwardRef(Typography))
+      <WithStyles(ForwardRef(Link))
+        className="makeStyles-title-4"
         color="inherit"
-        noWrap={true}
+        component="a"
+        href="/"
         variant="h6"
       >
         title
-      </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Link))>
     </WithStyles(ForwardRef(Toolbar))>
   </WithStyles(ForwardRef(AppBar))>
   <WithStyles(ForwardRef(Drawer))
     anchor="left"
-    className="makeStyles-drawer-6"
+    className="makeStyles-drawer-7"
     classes={
       Object {
-        "paper": "makeStyles-drawerPaper-7",
+        "paper": "makeStyles-drawerPaper-8",
       }
     }
     open={false}
     variant="persistent"
   >
     <div
-      className="makeStyles-drawerHeader-8"
+      className="makeStyles-drawerHeader-9"
     >
       <Profile
         avatar="https://img.aquariuslt.com/social/avatar.png"
@@ -292,7 +300,7 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
       />
       <WithStyles(ForwardRef(IconButton))
         aria-label="Close drawer"
-        className="makeStyles-drawerButton-10"
+        className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
       >
@@ -341,10 +349,10 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
     />
   </WithStyles(ForwardRef(Drawer))>
   <main
-    className="makeStyles-content-11"
+    className="makeStyles-content-12"
   >
     <div
-      className="makeStyles-drawerSpace-9"
+      className="makeStyles-drawerSpace-10"
     />
   </main>
 </div>
