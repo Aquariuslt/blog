@@ -5,7 +5,6 @@ import * as OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import * as OfflinePlugin from 'offline-plugin';
-
 import webpackBaseConfig from './webpack.base';
 
 import pathUtil from '../utils/path-util';

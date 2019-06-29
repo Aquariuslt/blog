@@ -4,6 +4,8 @@ import * as webpack from 'webpack';
 import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
 
+import * as PrerenderSPAPlugin from 'prerender-spa-plugin';
+
 import pathUtil from '../utils/path-util';
 
 import * as packageJson from '../../package.json';
@@ -14,9 +16,16 @@ import apiGenerator from '@blog/api-generator';
 
 const baseConfig = packageJson.config.base;
 
-gulp.task(
-  'build:webpack',
-  (done): void => {
+const ROUTES_FILENAME = 'routes.json';
+
+gulp.task('build:webpack', (done): void => {
+    const routes = JSON.parse(fs.readFileSync(pathUtil.resolve(baseConfig.dir.dist.root) + '/' + ROUTES_FILENAME).toString());
+
+    webpackProdConfig.plugins.push(new PrerenderSPAPlugin({
+      staticDir: pathUtil.resolve(baseConfig.dir.dist.root),
+      routes: routes
+    }));
+
     webpack(
       webpackProdConfig,
       (error, stats): void => {
@@ -38,9 +47,7 @@ gulp.task(
   }
 );
 
-gulp.task(
-  'build:config',
-  async (done): Promise<void> => {
+gulp.task('build:config', async (done): Promise<void> => {
     const configPath = pathUtil.resolve('') + '/' + 'config.yml';
 
     const configProcessor = await import('@blog/config-processor');
@@ -59,9 +66,7 @@ gulp.task(
   }
 );
 
-gulp.task(
-  'build:api',
-  (done): void => {
+gulp.task('build:api', (done): void => {
     const configPath = pathUtil.resolve('') + '/' + 'config.yml';
     let config = configProcessor.read(configPath);
 
@@ -76,9 +81,7 @@ gulp.task(
   }
 );
 
-gulp.task(
-  'build:dev-api',
-  (done): void => {
+gulp.task('build:dev-api', (done): void => {
     const configPath = pathUtil.resolve('') + '/' + 'config.yml';
     const config = configProcessor.read(configPath);
 

@@ -38,11 +38,12 @@ const Posts: React.ComponentType<PropsWithRoute<PostsProps>> =
         }, [props.match.url]);
 
         let posts = props.postStore.posts;
-        let needShowBreadcrumb = !(props.match.url == '');
+        let needShowBreadcrumb = !(props.match.url === '' || props.match.url === '/');
 
         let routePrefix = capitalize(props.match.url.split('/')[1]);
         let routeSuffix = props.match.url.split('/').slice(2).join('-');
         let title = needShowBreadcrumb ? `${routePrefix} : ${routeSuffix}` : '';
+
 
         return (
           <div className={classes.root}>

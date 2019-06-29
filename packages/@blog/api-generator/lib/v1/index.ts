@@ -6,6 +6,7 @@ import * as log from 'fancy-log';
 import persistUtil from '../utils/persist-util';
 import postsApi from './posts-api';
 import seoApi from './seo-api';
+import routesApi from './routes-api';
 
 import articleProcessor, { scanner as articleScanner } from '@blog/article-processor';
 import configParser from '@blog/config-processor';
@@ -65,6 +66,9 @@ async function generate(configPath: string, dataPath: string, outputPath: string
     seoApi.generateSiteMapApi(config.site, posts));
 
   persistUtil.persist(outputPath, seoApiMap, '');
+
+  const pageRoutes = routesApi.generatePageRoutes(postsApiMap);
+  persistUtil.persist(outputPath, pageRoutes);
 }
 
 
