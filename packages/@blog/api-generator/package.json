@@ -1,6 +1,6 @@
 {
   "name": "@blog/api-generator",
-  "version": "5.0.0-beta.2",
+  "version": "5.0.0",
   "description": "blog article processor",
   "typings": "dist/v1/index.d.ts",
   "main": "lib/v1/index.ts",
@@ -11,8 +11,8 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@blog/article-processor": "5.0.0-beta.2",
-    "@blog/config-processor": "5.0.0-beta.2",
-    "@utils/gallery-api": "5.0.0-beta.2"
+    "@blog/article-processor": "^5.0.0",
+    "@blog/config-processor": "^5.0.0",
+    "@utils/gallery-api": "^5.0.0"
   }
 }

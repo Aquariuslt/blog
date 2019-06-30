@@ -1,6 +1,6 @@
 {
   "name": "@theme/r-material",
-  "version": "5.0.0-beta.2",
+  "version": "5.0.0",
   "main": "src/index.tsx",
   "esnext": "src/index.tsx",
   "license": "MIT"
