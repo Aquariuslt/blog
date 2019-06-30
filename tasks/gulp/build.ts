@@ -28,15 +28,19 @@ gulp.task('build:webpack', (done): void => {
     const routes = JSON.parse(fs.readFileSync(pathUtil.resolve(baseConfig.dir.dist.root) + '/' + ROUTES_FILENAME).toString());
     const config = configProcessor.read(configPath);
 
+    const themeColor = config.build.colors ? config.build.colors['primary']['main'] : DEFAULT_BG_COLOR;
+
     webpackProdConfig.plugins.push(new WebapckPawManifest({
       filename: baseConfig.dir.dist.manifest + '/' + 'manifest.json',
+      start_url: '/',
       name: config.site.title,
       short_name: config.site.title,
       description: config.site.description,
-      background_color: config.build.colors ? config.build.colors['primary']['main'] : DEFAULT_BG_COLOR,
+      theme_color: themeColor,
+      background_color: themeColor,
       icons: [
         {
-          src: pathUtil.resolve(baseConfig.dir.src + '/' + 'favicon.ico'),
+          src: pathUtil.resolve(baseConfig.dir.src + '/' + 'favicon.png'),
           sizes: [96, 128, 144, 192, 256, 384, 512],
           destination: baseConfig.dir.dist.img
         }
