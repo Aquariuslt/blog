@@ -3,24 +3,32 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node-browsers:10.16.0
+      -
+        image: circleci/node:10.16.0-browsers
     working_directory: ~/blog
     steps:
-      - checkout:
+      -
+        checkout:
           name: SCM
-      - run:
+      -
+        run:
           name: Install Dependencies
           command: yarn install
-      - run:
+      -
+        run:
           name: Linting
           command: yarn lint
-      - run:
+      -
+        run:
           name: Unit Test & Build
           command: yarn ci
-      - run:
+      -
+        run:
           name: Coverage Report
           command: "bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN"
-      - store_test_results:
+      -
+        store_test_results:
           path: reports/junit
-      - store_artifacts:
+      -
+        store_artifacts:
           path: reports/junit
