@@ -1,9 +1,0 @@
-{
-  "packages": [
-    "packages/*",
-    "service/",
-    "themes/*"
-  ],
-  "version": "6.26.198",
-  "npmClient": "yarn"
-}
