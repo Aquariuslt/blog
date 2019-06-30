@@ -3,7 +3,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then((registration): void => {
         console.log('SW registered: ', registration);
-        registration.pushManager.subscribe({ userVisibleOnly: true }).then();
+        registration.pushManager.subscribe({ userVisibleOnly: true })
       })
       .catch((registrationError): void => {
         console.error('SW register failed:', registrationError);
