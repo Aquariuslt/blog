@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import * as gulp from 'gulp';
+import { dest } from 'gulp';
+import * as rename from 'gulp-rename';
 import * as logger from 'fancy-log';
 import * as webpack from 'webpack';
 import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
 
 import * as PrerenderSPAPlugin from 'prerender-spa-plugin';
-import * as WebapckPawManifest from 'webpack-pwa-manifest';
+import * as WebpackPawManifest from 'webpack-pwa-manifest';
 import * as workbox from 'workbox-build';
 
 import pathUtil from '../utils/path-util';
@@ -21,6 +23,7 @@ const baseConfig = packageJson.config.base;
 
 const DEFAULT_BG_COLOR = '#fafafa';
 const ROUTES_FILENAME = 'routes.json';
+const FALLBACK_FILENAME = '404.html';
 
 
 gulp.task('build:webpack', (done): void => {
@@ -30,7 +33,7 @@ gulp.task('build:webpack', (done): void => {
 
     const themeColor = config.build.colors ? config.build.colors['primary']['main'] : DEFAULT_BG_COLOR;
 
-    webpackProdConfig.plugins.push(new WebapckPawManifest({
+    webpackProdConfig.plugins.push(new WebpackPawManifest({
       filename: baseConfig.dir.dist.manifest + '/' + 'manifest.json',
       start_url: '/',
       name: config.site.title,
@@ -144,7 +147,7 @@ gulp.task('build:dev-api', (done): void => {
   }
 );
 
-gulp.task('build:cname', (done): void => {
+gulp.task('build:pages', (done): void => {
   logger.info('Generating CNAME file');
   const configPath = pathUtil.resolve('') + '/' + 'config.yml';
   const config = configProcessor.read(configPath);
@@ -155,8 +158,14 @@ gulp.task('build:cname', (done): void => {
 
   fs.writeFileSync(distPath + '/' + CNAME_FILENAME, hostname);
 
-  done();
+  gulp.src(pathUtil.resolve(baseConfig.dir.dist.root) + '/index.html')
+    .pipe(rename(FALLBACK_FILENAME))
+    .pipe(dest(pathUtil.resolve(baseConfig.dir.dist.root)))
+    .on('end', (): void => {
+      done();
+    });
 });
+
 
 gulp.task('build', gulp.series(
   'clean:dist',
@@ -164,5 +173,5 @@ gulp.task('build', gulp.series(
   'build:api',
   'build:webpack',
   'build:service-worker',
-  'build:cname'
+  'build:pages'
 ));
