@@ -4,13 +4,13 @@ workflow "workflow/build-test" {
 }
 
 action "workflow/install" {
-  uses = "docker://node:10"
+  uses = "docker://circleci/node:10.16.0-browsers"
   runs = "yarn"
   args = "install"
 }
 
 action "workflow/ci" {
-  uses = "docker://node:10"
+  uses = "docker://circleci/node:10.16.0-browsers"
   needs = ["workflow/install"]
   args = "ci"
   runs = "yarn"
