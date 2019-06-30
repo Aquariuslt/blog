@@ -279,6 +279,7 @@
       "packages/@theme/**/src/**/*.tsx",
       "!packages/@theme/**/src/index.tsx",
       "!src/main.ts",
+      "!src/offline.ts",
       "!**/tasks/**",
       "!**/test/**",
       "!**/node_modules/**"
