@@ -22,8 +22,8 @@ const buildPostPermalink = (created: string, filename: string): string =>
 function generateFeedsApi(config: Config.Site, data: BlogModel.Post[]): BlogApiModel.ApiQuery {
   const toPostFeedItem = (post: BlogModel.Post): Item => ({
     title: post.metadata.title,
-    id: config.host + buildPostPermalink(post.metadata.created, post.filename),
-    link: config.host + buildPostPermalink(post.metadata.created, post.filename),
+    id: PROTOCOL_PREFIX + config.host + buildPostPermalink(post.metadata.created, post.filename),
+    link: PROTOCOL_PREFIX + config.host + buildPostPermalink(post.metadata.created, post.filename),
     description: post.summary,
     content: post.html,
     date: new Date(post.metadata.created),
@@ -35,8 +35,8 @@ function generateFeedsApi(config: Config.Site, data: BlogModel.Post[]): BlogApiM
   const feed = new Feed({
     title: config.title,
     description: config.description,
-    id: config.host,
-    link: config.host,
+    id: PROTOCOL_PREFIX + config.host,
+    link: PROTOCOL_PREFIX + config.host,
     language: config.language,
     copyright: config.copyright,
     feedLinks: {
