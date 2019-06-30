@@ -37,7 +37,7 @@ gulp.task('build:webpack', (done): void => {
       icons: [
         {
           src: pathUtil.resolve(baseConfig.dir.src + '/' + 'favicon.ico'),
-          sizes: [96, 128, 192, 256, 384, 512],
+          sizes: [96, 128, 144, 192, 256, 384, 512],
           destination: baseConfig.dir.dist.img
         }
       ]
