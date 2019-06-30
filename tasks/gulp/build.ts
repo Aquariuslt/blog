@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import * as gulp from 'gulp';
 import * as logger from 'fancy-log';
 import * as webpack from 'webpack';
@@ -5,6 +6,8 @@ import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
 
 import * as PrerenderSPAPlugin from 'prerender-spa-plugin';
+import * as WebapckPawManifest from 'webpack-pwa-manifest';
+import * as workbox from 'workbox-build';
 
 import pathUtil from '../utils/path-util';
 
@@ -16,10 +19,30 @@ import apiGenerator from '@blog/api-generator';
 
 const baseConfig = packageJson.config.base;
 
+const DEFAULT_BG_COLOR = '#fafafa';
 const ROUTES_FILENAME = 'routes.json';
 
+
 gulp.task('build:webpack', (done): void => {
+    const configPath = pathUtil.resolve('') + '/' + 'config.yml';
     const routes = JSON.parse(fs.readFileSync(pathUtil.resolve(baseConfig.dir.dist.root) + '/' + ROUTES_FILENAME).toString());
+    const config = configProcessor.read(configPath);
+
+    webpackProdConfig.plugins.push(new WebapckPawManifest({
+      filename: baseConfig.dir.dist.manifest + '/' + 'manifest.json',
+      name: config.site.title,
+      short_name: config.site.title,
+      description: config.site.description,
+      background_color: config.build.colors ? config.build.colors['primary']['main'] : DEFAULT_BG_COLOR,
+      icons: [
+        {
+          src: pathUtil.resolve(baseConfig.dir.src + '/' + 'favicon.ico'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: baseConfig.dir.dist.img
+        }
+      ]
+    }));
+
 
     webpackProdConfig.plugins.push(new PrerenderSPAPlugin({
       staticDir: pathUtil.resolve(baseConfig.dir.dist.root),
@@ -46,6 +69,26 @@ gulp.task('build:webpack', (done): void => {
     );
   }
 );
+
+gulp.task('build:service-worker', (): void => {
+  const dist = pathUtil.resolve(baseConfig.dir.dist.root);
+  return workbox.generateSW({
+    globDirectory: dist,
+    globPatterns: [
+      '\*\*/\*.{html,js,css}'
+    ],
+    swDest: `${dist}/sw.js`,
+    clientsClaim: true,
+    skipWaiting: true
+  }).then(({ warnings }): void => {
+    for (const warning of warnings) {
+      logger.warn('Service worker warning:', warning);
+    }
+    logger.info('Generate Service worker complete');
+  }).catch((error): void => {
+    logger.error('Service worker generation failed:', error);
+  });
+});
 
 gulp.task('build:config', async (done): Promise<void> => {
     const configPath = pathUtil.resolve('') + '/' + 'config.yml';
@@ -111,4 +154,11 @@ gulp.task('build:cname', (done): void => {
   done();
 });
 
-gulp.task('build', gulp.series('clean:dist', 'build:config', 'build:api', 'build:webpack', 'build:cname'));
+gulp.task('build', gulp.series(
+  'clean:dist',
+  'build:config',
+  'build:api',
+  'build:webpack',
+  'build:service-worker',
+  'build:cname'
+));

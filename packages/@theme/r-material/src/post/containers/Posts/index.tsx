@@ -28,6 +28,7 @@ const useStyles = makeStyles(
     })
 );
 
+
 const Posts: React.ComponentType<PropsWithRoute<PostsProps>> =
   inject('postStore')(
     observer((props: PropsWithRoute<PostsProps>): JSX.Element => {
@@ -37,18 +38,20 @@ const Posts: React.ComponentType<PropsWithRoute<PostsProps>> =
           props.postStore.loadPosts(props.match.url);
         }, [props.match.url]);
 
-        let posts = props.postStore.posts;
-        let needShowBreadcrumb = !(props.match.url === '' || props.match.url === '/');
+        const posts = props.postStore.posts;
+        const needShowBreadcrumb = !(props.match.url === '' || props.match.url === '/');
 
-        let routePrefix = capitalize(props.match.url.split('/')[1]);
-        let routeSuffix = props.match.url.split('/').slice(2).join('-');
-        let title = needShowBreadcrumb ? `${routePrefix} : ${routeSuffix}` : '';
+        const routePrefix = capitalize(props.match.url.split('/')[1]);
+        const routeSuffix = props.match.url.split('/').slice(2).join('-');
+        const title = needShowBreadcrumb ? `${routePrefix} : ${routeSuffix}` : '';
+        const description = '';
 
 
         return (
           <div className={classes.root}>
             <DocHead
               title={title}
+              description={description}
             />
             {
               needShowBreadcrumb &&

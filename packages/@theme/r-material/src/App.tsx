@@ -31,6 +31,7 @@ export default class App extends React.Component<AppProps> {
         <CssBaseline/>
         <DocHead
           title={site.title}
+          description={site.description}
           root={true}
         />
         <Navigation
