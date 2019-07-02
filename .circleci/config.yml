@@ -63,7 +63,8 @@ jobs:
           command: >
             gh-pages
             --dist dist
-            --repo https://$GITHUB_TOKEN@github.com/aquariuslt/aquariuslt.github.io.git
+            --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git
+            --branch master
             --silent
 
 
