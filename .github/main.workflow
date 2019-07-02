@@ -6,13 +6,13 @@ workflow "workflow/build-test" {
 }
 
 action "workflow/install" {
-  uses = "docker://aquariuslt/node-10-browsers"
+  uses = "docker://aquariuslt/node-10-browsers@master"
   runs = "yarn"
   args = "install"
 }
 
 action "workflow/ci" {
-  uses = "docker://aquariuslt/node-10-browsers"
+  uses = "docker://aquariuslt/node-10-browsers@master"
   needs = [
     "workflow/install"
   ]
