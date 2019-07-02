@@ -1,8 +1,6 @@
 workflow "workflow/build-test" {
   on = "push"
-  resolves = [
-    "workflow/ci"
-  ]
+  resolves = ["workflow/ci"]
 }
 
 action "workflow/install" {
@@ -13,9 +11,7 @@ action "workflow/install" {
 
 action "workflow/ci" {
   uses = "docker://aquariuslt/node-10-browsers@master"
-  needs = [
-    "workflow/install"
-  ]
+  needs = ["workflow/install"]
   runs = "yarn"
   args = "ci"
 }
