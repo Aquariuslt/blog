@@ -1,7 +1,8 @@
 version: 2.1
 
+
 jobs:
-  build:
+  ci:
     docker:
       -
         image: circleci/node:10.16.0-browsers
@@ -13,7 +14,7 @@ jobs:
       -
         run:
           name: Install Dependencies
-          command: yarn install
+          command: yarn
       -
         run:
           name: Linting
@@ -32,3 +33,51 @@ jobs:
       -
         store_artifacts:
           path: reports/junit
+      -
+        persist_to_workspace:
+          root: dist
+
+  deploy:
+    docker:
+      -
+        image: circleci/node:10.16.0-browsers
+    working_directory: ~/blog
+    steps:
+      -
+        checkout:
+          name: Checkout
+      -
+        attach_workspace:
+          at: dist
+      -
+        run:
+          name: Install Deploy Dependencies
+          command: |
+            npm install -g --silent gh-pages
+            git config user.email "deploy-bot@circleci.com"
+            git config user.name "circleci"
+      -
+        run:
+          name: Deploy docs to gh-pages branch
+          command: >
+            gh-pages
+            --dist dist
+            --repo https://$GITHUB_TOKEN@github.com/aquariuslt/aquariuslt.github.io.git
+            --silent
+
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      -
+        ci:
+      -
+        deploy:
+          requires:
+            - ci
+          filters:
+            branches:
+              only: universal-ts
+
+

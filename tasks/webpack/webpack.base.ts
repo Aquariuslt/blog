@@ -49,7 +49,10 @@ const webpackBaseConfig = {
       },
       {
         test: /\.properties$/,
-        include: pathUtil.resolve(baseConfig.dir.src),
+        include: [
+          pathUtil.resolve(baseConfig.dir.src),
+          pathUtil.resolve(baseConfig.dir.packages)
+        ],
         loader: 'properties-json-loader'
       }
     ]
