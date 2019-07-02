@@ -41,7 +41,7 @@ jobs:
   deploy:
     docker:
       -
-        image: circleci/node:10.16.0-browsers
+        image: node:10
     working_directory: ~/blog
     steps:
       -
@@ -54,7 +54,6 @@ jobs:
         run:
           name: Install Deploy Dependencies
           command: |
-            # installing
             npm install -g --silent gh-pages
             git config user.email deploy-bot@circleci.com
             git config user.name "circleci"
