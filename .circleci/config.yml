@@ -70,8 +70,7 @@ workflows:
   version: 2
   build:
     jobs:
-      -
-        ci:
+      - ci
       -
         deploy:
           requires:
