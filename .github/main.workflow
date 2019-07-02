@@ -4,14 +4,14 @@ workflow "workflow/build-test" {
 }
 
 action "workflow/install" {
-  uses = "aquariuslt/github-actions-yarn@master"
+  uses = "aquariuslt/node-10-browsers@master"
   runs = "yarn"
   args = "install"
 }
 
 action "workflow/ci" {
-  uses = "aquariuslt/github-actions-yarn@master"
+  uses = "aquariuslt/node-10-browsers@master"
   needs = ["workflow/install"]
-  args = "ci"
   runs = "yarn"
+  args = "ci"
 }
