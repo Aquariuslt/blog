@@ -35,7 +35,8 @@ jobs:
           path: reports/junit
       -
         persist_to_workspace:
-          root: dist
+          root: .
+          path: dist
 
   deploy:
     docker:
