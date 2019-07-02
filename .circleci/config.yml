@@ -35,8 +35,8 @@ jobs:
           path: reports/junit
       -
         persist_to_workspace:
-          root: .
-          path: dist
+          root: ~/blog
+          paths: dist
 
   deploy:
     docker:
@@ -49,7 +49,7 @@ jobs:
           name: Checkout
       -
         attach_workspace:
-          at: dist
+          at: ~/blog
       -
         run:
           name: Install Deploy Dependencies
