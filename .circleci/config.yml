@@ -6,6 +6,7 @@ jobs:
     docker:
       -
         image: circleci/node:10.16.0-browsers
+    resource_class: large
     working_directory: ~/blog
     steps:
       -
