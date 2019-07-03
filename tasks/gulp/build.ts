@@ -9,6 +9,8 @@ import * as mkdirp from 'mkdirp';
 
 import * as PrerenderSPAPlugin from 'prerender-spa-plugin';
 import * as WebpackPawManifest from 'webpack-pwa-manifest';
+
+import * as PuppeteerRenderer from '@prerenderer/renderer-puppeteer';
 import * as workbox from 'workbox-build';
 
 import pathUtil from '../utils/path-util';
@@ -53,7 +55,19 @@ gulp.task('build:webpack', (done): void => {
 
     webpackProdConfig.plugins.push(new PrerenderSPAPlugin({
       staticDir: pathUtil.resolve(baseConfig.dir.dist.root),
-      routes: routes
+      routes: routes,
+      renderer: new PuppeteerRenderer({
+        // Optional - defaults to 0, no limit.
+        // Routes are rendered asynchronously.
+        // Use this to limit the number of routes rendered in parallel.
+        maxConcurrentRoutes: 4,
+        // Other puppeteer options.
+        // (See here: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
+        headless: true // Display the browser window when rendering. Useful for debugging.
+      }),
+      minify: {
+        minifyCSS: true
+      }
     }));
 
     webpack(
