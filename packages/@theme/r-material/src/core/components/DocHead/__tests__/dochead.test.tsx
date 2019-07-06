@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import * as React from 'react';
 import * as Enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
@@ -45,4 +46,33 @@ describe('@theme/r-material: core/components/DocHead', (): void => {
   it.todo('# should replace description content with sub route');
   it.todo('# should combine keywords content with sub route');
 
+  it('# should load with opengraph in post detail page', () => {
+    const baseTitle = 'Awesome Website';
+
+    const mockOpenGraph: OpenGraph.Meta = {
+      'og:title': 'OG Title',
+      'og:type': 'article',
+      'og:image': 'https://img.example.com/somepic.png',
+      'og:url': 'https://blog.example.com/p/some-article'
+    };
+
+    Enzyme.mount(
+      <div>
+        <DocHead
+          title={baseTitle}
+          opengraph={mockOpenGraph}
+        />
+      </div>
+    );
+    const helmet = Helmet.peek();
+    expect(helmet.title).toEqual(baseTitle);
+    expect(helmet.metaTags).not.toBeUndefined();
+
+    const metaTagMap = _.mapValues(_.keyBy(helmet.metaTags, 'name'), 'content');
+
+    _.each(_.keys(mockOpenGraph), (key) => {
+      expect(metaTagMap[key]).toEqual(mockOpenGraph[key]);
+    });
+
+  });
 });
