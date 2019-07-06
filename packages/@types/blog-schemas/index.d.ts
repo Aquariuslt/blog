@@ -130,6 +130,7 @@ declare namespace BlogModel {
     toc?: ContentItem[];
     images?: string[];
     summary?: string;
+    opengraph?: OpenGraph.Meta;
   }
 
   export interface Metadata {
@@ -148,5 +149,30 @@ declare namespace BlogModel {
     level: number;
     pid?: number;
     children: ContentItem[];
+  }
+}
+
+declare namespace OpenGraph {
+  export interface MetaKey {
+    title: string;
+    type: string;
+    cover: string;
+    permalink: string;
+    description: string;
+
+
+    // article related
+    author: string;
+    category: string;
+    tags: string;
+    created: string;
+    updated: string;
+
+    // website
+    website: string;
+  }
+
+  export interface Meta {
+    [key: MetaKey]: string;
   }
 }

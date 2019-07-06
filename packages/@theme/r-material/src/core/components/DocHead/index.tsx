@@ -10,6 +10,7 @@ interface DocHeadProps {
   description?: string;
   keywords?: string;
 
+  opengraph?: OpenGraph.Meta;
 }
 
 
@@ -48,6 +49,10 @@ const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.El
       .join(KEYWORD_JOIN_KEY);
   };
 
+  const getOpengraph = (propsOpengraph, baseOpengraph): OpenGraph.Meta => {
+    return propsOpengraph || baseOpengraph;
+  };
+
 
   if (props.root) {
     window[DOC_HEAD_BASE_KEY] = props;
@@ -55,15 +60,24 @@ const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.El
 
   const defaultProps = window[DOC_HEAD_BASE_KEY] || DEFAULT_DOC_HEAD;
 
-  let title = getTitle(props.title, defaultProps.title);
-  let description = getDescription(props.description, defaultProps.description);
-  let keywords = getKeywords(props.keywords, defaultProps.keywords);
+  const title = getTitle(props.title, defaultProps.title);
+  const description = getDescription(props.description, defaultProps.description);
+  const keywords = getKeywords(props.keywords, defaultProps.keywords);
+
+  const ogMeta = getOpengraph(props.opengraph, defaultProps.opengraph);
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywords}/>
+
+      {
+        ogMeta &&
+        Object.keys(ogMeta).map((key) => (
+          <meta name={key} content={ogMeta[key]} key={key}/>
+        ))
+      }
     </Helmet>
   );
 };

@@ -64,6 +64,7 @@ const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject(
             title={post.metadata.title}
             description={post.summary}
             keywords={post.metadata.tags && post.metadata.tags.join(',')}
+            opengraph={post.opengraph}
           />
           <div className={classes.content}>
             <PostContent html={post.html}/>

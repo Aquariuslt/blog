@@ -7,6 +7,7 @@ import persistUtil from '../utils/persist-util';
 import postsApi from './posts-api';
 import seoApi from './seo-api';
 import routesApi from './routes-api';
+import ogMetaGenerator from './opengraph-generator';
 
 import articleProcessor, { scanner as articleScanner } from '@blog/article-processor';
 import configParser from '@blog/config-processor';
@@ -32,6 +33,12 @@ async function handleFeatures(posts: BlogModel.Post[], features: Config.Features
   }
 }
 
+function generateOGMeta(posts: BlogModel.Post[], config: Config.Site) {
+  _.each(posts, (post) => {
+    post.opengraph = ogMetaGenerator.generatePostOGMeta(config, post);
+  });
+}
+
 
 /**
  * @param configPath: extra injected config filepath
@@ -47,8 +54,9 @@ async function generate(configPath: string, dataPath: string, outputPath: string
     return articleProcessor.parse(filename, mdContent);
   });
 
-
   await handleFeatures(posts, config.features);
+  generateOGMeta(posts, config.site);
+
 
   const postsApiMap = _.merge({},
     postsApi.generateTagsOverview(posts),
