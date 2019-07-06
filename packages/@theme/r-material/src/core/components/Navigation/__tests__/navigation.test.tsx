@@ -22,7 +22,7 @@ describe('@theme/r-material: core/components: Navigation', (): void => {
     let wrapper = Enzyme.shallow(<Navigation title={mockTitle} menus={[]}/>);
 
     // simulate on drawer button will trigger sidebar class change
-    wrapper.find('[aria-label="Open drawer"]').simulate('click');
+    wrapper.find('[aria-label="core.navigation.open_drawer"]').simulate('click');
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -33,16 +33,16 @@ describe('@theme/r-material: core/components: Navigation', (): void => {
     let wrapper = Enzyme.shallow(<Navigation title={mockTitle} menus={[]}/>);
 
     // simulate on drawer button will trigger sidebar class change
-    wrapper.find('[aria-label="Open drawer"]').simulate('click');
+    wrapper.find('[aria-label="core.navigation.open_drawer"]').simulate('click');
 
-    wrapper.find('[aria-label="Close drawer"]').simulate('click');
+    wrapper.find('[aria-label="core.navigation.close_drawer"]').simulate('click');
   });
 
   it('# should show menus when have non-empty menus props', (): void => {
     const mockTitle = 'title';
     const menus = [
       {
-        name: 'Postlist',
+        name: 'PostList',
         link: '/to/somewhere',
         icon: 'category',
         priority: 3,
@@ -83,7 +83,7 @@ describe('@theme/r-material: core/components: Navigation', (): void => {
     const mockTitle = 'title';
     const menus = [
       {
-        name: 'Postlist',
+        name: 'PostList',
         link: '/to/somewhere',
         icon: 'category',
         priority: 3,

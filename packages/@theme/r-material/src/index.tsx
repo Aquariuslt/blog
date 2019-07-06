@@ -5,8 +5,10 @@ import { Provider } from 'mobx-react';
 import { ThemeProvider } from '@material-ui/styles';
 import { attachRoutes } from './router';
 
+import './locale';
 import './core';
 import './post';
+
 
 import theme from './theme';
 import store from './store';

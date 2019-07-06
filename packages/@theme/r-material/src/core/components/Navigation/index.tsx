@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { PropsWithChildren, ReactNode } from 'react';
 import classnames from 'classnames';
+import { useTranslation } from 'react-i18next';
 import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -98,6 +99,7 @@ const Navigation: React.ComponentType<NavigationProps> = (
 ): JSX.Element => {
   const theme: Theme = useTheme();
   const classes = useStyles(theme);
+  const [t] = useTranslation();
 
   const [open, setOpen] = React.useState(false);
 
@@ -121,7 +123,7 @@ const Navigation: React.ComponentType<NavigationProps> = (
         <Toolbar>
           <IconButton
             color="inherit"
-            aria-label="Open drawer"
+            aria-label={t('core.navigation.open_drawer')}
             onClick={handleDrawerOpen}
             edge="start"
             href=""
@@ -152,7 +154,11 @@ const Navigation: React.ComponentType<NavigationProps> = (
       >
         <div className={classes.drawerHeader}>
           {props.profile}
-          <IconButton aria-label="Close drawer" onClick={handleDrawerClose} href="" className={classes.drawerButton}>
+          <IconButton
+            aria-label={t('core.navigation.close_drawer')}
+            onClick={handleDrawerClose}
+            href=""
+            className={classes.drawerButton}>
             <BundledIcon type="chevronLeft"/>
           </IconButton>
         </div>

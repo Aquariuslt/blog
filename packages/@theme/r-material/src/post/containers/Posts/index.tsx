@@ -23,7 +23,8 @@ const useStyles = makeStyles(
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper
+        backgroundColor: theme.palette.background.paper,
+        paddingTop: theme.spacing(1)
       }
     })
 );

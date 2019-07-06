@@ -11,7 +11,7 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
   >
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Open drawer"
+        aria-label="core.navigation.open_drawer"
         className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
@@ -48,7 +48,7 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
       className="makeStyles-drawerHeader-9"
     >
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Close drawer"
+        aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
@@ -80,7 +80,7 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
   >
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Open drawer"
+        aria-label="core.navigation.open_drawer"
         className="makeStyles-menuButton-5 makeStyles-hide-6"
         color="inherit"
         edge="start"
@@ -117,7 +117,7 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
       className="makeStyles-drawerHeader-9"
     >
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Close drawer"
+        aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
@@ -149,7 +149,7 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
   >
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Open drawer"
+        aria-label="core.navigation.open_drawer"
         className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
@@ -186,7 +186,7 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
       className="makeStyles-drawerHeader-9"
     >
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Close drawer"
+        aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
@@ -212,7 +212,7 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
       icon="category"
       key="0"
       link="/to/somewhere"
-      name="Postlist"
+      name="PostList"
       priority={3}
     />
     <RoutingItemList
@@ -256,7 +256,7 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
   >
     <WithStyles(ForwardRef(Toolbar))>
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Open drawer"
+        aria-label="core.navigation.open_drawer"
         className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
@@ -299,7 +299,7 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
         subtitle=""
       />
       <WithStyles(ForwardRef(IconButton))
-        aria-label="Close drawer"
+        aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
         href=""
         onClick={[Function]}
@@ -325,7 +325,7 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
       icon="category"
       key="0"
       link="/to/somewhere"
-      name="Postlist"
+      name="PostList"
       priority={3}
     />
     <RoutingItemList
