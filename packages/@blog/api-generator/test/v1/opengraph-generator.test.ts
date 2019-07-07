@@ -37,4 +37,29 @@ describe('@blog/api-generator: opengraph-generator', () => {
     expect(_.get(ogMeta, 'og:image')).not.toBeUndefined();
 
   });
+
+  it('# should `tag` content empty if post dont have any tags', () => {
+    const mockConfig: Config.Site = {
+      title: 'site title',
+      subtitle: 'site subtitle',
+      author: 'some author',
+      avatar: 'https://your-gavator.com/your-id',
+      copyright: '',
+      description: 'some description',
+      host: 'example.com',
+      language: 'zh'
+    };
+
+    const examplePost = posts[0];
+    const ogMeta = generator.generatePostOGMeta(mockConfig, examplePost);
+    expect(ogMeta).toHaveProperty('article:tag');
+    expect(ogMeta['article:tag'].length).toBeGreaterThan(0);
+
+    const postWoTags = _.cloneDeep(examplePost);
+    delete postWoTags.metadata.tags;
+    const osMetaWithEmptyTag = generator.generatePostOGMeta(mockConfig, postWoTags);
+    expect(osMetaWithEmptyTag).toHaveProperty('article:tag');
+    expect(osMetaWithEmptyTag['article:tag']).toEqual('');
+
+  });
 });

@@ -68,7 +68,7 @@ describe('@theme/r-material: core/components/DocHead', (): void => {
     expect(helmet.title).toEqual(baseTitle);
     expect(helmet.metaTags).not.toBeUndefined();
 
-    const metaTagMap = _.mapValues(_.keyBy(helmet.metaTags, 'name'), 'content');
+    const metaTagMap = _.mapValues(_.keyBy(helmet.metaTags, 'property'), 'content');
 
     _.each(_.keys(mockOpenGraph), (key) => {
       expect(metaTagMap[key]).toEqual(mockOpenGraph[key]);
