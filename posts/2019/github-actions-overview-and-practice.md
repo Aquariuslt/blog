@@ -233,7 +233,7 @@ hcl 全称 **HashiCorp Configuration Language**，其具体的语法规则比较
 
 Tips: 如果平时使用 IntelliJ IDEA 进行开发，那么可以通过给 `.workflow` 添加语法支持，将其识别为 `HCL` 语法，即可获得高亮与格式化
 
-![](https://img.aquariuslt.com/posts/2019/07/workflow-syntax-highligh.png)
+![](https://img.aquariuslt.com/posts/2019/07/workflow-syntax-highlight.png)
 
 为了实现基本操作中的第一部分: 每次提交代码时，触发基本的 build & test pipeline
 
