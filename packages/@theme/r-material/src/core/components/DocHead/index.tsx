@@ -75,7 +75,7 @@ const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.El
       {
         ogMeta &&
         Object.keys(ogMeta).map((key) => (
-          <meta name={key} content={ogMeta[key]} key={key}/>
+          <meta property={key} content={ogMeta[key]} key={key}/>
         ))
       }
     </Helmet>
