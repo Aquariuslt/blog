@@ -89,7 +89,7 @@ declare namespace Config {
    * 3rd party config
    */
   export interface Features {
-    ga?: string;
+    ga?: GoogleAnalysisConfig;
     disqus?: string;
     gallery?: boolean;
   }
@@ -109,6 +109,12 @@ declare namespace Config {
     site: Config.Site;
     build: Config.Build;
     features: Config.Features;
+  }
+
+
+  export interface GoogleAnalysisConfig {
+    verification: string;
+    tracking: string;
   }
 }
 

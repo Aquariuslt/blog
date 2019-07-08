@@ -17,6 +17,8 @@ build:
 
 
 features:
-  ga: some-ga-tracking-id
+  ga:
+    verification: site_verification_code
+    tracking: UA-XXXXXX-XX1
   disqus: some-disqus-shortname
   gallery: true

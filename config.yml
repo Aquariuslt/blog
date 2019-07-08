@@ -23,6 +23,8 @@ build:
       contrastText: '#000000'
 
 features:
-  ga: s3PYm0fCo0ImPqqXoPLiUb_bFdlYODKw54VGSkcFgyE
+  ga:
+    verification:  s3PYm0fCo0ImPqqXoPLiUb_bFdlYODKw54VGSkcFgyE
+    tracking: UA-68904127-1
   disqus: aquariuslt
   gallery: true

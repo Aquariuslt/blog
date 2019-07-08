@@ -115,8 +115,24 @@
       "type": "object",
       "properties": {
         "ga": {
-          "type": "string",
-          "description": "Your Google Analytics tracking id"
+          "type": "object",
+          "description": "Your Google Analytics Config",
+          "properties": {
+            "verification": {
+              "type": "string",
+              "description": "Your Google Analytics site verification code",
+              "default": ""
+            },
+            "tracking": {
+              "type": "string",
+              "description": "Your Google Analytics tracking code",
+              "default": ""
+            }
+          },
+          "required": [
+            "verification",
+            "tracking"
+          ]
         },
         "disqus": {
           "type": "string",
