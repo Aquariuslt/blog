@@ -23,6 +23,4 @@ features:
     verification: site_verification_code
     tracking: UA-XXXXXX-XX1
   disqus: some-disqus-shortname
-  links:
-    john: http://johbdoe.com
-    frank: http://frank.com
+  gallery: true

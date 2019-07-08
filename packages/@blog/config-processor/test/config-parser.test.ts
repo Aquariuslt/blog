@@ -9,6 +9,7 @@ describe('@blog/config-parser: parser', (): void => {
   const MISSING_SITE_CONFIG_PATH = path.join(__dirname, './__fixtures__/missing-site-config.yml');
   const NO_FEATURE_CONFIG_PATH = path.join(__dirname, './__fixtures__/no-feature-config.yml');
   const ENABLE_GALLERY_CONFIG = path.join(__dirname, './__fixtures__/enable-gallery-config.yml');
+  const MISSING_LINKS_CONFIG = path.join(__dirname, './__fixtures__/missing-links-config.yml');
 
   it('# should read and valid sample ', (): void => {
     const config = parser.read(CORRECT_CONFIG_PATH);
@@ -45,5 +46,24 @@ describe('@blog/config-parser: parser', (): void => {
     expect(config).toHaveProperty('features');
     expect(config.features).toHaveProperty('gallery');
     expect(config.features.gallery).toBeTruthy();
+  });
+
+  it('# should got friend links when `features` links is not a empty object', () => {
+    const config = parser.read(CORRECT_CONFIG_PATH);
+    expect(config).toHaveProperty('features');
+    expect(config.features).toHaveProperty('links');
+    expect(config.features.links).not.toBeUndefined();
+
+    if (config.features.links) {
+      expect(Object.keys(config.features.links).length).toEqual(2);
+    }
+  });
+
+  it('# should got friend links when `features` links is undefined', () => {
+    const config = parser.read(MISSING_LINKS_CONFIG);
+    expect(config).toHaveProperty('features');
+    expect(config.features).not.toHaveProperty('links');
+    expect(config.features.links).toBeUndefined();
+
   });
 });

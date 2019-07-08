@@ -92,6 +92,7 @@ declare namespace Config {
     ga?: GoogleAnalysisConfig;
     disqus?: string;
     gallery?: boolean;
+    links?: object;
   }
 
   export interface Build {

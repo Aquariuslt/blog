@@ -141,6 +141,14 @@
         "gallery": {
           "type": "boolean",
           "description": "Enable gallery to auto generate a cover image when not set"
+        },
+        "links": {
+          "type": "object",
+          "description": "Your friend links)",
+          "additionalProperties": {
+            "type": "string",
+            "description": "key-value pairs"
+          }
         }
       },
       "required": []
