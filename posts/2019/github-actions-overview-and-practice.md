@@ -1,8 +1,7 @@
-# Github Actions: Overview and In Actions
-
+# Github Actions: Overview and Practice
 
 ```metadata
-title: 'Github Actions: Overview and In Actions'
+title: 'Github Actions: Overview and Practice'
 created: 2019-07-07
 updated: 2019-07-07
 category: Blog
