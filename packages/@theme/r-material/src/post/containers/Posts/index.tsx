@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
 import { inject, observer } from 'mobx-react';
-import { capitalize } from 'lodash';
+import { capitalize, trimEnd } from 'lodash';
 
 import { PostStore } from '../../stores/post.store';
 import { PropsWithRoute } from '../../../router';
@@ -43,7 +43,7 @@ const Posts: React.ComponentType<PropsWithRoute<PostsProps>> =
         const needShowBreadcrumb = !(props.match.url === '' || props.match.url === '/');
 
         const routePrefix = capitalize(props.match.url.split('/')[1]);
-        const routeSuffix = props.match.url.split('/').slice(2).join('-');
+        const routeSuffix = trimEnd(props.match.url, '/').split('/').slice(2).join('-');
         const title = needShowBreadcrumb ? `${routePrefix} : ${routeSuffix}` : '';
         const description = '';
 
