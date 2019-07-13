@@ -3,8 +3,6 @@ import { useEffect } from 'react';
 import { inject, observer } from 'mobx-react';
 import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
 
-import { JsonLd } from 'react-schemaorg';
-
 import { PostStore } from '../../stores/post.store';
 import { PropsWithRoute } from '../../../router';
 
@@ -13,6 +11,7 @@ import Helmet from '../../../core/components/Helmet';
 import PostContent from '../../components/PostContent';
 import PostTOC from '../../components/PostTOC';
 import PostComment from '../../components/PostComment';
+import PostJsonLd from '../../components/PostJsonLd';
 
 import * as config from '@/config.json';
 
@@ -66,7 +65,7 @@ const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject(
             keywords={post.metadata.tags && post.metadata.tags.join(',')}
             opengraph={post.opengraph}
           />
-          <JsonLd item={post.jsonld} />
+          <PostJsonLd item={post.jsonld} />
 
           <div className={classes.content}>
             <PostContent html={post.html} />
