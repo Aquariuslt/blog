@@ -2,7 +2,7 @@
   "name": "@types/blog-schemas",
   "private": true,
   "version": "5.0.0",
-  "description": "blog markdown-util",
+  "description": "blog schemas definitions",
   "author": "Aquariuslt<superaquariuslt@gmail.com>",
   "license": "MIT",
   "types": "index.d.ts"

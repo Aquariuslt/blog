@@ -139,6 +139,7 @@ declare namespace BlogModel {
     images?: string[];
     summary?: string;
     opengraph?: OpenGraph.Meta;
+    jsonld?: Article;
   }
 
   export interface Metadata {

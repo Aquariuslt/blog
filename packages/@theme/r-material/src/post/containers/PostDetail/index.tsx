@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { inject, observer } from 'mobx-react';
 import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
 
+import { JsonLd } from 'react-schemaorg';
+
 import { PostStore } from '../../stores/post.store';
 import { PropsWithRoute } from '../../../router';
 
@@ -64,6 +66,8 @@ const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject(
             keywords={post.metadata.tags && post.metadata.tags.join(',')}
             opengraph={post.opengraph}
           />
+          <JsonLd item={post.jsonld} />
+
           <div className={classes.content}>
             <PostContent html={post.html} />
             {config.features.disqus && (

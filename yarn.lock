@@ -11313,6 +11313,11 @@ react-router@5.0.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
+react-schemaorg@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-schemaorg/-/react-schemaorg-1.0.0.tgz#976a036a965eca597db8682455a2e7c8cd95f0b0"
+  integrity sha512-dMSxyXBeFB0A3VLpsGLMK8W1rMh05+N7YzlBgp0WLMqt+9Y1yHDCO/gR4+dK8lu9574kknYomeZr79woBtFRYw==
+
 react-side-effect@^1.1.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
@@ -11909,6 +11914,11 @@ scheduler@^0.13.6:
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+
+schema-dts@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/schema-dts/-/schema-dts-0.4.1.tgz#1e2bef961a9e04253c988378247203600f09a0db"
+  integrity sha512-7QKzNBOdfYcvC4YHZhN+opENHIo2ONZz1RO56Uz2UlJ1hWjAXDk6pQtwBs4BRjnHwD7JH5wIaewPPXK3w+QK+g==
 
 schema-utils@^0.4.5:
   version "0.4.7"
