@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Navigation from './core/components/Navigation';
 import Profile from './core/components/Profile';
-import DocHead from './core/components/DocHead';
+import Helmet from './core/components/Helmet';
 
 import * as config from '@/config.json';
 import { RouteConfig, RouteWithSubRoutes } from './router';
@@ -28,17 +28,13 @@ export default class App extends React.Component<AppProps> {
 
     return (
       <Router>
-        <CssBaseline/>
-        <DocHead
-          title={site.title}
-          description={site.description}
-          root={true}
-        />
+        <CssBaseline />
+        <Helmet title={site.title} description={site.description} root={true} />
         <Navigation
           title={site.title}
           menus={menus}
           profile={
-            <Profile name={site.author} avatar={site.avatar} description={site.description} subtitle={site.subtitle}/>
+            <Profile name={site.author} avatar={site.avatar} description={site.description} subtitle={site.subtitle} />
           }
         >
           <div>

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@theme/r-material: core/components: LocaleSelect # should change locale when click and select language select menu 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(WithFormControlContext(ForwardRef(InputLabel)))
+    className="makeStyles-label-2"
+    htmlFor="select-locale"
+  >
+    Language
+  </WithStyles(WithFormControlContext(ForwardRef(InputLabel)))>
+  <WithStyles(WithFormControlContext(ForwardRef(Select)))
+    aria-label="Language"
+    className="makeStyles-select-3"
+    inputProps={
+      Object {
+        "id": "select-locale",
+        "name": "locale",
+      }
+    }
+    onChange={[Function]}
+    value="en"
+  >
+    <WithStyles(ForwardRef(MenuItem))
+      value="zh"
+    >
+      Chinese
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
+      value="en"
+    >
+      English
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(WithFormControlContext(ForwardRef(Select)))>
+</div>
+`;
+
+exports[`@theme/r-material: core/components: LocaleSelect # should mount LocaleSelect component w/o i18next options correctly 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(WithFormControlContext(ForwardRef(InputLabel)))
+    className="makeStyles-label-2"
+    htmlFor="select-locale"
+  >
+    core.locale.select.label
+  </WithStyles(WithFormControlContext(ForwardRef(InputLabel)))>
+  <WithStyles(WithFormControlContext(ForwardRef(Select)))
+    aria-label="core.locale.select.label"
+    className="makeStyles-select-3"
+    inputProps={
+      Object {
+        "id": "select-locale",
+        "name": "locale",
+      }
+    }
+    onChange={[Function]}
+  >
+    <WithStyles(ForwardRef(MenuItem))
+      value="zh"
+    >
+      core.locale.select.option.zh
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
+      value="en"
+    >
+      core.locale.select.option.en
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(WithFormControlContext(ForwardRef(Select)))>
+</div>
+`;

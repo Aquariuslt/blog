@@ -6,7 +6,7 @@ site:
   author: Aquariuslt
   avatar: https://avatars2.githubusercontent.com/u/6554061?s=460&v=4
   subtitle: TL; DR
-  description: Personal Blog
+  description: Personal Blog | Coder | WoWer | On the way.
   language: zh
 
 build:
@@ -17,9 +17,9 @@ build:
   theme: '@theme/v-material'
   colors:
     primary:
-      light: '#ffffff'
-      main: '#fafafa'
-      dark: '#c7c7c7'
+      light: '#FFFFFF'
+      main: '#FAFAFA'
+      dark: '#C7C7C7'
       contrastText: '#000000'
 
 features:

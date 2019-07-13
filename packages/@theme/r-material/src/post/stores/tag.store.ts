@@ -8,21 +8,17 @@ export class TagStore {
   @observable tags: BlogApiModel.TagsOverview = [];
 
   @action loadTags(): void {
-    tagApi.loadTags().then(
-      (apiResult): void => {
-        runInAction(
-          (): void => {
-            this.tags = apiResult.data;
-            navigationStore.registerMenus(this.toMenus());
-          }
-        );
-      }
-    );
+    tagApi.loadTags().then((apiResult): void => {
+      runInAction((): void => {
+        this.tags = apiResult.data;
+        navigationStore.registerMenus(this.toMenus());
+      });
+    });
   }
 
   toMenus(): NavMenu {
     return {
-      name: 'Tags',
+      name: 'post.navigation.tag.label',
       link: '/tags',
       icon: 'bookmark',
       priority: 5,

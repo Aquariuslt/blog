@@ -7,21 +7,17 @@ export class CategoryStore {
   @observable categories: BlogApiModel.CategoriesOverview = [];
 
   @action loadCategories(): void {
-    categoryApi.loadCategories().then(
-      (apiResult): void => {
-        runInAction(
-          (): void => {
-            this.categories = apiResult.data;
-            navigationStore.registerMenus(this.toMenus());
-          }
-        );
-      }
-    );
+    categoryApi.loadCategories().then((apiResult): void => {
+      runInAction((): void => {
+        this.categories = apiResult.data;
+        navigationStore.registerMenus(this.toMenus());
+      });
+    });
   }
 
   toMenus(): NavMenu {
     return {
-      name: 'Categories',
+      name: 'post.navigation.category.label',
       link: '/categories',
       icon: 'category',
       priority: 5,

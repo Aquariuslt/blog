@@ -6,10 +6,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 
-
 import { NavMenu } from '../../stores/navigation.store';
 import BundledIcon from '../../components/BundledIcon';
 import RoutingItem from '../../components/RoutingItem';
+import { useTranslation } from 'react-i18next';
 
 type RoutingItemListProps = NavMenu;
 
@@ -30,6 +30,7 @@ const RoutingItemList: React.ComponentType<RoutingItemListProps> = (props: Routi
   const classes = useStyles(theme);
 
   const [open, setOpen] = React.useState(false);
+  const [t] = useTranslation();
 
   function toggleOpen(): void {
     setOpen(!open);
@@ -39,10 +40,10 @@ const RoutingItemList: React.ComponentType<RoutingItemListProps> = (props: Routi
     <List component="nav" className={classes.root}>
       <ListItem component="div" button onClick={toggleOpen} aria-label="Toggle Menu">
         <ListItemIcon>
-          <BundledIcon type={props.icon || 'menu'}/>
+          <BundledIcon type={props.icon || 'menu'} />
         </ListItemIcon>
-        <ListItemText primary={props.name}/>
-        {open ? <BundledIcon type="expandLess"/> : <BundledIcon type="expandMore"/>}
+        <ListItemText primary={t(props.name)} />
+        {open ? <BundledIcon type="expandLess" /> : <BundledIcon type="expandMore" />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>

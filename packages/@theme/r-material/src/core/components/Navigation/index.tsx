@@ -3,6 +3,7 @@ import { PropsWithChildren, ReactNode } from 'react';
 import classnames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -12,6 +13,7 @@ import Link from '@material-ui/core/Link';
 
 import RoutingItemList from '../RoutingItemList';
 import BundledIcon from '../../components/BundledIcon';
+import LocaleSelect from '../../components/LocaleSelect';
 
 import { NavMenu } from '../../stores/navigation.store';
 
@@ -93,10 +95,7 @@ const useStyles = makeStyles(
   })
 );
 
-
-const Navigation: React.ComponentType<NavigationProps> = (
-  props: PropsWithChildren<NavigationProps>
-): JSX.Element => {
+const Navigation: React.ComponentType<NavigationProps> = (props: PropsWithChildren<NavigationProps>): JSX.Element => {
   const theme: Theme = useTheme();
   const classes = useStyles(theme);
   const [t] = useTranslation();
@@ -113,7 +112,7 @@ const Navigation: React.ComponentType<NavigationProps> = (
 
   return (
     <div className={classes.root}>
-      <CssBaseline/>
+      <CssBaseline />
       <AppBar
         position="fixed"
         className={classnames(classes.appBar, {
@@ -129,16 +128,10 @@ const Navigation: React.ComponentType<NavigationProps> = (
             href=""
             className={classnames(classes.menuButton, open && classes.hide)}
           >
-            <BundledIcon type="menu"/>
+            <BundledIcon type="menu" />
           </IconButton>
 
-          <Link
-            component="a"
-            href="/"
-            variant="h6"
-            color="inherit"
-            className={classes.title}
-          >
+          <Link component="a" href="/" variant="h6" color="inherit" className={classes.title}>
             {props.title}
           </Link>
         </Toolbar>
@@ -158,8 +151,9 @@ const Navigation: React.ComponentType<NavigationProps> = (
             aria-label={t('core.navigation.close_drawer')}
             onClick={handleDrawerClose}
             href=""
-            className={classes.drawerButton}>
-            <BundledIcon type="chevronLeft"/>
+            className={classes.drawerButton}
+          >
+            <BundledIcon type="chevronLeft" />
           </IconButton>
         </div>
 
@@ -168,13 +162,16 @@ const Navigation: React.ComponentType<NavigationProps> = (
             <RoutingItemList key={index} {...menu} />
           )
         )}
+
+        <Box flexShrink={1} height={'100%'} />
+        <LocaleSelect />
       </Drawer>
       <main
         className={classnames(classes.content, {
           [classes.contentShift]: open
         })}
       >
-        <div className={classes.drawerSpace}/>
+        <div className={classes.drawerSpace} />
         {props.children}
       </main>
     </div>

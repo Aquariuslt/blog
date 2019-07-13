@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Helmet from 'react-helmet';
+import RHelmet from 'react-helmet';
 
 
 interface DocHeadProps {
@@ -18,11 +18,11 @@ const DEFAULT_DOC_HEAD = {
   title: ''
 };
 
-const DOC_HEAD_BASE_KEY = '__DOC_HEAD_BASE_KEY__';
+const HELMET_BASE_KEY = '__HELMET_BASE_KEY__';
 const TITLE_SPLIT_KEY = ' | ';
 const KEYWORD_JOIN_KEY = ',';
 
-const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.Element => {
+const Helmet: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.Element => {
 
   const getTitle = (propsTitle, baseTitle): string => {
     const showBaseTitle = (propsTitle === baseTitle || propsTitle === '');
@@ -55,10 +55,10 @@ const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.El
 
 
   if (props.root) {
-    window[DOC_HEAD_BASE_KEY] = props;
+    window[HELMET_BASE_KEY] = props;
   }
 
-  const defaultProps = window[DOC_HEAD_BASE_KEY] || DEFAULT_DOC_HEAD;
+  const defaultProps = window[HELMET_BASE_KEY] || DEFAULT_DOC_HEAD;
 
   const title = getTitle(props.title, defaultProps.title);
   const description = getDescription(props.description, defaultProps.description);
@@ -67,7 +67,7 @@ const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.El
   const ogMeta = getOpengraph(props.opengraph, defaultProps.opengraph);
 
   return (
-    <Helmet>
+    <RHelmet>
       <title>{title}</title>
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywords}/>
@@ -78,9 +78,9 @@ const DocHead: React.ComponentType<DocHeadProps> = (props: DocHeadProps): JSX.El
           <meta property={key} content={ogMeta[key]} key={key}/>
         ))
       }
-    </Helmet>
+    </RHelmet>
   );
 };
 
 
-export default DocHead;
+export default Helmet;

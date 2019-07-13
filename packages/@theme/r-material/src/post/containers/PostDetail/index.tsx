@@ -6,18 +6,17 @@ import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/s
 import { PostStore } from '../../stores/post.store';
 import { PropsWithRoute } from '../../../router';
 
-import DocHead from '../../../core/components/DocHead';
+import Helmet from '../../../core/components/Helmet';
 
 import PostContent from '../../components/PostContent';
 import PostTOC from '../../components/PostTOC';
 import PostComment from '../../components/PostComment';
 
-
-import * as  config from '@/config.json';
+import * as config from '@/config.json';
 
 type PostDetailProps = {} & {
   postStore: PostStore;
-}
+};
 
 const useStyles = makeStyles(
   (theme: Theme): StyleRules =>
@@ -47,10 +46,9 @@ const useStyles = makeStyles(
     })
 );
 
-
 const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject('postStore')(
-  observer((props: PropsWithRoute<PostDetailProps>): JSX.Element => {
-
+  observer(
+    (props: PropsWithRoute<PostDetailProps>): JSX.Element => {
       const classes = useStyles();
       useEffect((): void => {
         props.postStore.loadPost(props.match.url);
@@ -60,32 +58,30 @@ const PostDetail: React.ComponentType<PropsWithRoute<PostDetailProps>> = inject(
 
       return (
         <div className={classes.root}>
-          <DocHead
+          <Helmet
             title={post.metadata.title}
             description={post.summary}
             keywords={post.metadata.tags && post.metadata.tags.join(',')}
             opengraph={post.opengraph}
           />
           <div className={classes.content}>
-            <PostContent html={post.html}/>
-            {
-              config.features.disqus &&
+            <PostContent html={post.html} />
+            {config.features.disqus && (
               <PostComment
                 shortname={config.features.disqus}
                 identifier={props.match.url.replace(/\//g, '-')}
                 title={post.metadata.title}
                 url={location.href}
               />
-            }
+            )}
           </div>
           <div className={classes.nav}>
-            <PostTOC contents={post.toc}/>
+            <PostTOC contents={post.toc} />
           </div>
         </div>
       );
     }
   )
 );
-
 
 export default PostDetail;

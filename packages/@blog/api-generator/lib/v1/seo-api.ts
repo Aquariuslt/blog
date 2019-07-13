@@ -1,4 +1,5 @@
 import * as sm from 'sitemap';
+import { SitemapItemOptions } from 'sitemap';
 import robotstxt from 'generate-robotstxt';
 import { Feed } from 'feed';
 import { format } from 'date-fns';
@@ -57,7 +58,7 @@ function generateFeedsApi(config: Config.Site, data: BlogModel.Post[]): BlogApiM
 }
 
 function generateSiteMapApi(config: Config.Site, data: BlogModel.Post[]): BlogApiModel.ApiQuery {
-  const toSitemapUrl = (post: BlogModel.Post): object => ({
+  const toSitemapUrl = (post: BlogModel.Post): SitemapItemOptions => ({
     url: buildPostPermalink(post.metadata.created, post.filename)
   });
 

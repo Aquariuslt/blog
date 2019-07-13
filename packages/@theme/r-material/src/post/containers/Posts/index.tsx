@@ -9,11 +9,11 @@ import { PropsWithRoute } from '../../../router';
 
 import PostCard from '../../components/PostCard';
 import PostNavBreadcrumbs from '../../components/PostNavBreadcrumbs';
-import DocHead from '../../../core/components/DocHead';
+import Helmet from '../../../core/components/Helmet';
 
 type PostsProps = {} & {
   postStore: PostStore;
-}
+};
 
 const useStyles = makeStyles(
   (theme: Theme): StyleRules =>
@@ -29,44 +29,39 @@ const useStyles = makeStyles(
     })
 );
 
+const Posts: React.ComponentType<PropsWithRoute<PostsProps>> = inject('postStore')(
+  observer(
+    (props: PropsWithRoute<PostsProps>): JSX.Element => {
+      const classes = useStyles();
 
-const Posts: React.ComponentType<PropsWithRoute<PostsProps>> =
-  inject('postStore')(
-    observer((props: PropsWithRoute<PostsProps>): JSX.Element => {
-        const classes = useStyles();
+      useEffect((): void => {
+        props.postStore.loadPosts(props.match.url);
+      }, [props.match.url]);
 
-        useEffect((): void => {
-          props.postStore.loadPosts(props.match.url);
-        }, [props.match.url]);
+      const posts = props.postStore.posts;
+      const needShowBreadcrumb = !(props.match.url === '' || props.match.url === '/');
 
-        const posts = props.postStore.posts;
-        const needShowBreadcrumb = !(props.match.url === '' || props.match.url === '/');
+      const routePrefix = capitalize(props.match.url.split('/')[1]);
+      const routeSuffix = trimEnd(props.match.url, '/')
+        .split('/')
+        .slice(2)
+        .join('-');
+      const title = needShowBreadcrumb ? `${routePrefix} : ${routeSuffix}` : '';
+      const description = '';
 
-        const routePrefix = capitalize(props.match.url.split('/')[1]);
-        const routeSuffix = trimEnd(props.match.url, '/').split('/').slice(2).join('-');
-        const title = needShowBreadcrumb ? `${routePrefix} : ${routeSuffix}` : '';
-        const description = '';
-
-
-        return (
-          <div className={classes.root}>
-            <DocHead
-              title={title}
-              description={description}
-            />
-            {
-              needShowBreadcrumb &&
-              <PostNavBreadcrumbs path={props.match.url}/>
-            }
-            {
-              posts.map((post: BlogModel.Post): JSX.Element => (
-                  <PostCard key={post.filename} {...post} />
-                )
-              )
-            }
-          </div>
-        );
-      }
-    ));
+      return (
+        <div className={classes.root}>
+          <Helmet title={title} description={description} />
+          {needShowBreadcrumb && <PostNavBreadcrumbs path={props.match.url} />}
+          {posts.map(
+            (post: BlogModel.Post): JSX.Element => (
+              <PostCard key={post.filename} {...post} />
+            )
+          )}
+        </div>
+      );
+    }
+  )
+);
 
 export default Posts;

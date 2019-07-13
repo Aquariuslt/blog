@@ -58,6 +58,11 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
         />
       </WithStyles(ForwardRef(IconButton))>
     </div>
+    <Styled(MuiBox)
+      flexShrink={1}
+      height="100%"
+    />
+    <LocaleSelect />
   </WithStyles(ForwardRef(Drawer))>
   <main
     className="makeStyles-content-12"
@@ -127,6 +132,11 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
         />
       </WithStyles(ForwardRef(IconButton))>
     </div>
+    <Styled(MuiBox)
+      flexShrink={1}
+      height="100%"
+    />
+    <LocaleSelect />
   </WithStyles(ForwardRef(Drawer))>
   <main
     className="makeStyles-content-12 makeStyles-contentShift-13"
@@ -234,6 +244,11 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
       name="Tags"
       priority={3}
     />
+    <Styled(MuiBox)
+      flexShrink={1}
+      height="100%"
+    />
+    <LocaleSelect />
   </WithStyles(ForwardRef(Drawer))>
   <main
     className="makeStyles-content-12"
@@ -347,6 +362,11 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
       name="Tags"
       priority={3}
     />
+    <Styled(MuiBox)
+      flexShrink={1}
+      height="100%"
+    />
+    <LocaleSelect />
   </WithStyles(ForwardRef(Drawer))>
   <main
     className="makeStyles-content-12"

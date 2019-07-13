@@ -3,5 +3,8 @@
   "version": "5.0.0",
   "main": "src/index.tsx",
   "esnext": "src/index.tsx",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "test": "__tests__"
+  }
 }
