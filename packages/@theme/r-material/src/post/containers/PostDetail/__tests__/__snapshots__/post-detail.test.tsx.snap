@@ -4196,7 +4196,7 @@ Apache Shiro 是一款Java的安全框架,通常用作Web应用的权限校验,�
       <div
         className="makeStyles-root-1"
       >
-        <DocHead
+        <Helmet
           title=""
         >
           <HelmetWrapper
@@ -4241,7 +4241,7 @@ Apache Shiro 是一款Java的安全框架,通常用作Web应用的权限校验,�
               />
             </SideEffect(NullComponent)>
           </HelmetWrapper>
-        </DocHead>
+        </Helmet>
         <div
           className="makeStyles-content-3"
         >

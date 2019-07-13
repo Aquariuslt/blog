@@ -2,22 +2,22 @@ import * as _ from 'lodash';
 import * as React from 'react';
 import * as Enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
-import Helmet from 'react-helmet';
+import RHelmet from 'react-helmet';
 
-import DocHead from '../';
+import Helmet from '../';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('@theme/r-material: core/components/DocHead', (): void => {
+describe('@theme/r-material: core/components/RHelmet', (): void => {
   it('# should mount without root meta', (): void => {
 
     const expectedTitle = 'Awesome Website';
 
     Enzyme.mount(
-      <DocHead title={expectedTitle}/>
+      <Helmet title={expectedTitle}/>
     );
 
-    const helmet = Helmet.peek();
+    const helmet = RHelmet.peek();
     expect(helmet.title).toEqual(expectedTitle);
 
   });
@@ -31,14 +31,14 @@ describe('@theme/r-material: core/components/DocHead', (): void => {
 
     Enzyme.mount(
       <div>
-        <DocHead title={baseTitle} root={true}/>
+        <Helmet title={baseTitle} root={true}/>
 
         <div>
-          <DocHead title={subRouteTitle}/>
+          <Helmet title={subRouteTitle}/>
         </div>
       </div>
     );
-    const helmet = Helmet.peek();
+    const helmet = RHelmet.peek();
     expect(helmet.title).toEqual(expectedTitle);
 
   });
@@ -58,13 +58,13 @@ describe('@theme/r-material: core/components/DocHead', (): void => {
 
     Enzyme.mount(
       <div>
-        <DocHead
+        <Helmet
           title={baseTitle}
           opengraph={mockOpenGraph}
         />
       </div>
     );
-    const helmet = Helmet.peek();
+    const helmet = RHelmet.peek();
     expect(helmet.title).toEqual(baseTitle);
     expect(helmet.metaTags).not.toBeUndefined();
 

@@ -8,7 +8,10 @@ category: Blog
 tags:
 - NPM
 - CI
-- GithubActions
+- Github
+- TravisCI
+- Actions
+- Docker
 cover: https://img.aquariuslt.com/posts/2019/07/github-actions.png
 ```
 
