@@ -3,6 +3,8 @@ declare module '*.md' {
   export = value;
 }
 
+declare module '*.properties' {}
+
 declare namespace BlogApiModel {
   interface ApiQuery {
     [path: string]: string | object | object[];
@@ -112,7 +114,6 @@ declare namespace Config {
     features: Config.Features;
   }
 
-
   export interface GoogleAnalysisConfig {
     verification: string;
     tracking: string;
@@ -166,7 +167,6 @@ declare namespace OpenGraph {
     cover: string;
     permalink: string;
     description: string;
-
 
     // article related
     author: string;

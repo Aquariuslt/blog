@@ -8,6 +8,7 @@ import StarBorder from '@material-ui/icons/StarBorder';
 import Category from '@material-ui/icons/Category';
 import Bookmark from '@material-ui/icons/Bookmark';
 import Info from '@material-ui/icons/Info';
+import Link from '@material-ui/icons/Link';
 
 interface BundleIconProps {
   type: string;
@@ -21,14 +22,15 @@ const FALLBACK_TYPE = 'menu';
  */
 const BundledIcon: React.ComponentType<BundleIconProps> = (props: BundleIconProps): JSX.Element => {
   const bundledMap = {
-    menu: <Menu/>,
-    chevronLeft: <ChevronLeft/>,
-    starBorder: <StarBorder/>,
-    expandLess: <ExpandLess/>,
-    expandMore: <ExpandMore/>,
-    category: <Category/>,
-    bookmark: <Bookmark/>,
-    info: <Info/>
+    menu: <Menu />,
+    chevronLeft: <ChevronLeft />,
+    starBorder: <StarBorder />,
+    expandLess: <ExpandLess />,
+    expandMore: <ExpandMore />,
+    category: <Category />,
+    bookmark: <Bookmark />,
+    info: <Info />,
+    link: <Link />
   };
 
   const detectIconType = (): string => {

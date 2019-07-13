@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`@theme/r-material: core/components: RoutingItem # should mount external item component with \`a\` and open with new tab 1`] = `
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  className="makeStyles-nested-3"
+  component="a"
+  href="https://somewhere.com"
+  target="_blank"
+>
+  <WithStyles(ForwardRef(ListItemIcon))>
+    <BundledIcon
+      type="starBorder"
+    />
+  </WithStyles(ForwardRef(ListItemIcon))>
+  <WithStyles(ForwardRef(ListItemText))
+    primary="routing menu"
+  />
+</WithStyles(ForwardRef(ListItem))>
+`;
+
 exports[`@theme/r-material: core/components: RoutingItem # should mount routing item component correctly 1`] = `
 <WithStyles(ForwardRef(ListItem))
   button={true}

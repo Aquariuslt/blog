@@ -31,12 +31,27 @@ const RoutingItem: React.ComponentType<RoutingItemProps> = (props: RoutingItemPr
   const theme: Theme = useTheme();
   const classes = useStyles(theme);
 
+  const isExtLink = props.ext;
+
+  const listItemInnerRenderProps = {
+    component: RouterLink,
+    to: props.link
+  };
+
+  const listItemExtRenderProps = {
+    component: 'a',
+    href: props.link,
+    target: '_blank'
+  };
+
+  const actualRenderProps = isExtLink ? listItemExtRenderProps : listItemInnerRenderProps;
+
   return (
-    <ListItem button component={RouterLink} className={classes.nested} to={props.link}>
+    <ListItem button className={classes.nested} {...actualRenderProps}>
       <ListItemIcon>
-        <BundledIcon type="starBorder"/>
+        <BundledIcon type="starBorder" />
       </ListItemIcon>
-      <ListItemText primary={props.name}/>
+      <ListItemText primary={props.name} />
     </ListItem>
   );
 };
