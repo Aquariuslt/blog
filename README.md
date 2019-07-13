@@ -8,7 +8,6 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 
-
 Personal Blog
 
 > For existing source of [https://blog.aquariuslt.com](https://blog.aquariuslt.com)
@@ -19,19 +18,12 @@ Personal Blog
 > TODO
 
 
-## Development Level Features
+## Features
 
 - [x] TypeScript (application level code only use `*.ts`)
 - [x] MultiPackages Management (with the help of `yarn workspace` and `lerna`)
-- [ ] Google Search Structured Data Support 
-- [x] RSS support
+- [x] Google Search Structured Data Support 
+- [x] RSS support (Feed/RSS/Json)
 - [x] Integration with Github Actions
 
-## Build Flow
 
-![Build Flow](./docs/imgs/build-flow.png)
-
-
-## Road Map
-
-> TODO
