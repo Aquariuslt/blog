@@ -1,11 +1,13 @@
 import * as React from 'react';
 
+import * as SmoothScroll from 'smooth-scroll';
 import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 import styles from '../../../styles';
 
-const useStyles = makeStyles((theme: Theme): StyleRules => ({
+const useStyles = makeStyles(
+  (theme: Theme): StyleRules => ({
     root: {
       width: styles.sidebar.width,
       flexShrink: 0,
@@ -50,32 +52,32 @@ interface PostTOCProps {
   contents: BlogModel.ContentItem[] | undefined;
 }
 
-
 const PostTOC: React.ComponentType<PostTOCProps> = (props: PostTOCProps): JSX.Element => {
-
   const theme = useTheme();
   const classes = useStyles();
 
+  const handleClick = (id: string) => () => {
+    const scroll = new SmoothScroll();
+    const hash = `#${id}`;
+    scroll.animateScroll(document.querySelector(hash));
+  };
 
   const ContentLink = (item: BlogModel.ContentItem): JSX.Element => {
     return (
       <React.Fragment>
         <Typography
+          onClick={handleClick(item.id)}
           component="li"
           className={classes.item}
           style={{
-            paddingLeft: theme.spacing((item.level))
+            paddingLeft: theme.spacing(item.level)
           }}
         >
           {item.label}
         </Typography>
         <Typography component="ul" className={classes.ul}>
-          {
-            item.children.length > 0 &&
-            item.children.map((child): JSX.Element => (
-              <ContentLink key={child.id}{...child} />
-            ))
-          }
+          {item.children.length > 0 &&
+            item.children.map((child): JSX.Element => <ContentLink key={child.id} {...child} />)}
         </Typography>
       </React.Fragment>
     );
@@ -83,15 +85,9 @@ const PostTOC: React.ComponentType<PostTOCProps> = (props: PostTOCProps): JSX.El
 
   return (
     <nav className={classes.root}>
-      {
-        props.contents &&
-        props.contents.map((item): JSX.Element => (
-          <ContentLink key={item.id} {...item}/>
-        ))
-      }
+      {props.contents && props.contents.map((item): JSX.Element => <ContentLink key={item.id} {...item} />)}
     </nav>
   );
 };
-
 
 export default PostTOC;
