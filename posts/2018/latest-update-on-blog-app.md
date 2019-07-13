@@ -16,7 +16,6 @@ tags:
 cover: https://picsum.photos/id/83/800/300
 ```
 
-# Latest Update on Blog App
 
 结合最近学到的一些知识，了解的一些规范，和实践过的一些新姿势，重构了 Blog 的整个应用。目前 Vue Branch 版本从`4.0.0-beta` 到了`4.0.1` ，算是可以标记 release 的一个版本了。
 
