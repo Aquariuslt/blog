@@ -37,13 +37,11 @@ export default class App extends React.Component<AppProps> {
             <Profile name={site.author} avatar={site.avatar} description={site.description} subtitle={site.subtitle} />
           }
         >
-          <div>
-            {$this.props.routes.map(
-              (route, i): JSX.Element => (
-                <RouteWithSubRoutes key={i} {...route} />
-              )
-            )}
-          </div>
+          {$this.props.routes.map(
+            (route, i): JSX.Element => (
+              <RouteWithSubRoutes key={i} {...route} />
+            )
+          )}
         </Navigation>
       </Router>
     );
