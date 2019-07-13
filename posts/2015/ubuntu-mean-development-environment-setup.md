@@ -165,7 +165,7 @@ $n v4.2.3
 
 重启电脑
 之后在查看`node`和`npm`版本,应该如下图
-![更新Node.js](https://img.alicdn.com/tfscom/TB1JHnGKVXXXXaFXVXXXXXXXXXX.png)
+![更新Node.js](https://img.aquariuslt.com/posts/2015/12/update-nodejs.webp)
 
 
 ## Linux下Node-OracleDB的配置
@@ -204,7 +204,7 @@ export ORACLE_HOME=$OCI_LIB_DIR
 export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH
 ```
 
-![添加Oracle Client 相关全局环境变量](https://img.alicdn.com/tfscom/TB1PA2SKVXXXXX2XpXXXXXXXXXX.png)
+![添加Oracle Client 相关全局环境变量](https://img.aquariuslt.com/posts/2015/12/add-oracle-cli-global-env-var.webp)
 
 此时执行命令安装 `oracledb` 大概应该不会出问题了
 > 其实还有个小问题,`oracledb`得必须是1.3.0 以上的版本..不然爆的错我也无法入手解决
@@ -249,7 +249,7 @@ $java -version
 ```
 
 
-![配置JDK路径](https://img.alicdn.com/tfscom/TB10eYyKVXXXXc8aXXXXXXXXXXX.png)
+![配置JDK路径](https://img.aquariuslt.com/posts/2015/12/config-jdk-path.webp)
 
 
 ### 配置Idea在Ubuntu中的启动图标
@@ -271,7 +271,7 @@ Terminal=false
 Categories=Development;IDE;Java;
 ```
 
-![添加Ubuntu Applications启动图标](https://img.alicdn.com/tfscom/TB100DBKVXXXXbCaXXXXXXXXXXX.png)
+![添加Ubuntu Applications启动图标](https://img.aquariuslt.com/posts/2015/12/add-app-launch-icon.webp)
 
 
 
@@ -285,7 +285,7 @@ Liux下在`run configuration`里面添加新的`Node.js`脚本或者`shell`脚�
 在`Run Configurations`->`Environment Variables`->`Include Parents Variables`->`Show` 查看所有环境变量.
 如果没有,烦请自己加上,为求能达到与Terminal运行同样的结果.
 
-![查看Run Configurations全局变量](https://img.alicdn.com/tfscom/TB1ik2EKVXXXXaxaXXXXXXXXXXX.png)
+![查看Run Configurations全局变量](https://img.aquariuslt.com/posts/2015/12/check-run-configuration.webp)
 
 
 

@@ -357,7 +357,7 @@ hduser@hd-worker-a:~$ jps
 
 或者可以通过浏览器访问[https://master:8088](https://master:8088) 或者[https://master:50070](https://master:50070) 查看 Hadoop 服务状态.
 
-![Nodes of the cluster](https://img.alicdn.com/tfscom/TB1vHd.MpXXXXXDXFXXXXXXXXXX.png) ![Namenode information](https://img.alicdn.com/tfscom/TB16f8YMpXXXXbJXVXXXXXXXXXX.png)
+![Nodes of the cluster](https://img.aquariuslt.com/2016/04/nodes-of-the-cluster.png) ![Namenode information](https://img.alicdn.com/tfscom/TB16f8YMpXXXXbJXVXXXXXXXXXX.png)
 
 P.S.关于`jps`命令. jps 位于 jdk 的 bin 目录下,其作用是显示当前系统的 java 进程情况,及其 id 号. jps 相当于 linux 进程工具 ps,但是不支持管道命令 grep jps 并不使用应用程序名来查找 JVM 实例.
 
