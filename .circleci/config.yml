@@ -94,7 +94,7 @@ jobs:
           command: >
             gh-pages
             --dist dist
-            --repo https://${CODING_TOKEN}@coding.net/aquariuslt/aquariuslt.coding.me.git
+            --repo https://aquariuslt:${CODING_TOKEN}@git.coding.net/aquariuslt/aquariuslt.coding.me.git
             --branch master
             --silent
 
