@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { PropsWithChildren, ReactNode } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import classnames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
@@ -125,13 +126,12 @@ const Navigation: React.ComponentType<NavigationProps> = (props: PropsWithChildr
             aria-label={t('core.navigation.open_drawer')}
             onClick={handleDrawerOpen}
             edge="start"
-            href=""
             className={classnames(classes.menuButton, open && classes.hide)}
           >
             <BundledIcon type="menu" />
           </IconButton>
 
-          <Link component="a" href="/" variant="h6" color="inherit" className={classes.title}>
+          <Link component={RouterLink} to="/" variant="h6" color="inherit" className={classes.title}>
             {props.title}
           </Link>
         </Toolbar>
@@ -150,7 +150,6 @@ const Navigation: React.ComponentType<NavigationProps> = (props: PropsWithChildr
           <IconButton
             aria-label={t('core.navigation.close_drawer')}
             onClick={handleDrawerClose}
-            href=""
             className={classes.drawerButton}
           >
             <BundledIcon type="chevronLeft" />

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { createStyles, makeStyles, StyleRules, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -12,7 +13,6 @@ import Button from '@material-ui/core/Button';
 import styles from '../../../styles';
 
 type PostCardProps = BlogModel.Post;
-
 
 const useStyles = makeStyles(
   (theme: Theme): StyleRules =>
@@ -45,25 +45,11 @@ const PostCard: React.ComponentType<PostCardProps> = (props: PostCardProps): JSX
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      className={classes.root}
-    >
-      <Grid
-        item
-        xs={12}
-        sm={12}
-        md={12}
-        lg={12}
-        xl={12}
-        className={classes.root}
-      >
+    <Grid container className={classes.root}>
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.root}>
         <Card className={classes.card}>
-          <CardActionArea
-            href={POST_URL_PREFIX + props.permalink}
-          >
-            {
-              props.metadata.cover &&
+          <CardActionArea component={RouterLink} to={POST_URL_PREFIX + props.permalink}>
+            {props.metadata.cover && (
               <CardMedia
                 component="img"
                 alt={props.metadata.title}
@@ -71,7 +57,7 @@ const PostCard: React.ComponentType<PostCardProps> = (props: PostCardProps): JSX
                 image={props.metadata.cover}
                 title={props.metadata.title}
               />
-            }
+            )}
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 {props.metadata.title}
@@ -82,7 +68,7 @@ const PostCard: React.ComponentType<PostCardProps> = (props: PostCardProps): JSX
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button href="" size="small">{props.metadata.created}</Button>
+            <Button size="small">{props.metadata.created}</Button>
           </CardActions>
         </Card>
       </Grid>

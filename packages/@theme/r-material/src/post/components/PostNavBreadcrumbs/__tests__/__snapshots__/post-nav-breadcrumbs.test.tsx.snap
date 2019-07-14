@@ -23,17 +23,17 @@ exports[`@theme/r-material: post/component: PostNavBreadcrumbs # should mount co
       >
         <WithStyles(ForwardRef(Link))
           color="inherit"
-          component="a"
-          href="/categories"
+          component={[Function]}
           key="/categories"
+          to="/categories"
         >
           Categories
         </WithStyles(ForwardRef(Link))>
         <WithStyles(ForwardRef(Link))
           color="textPrimary"
-          component="a"
-          href="/categories/some-category"
+          component={[Function]}
           key="/categories/some-category"
+          to="/categories/some-category"
         >
           Some-category
         </WithStyles(ForwardRef(Link))>
@@ -66,33 +66,33 @@ exports[`@theme/r-material: post/component: PostNavBreadcrumbs # should mount wi
       >
         <WithStyles(ForwardRef(Link))
           color="inherit"
-          component="a"
-          href="/posts"
+          component={[Function]}
           key="/posts"
+          to="/posts"
         >
           Posts
         </WithStyles(ForwardRef(Link))>
         <WithStyles(ForwardRef(Link))
           color="inherit"
-          component="a"
-          href="/posts/2019"
+          component={[Function]}
           key="/posts/2019"
+          to="/posts/2019"
         >
           2019
         </WithStyles(ForwardRef(Link))>
         <WithStyles(ForwardRef(Link))
           color="inherit"
-          component="a"
-          href="/posts/2019/06"
+          component={[Function]}
           key="/posts/2019/06"
+          to="/posts/2019/06"
         >
           06
         </WithStyles(ForwardRef(Link))>
         <WithStyles(ForwardRef(Link))
           color="textPrimary"
-          component="a"
-          href="/posts/2019/06/05"
+          component={[Function]}
           key="/posts/2019/06/05"
+          to="/posts/2019/06/05"
         >
           05
         </WithStyles(ForwardRef(Link))>

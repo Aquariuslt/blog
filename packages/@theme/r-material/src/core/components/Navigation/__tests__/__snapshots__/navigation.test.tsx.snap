@@ -15,7 +15,6 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
         className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon
@@ -25,8 +24,8 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
       <WithStyles(ForwardRef(Link))
         className="makeStyles-title-4"
         color="inherit"
-        component="a"
-        href="/"
+        component={[Function]}
+        to="/"
         variant="h6"
       >
         title
@@ -50,7 +49,6 @@ exports[`@theme/r-material: core/components: Navigation # should mount Navigatio
       <WithStyles(ForwardRef(IconButton))
         aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon
@@ -89,7 +87,6 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
         className="makeStyles-menuButton-5 makeStyles-hide-6"
         color="inherit"
         edge="start"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon
@@ -99,8 +96,8 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
       <WithStyles(ForwardRef(Link))
         className="makeStyles-title-4"
         color="inherit"
-        component="a"
-        href="/"
+        component={[Function]}
+        to="/"
         variant="h6"
       >
         title
@@ -124,7 +121,6 @@ exports[`@theme/r-material: core/components: Navigation # should show SideBar wh
       <WithStyles(ForwardRef(IconButton))
         aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon
@@ -163,7 +159,6 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
         className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon
@@ -173,8 +168,8 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
       <WithStyles(ForwardRef(Link))
         className="makeStyles-title-4"
         color="inherit"
-        component="a"
-        href="/"
+        component={[Function]}
+        to="/"
         variant="h6"
       >
         title
@@ -198,7 +193,6 @@ exports[`@theme/r-material: core/components: Navigation # should show menus when
       <WithStyles(ForwardRef(IconButton))
         aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon
@@ -275,7 +269,6 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
         className="makeStyles-menuButton-5"
         color="inherit"
         edge="start"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon
@@ -285,8 +278,8 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
       <WithStyles(ForwardRef(Link))
         className="makeStyles-title-4"
         color="inherit"
-        component="a"
-        href="/"
+        component={[Function]}
+        to="/"
         variant="h6"
       >
         title
@@ -316,7 +309,6 @@ exports[`@theme/r-material: core/components: Navigation # should show profile wh
       <WithStyles(ForwardRef(IconButton))
         aria-label="core.navigation.close_drawer"
         className="makeStyles-drawerButton-11"
-        href=""
         onClick={[Function]}
       >
         <BundledIcon

@@ -18,7 +18,8 @@ exports[`@theme/r-material: post/component: PostCard # should mount correctly 1`
       className="makeStyles-card-2"
     >
       <WithStyles(ForwardRef(CardActionArea))
-        href="/posts/2015/10/25/apache-shiro-spring-integration"
+        component={[Function]}
+        to="/posts/2015/10/25/apache-shiro-spring-integration"
       >
         <WithStyles(ForwardRef(CardContent))>
           <WithStyles(ForwardRef(Typography))
@@ -41,7 +42,6 @@ Apache Shiro 是一款Java的安全框架,通常用作Web应用的权限校验,�
       </WithStyles(ForwardRef(CardActionArea))>
       <WithStyles(ForwardRef(CardActions))>
         <WithStyles(ForwardRef(Button))
-          href=""
           size="small"
         >
           2015-10-25
@@ -70,7 +70,8 @@ exports[`@theme/r-material: post/component: PostCard # should mount with cover c
       className="makeStyles-card-2"
     >
       <WithStyles(ForwardRef(CardActionArea))
-        href="/posts/2015/10/25/apache-shiro-spring-integration"
+        component={[Function]}
+        to="/posts/2015/10/25/apache-shiro-spring-integration"
       >
         <WithStyles(ForwardRef(CardMedia))
           alt="Spring 整合 Apache Shiro 实现各等级的权限管理"
@@ -100,7 +101,6 @@ Apache Shiro 是一款Java的安全框架,通常用作Web应用的权限校验,�
       </WithStyles(ForwardRef(CardActionArea))>
       <WithStyles(ForwardRef(CardActions))>
         <WithStyles(ForwardRef(Button))
-          href=""
           size="small"
         >
           2015-10-25
