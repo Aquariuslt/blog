@@ -67,6 +67,7 @@ jobs:
             --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git
             --branch master
             --silent
+
   coding-deploy:
     docker:
       -
@@ -110,7 +111,7 @@ workflows:
             branches:
               only: universal-ts
       -
-        coding-deplpy:
+        coding-deploy:
           requires:
             - ci
           filters:
