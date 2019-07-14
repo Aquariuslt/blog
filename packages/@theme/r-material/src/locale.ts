@@ -13,8 +13,8 @@ const detectorOptions = {
 
   // keys or params to lookup language from
   lookupQuerystring: 'lang',
-  lookupCookie: 'locale',
-  lookupLocalStorage: 'locale',
+  lookupCookie: 'lang',
+  lookupLocalStorage: 'lang',
 
   // cache user language on
   caches: ['localStorage', 'cookie'],
@@ -31,7 +31,7 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    lng: 'zh',
+    lng: 'en',
     fallbackLng: 'zh',
     debug: process.env.NODE_ENV !== 'production',
     interpolation: {
