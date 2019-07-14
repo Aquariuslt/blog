@@ -8,7 +8,7 @@ import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
 
 import * as PrerenderSPAPlugin from 'prerender-spa-plugin';
-import * as WebpackPawManifest from 'webpack-pwa-manifest';
+import * as WebpackPwaManifest from 'webpack-pwa-manifest';
 
 import * as PuppeteerRenderer from '@prerenderer/renderer-puppeteer';
 import * as workbox from 'workbox-build';
@@ -23,7 +23,7 @@ import apiGenerator from '@blog/api-generator';
 
 const baseConfig = packageJson.config.base;
 
-const DEFAULT_BG_COLOR = '#fafafa';
+const DEFAULT_BG_COLOR = '#FAFAFA';
 const ROUTES_FILENAME = 'routes.json';
 const FALLBACK_FILENAME = '404.html';
 
@@ -35,7 +35,7 @@ gulp.task('build:webpack', (done): void => {
 
     const themeColor = config.build.colors ? config.build.colors['primary']['main'] : DEFAULT_BG_COLOR;
 
-    webpackProdConfig.plugins.push(new WebpackPawManifest({
+    webpackProdConfig.plugins.push(new WebpackPwaManifest({
       filename: baseConfig.dir.dist.manifest + '/' + 'manifest.json',
       start_url: '/',
       name: config.site.title,
@@ -96,7 +96,7 @@ gulp.task('build:service-worker', (): void => {
   return workbox.generateSW({
     globDirectory: dist,
     globPatterns: [
-      '\*\*/\*.{js,css}'
+      '\*\*/\*.{js,json,css}'
     ],
     swDest: `${dist}/sw.js`,
     clientsClaim: true,
