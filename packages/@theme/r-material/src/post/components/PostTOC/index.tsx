@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as SmoothScroll from 'smooth-scroll';
+import * as SmoothScroll from 'smooth-scroll/src/js/smooth-scroll/smooth-scroll';
 import { makeStyles, StyleRules, Theme, useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
@@ -59,7 +59,7 @@ const PostTOC: React.ComponentType<PostTOCProps> = (props: PostTOCProps): JSX.El
   const handleClick = (id: string) => () => {
     const scroll = new SmoothScroll();
     const hash = `#${id}`;
-    scroll.animateScroll(document.querySelector(hash));
+    scroll.animateScroll(document.getElementById(id));
   };
 
   const ContentLink = (item: BlogModel.ContentItem): JSX.Element => {
