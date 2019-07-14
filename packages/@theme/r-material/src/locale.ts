@@ -9,10 +9,9 @@ const toTranslation = (resource) => ({ translation: resource });
 
 const detectorOptions = {
   // order and from where user language should be detected
-  order: ['querystring', 'cookie', 'localStorage'],
+  order: ['cookie', 'localStorage'],
 
   // keys or params to lookup language from
-  lookupQuerystring: 'lang',
   lookupCookie: 'lang',
   lookupLocalStorage: 'lang',
 
