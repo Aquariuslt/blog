@@ -67,7 +67,35 @@ jobs:
             --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git
             --branch master
             --silent
-
+  coding-deploy:
+    docker:
+      -
+        image: node:10
+    working_directory: ~/blog
+    steps:
+      -
+        checkout:
+          name: Checkout
+      -
+        attach_workspace:
+          at: ~/blog
+      -
+        run:
+          name: Install Deploy Dependencies
+          command: |
+            npm install -g --silent gh-pages
+            git config user.email deploy-bot@circleci.com
+            git config user.name "circleci"
+            echo "blogcn.aquariuslt.com" > dist/CNAME
+      -
+        run:
+          name: Deploy docs to gh-pages branch at coding.me
+          command: >
+            gh-pages
+            --dist dist
+            --repo https://${CODING_TOKEN}@coding.net/aquariuslt/aquariuslt.coding.me.git
+            --branch master
+            --silent
 
 workflows:
   version: 2
@@ -81,5 +109,11 @@ workflows:
           filters:
             branches:
               only: universal-ts
-
+      -
+        coding-deplpy:
+          requires:
+            - ci
+          filters:
+            branches:
+              only: universal-ts
 
