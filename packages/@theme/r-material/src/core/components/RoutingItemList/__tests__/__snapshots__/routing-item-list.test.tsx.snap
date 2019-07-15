@@ -4,6 +4,7 @@ exports[`@theme/r-material: core/components: RoutingItemList # should mount rout
 <WithStyles(ForwardRef(List))
   className="makeStyles-root-1"
   component="nav"
+  dense={true}
 >
   <WithStyles(ForwardRef(ListItem))
     aria-label="Toggle Menu"
@@ -26,10 +27,10 @@ exports[`@theme/r-material: core/components: RoutingItemList # should mount rout
   <WithStyles(ForwardRef(Collapse))
     in={false}
     timeout="auto"
-    unmountOnExit={true}
   >
     <WithStyles(ForwardRef(List))
       component="div"
+      dense={true}
       disablePadding={true}
     >
       <RoutingItem
@@ -51,6 +52,7 @@ exports[`@theme/r-material: core/components: RoutingItemList # should mount rout
 <WithStyles(ForwardRef(List))
   className="makeStyles-root-1"
   component="nav"
+  dense={true}
 >
   <WithStyles(ForwardRef(ListItem))
     aria-label="Toggle Menu"
@@ -73,10 +75,10 @@ exports[`@theme/r-material: core/components: RoutingItemList # should mount rout
   <WithStyles(ForwardRef(Collapse))
     in={false}
     timeout="auto"
-    unmountOnExit={true}
   >
     <WithStyles(ForwardRef(List))
       component="div"
+      dense={true}
       disablePadding={true}
     />
   </WithStyles(ForwardRef(Collapse))>
@@ -87,6 +89,7 @@ exports[`@theme/r-material: core/components: RoutingItemList # should mount rout
 <WithStyles(ForwardRef(List))
   className="makeStyles-root-1"
   component="nav"
+  dense={true}
 >
   <WithStyles(ForwardRef(ListItem))
     aria-label="Toggle Menu"
@@ -109,10 +112,10 @@ exports[`@theme/r-material: core/components: RoutingItemList # should mount rout
   <WithStyles(ForwardRef(Collapse))
     in={false}
     timeout="auto"
-    unmountOnExit={true}
   >
     <WithStyles(ForwardRef(List))
       component="div"
+      dense={true}
       disablePadding={true}
     />
   </WithStyles(ForwardRef(Collapse))>

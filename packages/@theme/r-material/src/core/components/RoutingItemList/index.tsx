@@ -37,7 +37,7 @@ const RoutingItemList: React.ComponentType<RoutingItemListProps> = (props: Routi
   }
 
   return (
-    <List component="nav" className={classes.root}>
+    <List component="nav" className={classes.root} dense>
       <ListItem component="div" button onClick={toggleOpen} aria-label="Toggle Menu">
         <ListItemIcon>
           <BundledIcon type={props.icon || 'menu'} />
@@ -45,8 +45,8 @@ const RoutingItemList: React.ComponentType<RoutingItemListProps> = (props: Routi
         <ListItemText primary={t(props.name)} />
         {open ? <BundledIcon type="expandLess" /> : <BundledIcon type="expandMore" />}
       </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
+      <Collapse in={open} timeout="auto">
+        <List component="div" disablePadding dense>
           {props.child.map(
             (childProps, index): JSX.Element => (
               <RoutingItem key={index} {...childProps} />

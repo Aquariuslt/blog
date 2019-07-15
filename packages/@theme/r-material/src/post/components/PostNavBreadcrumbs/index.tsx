@@ -31,7 +31,7 @@ const useStyles = makeStyles(
       },
       breadcrumbs: {
         maxWidth: styles.content.maxWidth,
-        padding: theme.spacing(1, 1)
+        padding: theme.spacing(0, 1, 1, 1)
       }
     })
 );

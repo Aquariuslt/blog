@@ -11,6 +11,9 @@ interface ProfileProps {
 }
 
 const useStyles = makeStyles({
+  root: {
+    position: 'absolute'
+  },
   avatar: {
     margin: 10,
     width: 60,
@@ -22,8 +25,8 @@ const Profile: React.ComponentType<ProfileProps> = (props: ProfileProps): JSX.El
   const classes = useStyles();
 
   return (
-    <Grid container justify="center" alignItems="center">
-      <Avatar component="div" alt={props.name} src={props.avatar} className={classes.avatar}/>
+    <Grid container justify="center" alignItems="center" className={classes.root}>
+      <Avatar component="div" alt={props.name} src={props.avatar} className={classes.avatar} />
     </Grid>
   );
 };
