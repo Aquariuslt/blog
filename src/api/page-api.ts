@@ -1,6 +1,7 @@
 import axios, { AxiosPromise } from 'axios';
 import Post = BlogModel.Post;
 import PagesOverview = BlogApiModel.PagesOverview;
+import { trim } from 'lodash';
 
 const API_QUERY_PREFIX = '/api/v1/';
 const API_PREFIX = '/api/v1/pages';
@@ -11,6 +12,7 @@ function loadPages(): AxiosPromise<PagesOverview> {
 }
 
 function loadPage(path: string): AxiosPromise<Post> {
+  path = trim(path, '/');
   return axios.get(`${API_QUERY_PREFIX}${path}${API_SUFFIX}`);
 }
 
