@@ -5,6 +5,14 @@ exports[`@theme/r-material: post/component: PostNavBreadcrumbs # should mount co
   className="makeStyles-root-1"
   container={true}
 >
+  <script
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"BreadcrumbList\\",\\"itemListElement\\":[{\\"@type\\":\\"ListItem\\",\\"position\\":1,\\"name\\":\\"Categories\\",\\"item\\":\\"localhost/categories\\"},{\\"@type\\":\\"ListItem\\",\\"position\\":2,\\"name\\":\\"Some-category\\",\\"item\\":\\"localhost/categories/some-category\\"}]}",
+      }
+    }
+    type="application/ld+json"
+  />
   <WithStyles(ForwardRef(Grid))
     className="makeStyles-breadcrumbs-2"
     item={true}
@@ -48,6 +56,14 @@ exports[`@theme/r-material: post/component: PostNavBreadcrumbs # should mount wi
   className="makeStyles-root-1"
   container={true}
 >
+  <script
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"BreadcrumbList\\",\\"itemListElement\\":[{\\"@type\\":\\"ListItem\\",\\"position\\":1,\\"name\\":\\"Posts\\",\\"item\\":\\"localhost/posts\\"},{\\"@type\\":\\"ListItem\\",\\"position\\":2,\\"name\\":\\"2019\\",\\"item\\":\\"localhost/posts/2019\\"},{\\"@type\\":\\"ListItem\\",\\"position\\":3,\\"name\\":\\"06\\",\\"item\\":\\"localhost/posts/2019/06\\"},{\\"@type\\":\\"ListItem\\",\\"position\\":4,\\"name\\":\\"05\\",\\"item\\":\\"localhost/posts/2019/06/05\\"}]}",
+      }
+    }
+    type="application/ld+json"
+  />
   <WithStyles(ForwardRef(Grid))
     className="makeStyles-breadcrumbs-2"
     item={true}

@@ -56,6 +56,17 @@ const PostNavBreadcrumbs: React.ComponentType<PostNavBreadcrumbsProps> = (
     }
   );
 
+  const breadcrumbsJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: linkContents.map((link, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: link.label,
+      item: location.host + link.to
+    }))
+  };
+
   const links = linkContents.map(
     (link): JSX.Element => (
       <Link key={link.to} component={RouterLink} to={link.to} color={link.activated ? 'textPrimary' : 'inherit'}>
@@ -66,6 +77,7 @@ const PostNavBreadcrumbs: React.ComponentType<PostNavBreadcrumbsProps> = (
 
   return (
     <Grid container className={classes.root}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
       <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.breadcrumbs}>
         <Paper elevation={0}>
           <Breadcrumbs component="nav" area-label="Breadcrumb">
