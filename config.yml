@@ -12,6 +12,7 @@ site:
 build:
   directory:
     posts: posts
+    pages: pages
     public: dist
   favicon: src/favicon.ico
   theme: '@theme/v-material'

@@ -85,6 +85,11 @@
               "description": "markdown posts file base directory, relative to project root path",
               "default": "posts"
             },
+            "pages": {
+              "type": "string",
+              "description": "single pages file base directory, relative to project root path",
+              "default": "pages"
+            },
             "public": {
               "type": "string",
               "description": "build location path",

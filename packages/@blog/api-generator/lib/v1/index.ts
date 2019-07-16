@@ -54,7 +54,9 @@ function generateJsonLd(posts: BlogModel.Post[], config: Config.Site) {
  */
 async function generate(configPath: string, dataPath: string, outputPath: string): Promise<void> {
   const config = configParser.read(configPath);
+  const pagesFilePath = config.build.directory.pages;
   const mdFiles: string[] = articleScanner.scan(dataPath);
+  const pageFiles: string[] = articleScanner.scan(pagesFilePath);
   const posts: BlogModel.Post[] = mdFiles.map(
     (postFile): BlogModel.Post => {
       const filename = path.basename(postFile, '.md');
@@ -63,9 +65,17 @@ async function generate(configPath: string, dataPath: string, outputPath: string
     }
   );
 
+  const pages = pageFiles.map((pageFile) => {
+    const filename = path.basename(pageFile, '.md');
+    const mdContent = fs.readFileSync(pageFile).toString();
+    return articleProcessor.parse(filename, mdContent);
+  });
+
   await handleFeatures(posts, config.features);
   generateOGMeta(posts, config.site);
+  generateOGMeta(pages, config.site);
   generateJsonLd(posts, config.site);
+  generateJsonLd(pages, config.site);
 
   const postsApiMap = _.merge(
     {},
@@ -74,7 +84,9 @@ async function generate(configPath: string, dataPath: string, outputPath: string
     postsApi.generatePostsOverview(posts),
     postsApi.generateTagsQuery(posts),
     postsApi.generateCategoriesOverview(posts),
-    postsApi.generateCategoriesQuery(posts)
+    postsApi.generateCategoriesQuery(posts),
+    postsApi.generatePagesOverview(pages),
+    postsApi.generatePagesQuery(pages)
   );
 
   persistUtil.persist(outputPath, postsApiMap);

@@ -1,5 +1,6 @@
 import Posts from './containers/Posts';
 import PostDetail from './containers/PostDetail';
+import PageDetail from './containers/PageDetail';
 import Categories from './containers/Categories';
 import Tags from './containers/Tags';
 
@@ -53,6 +54,11 @@ const routes = [
     path: '/tags',
     exact: true,
     component: Tags
+  },
+  {
+    path: '/pages/:filename',
+    exact: true,
+    component: PageDetail
   }
 ];
 

@@ -71,6 +71,24 @@ declare namespace BlogApiModel {
   export interface TagsQuery extends ApiQuery {
     [path: string]: BlogModel.Post[];
   }
+
+  export type PagesOverview = BlogApiModel.Post[];
+
+  /**
+   * @example
+   * - /api/v1/pages
+   * */
+  export interface PagesOverviewQuery extends ApiQuery {
+    [path: string]: PagesOverview;
+  }
+
+  /**
+   * @example
+   * - /api/v1/pages/about
+   * */
+  export interface PagesQuery extends ApiQuery {
+    [path: string]: BlogModel.Post;
+  }
 }
 declare namespace Config {
   export interface Site {
@@ -100,6 +118,7 @@ declare namespace Config {
   export interface Build {
     directory: {
       posts: string;
+      pages: string;
       public: string;
     };
 
