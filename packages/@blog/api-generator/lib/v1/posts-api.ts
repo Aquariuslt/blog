@@ -160,7 +160,7 @@ function generatePagesQuery(data: BlogModel.Post[]): BlogApiModel.PagesQuery {
   const pagesApiMap = {};
 
   _.each(data, (page) => {
-    pagesApiMap[buildPageLink(page.filename)] = page;
+    pagesApiMap[API_PREFIX + buildPageLink(page.filename)] = page;
   });
   return pagesApiMap;
 }
