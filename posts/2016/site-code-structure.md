@@ -32,11 +32,8 @@ cover: https://picsum.photos/id/38/800/300
 
 从 Coding 的角度出发,`Node.js`作为服务器端语言的优势之一就是不需要编译,直接重启 node 进程即可. 而前端代码呢,在开发的时候,我们希望能够达到所见即所得的方式,即 html+样式的修改能够直接呈现在页面上. 在生产环境的时候,为了加快访问速度,对前端代码进行必要的打包,压缩,混淆等操作.
 
-作为单页应用的一部分,希望能够进行自动引入所需的 js 文件,不需要手动维护首页 html 里面的
+作为单页应用的一部分,希望能够进行自动引入所需的 js 文件,不需要手动维护首页 html 里面的直接饮用
 
-```html
-<script src="after-respondent.md" type="text/javascript"></script>
-```
 
 按照这个想法,理想中的前端开发顺序希望是这样:
 
@@ -246,7 +243,7 @@ cover: https://picsum.photos/id/38/800/300
 
 #### How to Use
 
-我使用 gulp 来干什么呢? 单从前端运行的过程来说.我使用 Gulp 的 Task 进行下面一个流程. ![](https://img.alicdn.com/tfscom/TB1DX9QLVXXXXXNaXXXXXXXXXXX.png)
+我使用 gulp 来干什么呢? 单从前端运行的过程来说.我使用 Gulp 的 Task 进行下面一个流程. ![](https://img.aquariuslt.com/posts/2016/03/build-flow.png)
 
 ### Build Flow
 

@@ -27,19 +27,19 @@ cover: https://picsum.photos/id/237/800/300
 
 通过 Chrome 浏览的时候提示可以添加到桌面
 
-![通过Chrome浏览的时候提示可以添加到桌面](https://ooo.0o0.ooo/2017/03/13/58c5750dd1641.png)
+![通过Chrome浏览的时候提示可以添加到桌面](https://img.aquariuslt.com/posts/2017/03/13/add-shortcut.png)
 
 桌面版本也可以可以添加快捷方式,像桌面版本的 Google Keep 一样
 
-![桌面版本快捷方式](https://ooo.0o0.ooo/2017/03/13/58c576a266e6f.png)
+![桌面版本快捷方式](https://img.aquariuslt.com/posts/2017/03/13/desktop-version-shortcut.png)
 
 添加成功后桌面会有一个快捷方式
 
-![添加成功后桌面会有一个快捷方式](https://ooo.0o0.ooo/2017/03/13/58c57510236a3.png)
+![添加成功后桌面会有一个快捷方式](https://img.aquariuslt.com/posts/2017/03/13/shortcut.png)
 
 打开快捷方式会有一个自定义的启动动画
 
-![打开快捷方式会有一个默认的启动动画](https://ooo.0o0.ooo/2017/03/13/58c5750dc2499.png)
+![打开快捷方式会有一个默认的启动动画](https://img.aquariuslt.com/posts/2017/03/13/launching.png)
 
 ```
 颜色,图表可通过PWA提供的manifest.webapp来配置
