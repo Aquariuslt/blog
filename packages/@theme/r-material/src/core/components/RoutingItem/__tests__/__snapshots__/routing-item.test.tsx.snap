@@ -6,6 +6,7 @@ exports[`@theme/r-material: core/components: RoutingItem # should mount external
   className="makeStyles-nested-3"
   component="a"
   href="https://somewhere.com"
+  rel="noopener"
   target="_blank"
 >
   <WithStyles(ForwardRef(ListItemIcon))>
