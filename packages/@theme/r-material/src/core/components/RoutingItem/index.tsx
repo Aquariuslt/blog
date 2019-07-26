@@ -41,7 +41,8 @@ const RoutingItem: React.ComponentType<RoutingItemProps> = (props: RoutingItemPr
   const listItemExtRenderProps = {
     component: 'a',
     href: props.link,
-    target: '_blank'
+    target: '_blank',
+    rel: 'noopener'
   };
 
   const actualRenderProps = isExtLink ? listItemExtRenderProps : listItemInnerRenderProps;
