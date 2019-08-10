@@ -1,4 +1,4 @@
-import i18n from 'i18next/index.js';
+import * as i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import * as zh from '../../../../i18n/base.zh.properties';
 import * as en from '../../../../i18n/base.en.properties';
