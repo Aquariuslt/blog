@@ -1,4 +1,4 @@
-import i18n from 'i18next';
+import * as i18n from 'i18next';
 
 import * as en from './i18n/base.en.properties';
 import * as zh from './i18n/base.zh.properties';
