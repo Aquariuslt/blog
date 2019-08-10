@@ -7,6 +7,7 @@ if (config.features.ga) {
 
     // @ts-ignore
     window.ga =
+      // @ts-ignore
       window.ga ||
       function() {
         (ga.q = ga.q || []).push(arguments);
