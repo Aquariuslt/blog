@@ -4,13 +4,13 @@ exports[`@theme/r-material: core/components: LocaleSelect # should change locale
 <div
   className="makeStyles-root-1"
 >
-  <WithStyles(WithFormControlContext(ForwardRef(InputLabel)))
+  <WithStyles(ForwardRef(InputLabel))
     className="makeStyles-label-2"
     htmlFor="select-locale"
   >
     Language
-  </WithStyles(WithFormControlContext(ForwardRef(InputLabel)))>
-  <WithStyles(WithFormControlContext(ForwardRef(Select)))
+  </WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(Select))
     aria-label="Language"
     className="makeStyles-select-3"
     inputProps={
@@ -32,7 +32,7 @@ exports[`@theme/r-material: core/components: LocaleSelect # should change locale
     >
       English
     </WithStyles(ForwardRef(MenuItem))>
-  </WithStyles(WithFormControlContext(ForwardRef(Select)))>
+  </WithStyles(ForwardRef(Select))>
 </div>
 `;
 
@@ -40,13 +40,13 @@ exports[`@theme/r-material: core/components: LocaleSelect # should mount LocaleS
 <div
   className="makeStyles-root-1"
 >
-  <WithStyles(WithFormControlContext(ForwardRef(InputLabel)))
+  <WithStyles(ForwardRef(InputLabel))
     className="makeStyles-label-2"
     htmlFor="select-locale"
   >
     core.locale.select.label
-  </WithStyles(WithFormControlContext(ForwardRef(InputLabel)))>
-  <WithStyles(WithFormControlContext(ForwardRef(Select)))
+  </WithStyles(ForwardRef(InputLabel))>
+  <WithStyles(ForwardRef(Select))
     aria-label="core.locale.select.label"
     className="makeStyles-select-3"
     inputProps={
@@ -67,6 +67,6 @@ exports[`@theme/r-material: core/components: LocaleSelect # should mount LocaleS
     >
       core.locale.select.option.en
     </WithStyles(ForwardRef(MenuItem))>
-  </WithStyles(WithFormControlContext(ForwardRef(Select)))>
+  </WithStyles(ForwardRef(Select))>
 </div>
 `;
