@@ -48,7 +48,7 @@ Github 官方介绍，简要的将就是 Github 官方提供的 CI 平台，其�
 
 ![](https://img.aquariuslt.com/posts/2019/07/github-official-actions-repo.png)
 
-当然也有很多非官方维护的 Actions，可以通过发布到 Github Marketplace 被查找到，也可以把Actions 构建成 `docker image` + `[entrypoints.sh](http://entrypoints.sh)` 的形式， 在项目 Workflow 的配置文件中以docker image 路径进行引用。
+当然也有很多非官方维护的 Actions，可以通过发布到 Github Marketplace 被查找到，也可以把Actions 构建成 `docker image` + `entrypoints.sh` 的形式， 在项目 Workflow 的配置文件中以docker image 路径进行引用。
 
 ### How configuration look like
 

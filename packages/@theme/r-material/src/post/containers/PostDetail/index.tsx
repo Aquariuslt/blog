@@ -12,7 +12,7 @@ import PostContent from '../../components/PostContent';
 import PostTOC from '../../components/PostTOC';
 import PostComment from '../../components/PostComment';
 import PostJsonLd from '../../components/PostJsonLd';
-
+import styles from '../../../styles';
 import * as config from '@/config.json';
 
 type PostDetailProps = {} & {
@@ -34,6 +34,7 @@ const useStyles = makeStyles(
         flexWrap: 'wrap',
         justifyContent: 'flex-end',
         overflow: 'hidden',
+        width: styles.sidebar.width,
         backgroundColor: theme.palette.background.paper
       },
       content: {

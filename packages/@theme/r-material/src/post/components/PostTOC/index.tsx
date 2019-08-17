@@ -12,7 +12,7 @@ const useStyles = makeStyles(
       width: styles.sidebar.width,
       flexShrink: 0,
       order: 2,
-      position: 'sticky',
+      position: 'fixed',
       overflowX: 'hidden',
       overflowY: 'auto',
       overflowWrap: 'break-word',
@@ -58,7 +58,6 @@ const PostTOC: React.ComponentType<PostTOCProps> = (props: PostTOCProps): JSX.El
 
   const handleClick = (id: string) => () => {
     const scroll = new SmoothScroll();
-    const hash = `#${id}`;
     scroll.animateScroll(document.getElementById(id));
   };
 
