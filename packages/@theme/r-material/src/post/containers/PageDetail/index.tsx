@@ -35,8 +35,10 @@ const useStyles = makeStyles(
         flexWrap: 'wrap',
         justifyContent: 'flex-end',
         overflow: 'hidden',
-        width: styles.sidebar.width,
-        backgroundColor: theme.palette.background.paper
+        backgroundColor: theme.palette.background.paper,
+        [theme.breakpoints.up('md')]: {
+          width: styles.sidebar.width
+        }
       },
       content: {
         display: 'flex',
