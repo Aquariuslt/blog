@@ -8,7 +8,7 @@ import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
 
 import * as PrerenderSPAPlugin from 'prerender-spa-plugin';
-import * as WebpackPwaManifest from 'webpack-pwa-manifest';
+import * as FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 
 import * as PuppeteerRenderer from '@prerenderer/renderer-puppeteer';
 import * as workbox from 'workbox-build';
@@ -35,21 +35,29 @@ gulp.task('build:webpack', (done): void => {
 
     const themeColor = config.build.colors ? config.build.colors['primary']['main'] : DEFAULT_BG_COLOR;
 
-    webpackProdConfig.plugins.push(new WebpackPwaManifest({
-      filename: baseConfig.dir.dist.manifest + '/' + 'manifest.json',
-      start_url: '/',
-      name: config.site.title,
-      short_name: config.site.title,
-      description: config.site.description,
-      theme_color: themeColor,
-      background_color: themeColor,
-      icons: [
-        {
-          src: pathUtil.resolve(baseConfig.dir.src + '/' + 'favicon.png'),
-          sizes: [96, 128, 144, 192, 256, 384, 512],
-          destination: baseConfig.dir.dist.img
+    webpackProdConfig.plugins.push(new FaviconsWebpackPlugin({
+      prefix: baseConfig.dir.dist.img,
+      outputPath: baseConfig.dir.dist.img,
+      logo: `./${baseConfig.dir.src}/favicon.png`,
+      cache: true,
+      inject: true,
+      favicons: {
+        start_url: '/',
+        appName: config.site.title,
+        appShortName: config.site.title,
+        appDescription: config.site.description,
+        theme_color: themeColor,
+        background_color: themeColor,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          firefox: true,
+          opengraph: true,
+          twitter: true,
+          windows: true
         }
-      ]
+      }
     }));
 
 
@@ -97,6 +105,7 @@ gulp.task('build:service-worker', (): void => {
     globDirectory: dist,
     globPatterns: [
       '\*\*/\*.{js,json,css}',
+      '\*\*/\*.{jpg,jpeg,png}',
       'index.html'
     ],
     swDest: `${dist}/sw.js`,
