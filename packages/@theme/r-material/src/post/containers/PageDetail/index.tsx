@@ -14,6 +14,7 @@ import PostComment from '../../components/PostComment';
 import PostJsonLd from '../../components/PostJsonLd';
 
 import * as config from '@/config.json';
+import styles from '../../../styles';
 
 type PageDetailProps = {} & {
   pageStore: PageStore;
@@ -34,6 +35,7 @@ const useStyles = makeStyles(
         flexWrap: 'wrap',
         justifyContent: 'flex-end',
         overflow: 'hidden',
+        width: styles.sidebar.width,
         backgroundColor: theme.palette.background.paper
       },
       content: {
