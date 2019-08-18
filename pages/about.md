@@ -24,5 +24,5 @@ WoWer(因工作太忙已成往事)。
 
 [Github](https://github.com/aquariuslt)
 
-[Ins](https://www.instagram.com/supaquariuslt)
+[Instagram](https://www.instagram.com/supaquariuslt)
 
