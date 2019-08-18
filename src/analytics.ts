@@ -5,11 +5,14 @@ if (config.features.ga) {
   if (googleSiteVerificationTag) {
     googleSiteVerificationTag.setAttribute('content', config.features.ga.verification);
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore
     window.ga =
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
       window.ga ||
       function() {
+        // eslint-disable-next-line prefer-rest-params
         (ga.q = ga.q || []).push(arguments);
       };
     ga.l = +new Date();
