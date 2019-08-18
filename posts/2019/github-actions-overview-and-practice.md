@@ -231,6 +231,9 @@ deploy:
 
 `.workflow` 文件是 Github Workflow 的文件名后缀，其语法为 `hcl` 。
 
+> 2019年8月初, github actions 官方宣布 actions 配置语法会从 HCL 改变为 yaml, 因此这篇文章的HCL部分其实在9月30日之后便失效。后面会更新一篇文章，简述新的 yaml 语法
+> See [Migrating Github Actions from HCL syntax to YAML syntax](https://help.github.com/en/articles/migrating-github-actions-from-hcl-syntax-to-yaml-syntax)
+
 hcl 全称 **HashiCorp Configuration Language**，其具体的语法规则比较容易明白，实际上可以快速的以 `json`,  `yml` 的概念去理解他。
 
 Tips: 如果平时使用 IntelliJ IDEA 进行开发，那么可以通过给 `.workflow` 添加语法支持，将其识别为 `HCL` 语法，即可获得高亮与格式化
