@@ -13,10 +13,9 @@ interface GalleryApiConfig {
 
 type GalleryConfig = GalleryApiConfig & {
   hash?: Function | boolean;
-}
+};
 
 const PICSUM_PHOTOS_URL = 'https://picsum.photos';
-
 
 const DEFAULT_CONFIG: GalleryConfig = {
   hash: true,
@@ -29,7 +28,6 @@ const DEFAULT_CONFIG: GalleryConfig = {
   blur: false
 };
 
-
 class GalleryApi {
   private readonly config: GalleryConfig;
 
@@ -40,7 +38,7 @@ class GalleryApi {
   }
 
   async getPhoto(criteria: string): Promise<string> {
-    let queryConfig = Object.assign({}, this.config);
+    const queryConfig = Object.assign({}, this.config);
 
     if (this.caches.hasOwnProperty(criteria)) {
       return this.caches[criteria];
@@ -52,7 +50,6 @@ class GalleryApi {
       return responseUrl;
     }
   }
-
 }
 
 export default GalleryApi;

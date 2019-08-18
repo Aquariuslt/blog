@@ -18,7 +18,7 @@ const PAGE_DETAIL_HOLDER: BlogModel.Post = {
 };
 
 export class PageStore {
-  @observable loaded: boolean = false;
+  @observable loaded = false;
   @observable pages: BlogApiModel.PagesOverview = [];
   @observable private $detail: BlogModel.Post = PAGE_DETAIL_HOLDER;
 

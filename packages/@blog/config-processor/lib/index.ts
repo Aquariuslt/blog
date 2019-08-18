@@ -10,13 +10,12 @@ const ajv = new Ajv({
 });
 const validate = ajv.compile(schema);
 
-
 /**
  * @desc read a yml file and parse to valid config object
  * @param filepath: absolute file path
  */
 function read(filepath: string): Config.Bundle {
-  let config = yaml.load(fs.readFileSync(filepath).toString());
+  const config = yaml.load(fs.readFileSync(filepath).toString());
   const valid = validate(config);
 
   if (!valid) {
@@ -25,7 +24,6 @@ function read(filepath: string): Config.Bundle {
 
   return config;
 }
-
 
 export default {
   read

@@ -2,7 +2,6 @@ import postApi from '@/api/post-api';
 
 import { action, computed, observable, runInAction } from 'mobx';
 
-
 const POST_DETAIL_HOLDER: BlogModel.Post = {
   filename: '',
   md: '',
@@ -17,10 +16,9 @@ const POST_DETAIL_HOLDER: BlogModel.Post = {
 };
 
 export class PostStore {
-  @observable loaded: boolean = false;
+  @observable loaded = false;
   @observable private $posts: BlogApiModel.PostsOverview = [];
   @observable private $detail: BlogModel.Post = POST_DETAIL_HOLDER;
-
 
   @computed get posts(): BlogApiModel.PostsOverview {
     return this.$posts;
@@ -31,28 +29,20 @@ export class PostStore {
   }
 
   @action loadPosts(path: string): void {
-    postApi.loadPosts(path).then(
-      (apiResult): void => {
-        runInAction(
-          (): void => {
-            this.loaded = true;
-            this.$posts = apiResult.data;
-          }
-        );
-      }
-    );
+    postApi.loadPosts(path).then((apiResult): void => {
+      runInAction((): void => {
+        this.loaded = true;
+        this.$posts = apiResult.data;
+      });
+    });
   }
 
   @action loadPost(path: string): void {
-    postApi.loadPostDetail(path).then(
-      (apiResult): void => {
-        runInAction(
-          (): void => {
-            this.$detail = apiResult.data;
-          }
-        );
-      }
-    );
+    postApi.loadPostDetail(path).then((apiResult): void => {
+      runInAction((): void => {
+        this.$detail = apiResult.data;
+      });
+    });
   }
 }
 
