@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import * as sm from 'sitemap';
 import { SitemapItemOptions } from 'sitemap';
 import robotstxt from 'generate-robotstxt';
@@ -59,6 +60,9 @@ function generateFeedsApi(config: Config.Site, data: BlogModel.Post[]): BlogApiM
 
 function generateSiteMapApi(config: Config.Site, data: BlogModel.Post[]): BlogApiModel.ApiQuery {
   const toSitemapUrl = (post: BlogModel.Post): SitemapItemOptions => ({
+    img: _.map(post.images, (img) => ({ url: img })),
+    links: [],
+    video: [],
     url: buildPostPermalink(post.metadata.created, post.filename)
   });
 
