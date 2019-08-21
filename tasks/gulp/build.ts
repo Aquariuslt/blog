@@ -108,6 +108,7 @@ gulp.task('build:service-worker', (): void => {
       '\*\*/\*.{jpg,jpeg,png}',
       'index.html'
     ],
+    importWorkboxFrom: 'local',
     swDest: `${dist}/sw.js`,
     clientsClaim: true,
     skipWaiting: true
@@ -142,7 +143,7 @@ gulp.task('build:config', async (done): Promise<void> => {
 
 gulp.task('build:api', (done): void => {
     const configPath = pathUtil.resolve('') + '/' + 'config.yml';
-    let config = configProcessor.read(configPath);
+    const config = configProcessor.read(configPath);
 
     const mdFilePath = pathUtil.resolve('') + '/' + config.build.directory.posts;
     const distPath = pathUtil.resolve('') + '/' + config.build.directory.public;
