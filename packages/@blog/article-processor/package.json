@@ -1,6 +1,6 @@
 {
   "name": "@blog/article-processor",
-  "version": "5.0.0",
+  "version": "5.2.0",
   "description": "blog article processor",
   "typings": "dist",
   "main": "lib/index.ts",
@@ -11,6 +11,6 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@utils/markdown-it-plugins": "^5.0.0"
+    "@utils/markdown-it-plugins": "^5.2.0"
   }
 }

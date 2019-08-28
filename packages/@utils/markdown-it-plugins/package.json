@@ -1,6 +1,6 @@
 {
   "name": "@utils/markdown-it-plugins",
-  "version": "5.0.0",
+  "version": "5.2.0",
   "typings": "dist/index.d.ts",
   "main": "lib/index.ts",
   "license": "MIT",

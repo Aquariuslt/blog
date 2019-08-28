@@ -1,6 +1,6 @@
 {
   "name": "@utils/gallery-api",
-  "version": "5.0.0",
+  "version": "5.2.0",
   "description": "picsum api match blog generation",
   "typings": "dist/index.d.ts",
   "main": "lib/index.ts",
