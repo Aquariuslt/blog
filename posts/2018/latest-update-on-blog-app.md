@@ -74,9 +74,9 @@ cover: https://picsum.photos/id/83/800/300
 
 ## Benchmark
 
-目前首次页面加载总共需要 280KB 的流量。 ![blog-resource-transfer-time](https://img.aquariuslt.com/posts/blog-resource-transfer-time.png)
+目前首次页面加载总共需要 280KB 的流量。 ![blog-resource-transfer-time](https://img.aquariuslt.com/posts/2018/03/blog-resource-transfer-time.png)
 
-![benchmark-blog-website](https://img.aquariuslt.com/posts/benchmark-blog-website.png) 重新用 Chrome 的 Audits 工具做了一次测试(中间有根据提示的一些最佳实践准则进行优化) 之后，主要痛点是首次渲染页面时间比较长。
+![benchmark-blog-website](https://img.aquariuslt.com/posts/2018/03/benchmark-blog-website.png) 重新用 Chrome 的 Audits 工具做了一次测试(中间有根据提示的一些最佳实践准则进行优化) 之后，主要痛点是首次渲染页面时间比较长。
 
 ## TODO
 
