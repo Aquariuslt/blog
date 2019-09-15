@@ -1,6 +1,7 @@
 # blog.aquariuslt.com
 
 [![Build Status](https://travis-ci.org/aquariuslt/blog.svg?branch=universal-ts)](https://travis-ci.org/aquariuslt/blog)
+[![Github Workflow Status](https://github.com/aquariuslt/blog/workflows/build/badge.svg)](https://github.com/aquariuslt/blog)
 [![CircleCI](https://circleci.com/gh/aquariuslt/blog/tree/universal-ts.svg?style=svg)](https://circleci.com/gh/aquariuslt/blog/tree/universal-ts)
 [![Codecov](https://codecov.io/gh/aquariuslt/blog/branch/universal-ts/graph/badge.svg)](https://codecov.io/gh/aquariuslt/blog)
 [![GitHub License](https://img.shields.io/github/license/aquariuslt/blog.svg)](https://github.com/aquariuslt/blog/blob/universal-ts/LICENSE)
