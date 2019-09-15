@@ -17,15 +17,15 @@ cover: https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png
 
 ## Background
 
+在之前一篇博文 [Github Actions: Overview and Practice](https://blog.aquariuslt.com/posts/2019/07/07/github-actions-overview-and-practice/) 里
+刚介绍完 Github Actions 配置的`HCL`语法不久，Github 官方就标记为 **deprecated** 了。原因是社区声音推崇他们使用新的 YAML 语法，这类的语法配置与现有的其他
+CI 平台相对更加接近，更加容易举一反三写出合理的配置。
+
+
 > The documentation at https://developer.github.com/actions and support for the HCL syntax in GitHub Actions
 > will be deprecated on September 30, 2019. Documentation for the new limited public beta using the 
 > YAML syntax is available on https://help.github.com. See "Automating your workflow with GitHub Actions" 
 > for documentation using the YAML syntax.
-
-
-在之前一篇博文 [Github Actions: Overview and Practice](https://blog.aquariuslt.com/posts/2019/07/07/github-actions-overview-and-practice/) 里
-刚介绍完 Github Actions 配置的`HCL`语法不久，Github 官方就标记为 **deprecated** 了。原因是社区声音推崇他们使用新的 YAML 语法，这类的语法配置与现有的其他
-CI 平台相对更加接近，更加容易举一反三写出合理的配置。
 
 自此之后，官方的 Github Actions Marketplace 也多了更多的官方 Actions (actions 官方 org 原本置顶的几个 actions 源代码也都换成了常见的项目集成 samples)
 
