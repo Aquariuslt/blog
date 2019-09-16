@@ -444,6 +444,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                   classes={
                     Object {
                       "root": "MuiTable-root",
+                      "stickyHeader": "MuiTable-stickyHeader",
                     }
                   }
                 >
@@ -494,12 +495,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <th
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+                                      className="MuiTableCell-root MuiTableCell-alignLeft MuiTableCell-head"
                                       scope="col"
                                     >
                                       post.navigation.tag.label
@@ -524,12 +526,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <th
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-head"
                                       scope="col"
                                     >
                                       post.navigation.total.label
@@ -592,6 +595,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -635,12 +639,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -688,6 +693,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -731,12 +737,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -784,6 +791,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -827,12 +835,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -880,6 +889,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -923,12 +933,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       4
                                     </td>
@@ -976,6 +987,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1019,12 +1031,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -1072,6 +1085,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1115,12 +1129,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -1168,6 +1183,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1211,12 +1227,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       5
                                     </td>
@@ -1264,6 +1281,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1307,12 +1325,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -1360,6 +1379,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1403,12 +1423,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       6
                                     </td>
@@ -1456,6 +1477,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1499,12 +1521,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -1552,6 +1575,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1595,12 +1619,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       4
                                     </td>
@@ -1648,6 +1673,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1691,12 +1717,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -1744,6 +1771,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1787,12 +1815,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -1840,6 +1869,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1883,12 +1913,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -1936,6 +1967,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -1979,12 +2011,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       5
                                     </td>
@@ -2032,6 +2065,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2075,12 +2109,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -2128,6 +2163,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2171,12 +2207,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -2224,6 +2261,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2267,12 +2305,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       4
                                     </td>
@@ -2320,6 +2359,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2363,12 +2403,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -2416,6 +2457,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2459,12 +2501,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -2512,6 +2555,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2555,12 +2599,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -2608,6 +2653,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2651,12 +2697,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       3
                                     </td>
@@ -2704,6 +2751,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2747,12 +2795,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -2800,6 +2849,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2843,12 +2893,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -2896,6 +2947,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -2939,12 +2991,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -2992,6 +3045,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3035,12 +3089,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -3088,6 +3143,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3131,12 +3187,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -3184,6 +3241,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3227,12 +3285,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -3280,6 +3339,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3323,12 +3383,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -3376,6 +3437,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3419,12 +3481,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -3472,6 +3535,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3515,12 +3579,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -3568,6 +3633,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3611,12 +3677,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -3664,6 +3731,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3707,12 +3775,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>
@@ -3760,6 +3829,7 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -3803,12 +3873,13 @@ exports[`@theme/r-material: post/container: Tags # should call load tags overvie
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       1
                                     </td>

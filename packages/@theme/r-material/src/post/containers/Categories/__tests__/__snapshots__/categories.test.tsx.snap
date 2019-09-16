@@ -144,6 +144,7 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                   classes={
                     Object {
                       "root": "MuiTable-root",
+                      "stickyHeader": "MuiTable-stickyHeader",
                     }
                   }
                 >
@@ -194,12 +195,13 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <th
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+                                      className="MuiTableCell-root MuiTableCell-alignLeft MuiTableCell-head"
                                       scope="col"
                                     >
                                       post.navigation.category.label
@@ -224,12 +226,13 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <th
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-head"
                                       scope="col"
                                     >
                                       post.navigation.total.label
@@ -292,6 +295,7 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -335,12 +339,13 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       13
                                     </td>
@@ -388,6 +393,7 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -431,12 +437,13 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       3
                                     </td>
@@ -484,6 +491,7 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -527,12 +535,13 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       2
                                     </td>
@@ -580,6 +589,7 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                     component="th"
@@ -623,12 +633,13 @@ exports[`@theme/r-material: post/container: Categories # should call load catego
                                         "paddingNone": "MuiTableCell-paddingNone",
                                         "root": "MuiTableCell-root",
                                         "sizeSmall": "MuiTableCell-sizeSmall",
+                                        "stickyHeader": "MuiTableCell-stickyHeader",
                                       }
                                     }
                                   >
                                     <td
                                       aria-sort={null}
-                                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                                      className="MuiTableCell-root MuiTableCell-alignRight MuiTableCell-body"
                                     >
                                       3
                                     </td>
