@@ -17,8 +17,7 @@ cover: https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png
 
 ## Background
 
-在之前一篇博文 [Github Actions: Overview and Practice](https://blog.aquariuslt.com/posts/2019/07/07/github-actions-overview-and-practice/) 里
-刚介绍完 Github Actions 配置的`HCL`语法不久，Github 官方就标记为 **deprecated** 了。原因是社区声音推崇他们使用新的 YAML 语法，这类的语法配置与现有的其他
+在之前一篇博文里刚介绍完 Github Actions 配置的`HCL`语法不久，Github 官方就标记为 **deprecated** 了。原因是社区声音推崇他们使用新的 YAML 语法，这类的语法配置与现有的其他
 CI 平台相对更加接近，更加容易举一反三写出合理的配置。
 
 
