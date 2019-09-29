@@ -60,7 +60,7 @@ CI 平台相对更加接近，更加容易举一反三写出合理的配置。
 
 根据迁移后的实际流程，然后找官方提供的 Example 进行魔改。
 
-目前来说，`jest-properties-loader` 作为一款 NPM Package
+目前来说，`jest-properties-loader` 作为一款 NPM Package，触发 CI/CD 的流程大致如下:
 
 1. 平时提交代码，通过 CI 平台执行 `yarn test`, `yarn build`, 上传覆盖率报告到 **Codecov**
 2. 触发 `release` 事件时，通过 CI 平台执行 `yarn build`，之后发布到 `npm registry` 上
