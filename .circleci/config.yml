@@ -1,5 +1,10 @@
 version: 2
 
+workflows:
+  build:
+    jobs:
+      - ci
+
 jobs:
   ci:
     docker:
@@ -13,6 +18,3 @@ jobs:
           command:
             - yarn
             - lerna bootstrap
-      - run:
-          name: Testing
-          command: lerna run test
