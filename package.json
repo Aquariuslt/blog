@@ -7,20 +7,10 @@
   "author": "Aquariuslt<superaquariuslt@gmail.com>",
   "license": "MIT",
   "keywords": [
-
+    ""
   ],
-  "scripts": {
-
-  },
-  "resolutions": {
-    "@types/react": "^16.9.2"
-  },
-  "dependencies": {
-
-  },
-  "devDependencies": {
-
-  },
-  "workspaces": [
-  ]
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "workspaces": []
 }

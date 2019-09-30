@@ -11,6 +11,3 @@
 
 next version of [https://blog.aquariuslt.com](https://blog.aquariuslt.com)
 
-
-
-
