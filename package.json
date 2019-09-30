@@ -10,7 +10,6 @@
     ""
   ],
   "scripts": {},
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
@@ -21,6 +20,7 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.7",
+    "lerna": "^3.16.4",
     "prettier": "^1.18.2",
     "typescript": "^3.6.3"
   },

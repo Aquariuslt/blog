@@ -1,0 +1,16 @@
+{
+  "name": "@blog/core",
+  "version": "6.0.0",
+  "description": "> TODO: description",
+  "author": "aaroncui <aaroncui@tencent.com>",
+  "homepage": "https://github.com/aquariuslt/blog#readme",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquariuslt/blog.git"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
