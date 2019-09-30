@@ -12,10 +12,6 @@ jobs:
       - image: circleci/node:10.16.0-browsers
     working_directory: ~/blog
     steps:
-      - checkout:
-          name: SCM
-      - run:
-          name: Install Dependencies
-          command:
-            - yarn
-            - lerna bootstrap
+      - checkout
+      - run: yarn
+      - run: yarn run bootstrap
