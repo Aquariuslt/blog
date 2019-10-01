@@ -1,10 +1,10 @@
 import * as MarkdownIt from 'markdown-it';
-import { ContentItemPlugin } from '@/content-item';
+import { ContentItemPlugin } from '../content-item';
 
-import { read } from '@/__tests__/helper';
+import { read } from '../__tests__/test.fixtures.helper';
 
 describe('markdown-it plugin: content items', (): void => {
-  it('# should got toc data at env', (): void => {
+  it('# should get toc data at env', (): void => {
     const md = MarkdownIt().use(ContentItemPlugin);
     const raw = read(`sample-article.md`);
     const context = {};

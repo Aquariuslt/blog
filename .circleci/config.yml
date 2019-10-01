@@ -15,3 +15,4 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn run bootstrap
+      - run: yarn run test
