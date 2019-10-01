@@ -40,9 +40,6 @@
       "js",
       "json"
     ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest",
       "^.*\\.md$": "jest-raw-loader"

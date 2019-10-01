@@ -1,9 +1,9 @@
 import * as MarkdownIt from 'markdown-it';
 
-import { ImagesDetectionPlugin } from '@/images';
-import { read } from '@/__tests__/helper';
+import { ImagesDetectionPlugin } from '../images';
+import { read } from '../__tests__/test.fixtures.helper';
 
-describe('@utils/markdown-it-images', (): void => {
+describe('markdown-it plugins: images', (): void => {
   it('# should detect images at env', (): void => {
     const md = MarkdownIt().use(ImagesDetectionPlugin);
     const raw = read(`sample-article.md`);

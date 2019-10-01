@@ -13,9 +13,6 @@
     "incremental": true,
     "noImplicitAny": false,
     "allowJs": true,
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "typeRoots": ["./node_modules/@types"]
   },
   "exclude": ["node_modules", "dist", "test", "reports"]

@@ -12,12 +12,13 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --fix",
-    "test": "lerna run test",
-    "test:cov": "lerna run test:cov"
+    "test": "jest",
+    "test:cov": "jest --coverage"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@types/jest": "^24.0.18",
     "@types/node": "^12.7.8",
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
@@ -25,9 +26,12 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.7",
+    "jest": "^24.9.0",
+    "jest-raw-loader": "^1.0.1",
     "lerna": "^3.16.4",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
   },
   "eslintConfig": {
@@ -89,5 +93,30 @@
         ]
       ]
     }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts",
+      "<rootDir>/packages/**/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts",
+      "<rootDir>/packages/**/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
   }
 }
