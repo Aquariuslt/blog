@@ -42,5 +42,14 @@ npm install --save-dev properties-json-loader
 ### Update webpack configuration
 
 You should use it to load as one of webpack loader configuration matching \`*.properties\` file.
+
+## Deep Understanding
+
+
+## References
+
+
+![Absolute Image](https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png)
+![Relative Image](images/sample-image.png)
 "
 `;

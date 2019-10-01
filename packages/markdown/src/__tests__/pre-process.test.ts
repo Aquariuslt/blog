@@ -1,17 +1,19 @@
 import { read } from '@/__tests__/helper';
-import * as matter from 'gray-matter';
+
+import { metadata, source } from '@/metadata';
 
 describe('markdown: preprocess', () => {
   it('# should read file content in pre-process steps', () => {
     const raw = read(`sample-article.md`);
-    const { data, content } = matter(raw);
+    const meta = metadata(raw);
+    const src = source(raw);
 
-    expect(data).not.toBeUndefined();
-    expect(data).toHaveProperty('title');
-    expect(data).toHaveProperty('created');
-    expect(content).not.toBeUndefined();
+    expect(meta).not.toBeUndefined();
+    expect(meta).toHaveProperty('title');
+    expect(meta).toHaveProperty('created');
+    expect(src).not.toBeUndefined();
 
-    expect(data).toMatchSnapshot();
-    expect(content).toMatchSnapshot();
+    expect(meta).toMatchSnapshot();
+    expect(src).toMatchSnapshot();
   });
 });

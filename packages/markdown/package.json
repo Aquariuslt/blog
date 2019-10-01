@@ -1,7 +1,7 @@
 {
   "name": "@blog/markdown",
   "version": "6.0.0",
-  "description": "> TODO: description",
+  "description": "markdown utils for parsing blog articles",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
   "license": "MIT",
@@ -10,13 +10,25 @@
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
+  "main": "dist/index.js",
+  "esnext": "src/index.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest",
     "test:cov": "jest --coverage"
   },
+  "dependencies": {
+    "@blog/common": "^6.0.0",
+    "gray-matter": "^4.0.2",
+    "lodash": "^4.17.15",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.4",
+    "uslug": "^1.0.4"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.141",
+    "@types/markdown-it": "^0.0.9",
     "@types/node": "^12.7.8",
     "jest": "^24.9.0",
     "jest-raw-loader": "^1.0.1",
@@ -36,6 +48,7 @@
       "^.*\\.md$": "jest-raw-loader"
     },
     "collectCoverageFrom": [
+      "!**/__tests__/**",
       "<rootDir>/src/**/*.ts"
     ],
     "testMatch": [
@@ -43,11 +56,5 @@
     ],
     "testEnvironment": "node",
     "coverageDirectory": "<rootDir>/reports/coverage"
-  },
-  "dependencies": {
-    "gray-matter": "^4.0.2",
-    "lodash": "^4.17.15",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.4"
   }
 }

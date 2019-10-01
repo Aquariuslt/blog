@@ -11,7 +11,9 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "lint": "eslint --fix"
+    "lint": "eslint --fix",
+    "test": "lerna run test",
+    "test:cov": "lerna run test:cov"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
