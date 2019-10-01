@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`markdown: preprocess # should read file content in pre-process steps 1`] = `
+Object {
+  "category": Array [
+    "Blog",
+  ],
+  "created": 2019-09-10T00:00:00.000Z,
+  "permalink": "introducing-json-properties-loader",
+  "tags": Array [
+    "NPM",
+    "Node",
+    "Typescript",
+  ],
+  "title": "introducing json properties loader",
+  "updated": 2019-09-10T00:00:00.000Z,
+}
+`;
+
+exports[`markdown: preprocess # should read file content in pre-process steps 2`] = `
+"
+# A beautiful day
+
+This is a example markdown content with all one-pass test cases.
+
+## Getting Started
+
+Getting started snippet
+
+### Installing
+
+\`\`\`shell script
+yarn add -D properteis-json-loader
+\`\`\`
+
+or, using npm
+
+\`\`\`shell script
+npm install --save-dev properties-json-loader
+\`\`\`
+
+### Update webpack configuration
+
+You should use it to load as one of webpack loader configuration matching \`*.properties\` file.
+"
+`;

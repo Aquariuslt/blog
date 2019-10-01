@@ -10,7 +10,8 @@
     ""
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "lint": "eslint --fix"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -24,6 +25,7 @@
     "husky": "^3.0.7",
     "lerna": "^3.16.4",
     "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "typescript": "^3.6.3"
   },
   "eslintConfig": {
@@ -57,6 +59,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "pretty-quick --staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
