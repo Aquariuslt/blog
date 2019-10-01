@@ -11,6 +11,41 @@
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "jest-raw-loader": "^1.0.1",
+    "ts-jest": "^24.1.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.2",
+    "lodash": "^4.17.15",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.4"
   }
 }
