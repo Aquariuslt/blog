@@ -9,8 +9,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
-  },
-  "scripts": {
-    "test": "jest"
   }
 }
