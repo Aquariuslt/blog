@@ -31,7 +31,7 @@ cover: https://picsum.photos/id/872/800/300
 
 利用 Angular 官方开发的 Chrome 插件`AngularJS Batarang`来监控页面性能.  
 [Angular Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk)  
-![运行截图](./performance.webp)
+![运行截图](./performance.png)
 
 通过`Angular Batarang`,我们可以轻易的统计在页面的`watcher`数量,`$scope`中变量的数量. 还有平均一段时间内`angular`执行`$digest`的数量.
 
@@ -45,7 +45,7 @@ cover: https://picsum.photos/id/872/800/300
 
 之前遇到的情况是,我们的页面 header 会有一个通知栏,展开会通知那些已经显示的列表.  
 单条通知样子类似于微博的这种:  
-![通知栏](./notification.webp) 在没优化之前,通知部分的伪代码如下:
+![通知栏](./notification.png) 在没优化之前,通知部分的伪代码如下:
 
 ```html
 <div class="notification">

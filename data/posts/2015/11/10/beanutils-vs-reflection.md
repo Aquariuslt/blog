@@ -29,7 +29,7 @@ idea 集成了 (应该是 JProfiler 本身就带了 idea 的插件安装) 安装
 
 通过 JProfiler 插件启动 weblogic 服务器实例之后,JProfiler 的 GUI 界面将会启动,并成功监听到对应的实例进程. 实例成功启动之后,下面会有一个 CPU Time 的标签页,选中并点击`record`. 触发任意次目标方法,即可看到所有方法的执行时间
 
-![方法执行时间](./method-executing-time.webp)
+![方法执行时间](./method-executing-time.png)
 
 ### 正文:性能优化部分
 
