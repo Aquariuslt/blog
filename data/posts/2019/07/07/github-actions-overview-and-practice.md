@@ -10,7 +10,7 @@ tags:
   - TravisCI
   - Actions
   - Docker
-cover: https://img.aquariuslt.com/posts/2019/07/github-actions.png
+cover: ./github-actions.png
 ---
 
 # Github Actions: Overview and Practice
@@ -43,7 +43,7 @@ Github 官方介绍，简要的将就是 Github 官方提供的 CI 平台，其�
 - docker
 - shell
 
-![](https://img.aquariuslt.com/posts/2019/07/github-official-actions-repo.png)
+![](./github-official-actions-repo.png)
 
 当然也有很多非官方维护的 Actions，可以通过发布到 Github Marketplace 被查找到，也可以把 Actions 构建成 `docker image` + `entrypoints.sh` 的形式， 在项目 Workflow 的配置文件中以 docker image 路径进行引用。
 
@@ -53,7 +53,7 @@ Github 官方介绍，简要的将就是 Github 官方提供的 CI 平台，其�
 
 在 Github Web 界面中，对一个 Repository 的 Workflow 进行可视化的编辑时，如下图:
 
-![](https://img.aquariuslt.com/posts/2019/07/workflow-editor-example.png)
+![](./workflow-editor-example.png)
 
 实际上他背后也是一个配置文件，用这个配置文件来描述 workflow 的触发条件，步骤，以及每个步骤执行时的参数... 只不过 Github 官方提供了基于这个配置文件的在线可视化编辑，使得编辑过程比较容易直观。
 
@@ -63,7 +63,7 @@ Github 官方介绍，简要的将就是 Github 官方提供的 CI 平台，其�
 
 在 Github 界面上查看单个项目的 Workflow 下图这样子:
 
-![](https://img.aquariuslt.com/posts/2019/07/workflow-example.png)
+![](./workflow-example.png)
 
 这个 Workflow 比较直观的表示了一个基本的 `构建-发布` 流程:
 
@@ -228,7 +228,7 @@ hcl 全称 **HashiCorp Configuration Language**，其具体的语法规则比较
 
 Tips: 如果平时使用 IntelliJ IDEA 进行开发，那么可以通过给 `.workflow` 添加语法支持，将其识别为 `HCL` 语法，即可获得高亮与格式化
 
-![](https://img.aquariuslt.com/posts/2019/07/workflow-syntax-highlight.png)
+![](./workflow-syntax-highlight.png)
 
 为了实现基本操作中的第一部分: 每次提交代码时，触发基本的 build & test pipeline
 
@@ -281,7 +281,7 @@ action "test" {
 
 所以每当触发 Github 的 push event 之后，我们可以在 Github Actions 流程里看到 `workflow/ci` 的执行。
 
-![](https://img.aquariuslt.com/posts/2019/07/workflow-ci-overview.png)
+![](./workflow-ci-overview.png)
 
 ### Add Publish workflow
 
@@ -315,11 +315,11 @@ action "npm:release" {
 
 现在，我们在 github release 页面创建一个新 release 时
 
-![](https://img.aquariuslt.com/posts/2019/07/create-release.png)
+![](./create-release.png)
 
 将会触发 `npm:release` workflow：
 
-![](https://img.aquariuslt.com/posts/2019/07/trigger-release-workflow.png)
+![](./trigger-release-workflow.png)
 
 接着可以看到如下 detail log， 详见 [https://github.com/aquariuslt/jest-properties-loader/runs/163050939](https://github.com/aquariuslt/jest-properties-loader/runs/163050939)
 

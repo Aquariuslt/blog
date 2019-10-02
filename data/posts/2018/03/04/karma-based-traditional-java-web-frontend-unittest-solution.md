@@ -414,7 +414,7 @@ jawr.js.bundle.i18n.mappings=messages:i18n.i18n(locale)
 
 为了解耦呢，这个`karma-jawr`的中间件提供了这样一个功能
 
-根据`jawr.properties`的位置，参考 jawr Java 的路径解释部分实现，生成了一个中间文件夹 ![generated-indexes folder](https://img.aquariuslt.com/posts/2018/03/karma-jawr-generated-index.jpg) 配合 webpack 的`alias`功能，我们只要在单元测试代码里面使用类似这样的语法
+根据`jawr.properties`的位置，参考 jawr Java 的路径解释部分实现，生成了一个中间文件夹 ![generated-indexes folder](./karma-jawr-generated-index.jpg) 配合 webpack 的`alias`功能，我们只要在单元测试代码里面使用类似这样的语法
 
 ```javascript
 require('@/jsBundles/extJs.js');

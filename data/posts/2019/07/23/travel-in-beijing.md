@@ -5,7 +5,7 @@ updated: 2019-07-23
 category: Blog
 tags:
   - Trips
-cover: https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg
+cover: ./palace-museum-01.jpg
 ---
 
 # Travel in Beijing
@@ -22,7 +22,7 @@ cover: https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg
 
 周四晚上 12 点半从机场出来，直奔北京分公司放下行李，随后便开始了 MSRA 参观之旅。在马老师的带领下，深夜潜入微软北京分部。
 
-![](https://img.aquariuslt.com/posts/2019/07/msra.png)
+![](./msra.png)
 
 ## Day1: 国家奥体中心
 
@@ -32,15 +32,15 @@ cover: https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg
 
 奥体中心主要是鸟巢、水立方和附近的一些大楼。
 
-![](https://img.aquariuslt.com/posts/2019/07/bird-nest.png)
+![](./bird-nest.png)
 
 偶遇杰森斯坦森 x 吴亦凡演唱会
 
-![](https://img.aquariuslt.com/posts/2019/07/bird-nest-show.jpg)
+![](./bird-nest-show.jpg)
 
 没有等待到晚上水立方点亮的特效，在白天看上去比较平淡
 
-![](https://img.aquariuslt.com/posts/2019/07/water-m3.png)
+![](./water-m3.png)
 
 交通指数: ⭐️⭐️⭐️⭐️⭐️
 
@@ -56,21 +56,21 @@ cover: https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg
 
 由于打车不能直接到达天安门正门，所以我是从西南门进入故宫，沿着护城河走了一公里左右，便来到了午门~~斩首~~。
 
-![](https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg)
+![](./palace-museum-01.jpg)
 
 从午门开始检票进入故宫博物馆范围，便开始了随缘遍历游览。
 
-![](https://img.aquariuslt.com/posts/2019/07/palace-museum-02.png)
+![](./palace-museum-02.png)
 
 御花园。
 
-![](https://img.aquariuslt.com/posts/2019/07/palace-museum-03.png)
+![](./palace-museum-03.png)
 
-![](https://img.aquariuslt.com/posts/2019/07/palace-museum-04.jpg)
+![](./palace-museum-04.jpg)
 
 遍历游览到最北的神武门，可以辗转上城墙上走回东门。这张照片是在城墙上纵览角度拍照的。
 
-![](https://img.aquariuslt.com/posts/2019/07/palace-museum-05.jpg)
+![](./palace-museum-05.jpg)
 
 另值得一提的是，中间有一件紫禁城历史 VR 体验室，50RMB 体验 8 分钟紫禁城建造历史纪录片。
 
@@ -90,7 +90,7 @@ cover: https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg
 
 ## Day3: 烈日攀爬长城
 
-![](https://img.aquariuslt.com/posts/2019/07/great-wall-01.jpg)
+![](./great-wall-01.jpg)
 
 由于周六故宫线走得是在累，原定早上提前出门乘坐轨道交通前往八达岭长城，结果惯性起晚后，再打车到黄土店火车站时已经错过了十分钟前一班，在车站浪费了进一个小时。
 
@@ -98,13 +98,13 @@ cover: https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg
 
 接下来便是攀城墙的艰苦时光: 在暑期出行攀登长城，最大的问题可能并不是烈日当空，而是众多的游客互相拥挤，使得长城一路上寸步难行。路上基本是在人海中挪动，偶尔被撑开的太阳伞戳中，偶尔被踩中，反正这点体验极差。
 
-![](https://img.aquariuslt.com/posts/2019/07/great-wall-02.jpg)
+![](./great-wall-02.jpg)
 
 之前在火车上听到导游说八达岭长城分成南北两部分，其中北边有 8 个烽火台，第 7-8 个烽火台相当陡峭，登上之后便是好汉坡。 (而且有缆车直接下去，我马上毫不犹豫选择了北长城)。
 
 在人海中边蠕动边拍照，终于来到好汉坡，赶紧打卡拍了 N 张全景，其中自我感觉有几张特别有 feel，选取了其中一张呈上。
 
-![](https://img.aquariuslt.com/posts/2019/07/great-wall-03.jpg)
+![](./great-wall-03.jpg)
 
 于是我便在七月北京最热的天里登上了八达岭长城第八层，不知道是不是因为太累，我终于拍到了记忆中课本上长城的样子。
 
@@ -120,7 +120,7 @@ cover: https://img.aquariuslt.com/posts/2019/07/palace-museum-01.jpg
 
 从中关村银科大厦附近出发，前往北京大学西门(就是历史最悠久的西门)，出来时已经接近 3 点半。接着发现清华周一不开放参观，贵校观光就此错过。
 
-![](https://img.aquariuslt.com/posts/2019/07/pku-untitled-lake.jpg)
+![](./pku-untitled-lake.jpg)
 
 上图拍摄于北大未名湖
 

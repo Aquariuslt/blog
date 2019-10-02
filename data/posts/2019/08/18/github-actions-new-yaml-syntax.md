@@ -10,7 +10,7 @@ tags:
   - TravisCI
   - Actions
   - Docker
-cover: https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png
+cover: ./migrating-github-actions.png
 ---
 
 # Github Actions: New YAML Syntax
@@ -38,7 +38,7 @@ cover: https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png
 - 元数据支持方面，多了很多可选的选项，可以在 YAML 配置里编写很多类似注释级别的 `metadata`
 - 通过模板语法支持 `matrix build`
 
-![Build Log Highlight](https://img.aquariuslt.com/posts/2019/08/build-log-highlight-support.png)
+![Build Log Highlight](./build-log-highlight-support.png)
 
 ## Migrations
 
@@ -59,7 +59,7 @@ cover: https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png
 
 在确立了流程后，我们可以从任意 Repo 的 `Actions` 标签页，选择一些对应语言/平台的 `example workflow` 进行魔改。
 
-![Select NPM Example Workflow](https://img.aquariuslt.com/posts/2019/08/select-sample-workflow-for-npm.png)
+![Select NPM Example Workflow](./select-sample-workflow-for-npm.png)
 
 把官方的 `Node-CI` 直接应用到项目本身，也完全 OK。自此，我们第一步，通过 CI 平台执行`yarn test`,`yarn build`的功能就完成了。
 

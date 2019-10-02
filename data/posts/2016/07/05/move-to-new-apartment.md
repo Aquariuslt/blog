@@ -24,7 +24,7 @@ cover: https://picsum.photos/id/192/800/300
 三月初提交的申请,劳动节之后终于通知下来去抽签.
 
 一层的户型图大概如下图: 从结构上分,个人申请只能申请一房一厅或者单身公寓了.  
-![IMG_0916.JPG](https://img.aquariuslt.com/posts/2016/07/room-architecture.jpg) 抽到了个 08 户型,一房一厅,实用面积才 30 多.
+![IMG_0916.JPG](./room-architecture.jpg) 抽到了个 08 户型,一房一厅,实用面积才 30 多.
 
 ## 布置
 
@@ -35,23 +35,23 @@ cover: https://picsum.photos/id/192/800/300
 
 #### 空洞的过道
 
-![空洞的过道](https://img.aquariuslt.com/posts/2016/07/passing-route.jpg)
+![空洞的过道](./passing-route.jpg)
 
 #### 空洞的客厅
 
-![空洞的客厅](https://img.aquariuslt.com/posts/2016/07/meeting-room.jpg)
+![空洞的客厅](./meeting-room.jpg)
 
 #### 空洞的睡房
 
-![空洞的睡房](https://img.aquariuslt.com/posts/2016/07/bedroom.jpg)
+![空洞的睡房](./bedroom.jpg)
 
 #### 空洞的厨房
 
-![空洞的厨房](https://img.aquariuslt.com/posts/2016/07/kitchen.jpg)
+![空洞的厨房](./kitchen.jpg)
 
 #### 空洞的阳台
 
-![空洞的阳台](https://img.aquariuslt.com/posts/2016/07/sunroom.jpg)
+![空洞的阳台](./sunroom.jpg)
 
 ### 购置刚需家具
 
@@ -75,40 +75,38 @@ cover: https://picsum.photos/id/192/800/300
 
 #### 大门过道就加了一个垫子
 
-![21:37:44.jpg](https://img.aquariuslt.com/posts/2016/07/passing-route-updated.jpg)
+![21:37:44.jpg](./passing-route-updated.jpg)
 
 #### 只有骨架的电脑桌
 
-![21:39:14.jpg](https://img.aquariuslt.com/posts/2016/07/desktop.jpg.jpg)
+![21:39:14.jpg](./desktop.jpg)
 
 #### 上百螺丝还要反过来装
 
-![21:51:48.jpg](https://img.aquariuslt.com/posts/2016/07/desktop-installation.jpg)
+![21:51:48.jpg](./desktop-installation.jpg)
 
 #### 安装完毕 配上西昊 M18 P2415Q+2414H 强 无敌
 
-![21:56:42.jpg](https://ww4.sinaimg.cn/large/p2415q-m18.jpg)
-
 #### 原来的电脑桌变成了饭桌
 
-![21:57:22.jpg](https://img.aquariuslt.com/posts/2016/07/depracted-desktop.jpg)
+![21:57:22.jpg](./depracted-desktop.jpg)
 
 #### 室内衣架和一个杂物柜
 
-![21:30:18.jpg](https://img.aquariuslt.com/posts/2016/07/clothes.jpg)
+![21:30:18.jpg](./clothes.jpg)
 
 #### 低到类似榻榻米的床与床头柜
 
-![21:28:49.jpg](https://img.aquariuslt.com/posts/2016/07/bed.jpg)
+![21:28:49.jpg](./bed.jpg)
 
 #### 楼再高一点就是海景啦
 
-![22:01:15.jpg](https://img.aquariuslt.com/posts/2016/07/see-sea.jpg)
+![22:01:15.jpg](./see-sea.jpg)
 
 ## 憧憬
 
-配置齐全 感觉每天晚上专注 ~~学习~~ 的时间变长了. `wakatime`的 report ![22:10:03.jpg](https://img.aquariuslt.com/posts/2016/07/wakatime.jpg)
+配置齐全 感觉每天晚上专注 ~~学习~~ 的时间变长了. `wakatime`的 report ![22:10:03.jpg](./wakatime.jpg)
 
-![22:19:24.jpg](https://img.aquariuslt.com/posts/2016/07/wakatime-total.jpg)
+![22:19:24.jpg](./wakatime-total.jpg)
 
 希望在如此好的环境中,学习和工作效率会变得越来越高~

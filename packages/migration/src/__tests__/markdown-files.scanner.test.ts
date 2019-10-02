@@ -1,7 +1,7 @@
 import * as path from 'path';
-import { scan } from '../scan.helper';
+import { scan } from '../markdown-files.scanner';
 
-describe('scan helper', () => {
+describe('markdown files scanner', () => {
   it('# should scan all markdown file under __fixtures__ dir', () => {
     const BASE_DIR = path.join(__dirname, `__fixtures__`);
 

@@ -242,7 +242,7 @@ cover: https://picsum.photos/id/38/800/300
 
 #### How to Use
 
-我使用 gulp 来干什么呢? 单从前端运行的过程来说.我使用 Gulp 的 Task 进行下面一个流程. ![](https://img.aquariuslt.com/posts/2016/03/build-flow.png)
+我使用 gulp 来干什么呢? 单从前端运行的过程来说.我使用 Gulp 的 Task 进行下面一个流程. ![](./build-flow.png)
 
 ### Build Flow
 

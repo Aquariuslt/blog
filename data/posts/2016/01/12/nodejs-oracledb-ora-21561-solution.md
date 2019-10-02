@@ -27,7 +27,7 @@ sudo gedit /etc/hosts   (vi也行)
 
 查找`127.0.0.1` 在对应的 hostname 后面添加`centos-vm`,即本机器名
 
-![修改CentOS hosts文件](https://img.aquariuslt.com/posts/2016/01/update-centos-hosts.png)
+![修改CentOS hosts文件](./update-centos-hosts.png)
 
 重启即可.
 

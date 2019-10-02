@@ -22,9 +22,9 @@ cover: https://picsum.photos/id/500/800/300
 
 正是由于有动力打开 IDE,在下班的时候把陆续毕业设计做完,顺利完成真.毕业设计.
 
-![开箱](https://img.aquariuslt.com/posts/2016/01/unboxing-macbook.jpg)
+![开箱](./unboxing-macbook.jpg)
 
-![RMBP](https://img.aquariuslt.com/posts/2016/01/rmbp.jpg)
+![RMBP](./rmbp.jpg)
 
 > 从此每天都背着电脑上班. 就算没机会拿出来,也感觉是编程灵感的来源. 讲真,我的编程能力有了质的飞跃
 
@@ -52,11 +52,11 @@ cover: https://picsum.photos/id/500/800/300
 
 那么快就到了 6 月 27.传说中拍毕业照的日子.
 
-还是初中的死党过来帮我拍照. ![大合照](https://img.aquariuslt.com/posts/2016/01/graduaction.jpg) ![...不敢放了](https://img.aquariuslt.com/posts/2016/01/graduaction-more.jpg)
+还是初中的死党过来帮我拍照. ![大合照](./graduaction.jpg) ![...不敢放了](./graduaction-more.jpg)
 
 ### 找房子
 
-公司附近其实是有便宜的城中村的,但是没物管也没保安,财产得不到保证. 于是就找了中大那边的教师公寓,复式,够大,恰好家具也很不 low. ![](https://img.aquariuslt.com/posts/2016/01/room-1.png) ![](https://img.aquariuslt.com/posts/2016/01/room-2.jpg) ![](https://img.aquariuslt.com/posts/2016/01/room-3.jpg) ![](https://img.aquariuslt.com/posts/2016/01/room-4.jpg) ![](https://img.aquariuslt.com/posts/2016/01/room-5.jpg)
+公司附近其实是有便宜的城中村的,但是没物管也没保安,财产得不到保证. 于是就找了中大那边的教师公寓,复式,够大,恰好家具也很不 low. ![](./room-1.png) ![](./room-2.jpg) ![](./room-3.jpg) ![](./room-4.jpg) ![](./room-5.jpg)
 
 环境什么都好,就是上网慢还不给拉光纤. 一台 99 块的路由器要供 10+台终端上网,还只有 8M 的总带宽,自然不稳定.
 
@@ -70,7 +70,7 @@ cover: https://picsum.photos/id/500/800/300
 
 然后在 ITA 也遇到了很多新的小伙伴.来自武大,吉珠,北理珠和中国政法大学的研究生转行的大大.
 
-![ITA Team3 小分队](https://img.aquariuslt.com/posts/2016/01/team-3-ita.jpg)
+![ITA Team3 小分队](./team-3-ita.jpg)
 
 ## 入手 IDEA License
 
@@ -86,7 +86,7 @@ cover: https://picsum.photos/id/500/800/300
 
 毕业之前用的是注册机生成的 Idea 序列号. 毕业之后,适逢 Idea 15 版本更新,并且自己也已经有正式收入了. 决定正式购买 Idea License.
 
-为了加大推广 Idea 的力度,故申请了个微信公众号,定期推送 Idea 相关文章. ![IDE Skill微信公众号:codingskills](https://img.aquariuslt.com/posts/2016/01/wechat-open-account.jpg)
+为了加大推广 Idea 的力度,故申请了个微信公众号,定期推送 Idea 相关文章. ![IDE Skill微信公众号:codingskills](./wechat-open-account.jpg)
 
 ## 新的圈子
 

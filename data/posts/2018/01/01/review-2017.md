@@ -32,13 +32,13 @@ cover: https://picsum.photos/id/1006/800/300
 
 ### RMBP 15
 
-![Macbook Pro](https://img.aquariuslt.com/posts/2018/01/macbook-pro.jpg) 出了之前的小 RMBP 入手了顶配+定制显卡的 15 寸新 RMBP。
+![Macbook Pro](./macbook-pro.jpg) 出了之前的小 RMBP 入手了顶配+定制显卡的 15 寸新 RMBP。
 
 感谢猴子聚聚的员工优惠，可惜下单的时候没注意写成了中文键盘。目前用起来一切完美，就是没出 32G 内存有点可惜。
 
 ### SONY MDR-1000x
 
-6 月份入手第一款降噪耳机。 ![MDR-1000X](https://img.aquariuslt.com/posts/2018/01/mdr-1000x.png)
+6 月份入手第一款降噪耳机。 ![MDR-1000X](./mdr-1000x.png)
 
 舒适程度降噪效果比之前的好太多了。目前评价挺高
 

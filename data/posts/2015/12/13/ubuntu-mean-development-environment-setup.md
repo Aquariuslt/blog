@@ -152,7 +152,7 @@ $npm install -g n
 $n v4.2.3
 ```
 
-重启电脑之后在查看`node`和`npm`版本,应该如下图 ![更新Node.js](https://img.aquariuslt.com/posts/2015/12/update-nodejs.webp)
+重启电脑之后在查看`node`和`npm`版本,应该如下图 ![更新Node.js](./update-nodejs.webp)
 
 ## Linux 下 Node-OracleDB 的配置
 
@@ -189,7 +189,7 @@ export ORACLE_HOME=$OCI_LIB_DIR
 export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH
 ```
 
-![添加Oracle Client 相关全局环境变量](https://img.aquariuslt.com/posts/2015/12/add-oracle-cli-global-env-var.webp)
+![添加Oracle Client 相关全局环境变量](./add-oracle-cli-global-env-var.webp)
 
 此时执行命令安装 `oracledb` 大概应该不会出问题了
 
@@ -235,7 +235,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 $java -version
 ```
 
-![配置JDK路径](https://img.aquariuslt.com/posts/2015/12/config-jdk-path.webp)
+![配置JDK路径](./config-jdk-path.webp)
 
 ### 配置 Idea 在 Ubuntu 中的启动图标
 
@@ -256,7 +256,7 @@ Terminal=false
 Categories=Development;IDE;Java;
 ```
 
-![添加Ubuntu Applications启动图标](https://img.aquariuslt.com/posts/2015/12/add-app-launch-icon.webp)
+![添加Ubuntu Applications启动图标](./add-app-launch-icon.webp)
 
 ### Idea 在 Ubuntu 下一些特殊的配置
 
@@ -264,4 +264,4 @@ Categories=Development;IDE;Java;
 
 在`Run Configurations`->`Environment Variables`->`Include Parents Variables`->`Show` 查看所有环境变量. 如果没有,烦请自己加上,为求能达到与 Terminal 运行同样的结果.
 
-![查看Run Configurations全局变量](https://img.aquariuslt.com/posts/2015/12/check-run-configuration.webp)
+![查看Run Configurations全局变量](./check-run-configuration.webp)

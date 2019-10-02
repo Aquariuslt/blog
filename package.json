@@ -109,6 +109,8 @@
     },
     "collectCoverageFrom": [
       "!**/__tests__/**",
+      "!**/src/index.ts",
+      "!**/migration.ts",
       "<rootDir>/src/**/*.ts",
       "<rootDir>/packages/**/src/**/*.ts"
     ],

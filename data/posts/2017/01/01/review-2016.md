@@ -49,7 +49,7 @@ cover: https://picsum.photos/id/1072/800/300
 
 我一直在等待 WebDriver 的出现带动黑苹果
 
-![6700K+32G+GTX1070](https://img.aquariuslt.com/posts/2017/01/hardware-info.jpg)
+![6700K+32G+GTX1070](./hardware-info.jpg)
 
 ## Google Pixel
 
