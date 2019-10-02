@@ -12,6 +12,7 @@
   },
   "scripts": {
     "test": "jest",
+    "clean": "rimraf dist",
     "migration": "tsc && node ./dist/migration"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "@types/node": "^12.7.8",
     "jest": "^24.9.0",
     "jest-raw-loader": "^1.0.1",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0"
   },
   "jest": {

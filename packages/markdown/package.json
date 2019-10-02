@@ -10,12 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "esnext": "src/index.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "@blog/common": "^6.0.0",
@@ -32,6 +36,7 @@
     "@types/node": "^12.7.8",
     "jest": "^24.9.0",
     "jest-raw-loader": "^1.0.1",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0"
   },
   "jest": {

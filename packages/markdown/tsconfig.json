@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": false,
+    "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -12,7 +12,6 @@
     "baseUrl": "./",
     "incremental": true,
     "noImplicitAny": false,
-    "allowJs": true,
     "typeRoots": ["./node_modules/@types"]
   },
   "exclude": ["node_modules", "dist", "__tests__", "reports"]

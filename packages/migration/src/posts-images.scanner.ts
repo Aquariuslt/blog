@@ -10,7 +10,7 @@ import { ImagesDetectionPlugin } from '@blog/markdown/dist/plugins';
  * @description scan images in markdown files
  * */
 export const scan = (filepath: string) => {
-  const sourceText = fs.readFileSync(filepath);
+  const sourceText = fs.readFileSync(filepath).toString();
   const meta = metadata(sourceText);
   const src = source(sourceText);
   const md = new MarkdownIt().use(ImagesDetectionPlugin);
