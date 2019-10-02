@@ -12,7 +12,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --fix",
+    "pretest": "lerna run build",
     "test": "jest",
+    "pretest:cov": "lerna run build",
     "test:cov": "jest --coverage"
   },
   "devDependencies": {
