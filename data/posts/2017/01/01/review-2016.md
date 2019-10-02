@@ -5,7 +5,7 @@ updated: 2017-01-01
 category: Others
 tags:
   - Diary
-cover: https://picsum.photos/id/1072/800/300
+cover: ./cover.jpg
 ---
 
 # Year in Review 2016

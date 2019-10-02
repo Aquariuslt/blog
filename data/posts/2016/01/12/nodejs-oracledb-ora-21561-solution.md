@@ -6,7 +6,7 @@ category: Debug
 tags:
   - Node
   - Linux
-cover: https://picsum.photos/id/501/800/300
+cover: ./cover.jpg
 ---
 
 # Node.js oracledb "ORA-21561 - OID generation failed" 解决方案

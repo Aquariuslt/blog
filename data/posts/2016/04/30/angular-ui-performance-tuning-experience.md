@@ -6,7 +6,7 @@ category: Blog
 tags:
   - Angular
   - JavaScript
-cover: https://picsum.photos/id/872/800/300
+cover: ./cover.jpg
 ---
 
 # Angular.js 常规性能优化阶段总结

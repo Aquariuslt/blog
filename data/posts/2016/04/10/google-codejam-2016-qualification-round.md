@@ -6,7 +6,7 @@ category: Note
 tags:
   - Java
   - Google
-cover: https://picsum.photos/id/51/800/300
+cover: ./cover.jpg
 ---
 
 # Google CodeJam 2016 Qualification

@@ -5,7 +5,7 @@ updated: 2016-07-05
 category: Blog
 tags:
   - Diary
-cover: https://picsum.photos/id/192/800/300
+cover: ./cover.jpg
 ---
 
 # 蜗居

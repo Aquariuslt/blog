@@ -15,5 +15,5 @@
     "allowJs": true,
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["node_modules", "dist", "test", "reports"]
+  "exclude": ["node_modules", "dist", "__tests__", "reports"]
 }

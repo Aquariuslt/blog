@@ -6,7 +6,7 @@ category: Blog
 tags:
   - Blog
   - Angular
-cover: https://picsum.photos/id/237/800/300
+cover: ./cover.jpg
 ---
 
 # Blog Structure Update

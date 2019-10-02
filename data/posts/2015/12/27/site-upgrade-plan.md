@@ -8,7 +8,7 @@ tags:
   - Blog
   - VPS
   - Node
-cover: https://picsum.photos/id/953/800/300
+cover: ./cover.jpg
 ---
 
 # 网站重构升级计划

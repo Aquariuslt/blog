@@ -6,7 +6,7 @@ category: Debug
 tags:
   - Node
   - Linux
-cover: https://picsum.photos/id/306/800/300
+cover: ./cover.jpg
 ---
 
 # RHEL(CentOS)6 环境下安装 node-oracledb

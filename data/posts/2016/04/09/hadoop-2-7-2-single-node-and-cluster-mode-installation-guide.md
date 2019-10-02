@@ -6,7 +6,7 @@ category: Note
 tags:
   - Hadoop
   - Linux
-cover: https://picsum.photos/id/278/800/300
+cover: ./cover.jpg
 ---
 
 # Hadoop 2.7.2 单节点与集群安装部署

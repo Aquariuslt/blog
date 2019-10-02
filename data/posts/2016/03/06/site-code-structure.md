@@ -6,7 +6,7 @@ category: Blog
 tags:
   - Node
   - JavaScript
-cover: https://picsum.photos/id/38/800/300
+cover: ./cover.jpg
 ---
 
 # Site 项目结构介绍

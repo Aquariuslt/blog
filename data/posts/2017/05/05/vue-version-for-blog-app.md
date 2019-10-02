@@ -7,7 +7,7 @@ tags:
   - Blog
   - Vue
   - PWA
-cover: https://picsum.photos/id/57/800/300
+cover: ./cover.jpg
 ---
 
 # Vue Version Blog App

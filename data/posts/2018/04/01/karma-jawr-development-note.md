@@ -9,7 +9,7 @@ tags:
   - AngularJS
   - JavaScript
   - JAWR
-cover: https://picsum.photos/id/31/800/300
+cover: ./cover.jpg
 ---
 
 # 基于 Karma 的非分离式前端单元测试基础方案

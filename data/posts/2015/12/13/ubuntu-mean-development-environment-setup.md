@@ -7,7 +7,7 @@ tags:
   - Ubuntu
   - Linux
   - IntelliJ IDEA
-cover: https://picsum.photos/id/873/800/300
+cover: ./cover.jpg
 ---
 
 # Linux Mean 开发环境搭建
