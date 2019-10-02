@@ -4,7 +4,7 @@ import * as path from 'path';
 import * as url from 'url';
 import * as MarkdownIt from 'markdown-it';
 import { source, metadata } from '@blog/markdown';
-import { ImagesDetectionPlugin } from '@blog/markdown';
+import { ImagesDetectionPlugin } from '@blog/markdown/dist/plugins';
 
 /**
  * @description scan images in markdown files
