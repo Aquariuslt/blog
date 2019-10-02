@@ -1,0 +1,50 @@
+{
+  "name": "@blog/migration",
+  "version": "6.0.0",
+  "description": "migration tools from previous version",
+  "author": "aquariuslt <superaquariuslt@gmail.com>",
+  "homepage": "https://github.com/aquariuslt/blog#readme",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquariuslt/blog.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "migration": ""
+  },
+  "dependencies": {
+    "@blog/markdown": "^6.0.0",
+    "glob": "^7.1.4",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.141",
+    "@types/node": "^12.7.8",
+    "jest": "^24.9.0",
+    "jest-raw-loader": "^1.0.1",
+    "ts-jest": "^24.1.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+  }
+}

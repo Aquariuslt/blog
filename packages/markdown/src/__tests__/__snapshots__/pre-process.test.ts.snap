@@ -12,7 +12,7 @@ Object {
     "Node",
     "Typescript",
   ],
-  "title": "introducing json properties loader",
+  "title": "Introducing JSON Properties Loader",
   "updated": 2019-09-10T00:00:00.000Z,
 }
 `;
@@ -21,7 +21,7 @@ exports[`markdown: preprocess # should read file content in pre-process steps 2`
 "
 # A beautiful day
 
-This is a example markdown content with all one-pass test cases.
+This is an example markdown content with all one-pass test cases.
 
 ## Getting Started
 
@@ -47,6 +47,7 @@ You should use it to load as one of webpack loader configuration matching \`*.pr
 
 ## References
 
-![Absolute Image](https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png) ![Relative Image](images/sample-image.png)
+![Absolute Image](https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png) 
+![Relative Image](./images/sample-image.png)
 "
 `;
