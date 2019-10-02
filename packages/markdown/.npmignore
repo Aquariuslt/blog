@@ -1,0 +1,37 @@
+# IDEA
+.idea
+*.iml
+
+# VSCode
+.vscode
+
+# Node
+node_modules
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# Build & Distribution
+build
+dist
+
+# Test Report and Output
+coverage
+reports
+
+
+# editorconfig
+.editorconfig
+
+# source
+src
+tsconfig.json
+
+# test
+test
+__tests__
+
+# github workflow
+.github
