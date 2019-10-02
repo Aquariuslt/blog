@@ -1,5 +1,5 @@
 import * as MarkdownIt from 'markdown-it';
-import { ContentItemPlugin } from '../content-item';
+import { ContentItemPlugin } from '../content-item.plugin';
 
 import { read } from '../__tests__/test.fixtures.helper';
 

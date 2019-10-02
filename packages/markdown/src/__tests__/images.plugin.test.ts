@@ -1,6 +1,5 @@
 import * as MarkdownIt from 'markdown-it';
-
-import { ImagesDetectionPlugin } from '../images';
+import { ImagesDetectionPlugin } from '../images.plugin';
 import { read } from '../__tests__/test.fixtures.helper';
 
 describe('markdown-it plugins: images', (): void => {
