@@ -5,7 +5,7 @@ describe('posts images scanner', () => {
   it('# should scan all relative file from sample markdown file', () => {
     const SAMPLE_FILE_PATH = path.join(__dirname, '__fixtures__', 'sample-article-a.md');
     const images = scan(SAMPLE_FILE_PATH);
-    expect(images).toHaveLength(1);
+    expect(images).toHaveLength(2);
   });
 
   it('# should detect if an image url is not relative', () => {
