@@ -14,9 +14,7 @@ Personal Blog
 > For existing source of [https://blog.aquariuslt.com](https://blog.aquariuslt.com)
 
 
-## Product Level Features
-
-> TODO
+Next Version is incubating! See [`next` branch](https://github.com/aquariuslt/blog/tree/next)
 
 
 ## Features
