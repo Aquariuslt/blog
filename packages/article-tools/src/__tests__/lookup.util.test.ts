@@ -1,11 +1,20 @@
 import * as path from 'path';
-import { getImageFilename, isImageHosting, scan } from '../posts-images.scanner';
+import { lookupMarkdownFiles } from '../lookup.util';
+import { lookupImagesInMarkdownFile, getImageFilename, isImageHosting } from '../lookup.util';
 
-describe('posts images scanner', () => {
+describe('lookup util', () => {
+  it('# should scan all markdown file under __fixtures__ dir', () => {
+    const BASE_DIR = path.join(__dirname, `__fixtures__`);
+
+    const markdownFileList = lookupMarkdownFiles(BASE_DIR);
+
+    expect(markdownFileList).toHaveLength(2);
+  });
+
   it('# should scan all relative file from sample markdown file', () => {
     const SAMPLE_FILE_PATH = path.join(__dirname, '__fixtures__', 'sample-article-a.md');
-    const images = scan(SAMPLE_FILE_PATH);
-    expect(images).toHaveLength(2);
+    const images = lookupImagesInMarkdownFile(SAMPLE_FILE_PATH);
+    expect(images).toHaveLength(4);
   });
 
   it('# should detect if an image url is not relative', () => {

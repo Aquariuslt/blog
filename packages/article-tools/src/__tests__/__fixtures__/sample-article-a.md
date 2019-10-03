@@ -2,7 +2,7 @@
 title: 'Introducing JSON Properties Loader'
 created: 2019-09-10
 updated: 2019-09-10
-permalink: introducing-json-properties-loader
+cover: ./cover.jpg
 category:
   - Blog
 tags:
@@ -40,3 +40,7 @@ You should use it to load as one of webpack loader configuration matching `*.pro
 ## References
 
 ![Absolute Image](https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png)
+
+![Relative Image](./a-image.jpg)
+
+![Relative Image with directory](./images/a-image.jpg)
