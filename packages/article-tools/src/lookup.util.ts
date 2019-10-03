@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
 import * as fs from 'fs';
+import * as glob from 'glob';
 import * as path from 'path';
 import * as url from 'url';
 import * as MarkdownIt from 'markdown-it';
@@ -7,9 +8,17 @@ import { source, metadata } from '@blog/markdown';
 import { ImagesDetectionPlugin } from '@blog/markdown/dist/plugins';
 
 /**
- * @description scan images in markdown files
+ * @description provide a scan function to scan all markdown files
  * */
-export const scan = (filepath: string) => {
+export const lookupMarkdownFiles = (baseDir: string): string[] => {
+  const MD_RULES = '/**/*.md';
+  return glob.sync(baseDir + MD_RULES);
+};
+
+/**
+ * @description lookup images files in markdown
+ * */
+export const lookupImagesInMarkdownFile = (filepath) => {
   const sourceText = fs.readFileSync(filepath).toString();
   const meta = metadata(sourceText);
   const src = source(sourceText);
