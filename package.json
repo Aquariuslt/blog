@@ -4,7 +4,7 @@
   "private": true,
   "description": "next generation version blog",
   "repository": "https://github.com/aquariuslt/blog",
-  "author": "Aquariuslt<superaquariuslt@gmail.com>",
+  "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "license": "MIT",
   "keywords": [
     "blog",
@@ -98,13 +98,20 @@
     }
   },
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": {
+          "experimentalDecorators": true
+        }
+      }
+    },
     "moduleFileExtensions": [
       "ts",
       "js",
       "json"
     ],
     "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
+      "^@/(.*)$": "<rootDir>/packages/application/src/$1"
     },
     "transform": {
       "^.+\\.ts$": "ts-jest",
@@ -113,6 +120,7 @@
     "collectCoverageFrom": [
       "!**/__tests__/**",
       "!**/src/index.ts",
+      "!**/src/main.ts",
       "!**/src/plugins.ts",
       "!**/migration.ts",
       "<rootDir>/src/**/*.ts",
