@@ -1,5 +1,6 @@
 ---
 title: 'A Karma Plugin: Karma-JAWR Development Note'
+id: karma-jawr-development-note
 created: 2018-04-01
 updated: 2018-04-01
 category: Blog

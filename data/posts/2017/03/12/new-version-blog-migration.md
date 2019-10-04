@@ -1,5 +1,6 @@
 ---
 title: Blog Structure Update
+id: new-version-blog-migration
 created: 2017-03-12
 updated: 2017-03-12
 category: Blog

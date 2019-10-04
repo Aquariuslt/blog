@@ -1,5 +1,6 @@
 ---
 title: Latest Update on Blog App
+id: latest-update-on-blog-app
 created: 2018-03-03
 updated: 2018-03-03
 category: Blog

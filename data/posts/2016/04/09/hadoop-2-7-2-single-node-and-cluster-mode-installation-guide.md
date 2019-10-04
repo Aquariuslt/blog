@@ -1,5 +1,6 @@
 ---
 title: Hadoop 2.7.2 单节点与集群安装部署
+id: hadoop-2-7-2-single-node-and-cluster-mode-installation-guide
 created: 2016-04-09
 updated: 2016-04-09
 category: Note

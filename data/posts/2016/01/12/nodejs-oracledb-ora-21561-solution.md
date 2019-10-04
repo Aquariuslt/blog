@@ -1,5 +1,6 @@
 ---
 title: Node.js oracledb "ORA-21561 - OID generation failed" 解决方案
+id: nodejs-oracledb-ora-21561-solution
 created: 2016-01-12
 updated: 2016-01-12
 category: Debug

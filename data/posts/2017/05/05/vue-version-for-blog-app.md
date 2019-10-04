@@ -1,5 +1,6 @@
 ---
 title: Vue Version Blog App
+id: vue-version-for-blog-app
 created: 2017-05-05
 updated: 2017-05-05
 category: Blog

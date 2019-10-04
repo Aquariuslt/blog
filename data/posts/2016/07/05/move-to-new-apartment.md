@@ -1,5 +1,6 @@
 ---
 title: 蜗居
+id: move-to-new-apartment
 created: 2016-07-05
 updated: 2016-07-05
 category: Blog

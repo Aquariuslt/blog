@@ -1,5 +1,6 @@
 ---
 title: 'Travel in Beijing'
+id: travel-in-beijing
 created: 2019-07-23
 updated: 2019-07-23
 category: Blog

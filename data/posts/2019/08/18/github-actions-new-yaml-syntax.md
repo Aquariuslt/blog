@@ -1,5 +1,6 @@
 ---
 title: 'Github Actions: New YAML Syntax'
+id: github-actions-new-yaml-syntax
 created: 2019-08-18
 updated: 2019-08-18
 category: Blog
