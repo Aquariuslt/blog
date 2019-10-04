@@ -1,0 +1,12 @@
+version: 2
+
+
+sources:
+  pages: data/pages
+  posts: data/posts
+
+
+dirs:
+  dest: dist
+  assets: dist/static
+  posts: dist/posts
