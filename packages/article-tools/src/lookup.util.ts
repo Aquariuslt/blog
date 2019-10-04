@@ -23,7 +23,7 @@ export const lookupImagesInMarkdownFile = (filepath) => {
   const meta = metadata(sourceText);
   const src = source(sourceText);
   const md = new MarkdownIt().use(ImagesDetectionPlugin);
-  const context = Object.assign({});
+  const context = Object.create({});
   md.parse(src, context);
 
   const contentImages = context.images;

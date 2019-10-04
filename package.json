@@ -11,6 +11,7 @@
     "typescript"
   ],
   "scripts": {
+    "clean": "lerna run clean",
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --fix",
     "pretest": "lerna run clean && lerna run build",
@@ -123,6 +124,7 @@
       "!**/src/index.ts",
       "!**/src/main.ts",
       "!**/src/plugins.ts",
+      "!**/*.module.ts",
       "!**/migration.ts",
       "<rootDir>/src/**/*.ts",
       "<rootDir>/packages/**/src/**/*.ts"

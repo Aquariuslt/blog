@@ -10,3 +10,14 @@ dirs:
   dest: dist
   assets: dist/static
   posts: dist/posts
+
+site:
+  https: true
+  domain: blog.aquariuslt.com
+  title: Aquariuslt Blog
+
+# article settings
+pages:
+  title_sperator: '|'
+
+

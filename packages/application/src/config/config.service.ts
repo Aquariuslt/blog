@@ -45,4 +45,18 @@ export class ConfigService {
       posts: path.join(this.basePath, dirs.posts)
     };
   }
+
+  get site() {
+    const site = this.config['site'];
+    return {
+      domain: site.domain
+    };
+  }
+
+  get pageOptions() {
+    const options = this.config['pages'];
+    return {
+      titleSeparator: options['title_separator']
+    };
+  }
 }
