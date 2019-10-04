@@ -1,16 +1,20 @@
-import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
-import { lookupMarkdownFiles, lookupImagesInMarkdownFile } from '@blog/article-tools';
-import { copyImagesInMarkdown, isImageHosting } from '@blog/article-tools';
+import {
+  lookupMarkdownFiles,
+  lookupImagesInMarkdownFile,
+  copyImagesInMarkdown,
+  isImageHosting,
+  createArticleContext
+} from '@blog/article-tools';
 
 @Injectable()
-export class ArticleService implements OnModuleInit {
+export class ArticleService {
   private readonly logger = new Logger(ArticleService.name);
   private postsFiles: string[];
+  private postsContexts;
 
-  constructor(private readonly config: ConfigService) {}
-
-  onModuleInit() {
+  constructor(private readonly config: ConfigService) {
     this.logger.log(`Article Service inited with config.version: ${this.config.version}`);
     this.buildPostsData();
   }
@@ -18,6 +22,7 @@ export class ArticleService implements OnModuleInit {
   buildPostsData() {
     this.lookupPosts();
     this.copyPostsAssets();
+    this.createArticleContexts();
   }
 
   lookupPosts() {
@@ -32,5 +37,15 @@ export class ArticleService implements OnModuleInit {
       this.logger.log(`Copying posts assets from post: ${postFile} to  ${this.config.dirs.posts}`);
       copyImagesInMarkdown(postFile, relativeImages, this.config.sources.posts, this.config.dirs.posts);
     });
+  }
+
+  createArticleContexts() {
+    this.postsContexts = this.postsFiles.map((postFile) => {
+      return createArticleContext(postFile);
+    });
+  }
+
+  get contexts() {
+    return this.postsContexts;
   }
 }

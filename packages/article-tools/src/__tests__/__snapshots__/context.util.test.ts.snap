@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`context.util # should create article context 1`] = `
+Object {
+  "category": Array [
+    "Blog",
+  ],
+  "cover": "./cover.jpg",
+  "created": 2019-09-10T00:00:00.000Z,
+  "html": "<h1>A beautiful day</h1>
+<p>This is an example markdown content with all one-pass test cases.</p>
+<h2>Getting Started</h2>
+<p>Getting started snippet</p>
+<h3>Installing</h3>
+<pre><code class=\\"language-shell\\">yarn add -D properteis-json-loader
+</code></pre>
+<p>or, using npm</p>
+<pre><code class=\\"language-shell\\">npm install --save-dev properties-json-loader
+</code></pre>
+<h3>Update webpack configuration</h3>
+<p>You should use it to load as one of webpack loader configuration matching <code>*.properties</code> file.</p>
+<h2>Deep Understanding</h2>
+<h2>References</h2>
+<p><img src=\\"https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png\\" alt=\\"Absolute Image\\"></p>
+<p><img src=\\"./a-image.jpg\\" alt=\\"Relative Image\\"></p>
+<p><img src=\\"./images/a-image.jpg\\" alt=\\"Relative Image with directory\\"></p>
+",
+  "id": "introducing-json-properties-loader",
+  "images": Array [
+    "https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png",
+    "./a-image.jpg",
+    "./images/a-image.jpg",
+  ],
+  "src": "
+# A beautiful day
+
+This is an example markdown content with all one-pass test cases.
+
+## Getting Started
+
+Getting started snippet
+
+### Installing
+
+\`\`\`shell script
+yarn add -D properteis-json-loader
+\`\`\`
+
+or, using npm
+
+\`\`\`shell script
+npm install --save-dev properties-json-loader
+\`\`\`
+
+### Update webpack configuration
+
+You should use it to load as one of webpack loader configuration matching \`*.properties\` file.
+
+## Deep Understanding
+
+## References
+
+![Absolute Image](https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png)
+
+![Relative Image](./a-image.jpg)
+
+![Relative Image with directory](./images/a-image.jpg)
+",
+  "summary": "This is an example markdown content with all one-pass test cases.Getting started snippetor, using npm",
+  "tags": Array [
+    "NPM",
+    "Node",
+    "Typescript",
+  ],
+  "title": "Introducing JSON Properties Loader",
+  "toc": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [],
+              "id": "installing",
+              "label": "Installing",
+              "level": 3,
+              "pid": 1,
+              "position": 2,
+            },
+            Object {
+              "children": Array [],
+              "id": "update-webpack-configuration",
+              "label": "Update webpack configuration",
+              "level": 3,
+              "pid": 1,
+              "position": 3,
+            },
+          ],
+          "id": "getting-started",
+          "label": "Getting Started",
+          "level": 2,
+          "pid": 0,
+          "position": 1,
+        },
+        Object {
+          "children": Array [],
+          "id": "deep-understanding",
+          "label": "Deep Understanding",
+          "level": 2,
+          "pid": 0,
+          "position": 4,
+        },
+        Object {
+          "children": Array [],
+          "id": "references",
+          "label": "References",
+          "level": 2,
+          "pid": 0,
+          "position": 5,
+        },
+      ],
+      "id": "a-beautiful-day",
+      "label": "A beautiful day",
+      "level": 1,
+      "pid": -1,
+      "position": 0,
+    },
+  ],
+  "updated": 2019-09-10T00:00:00.000Z,
+}
+`;

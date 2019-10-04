@@ -1,2 +1,16 @@
 version: 2-test
 
+sources:
+  pages: data/pages
+  posts: data/posts
+
+
+dirs:
+  dest: dist
+  assets: dist/static
+  posts: dist/posts
+
+site:
+  https: true
+  domain: blog.someone.com
+  title: Some Body Blog

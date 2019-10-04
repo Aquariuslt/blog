@@ -5,7 +5,7 @@ import * as rimraf from 'rimraf';
 import { isImageHosting, lookupImagesInMarkdownFile, lookupMarkdownFiles } from '../lookup.util';
 import { copyImagesInMarkdown } from '../asset.util';
 
-describe(' asset util', () => {
+describe('asset util', () => {
   const TEST_DIST_DIR = path.join(__dirname, '__dist__');
   const MARKDOWN_DIR = path.join(__dirname, '__fixtures__');
 

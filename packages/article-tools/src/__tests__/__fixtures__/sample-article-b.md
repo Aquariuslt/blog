@@ -1,5 +1,6 @@
 ---
 title: 'Introducing JSON Properties Loader'
+id: introducing-json-properties-loader
 created: 2019-09-10
 updated: 2019-09-10
 cover: ./cover.jpg
