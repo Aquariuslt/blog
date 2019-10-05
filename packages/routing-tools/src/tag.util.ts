@@ -8,5 +8,5 @@ export const createTagsRootInfo = () => ({
 
 export const createTagInfo = (rawTag: string) => ({
   id: uslug(rawTag),
-  label: rawTag
+  label: `Tag: ${rawTag}`
 });
