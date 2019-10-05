@@ -18,14 +18,19 @@ import {
 @Injectable()
 export class RoutingService implements OnModuleInit {
   private readonly logger = new Logger(RoutingService.name);
+  private $inited = false;
 
-  private routes;
+  private routes = [];
 
   constructor(private config: ConfigService, private article: ArticleService) {}
 
   onModuleInit() {
+    if (this.$inited) {
+      return;
+    }
     this.article.onModuleInit();
     this.createRoutes();
+    this.$inited = true;
   }
 
   createRoutes() {

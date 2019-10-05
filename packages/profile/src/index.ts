@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
-import { Profile } from '@blog/common/interfaces/profile';
+import { RawProfile } from '@blog/common/interfaces/profile';
 
-export const createProfileInfo = (profile: Profile) => {
+export const createProfileInfo = (profile: RawProfile) => {
   const urls = _.values(profile.url);
 
   const url = _.head(urls);
@@ -9,7 +9,7 @@ export const createProfileInfo = (profile: Profile) => {
 
   return {
     '@context': 'http://www.schema.org',
-    '@type': 'person',
+    '@type': 'Person',
     name: profile.name,
     image: profile.logo.url,
     url: url,

@@ -9,6 +9,9 @@ export enum RoutePathPrefix {
 }
 
 export interface RouteMeta {
+  /** full url including protocol, domain, path */
+  url: string;
+
   /** same as layout */
   type: string | Layout;
 
