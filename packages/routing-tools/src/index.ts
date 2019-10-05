@@ -37,6 +37,7 @@ export const createTagListRouteInfo = (contexts: ArticleContext[], extra?: Parti
       createTagListBreadcrumbItem(extra.baseUrl, title, path)
     ],
     type: Layout.TABLE,
+    meta: undefined,
     data: undefined
   };
 };
@@ -53,6 +54,7 @@ export const createCategoryListRouteInfo = (contexts: ArticleContext[], extra?: 
       createCategoryListBreadcrumbItem(extra.baseUrl, title, path)
     ],
     type: Layout.TABLE,
+    meta: undefined,
     data: undefined
   };
 };
@@ -69,6 +71,7 @@ export const createPostListRouteInfo = (contexts: ArticleContext[], extra?: Part
       createPostListBreadcrumbItem(extra.baseUrl, title, path)
     ],
     type: Layout.LIST,
+    meta: undefined,
     data: undefined
   };
 };
@@ -82,6 +85,7 @@ export const createHomeRouteInfo = (options?: Partial<RoutingExtraOption>) => {
     title: title,
     breadcrumbs: [createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME)],
     type: Layout.LIST,
+    meta: undefined,
     data: undefined
   };
 };
@@ -160,6 +164,7 @@ export const createPostDetailRouteInfo = (
       createPostDetailBreadcrumbItem(extra.baseUrl, title, path)
     ],
     type: Layout.DETAIL,
+    meta: undefined,
     data: undefined
   };
 };
