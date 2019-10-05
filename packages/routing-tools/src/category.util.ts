@@ -8,5 +8,5 @@ export const createCategoryRootInfo = () => ({
 
 export const createCategoryInfo = (rawCategory: string) => ({
   id: uslug(rawCategory),
-  label: rawCategory
+  label: `Category: ${rawCategory}`
 });

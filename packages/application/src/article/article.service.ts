@@ -11,14 +11,19 @@ import {
 @Injectable()
 export class ArticleService implements OnModuleInit {
   private readonly logger = new Logger(ArticleService.name);
-  private postsFiles: string[];
-  private postsContexts;
+  private $inited = false;
+  private postsFiles: string[] = [];
+  private postsContexts = [];
 
   constructor(private readonly config: ConfigService) {}
 
   onModuleInit() {
+    if (this.$inited) {
+      return;
+    }
     this.logger.log(`Article Service inited with config.version: ${this.config.version}`);
     this.buildPostsData();
+    this.$inited = true;
   }
 
   buildPostsData() {
