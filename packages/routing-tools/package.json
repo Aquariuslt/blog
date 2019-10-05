@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "@blog/common": "^6.0.0",
-    "@blog/article-tools": "^6.0.0"
+    "@blog/article-tools": "^6.0.0",
+    "uslug": "^1.0.4"
   },
   "devDependencies": {
     "@types/fancy-log": "^1.3.1",
