@@ -1,4 +1,4 @@
-import { BreadcrumbItem } from '@blog/common/interfaces/routes/breadcrumb';
+import { BreadcrumbItem, BreadcrumbList } from '@blog/common/interfaces/routes/breadcrumb';
 
 export const createHomeBreadcrumbItem = (baseUrl: string, label: string, path: string): BreadcrumbItem => {
   return {
@@ -60,5 +60,13 @@ export const createPostDetailBreadcrumbItem = (baseUrl: string, label: string, p
     item: baseUrl + path,
     name: label,
     position: 3
+  };
+};
+
+export const createBreadcrumbList = (items: BreadcrumbItem[]): BreadcrumbList => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items
   };
 };
