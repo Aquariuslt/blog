@@ -6,7 +6,7 @@ import { MockConfigService } from '@/config/__tests__/__mocks__/mock.config.serv
 describe('ArticleService', () => {
   let service: ArticleService;
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         {
@@ -20,7 +20,7 @@ describe('ArticleService', () => {
     service = module.get<ArticleService>(ArticleService);
   });
 
-  it('should be defined', () => {
+  it('# should be defined', () => {
     expect(service).toBeDefined();
   });
 });

@@ -3,7 +3,8 @@ title: 'Github Actions: Overview and Practice'
 id: github-actions-overview-and-practice
 created: 2019-07-07
 updated: 2019-07-07
-category: Blog
+categories:
+  - Blog
 tags:
   - NPM
   - CI

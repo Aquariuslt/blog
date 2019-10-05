@@ -3,7 +3,8 @@ title: 'Travel in Beijing'
 id: travel-in-beijing
 created: 2019-07-23
 updated: 2019-07-23
-category: Blog
+categories:
+  - Blog
 tags:
   - Trips
 cover: ./palace-museum-01.jpg

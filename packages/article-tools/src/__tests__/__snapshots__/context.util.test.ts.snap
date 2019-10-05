@@ -2,7 +2,7 @@
 
 exports[`context.util # should create article context 1`] = `
 Object {
-  "category": Array [
+  "categories": Array [
     "Blog",
   ],
   "cover": "./cover.jpg",

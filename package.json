@@ -99,6 +99,7 @@
     }
   },
   "jest": {
+    "verbose": true,
     "globals": {
       "ts-jest": {
         "diagnostics": false,

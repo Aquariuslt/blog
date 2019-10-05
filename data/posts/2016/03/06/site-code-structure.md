@@ -3,7 +3,8 @@ title: Site 项目结构介绍
 id: site-code-structure
 created: 2016-03-06
 updated: 2016-03-06
-category: Blog
+categories:
+  - Blog
 tags:
   - Node
   - JavaScript

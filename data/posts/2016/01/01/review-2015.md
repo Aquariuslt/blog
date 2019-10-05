@@ -3,7 +3,8 @@ title: Year in Review 2015
 id: review-2015
 created: 2016-01-01
 updated: 2016-01-01
-category: Others
+categories:
+  - Others
 tags:
   - Diary
 cover: ./cover.jpg

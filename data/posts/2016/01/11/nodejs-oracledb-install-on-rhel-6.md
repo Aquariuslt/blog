@@ -3,7 +3,8 @@ title: RHEL(CentOS)6环境下安装node-oracledb
 id: nodejs-oracledb-install-on-rhel-6
 created: 2016-01-11
 updated: 2016-01-11
-category: Debug
+categories:
+  - Debug
 tags:
   - Node
   - Linux

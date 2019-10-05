@@ -3,7 +3,8 @@ title: 记一次神奇的优化过程:Java反射 VS Apache BeanUtils VS Spring B
 id: beanutils-vs-reflection
 created: 2015-11-10
 updated: 2015-11-10
-category: Blog
+categories:
+  - Blog
 tags:
   - Java
   - Apache

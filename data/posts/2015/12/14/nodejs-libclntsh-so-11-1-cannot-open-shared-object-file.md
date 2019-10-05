@@ -3,7 +3,8 @@ title: Linux "libclntsh.so.11.1 cannot open shared object file no such file or d
 id: nodejs-libclntsh-so-11-1-cannot-open-shared-object-file
 created: 2015-12-14
 updated: 2015-12-14
-category: Debug
+categories:
+  - Debug
 tags:
   - Ubuntu
   - Linux

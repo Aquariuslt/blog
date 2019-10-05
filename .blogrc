@@ -18,6 +18,6 @@ site:
 
 # article settings
 pages:
-  title_sperator: '|'
+  title_separator: '|'
 
 

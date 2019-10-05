@@ -3,7 +3,7 @@ title: 'Introducing JSON Properties Loader'
 created: 2019-09-10
 updated: 2019-09-10
 permalink: introducing-json-properties-loader
-category:
+categories:
   - Blog
 tags:
   - NPM

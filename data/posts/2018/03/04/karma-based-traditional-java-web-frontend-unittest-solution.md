@@ -3,7 +3,8 @@ title: 基于Karma的非分离式前端单元测试基础方案
 id: karma-based-traditional-java-web-frontend-unittest-solution
 created: 2018-03-04
 updated: 2018-03-04
-category: Blog
+categories:
+  - Blog
 tags:
   - Java
   - JAWR

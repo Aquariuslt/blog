@@ -2,7 +2,7 @@
 
 exports[`markdown: preprocess # should read file content in pre-process steps 1`] = `
 Object {
-  "category": Array [
+  "categories": Array [
     "Blog",
   ],
   "created": 2019-09-10T00:00:00.000Z,

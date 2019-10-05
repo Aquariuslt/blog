@@ -3,7 +3,8 @@ title: 网站重构升级计划
 id: site-upgrade-plan
 created: 2015-12-27
 updated: 2015-12-27
-category: Blog
+categories:
+  - Blog
 tags:
   - Site
   - Blog

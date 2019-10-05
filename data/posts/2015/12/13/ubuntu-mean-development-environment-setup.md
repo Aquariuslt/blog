@@ -3,7 +3,8 @@ title: Linux Mean 开发环境搭建
 id: ubuntu-mean-development-environment-setup
 created: 2015-12-13
 updated: 2015-12-13
-category: Blog
+categories:
+  - Blog
 tags:
   - Ubuntu
   - Linux

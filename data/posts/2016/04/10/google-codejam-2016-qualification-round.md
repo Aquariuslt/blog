@@ -3,7 +3,8 @@ title: Google CodeJam 2016 Qualification
 id: google-codejam-2016-qualification-round
 created: 2016-04-10
 updated: 2016-04-10
-category: Note
+categories:
+  - Note
 tags:
   - Java
   - Google

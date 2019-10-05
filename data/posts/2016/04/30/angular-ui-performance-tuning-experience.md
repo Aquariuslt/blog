@@ -3,7 +3,8 @@ title: Angular.js常规性能优化阶段总结
 id: angular-ui-performance-tuning-experience
 created: 2016-04-30
 updated: 2016-04-30
-category: Blog
+categories:
+  - Blog
 tags:
   - Angular
   - JavaScript

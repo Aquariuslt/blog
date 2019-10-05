@@ -3,7 +3,8 @@ title: Spring 整合 Apache Shiro 实现各等级的权限管理
 id: apache-shiro-spring-integration
 created: 2015-10-25
 updated: 2015-10-25
-category: Blog
+categories:
+  - Blog
 tags:
   - Spring
   - Security
