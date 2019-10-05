@@ -15,8 +15,11 @@ export interface RouteMeta {
   /** the sub path: like `/categories`, `/tags */
   path: string;
 
-  /** tie bundle title */
+  /** title with base title as suffix */
   title: string;
+
+  /** key - value pair of meta */
+  meta?;
 
   /* breadcrumbs data*/
   breadcrumbs;

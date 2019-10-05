@@ -34,7 +34,9 @@ export class RoutingService implements OnModuleInit {
     const categoryRoutes = this.createCategoriesRoutes();
     const postRoutes = this.createPostsRoutes();
 
-    const allRoutes = _.concat(tagRoutes, categoryRoutes, postRoutes);
+    const allRoutes = _.concat(homeRoute, tagRoutes, categoryRoutes, postRoutes);
+
+    this.routes = allRoutes;
 
     _.each(allRoutes, (route) => {
       this.logger.debug(`Created Route Meta for path: ${route.path}`);
@@ -42,7 +44,7 @@ export class RoutingService implements OnModuleInit {
   }
 
   createHomeRoute() {
-    return createHomeRouteInfo(this.routingExtraOption);
+    return [createHomeRouteInfo(this.routingExtraOption)];
   }
 
   createTagsRoutes() {

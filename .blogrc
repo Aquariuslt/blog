@@ -5,7 +5,6 @@ sources:
   pages: data/pages
   posts: data/posts
 
-
 dirs:
   dest: dist
   assets: dist/static
@@ -16,8 +15,21 @@ site:
   domain: blog.aquariuslt.com
   title: Aquariuslt Blog
 
+profile:
+  name: Aquariuslt
+  logo:
+    url: https://img.aquariuslt.com/social/avator.png
+  email: superaquariuslt@gmail.com
+  url:
+    github: https://github.com/aquariuslt
+    instagram: https://instagram/supaquariuslt
+    twitter: https://twitter.com/superaquariuslt
+
+
 # article settings
 pages:
   title_separator: '|'
+
+
 
 
