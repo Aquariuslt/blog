@@ -25,17 +25,19 @@
   },
   "dependencies": {
     "@blog/article-tools": "^6.0.0",
+    "@blog/routing-tools": "^6.0.0",
     "@blog/common": "^6.0.0",
     "@blog/markdown": "^6.0.0",
     "@nestjs/common": "^6.8.0",
-    "@nestjs/core": "^6.8.0",
-    "@nestjs/platform-express": "^6.7.2",
+    "@nestjs/core": "^6.8.2",
+    "@nestjs/platform-express": "^6.8.2",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.10.0",
     "cosmiconfig": "^5.2.1",
     "date-fns": "^2.3.0",
     "lodash": "^4.17.15",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
   },
   "devDependencies": {
     "@nestjs/testing": "^6.7.2",

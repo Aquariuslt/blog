@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
 import {
   lookupMarkdownFiles,
@@ -9,12 +9,14 @@ import {
 } from '@blog/article-tools';
 
 @Injectable()
-export class ArticleService {
+export class ArticleService implements OnModuleInit {
   private readonly logger = new Logger(ArticleService.name);
   private postsFiles: string[];
   private postsContexts;
 
-  constructor(private readonly config: ConfigService) {
+  constructor(private readonly config: ConfigService) {}
+
+  onModuleInit() {
     this.logger.log(`Article Service inited with config.version: ${this.config.version}`);
     this.buildPostsData();
   }

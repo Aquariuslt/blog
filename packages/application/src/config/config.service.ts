@@ -48,8 +48,12 @@ export class ConfigService {
 
   get site() {
     const site = this.config['site'];
+    const protocol = site.https ? 'https://' : 'http://';
+    const baseUrl = protocol + site.domain;
     return {
-      domain: site.domain
+      domain: site.domain,
+      baseUrl: baseUrl,
+      baseTitle: site.title
     };
   }
 

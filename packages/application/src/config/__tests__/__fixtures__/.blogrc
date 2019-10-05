@@ -1,5 +1,6 @@
 version: 2-test
 
+
 sources:
   pages: data/pages
   posts: data/posts
@@ -12,5 +13,11 @@ dirs:
 
 site:
   https: true
-  domain: blog.someone.com
-  title: Some Body Blog
+  domain: blog.aquariuslt.com
+  title: Aquariuslt Blog
+
+# article settings
+pages:
+  title_sperator: '|'
+
+
