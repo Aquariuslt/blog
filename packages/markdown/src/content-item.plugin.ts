@@ -1,6 +1,6 @@
 import * as uslug from 'uslug';
+import * as MarkdownIt from 'markdown-it';
 import { ContentItem } from '@blog/common/interfaces/articles/content-item';
-import MarkdownIt = require('markdown-it');
 
 const level = (tag: string) => Number(tag.slice(1));
 

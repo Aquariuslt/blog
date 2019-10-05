@@ -1,10 +1,11 @@
-import MarkdownIt = require('markdown-it');
+import * as MarkdownIt from 'markdown-it';
+import * as cheerio from 'cheerio';
 
-const DEFAULT_SUMMARY_LENGTH = 100;
+const DEFAULT_SUMMARY_LENGTH = 200;
 
 export const SummaryPlugin = (md: MarkdownIt, options?) => {
   md.core.ruler.push('detect_summary', (state): void => {
-    let summary = '';
+    let summarySourceText = '';
     let summaryLength = DEFAULT_SUMMARY_LENGTH;
 
     if (options && options.len) {
@@ -20,11 +21,15 @@ export const SummaryPlugin = (md: MarkdownIt, options?) => {
         tokens[index - 1].type === 'paragraph_open' &&
         token.content.charAt(0) != '#'
       ) {
-        if (summary.length < summaryLength) {
-          summary += token.content;
+        if (summarySourceText.length < summaryLength) {
+          summarySourceText += token.content;
         }
       }
     });
+
+    const summaryHtml = new MarkdownIt().render(summarySourceText);
+    const $ = cheerio.load(summaryHtml);
+    const summary = $.root().text();
 
     if (state.env) {
       state.env.summary = summary;

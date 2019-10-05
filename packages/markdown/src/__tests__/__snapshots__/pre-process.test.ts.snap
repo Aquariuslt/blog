@@ -23,6 +23,8 @@ exports[`markdown: preprocess # should read file content in pre-process steps 2`
 
 This is an example markdown content with all one-pass test cases.
 
+This section should load as summary in parsed data.
+
 ## Getting Started
 
 Getting started snippet
@@ -44,6 +46,7 @@ npm install --save-dev properties-json-loader
 You should use it to load as one of webpack loader configuration matching \`*.properties\` file.
 
 ## Deep Understanding
+
 
 ## References
 

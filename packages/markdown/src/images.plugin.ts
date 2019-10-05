@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import MarkdownIt = require('markdown-it');
+import * as MarkdownIt from 'markdown-it';
 
 export const ImagesDetectionPlugin = (md: MarkdownIt) => {
   md.core.ruler.push('detect_images', (state): void => {

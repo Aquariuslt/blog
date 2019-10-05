@@ -15,6 +15,8 @@ tags:
 
 This is an example markdown content with all one-pass test cases.
 
+This section should load as summary in parsed data.
+
 ## Getting Started
 
 Getting started snippet
