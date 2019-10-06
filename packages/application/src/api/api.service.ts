@@ -19,8 +19,9 @@ export class ApiService implements OnModuleInit {
   }
 
   buildApi() {
-    this.buildCategoriesApi();
     this.buildTagsApi();
+    this.buildCategoriesApi();
+    this.buildPostsApi();
   }
 
   buildPostsApi() {}

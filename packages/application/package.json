@@ -24,6 +24,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@blog/api-generator": "^6.0.0",
     "@blog/article-tools": "^6.0.0",
     "@blog/routing-tools": "^6.0.0",
     "@blog/common": "^6.0.0",
