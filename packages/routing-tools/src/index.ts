@@ -4,7 +4,7 @@ import { ArticleContext } from '@blog/common/interfaces/articles/article-context
 import { RouteMeta, RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { Layout } from '@blog/common/interfaces/routes/layout';
 import { buildTitle } from './title.util';
-import { buildFullURL, buildURLPath } from './path.util';
+import { buildFullURL, buildURLPath } from '@blog/common/utils/path.util';
 import { createTagInfo, createTagsRootInfo } from './tag.util';
 import { createCategoryInfo, createCategoryRootInfo } from './category.util';
 import { createPostListRootInfo } from './post.util';

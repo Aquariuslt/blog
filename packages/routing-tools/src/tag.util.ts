@@ -1,5 +1,6 @@
 import * as uslug from 'uslug';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
+import { buildURLPath } from '@blog/common/utils/path.util';
 
 export const createTagsRootInfo = () => ({
   id: RoutePathPrefix.TAGS,
