@@ -15,6 +15,9 @@ export interface RouteMeta {
   /** same as layout */
   type: string | Layout;
 
+  /** raw key */
+  key: string;
+
   /** the sub path: like `/categories`, `/tags */
   path: string;
 

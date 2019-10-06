@@ -18,6 +18,23 @@ export const createTagsApiInfo = (contexts: ArticleContext[]) => {
   return _.map(_.keys(tagsMap), (tag) => createTagApiInfo(tag, tagsMap[tag].length));
 };
 
+export const groupByArticleTagPath = (contexts: Partial<ArticleContext>[]) => {
+  const tagsMap = Object.create({});
+
+  _.each(contexts, (context) => {
+    _.each(context.tags, (rawTag) => {
+      const tagPath = buildURLPath(RoutePathPrefix.TAGS, uslug(rawTag));
+      if (tagsMap.hasOwnProperty(rawTag)) {
+        tagsMap[tagPath].push(context);
+      } else {
+        tagsMap[tagPath] = [context];
+      }
+    });
+  });
+
+  return tagsMap;
+};
+
 /**  @description simply `/tags/:tag` api response, including article overviews */
 export const createTagsDetailApiInfo = (contexts: ArticleContext[]) =>
-  groupByArticleTags(_.map(contexts, createArticleOverview));
+  groupByArticleTagPath(_.map(contexts, createArticleOverview));

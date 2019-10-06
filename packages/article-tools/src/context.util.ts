@@ -56,6 +56,8 @@ export const groupByArticleCategories = (contexts: Partial<ArticleContext>[]) =>
       }
     });
   });
+
+  return categoriesMap;
 };
 
 export const getAllTagsFromContexts = (contexts: ArticleContext[]) => _.keys(groupByArticleTags(contexts));
