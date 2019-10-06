@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as mkdirp from 'mkdirp';
+import { metadata } from '@blog/markdown';
 
 /**
  * @param filepath: markdown filepath
@@ -12,10 +13,18 @@ export const copyImagesInMarkdown = (filepath: string, images: string[], baseDir
   const sourceDir = path.dirname(filepath);
   const sourceImagePaths = images.map((imageRelativePath) => path.resolve(sourceDir, imageRelativePath));
 
+  const meta = metadata(fs.readFileSync(filepath).toString());
+  const fileId = meta.id;
+
   sourceImagePaths.forEach((sourceImagePath) => {
     const imageRelativePath = path.relative(baseDir, sourceImagePath);
-    const imageDestinationPath = path.join(destination, imageRelativePath);
-    const imageDestinationDir = path.dirname(imageDestinationPath);
+    const imageDestinationBasePath = path.join(destination, imageRelativePath);
+    // join directory from post id
+    const imageDestinationBase = path.dirname(imageDestinationBasePath);
+    const imageFilename = path.basename(imageDestinationBasePath);
+    const imageDestinationDir = path.join(imageDestinationBase, fileId);
+    const imageDestinationPath = path.join(imageDestinationDir, imageFilename);
+
     mkdirp.sync(imageDestinationDir);
     fs.copyFileSync(sourceImagePath, imageDestinationPath);
   });
