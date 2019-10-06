@@ -4,6 +4,7 @@ import { RoutingService } from './routing.service';
 
 @Module({
   imports: [ArticleModule],
-  providers: [RoutingService]
+  providers: [RoutingService],
+  exports: [RoutingService]
 })
 export class RoutingModule {}
