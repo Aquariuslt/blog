@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import { metadata, source } from '@blog/markdown';
-import {} from './lookup.util';
 import * as MarkdownIt from 'markdown-it';
 import { ImagesDetectionPlugin } from '@blog/markdown/dist/images.plugin';
 import { ContentItemPlugin } from '@blog/markdown/dist/content-item.plugin';
