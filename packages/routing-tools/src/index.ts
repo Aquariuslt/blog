@@ -32,6 +32,7 @@ export const createTagListRouteInfo = (contexts: ArticleContext[], extra?: Parti
   const url = buildFullURL(extra.baseUrl, path);
 
   return {
+    key: path,
     url: url,
     path: path,
     title: title,
@@ -54,6 +55,7 @@ export const createCategoryListRouteInfo = (
   const url = buildFullURL(extra.baseUrl, path);
 
   return {
+    key: path,
     url: url,
     path: path,
     title: title,
@@ -73,6 +75,7 @@ export const createPostListRouteInfo = (contexts: ArticleContext[], extra?: Part
   const url = buildFullURL(extra.baseUrl, path);
 
   return {
+    key: path,
     url: url,
     path: path,
     title: title,
@@ -92,6 +95,7 @@ export const createHomeRouteInfo = (options?: Partial<RoutingExtraOption>): Rout
   const url = buildFullURL(options.baseUrl, path);
 
   return {
+    key: path,
     url: url,
     path: path,
     title: title,
@@ -118,6 +122,7 @@ export const createTagDetailRouteInfo = (
   const url = buildFullURL(extra.baseUrl, path);
 
   return {
+    key: path,
     url: url,
     path: path,
     title: title,
@@ -144,6 +149,7 @@ export const createCategoryDetailRouteInfo = (
   const url = buildFullURL(extra.baseUrl, path);
 
   return {
+    key: path,
     url: url,
     path: path,
     title: title,
@@ -175,6 +181,7 @@ export const createPostDetailRouteInfo = (
   const url = buildFullURL(extra.baseUrl, path);
 
   return {
+    key: path,
     url: url,
     path: path,
     title: title,

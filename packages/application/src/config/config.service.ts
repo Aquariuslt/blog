@@ -43,7 +43,8 @@ export class ConfigService {
   get dirs() {
     const dirs = this.config['dirs'];
     return {
-      posts: path.join(this.basePath, dirs.posts)
+      posts: path.join(this.basePath, dirs.posts),
+      api: path.join(this.basePath, dirs.api)
     };
   }
 

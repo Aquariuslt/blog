@@ -18,6 +18,23 @@ export const createCategoriesApInfo = (contexts: ArticleContext[]) => {
   return _.map(_.keys(categoriesMap), (category) => createCategoryApiInfo(category, categoriesMap[category].length));
 };
 
+export const groupByArticleCategoryPath = (contexts: Partial<ArticleContext>[]) => {
+  const categoriesMap = Object.create({});
+
+  _.each(contexts, (context) => {
+    _.each(context.categories, (rawCategory) => {
+      const categoryPath = buildURLPath(RoutePathPrefix.CATEGORIES, uslug(rawCategory));
+      if (categoriesMap.hasOwnProperty(rawCategory)) {
+        categoriesMap[categoryPath].push(context);
+      } else {
+        categoriesMap[categoryPath] = [context];
+      }
+    });
+  });
+
+  return categoriesMap;
+};
+
 /** @description simply `/categories/:category` api response, including article overviews */
 export const createCategoriesDetailApiInfo = (contexts: ArticleContext[]) =>
-  groupByArticleCategories(_.map(contexts, createArticleOverview));
+  groupByArticleCategoryPath(_.map(contexts, createArticleOverview));
