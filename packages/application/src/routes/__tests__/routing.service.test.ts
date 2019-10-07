@@ -1,11 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { RoutingService } from '@/routing/routing.service';
+import { RoutesService } from '@/routes/routes.service';
 import { ConfigService } from '@/config/config.service';
 import { MockConfigService } from '@/config/__tests__/__mocks__/mock.config.service';
 import { ArticleService } from '@/article/article.service';
 
 describe('RoutingService', () => {
-  let service: RoutingService;
+  let service: RoutesService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -15,11 +15,11 @@ describe('RoutingService', () => {
           useValue: new MockConfigService()
         },
         ArticleService,
-        RoutingService
+        RoutesService
       ]
     }).compile();
 
-    service = module.get<RoutingService>(RoutingService);
+    service = module.get<RoutesService>(RoutesService);
   });
 
   it('should be defined', () => {

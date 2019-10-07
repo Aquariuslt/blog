@@ -26,7 +26,7 @@
   "dependencies": {
     "@blog/api-generator": "^6.0.0",
     "@blog/article-tools": "^6.0.0",
-    "@blog/routing-tools": "^6.0.0",
+    "@blog/routes-tools": "^6.0.0",
     "@blog/common": "^6.0.0",
     "@blog/markdown": "^6.0.0",
     "@blog/profile": "^6.0.0",
