@@ -1,7 +1,7 @@
-export interface NavigationMenu {
+export interface NavigationItem {
   id: string;
   label: string;
   link: string;
   icon?: string;
-  children?: NavigationMenu;
+  children?: NavigationItem;
 }

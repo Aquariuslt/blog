@@ -6,7 +6,9 @@ export enum RoutePathPrefix {
   TAGS = 'tags',
   CATEGORIES = 'categories',
   POSTS = 'posts',
-  PAGES = 'pages'
+  PAGES = 'pages',
+  NAVIGATION = 'navigation',
+  PROFILE = 'profile'
 }
 
 export interface RouteMeta {

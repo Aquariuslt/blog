@@ -12,7 +12,9 @@ import {
   createPostsOverviewApiData,
   createTagDetailApiData,
   createTagsOverviewApiData,
-  persistApi
+  createNavigationApiData,
+  persistApi,
+  createProfileApiData
 } from '@blog/api-generator';
 import { buildURLPath } from '@blog/common/utils/path.util';
 
@@ -20,9 +22,11 @@ import { buildURLPath } from '@blog/common/utils/path.util';
 export class ApiService implements OnModuleInit {
   private readonly logger = new Logger(ApiService.name);
 
-  private apis: ApiData[];
+  private apis: Partial<ApiData>[];
 
   private home: ApiData;
+  private navigation: Partial<ApiData>;
+  private profile: Partial<ApiData>;
 
   private tagsOverview: ApiData;
   private tagDetails: ApiData[];
@@ -55,11 +59,16 @@ export class ApiService implements OnModuleInit {
     this.categoryDetails = this.buildCategoryDetailsApi();
     this.postDetails = this.buildPostDetailsApi();
 
+    this.navigation = this.buildNavigationApi();
+    this.profile = this.buildProfileApi();
+
     this.apis = _.concat(
       [this.home],
       [this.tagsOverview],
       [this.categoriesOverview],
       [this.postsOverview],
+      [this.navigation],
+      [this.profile],
       this.tagDetails,
       this.categoryDetails,
       this.postDetails
@@ -120,5 +129,19 @@ export class ApiService implements OnModuleInit {
         data: createPostDetailApiData(postDetail.key, this.article.contexts)
       });
     });
+  }
+
+  buildNavigationApi() {
+    return {
+      path: buildURLPath(RoutePathPrefix.NAVIGATION),
+      data: createNavigationApiData()
+    };
+  }
+
+  buildProfileApi() {
+    return {
+      path: buildURLPath(RoutePathPrefix.PROFILE),
+      data: createProfileApiData(this.config.profile)
+    };
   }
 }

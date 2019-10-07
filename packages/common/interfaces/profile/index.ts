@@ -1,7 +1,6 @@
 /**
  * @description author profile
  * */
-import { Person } from 'schema-dts';
 
 export interface RawProfile {
   name: string;
