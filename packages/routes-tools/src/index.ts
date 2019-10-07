@@ -5,9 +5,9 @@ import { RouteMeta, RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { Layout } from '@blog/common/interfaces/routes/layout';
 import { buildFullURL, buildURLPath } from '@blog/common/utils/path.util';
 import { buildTitle } from './title.util';
-import { createTagDetailRouteItem, createTagsOverviewRouteItem } from './tag.util';
-import { createCategoryDetailRouteItem, createCategoriesOverviewRouteItem } from './category.util';
-import { createPostsOverviewRouteItem } from './post.util';
+import { createTagDetailRouteItem, createTagsOverviewRouteItem } from './tag.route.util';
+import { createCategoryDetailRouteItem, createCategoriesOverviewRouteItem } from './category.route.util';
+import { createPostsOverviewRouteItem } from './post.route.util';
 import {
   createBreadcrumbList,
   createCategoryDetailBreadcrumbItem,
@@ -18,6 +18,9 @@ import {
   createTagDetailBreadcrumbItem,
   createTagsOverviewBreadcrumbItem
 } from './breadcrumb.util';
+
+export * from './tag.route.util';
+export * from './category.route.util';
 
 export interface RoutesOptions {
   baseUrl: string;

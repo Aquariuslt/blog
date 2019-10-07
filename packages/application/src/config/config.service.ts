@@ -1,7 +1,6 @@
 import * as path from 'path';
 import * as cosmiconfig from 'cosmiconfig';
 import { Injectable, Logger } from '@nestjs/common';
-import { createProfileInfo } from '@blog/profile';
 
 @Injectable()
 export class ConfigService {
@@ -60,8 +59,7 @@ export class ConfigService {
   }
 
   get profile() {
-    const profile = this.config['profile'];
-    return createProfileInfo(profile);
+    return this.config['profile'];
   }
 
   get pageOptions() {
