@@ -1,24 +1,29 @@
 import * as path from 'path';
 import * as cosmiconfig from 'cosmiconfig';
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 
 @Injectable()
-export class ConfigService {
+export class ConfigService implements OnModuleInit {
   private readonly logger = new Logger(ConfigService.name);
 
   private explorer = cosmiconfig(`blog`);
   private readonly configSearchPath;
   private configLocation;
   private config;
+  private configFilePath;
 
   constructor(configSearchPath?: string) {
     this.configSearchPath = configSearchPath;
     this.loadConfig();
   }
 
+  onModuleInit() {
+    this.logger.log(`Load Config from : ${this.configFilePath}`);
+  }
+
   loadConfig() {
     const lookupConfigResult = this.explorer.searchSync(this.configSearchPath);
-    this.logger.log(`Load Config from : ${lookupConfigResult.filepath}`);
+    this.configFilePath = lookupConfigResult.filePath;
     this.config = lookupConfigResult.config;
     this.configLocation = lookupConfigResult.filepath;
   }

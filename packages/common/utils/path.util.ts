@@ -1,5 +1,3 @@
-import * as _ from 'lodash';
-
 /**
  * @description path util for generating URL from standard web api
  * */
