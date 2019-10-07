@@ -3,32 +3,35 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
 import { ArticleService } from '@/article/article.service';
 import { RoutesService } from '@/routes/routes.service';
+import { RoutePathPrefix } from '@blog/common/interfaces/routes';
+import { ApiData } from '@blog/common/interfaces/api';
 import {
-  createCategoriesApInfo,
-  createCategoriesDetailApiInfo,
-  createTagsApiInfo,
-  createTagsDetailApiInfo,
-  createPostsApiInfo,
-  createPostsDetailInfo,
+  createCategoriesOverviewApiData,
+  createCategorysDetailApiData,
+  createPostDetailApiData,
+  createPostsOverviewApiData,
+  createTagDetailApiData,
+  createTagsOverviewApiData,
   persistApi
 } from '@blog/api-generator';
-import { mergeByKey } from '@blog/common/utils/collection.util';
-import { RoutePathPrefix } from '@blog/common/interfaces/routes';
+import { buildURLPath } from '@blog/common/utils/path.util';
 
 @Injectable()
 export class ApiService implements OnModuleInit {
   private readonly logger = new Logger(ApiService.name);
 
-  private tagsApiResponse;
-  private tagsDetailApiResponse;
+  private apis: ApiData[];
 
-  private categoriesApiResponse;
-  private categoriesDetailApiResponse;
+  private home: ApiData;
 
-  private postsApiResponse;
-  private postsDetailMapApiResponse;
+  private tagsOverview: ApiData;
+  private tagDetails: ApiData[];
 
-  private homeApiResponse;
+  private categoriesOverview: ApiData;
+  private categoryDetails: ApiData[];
+
+  private postsOverview: ApiData;
+  private postDetails: ApiData[];
 
   constructor(
     private readonly config: ConfigService,
@@ -42,77 +45,80 @@ export class ApiService implements OnModuleInit {
   }
 
   buildApi() {
-    this.buildTagsApi();
-    this.buildCategoriesApi();
-    this.buildPostsApi();
-    this.buildHomeApi();
+    this.home = this.buildHomeApi();
+
+    this.tagsOverview = this.buildTagsOverviewApi();
+    this.categoriesOverview = this.buildCategoriesOverviewApi();
+    this.postsOverview = this.buildPostsOverviewApi();
+
+    this.tagDetails = this.buildTagDetailsApi();
+    this.categoryDetails = this.buildCategoryDetailsApi();
+    this.postDetails = this.buildPostDetailsApi();
+
+    this.apis = _.concat(
+      [this.home],
+      [this.tagsOverview],
+      [this.categoriesOverview],
+      [this.postsOverview],
+      this.tagDetails,
+      this.categoryDetails,
+      this.postDetails
+    );
+
+    _.each(this.apis, (api) => {
+      this.logger.log(`Persisting Api for path: ${api.path}`);
+      persistApi(api.path, api, this.config.dirs.api);
+    });
   }
 
   buildHomeApi() {
-    this.homeApiResponse = {
-      ...this.routes.home,
-      data: createPostsApiInfo(this.article.contexts)
-    };
-    this.logger.log(`Persisting posts api for path: ${this.homeApiResponse.path}`);
-    persistApi(RoutePathPrefix.HOME_ALIAS, this.homeApiResponse, this.config.dirs.api);
+    return _.merge({}, this.routes.home, {
+      path: buildURLPath(RoutePathPrefix.HOME_ALIAS),
+      data: createPostsOverviewApiData
+    });
   }
 
-  buildPostsApi() {
-    this.postsApiResponse = {
-      ...this.routes.postsOverview,
-      data: createPostsApiInfo(this.article.contexts)
-    };
-
-    this.logger.log(`Persisting posts api for path: ${this.postsApiResponse.path}`);
-    persistApi(this.postsApiResponse.path, this.postsApiResponse, this.config.dirs.api);
-
-    const postsDetailApiInfo = createPostsDetailInfo(this.article.contexts);
-    const postsDetailsApiResponse = mergeByKey(this.routes.postDetails, postsDetailApiInfo, 'key');
-
-    _.each(postsDetailsApiResponse, (postDetailApiResponse) => {
-      this.logger.log(`Persisting posts api for path: ${postDetailApiResponse.path}`);
-      persistApi(postDetailApiResponse.path, postDetailApiResponse, this.config.dirs.api);
+  buildTagsOverviewApi() {
+    return _.merge({}, this.routes.tagsOverview, {
+      data: createTagsOverviewApiData
     });
-
-    this.postsDetailMapApiResponse = postsDetailsApiResponse;
   }
 
-  buildCategoriesApi() {
-    this.categoriesApiResponse = {
-      ...this.routes.categoriesOverview,
-      data: createCategoriesApInfo(this.article.contexts)
-    };
-    this.logger.log(`Persisting categories api for path: ${this.categoriesApiResponse.path}`);
-    persistApi(this.categoriesApiResponse.path, this.categoriesApiResponse, this.config.dirs.api);
-
-    // key is rawCategory
-    const categoriesDetailApiInfo = createCategoriesDetailApiInfo(this.article.contexts);
-    const categoriesDetailsApiResponse = mergeByKey(this.routes.categoryDetails, categoriesDetailApiInfo, 'key');
-
-    _.each(categoriesDetailsApiResponse, (categoryDetailApiResponse) => {
-      this.logger.log(`Persisting categories api for path: ${categoryDetailApiResponse.path}`);
-      persistApi(categoryDetailApiResponse.path, categoryDetailApiResponse, this.config.dirs.api);
+  buildTagDetailsApi() {
+    const tagDetails = this.routes.tagDetails;
+    return _.map(tagDetails, (tagDetail) => {
+      return _.merge({}, tagDetail, {
+        data: createTagDetailApiData(tagDetail.key, this.article.contexts)
+      });
     });
-    this.categoriesDetailApiResponse = categoriesDetailsApiResponse;
   }
 
-  buildTagsApi() {
-    this.tagsApiResponse = {
-      ...this.routes.tagsOverview,
-      data: createTagsApiInfo(this.article.contexts)
-    };
-    this.logger.log(`Persisting tags api for path: ${this.tagsApiResponse.path}`);
-    persistApi(this.tagsApiResponse.path, this.tagsApiResponse, this.config.dirs.api);
-
-    // key is rawTag
-    const tagsDetailApiInfo = createTagsDetailApiInfo(this.article.contexts);
-    const tagsDetailApiResponse = mergeByKey(this.routes.tagDetails, tagsDetailApiInfo, 'key');
-
-    _.each(tagsDetailApiResponse, (tagDetailApiResponse) => {
-      this.logger.log(`Persisting tags api for path: ${tagDetailApiResponse.path}`);
-      persistApi(tagDetailApiResponse.path, tagsDetailApiResponse, this.config.dirs.api);
+  buildCategoriesOverviewApi() {
+    return _.merge({}, this.routes.categoriesOverview, {
+      data: createCategoriesOverviewApiData
     });
+  }
 
-    this.tagsDetailApiResponse = tagsDetailApiResponse;
+  buildCategoryDetailsApi() {
+    const categoryDetails = this.routes.categoryDetails;
+    return _.map(categoryDetails, (categoryDetail) => {
+      return _.merge({}, categoryDetail, {
+        data: createCategorysDetailApiData(categoryDetail.key, this.article.contexts)
+      });
+    });
+  }
+
+  buildPostsOverviewApi() {
+    return _.merge({}, this.routes.postsOverview, {
+      data: createPostsOverviewApiData
+    });
+  }
+
+  buildPostDetailsApi() {
+    return _.map(this.routes.postDetails, (postDetail) => {
+      return _.merge({}, postDetail, {
+        data: createPostDetailApiData(postDetail.key, this.article.contexts)
+      });
+    });
   }
 }
