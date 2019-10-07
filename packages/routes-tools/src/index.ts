@@ -128,7 +128,7 @@ export const createTagDetailRouteMeta = (
   const url = buildFullURL(options.baseUrl, path);
 
   return {
-    key: path,
+    key: rawTag,
     url: url,
     path: path,
     title: title,
@@ -155,7 +155,7 @@ export const createCategoryDetailRouteMeta = (
   const url = buildFullURL(options.baseUrl, path);
 
   return {
-    key: path,
+    key: rawCategory,
     url: url,
     path: path,
     title: title,
@@ -191,7 +191,7 @@ export const createPostDetailRouteMeta = (
   const url = buildFullURL(options.baseUrl, path);
 
   return {
-    key: path,
+    key: article.id,
     url: url,
     path: path,
     title: title,

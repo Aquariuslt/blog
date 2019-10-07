@@ -1,4 +1,6 @@
-export interface ApiData {
+import { RouteMeta } from '../routes';
+
+export interface ApiData extends RouteMeta {
   /** raw key */
   key: string;
 
