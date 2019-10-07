@@ -9,7 +9,7 @@ export const createHomeBreadcrumbItem = (baseUrl: string, label: string, path: s
   };
 };
 
-export const createTagListBreadcrumbItem = (baseUrl: string, label: string, path: string): BreadcrumbItem => {
+export const createTagsOverviewBreadcrumbItem = (baseUrl: string, label: string, path: string): BreadcrumbItem => {
   return {
     '@type': 'ListItem',
     item: baseUrl + path,
@@ -18,7 +18,11 @@ export const createTagListBreadcrumbItem = (baseUrl: string, label: string, path
   };
 };
 
-export const createCategoryListBreadcrumbItem = (baseUrl: string, label: string, path: string): BreadcrumbItem => {
+export const createCategoriesOverviewBreadcrumbItem = (
+  baseUrl: string,
+  label: string,
+  path: string
+): BreadcrumbItem => {
   return {
     '@type': 'ListItem',
     item: baseUrl + path,
@@ -27,7 +31,7 @@ export const createCategoryListBreadcrumbItem = (baseUrl: string, label: string,
   };
 };
 
-export const createPostListBreadcrumbItem = (baseUrl: string, label: string, path: string): BreadcrumbItem => {
+export const createPostsOverviewBreadcrumbItem = (baseUrl: string, label: string, path: string): BreadcrumbItem => {
   return {
     '@type': 'ListItem',
     item: baseUrl + path,

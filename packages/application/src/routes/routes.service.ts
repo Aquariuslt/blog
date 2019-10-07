@@ -2,36 +2,36 @@ import * as _ from 'lodash';
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
 import { ArticleService } from '@/article/article.service';
-import { RoutingExtraOption } from '@blog/routes-tools';
-import {
-  createCategoryDetailRouteInfo,
-  createPostDetailRouteInfo,
-  createPostListRouteInfo,
-  createCategoryListRouteInfo,
-  createTagListRouteInfo,
-  createTagDetailRouteInfo,
-  createHomeRouteInfo
-} from '@blog/routes-tools';
-
+import { RouteMeta } from '@blog/common/interfaces/routes';
+import { RoutesOptions } from '@blog/routes-tools';
 import { getAllTagsFromContexts, getAllCategoriesFromContexts } from '@blog/article-tools';
+import {
+  createHomeRouteMeta,
+  createPostsOverviewRouteMeta,
+  createPostDetailRouteMeta,
+  createCategoriesOverviewRouteMeta,
+  createCategoryDetailRouteMeta,
+  createTagsOverviewRouteMeta,
+  createTagDetailRouteMeta
+} from '@blog/routes-tools';
 
 @Injectable()
 export class RoutesService implements OnModuleInit {
   private readonly logger = new Logger(RoutesService.name);
   private $inited = false;
 
-  public routes = [];
+  public routes: RouteMeta[] = [];
 
-  public homeRoute;
+  public home: RouteMeta;
 
-  public tagListRoute;
-  public tagDetailRouteList = [];
+  public tagsOverview: RouteMeta;
+  public tagDetails: RouteMeta[] = [];
 
-  public categoryListRoute;
-  public categoryDetailRouteList = [];
+  public categoriesOverview: RouteMeta;
+  public categoryDetails: RouteMeta[] = [];
 
-  public postListRoute;
-  public postDetailRouteList = [];
+  public postsOverview: RouteMeta;
+  public postDetails: RouteMeta[] = [];
 
   constructor(private config: ConfigService, private article: ArticleService) {}
 
@@ -45,66 +45,67 @@ export class RoutesService implements OnModuleInit {
   }
 
   createRoutes() {
-    const homeRoute = this.createHomeRoute();
-    const tagRoutes = this.createTagsRoutes();
-    const categoryRoutes = this.createCategoriesRoutes();
-    const postRoutes = this.createPostsRoutes();
+    this.home = this.createHomeRoute();
+    this.tagsOverview = this.createTagsOverviewRoute();
+    this.tagDetails = this.createTagDetailRoutes();
+    this.categoriesOverview = this.createCategoriesOverviewRoute();
+    this.categoryDetails = this.createCategoryDetailRoutes();
+    this.postsOverview = this.createPostsOverviewRoute();
+    this.postDetails = this.createPostDetailRoutes();
 
-    const allRoutes = _.concat(homeRoute, tagRoutes, categoryRoutes, postRoutes);
+    this.routes = _.concat(
+      [this.home],
+      [this.tagsOverview],
+      [this.categoriesOverview],
+      [this.postsOverview],
+      this.tagDetails,
+      this.categoryDetails,
+      this.postDetails
+    );
 
-    this.routes = allRoutes;
-
-    _.each(allRoutes, (route) => {
-      this.logger.debug(`Created Route Meta for path: ${route.path}`);
+    _.each(this.routes, (route) => {
+      this.logger.log(`Created Route Meta for path: ${route.path}`);
     });
   }
 
   createHomeRoute() {
-    const homeRouteInfo = createHomeRouteInfo(this.routingExtraOption);
-    this.homeRoute = homeRouteInfo;
-    return [homeRouteInfo];
+    return createHomeRouteMeta(this.routesOptions);
   }
 
-  createTagsRoutes() {
-    const tagListRouteInfo = createTagListRouteInfo(this.article.contexts, this.routingExtraOption);
+  createTagsOverviewRoute() {
+    return createTagsOverviewRouteMeta(this.article.contexts, this.routesOptions);
+  }
+
+  createTagDetailRoutes() {
     const tags = getAllTagsFromContexts(this.article.contexts);
 
-    const tagDetailRouteInfoList = _.map(tags, (rawTag) => {
-      return createTagDetailRouteInfo(rawTag, this.article.contexts, this.routingExtraOption);
+    return _.map(tags, (rawTag) => {
+      return createTagDetailRouteMeta(rawTag, this.article.contexts, this.routesOptions);
     });
-
-    this.tagListRoute = tagListRouteInfo;
-    this.tagDetailRouteList = tagDetailRouteInfoList;
-
-    return _.concat([tagListRouteInfo], tagDetailRouteInfoList);
   }
-  createCategoriesRoutes() {
-    const categoryListRouteInfo = createCategoryListRouteInfo(this.article.contexts, this.routingExtraOption);
+
+  createCategoriesOverviewRoute() {
+    return createCategoriesOverviewRouteMeta(this.article.contexts, this.routesOptions);
+  }
+
+  createCategoryDetailRoutes() {
     const categories = getAllCategoriesFromContexts(this.article.contexts);
-
-    const categoryDetailRouteInfoList = _.map(categories, (rawCategory) => {
-      return createCategoryDetailRouteInfo(rawCategory, this.article.contexts, this.routingExtraOption);
+    return _.map(categories, (rawCategory) => {
+      return createCategoryDetailRouteMeta(rawCategory, this.article.contexts, this.routesOptions);
     });
-
-    this.categoryListRoute = categoryListRouteInfo;
-    this.categoryDetailRouteList = categoryDetailRouteInfoList;
-
-    return _.concat([categoryListRouteInfo], categoryDetailRouteInfoList);
   }
 
-  createPostsRoutes() {
-    const postsRouteInfo = createPostListRouteInfo(this.article.contexts, this.routingExtraOption);
-    const postDetailRouteInfoList = _.map(this.article.contexts, (context) => {
-      return createPostDetailRouteInfo(context, this.article.contexts, this.routingExtraOption);
-    });
-
-    this.postListRoute = postsRouteInfo;
-    this.postDetailRouteList = postDetailRouteInfoList;
-
-    return _.concat([postsRouteInfo], postDetailRouteInfoList);
+  createPostsOverviewRoute() {
+    return createPostsOverviewRouteMeta(this.article.contexts, this.routesOptions);
   }
 
-  get routingExtraOption(): RoutingExtraOption {
+  createPostDetailRoutes() {
+    return _.map(this.article.contexts, (context) => {
+      return createPostDetailRouteMeta(context, this.article.contexts, this.routesOptions);
+    });
+  }
+
+  get routesOptions(): RoutesOptions {
     return {
       baseTitle: this.config.site.baseTitle,
       baseUrl: this.config.site.baseUrl,

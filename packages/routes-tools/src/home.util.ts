@@ -1,6 +1,6 @@
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 
-export const createHomeInfo = () => ({
+export const createHomeRouteItem = () => ({
   id: RoutePathPrefix.HOME,
   label: 'Home'
 });
