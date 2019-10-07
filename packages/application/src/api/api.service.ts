@@ -2,7 +2,7 @@ import * as _ from 'lodash';
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
 import { ArticleService } from '@/article/article.service';
-import { RoutingService } from '@/routing/routing.service';
+import { RoutesService } from '@/routes/routes.service';
 import {
   createCategoriesApInfo,
   createCategoriesDetailApiInfo,
@@ -12,16 +12,18 @@ import {
   createPostsDetailInfo,
   persistApi
 } from '@blog/api-generator';
+import { mergeByKey } from '@blog/common/utils/collection.util';
+import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 
 @Injectable()
 export class ApiService implements OnModuleInit {
   private readonly logger = new Logger(ApiService.name);
 
   private tagsApiResponse;
-  private tagsDetailMapApiResponse;
+  private tagsDetailApiResponse;
 
   private categoriesApiResponse;
-  private categoriesDetailMapApiResponse;
+  private categoriesDetailApiResponse;
 
   private postsApiResponse;
   private postsDetailMapApiResponse;
@@ -31,11 +33,11 @@ export class ApiService implements OnModuleInit {
   constructor(
     private readonly config: ConfigService,
     private readonly article: ArticleService,
-    private readonly routing: RoutingService
+    private readonly routes: RoutesService
   ) {}
 
   onModuleInit() {
-    this.routing.onModuleInit();
+    this.routes.onModuleInit();
     this.buildApi();
   }
 
@@ -48,16 +50,16 @@ export class ApiService implements OnModuleInit {
 
   buildHomeApi() {
     this.homeApiResponse = {
-      ...this.routing.homeRoute,
+      ...this.routes.homeRoute,
       data: createPostsApiInfo(this.article.contexts)
     };
     this.logger.log(`Persisting posts api for path: ${this.homeApiResponse.path}`);
-    persistApi(this.homeApiResponse.path, this.homeApiResponse, this.config.dirs.api);
+    persistApi(RoutePathPrefix.HOME_ALIAS, this.homeApiResponse, this.config.dirs.api);
   }
 
   buildPostsApi() {
     this.postsApiResponse = {
-      ...this.routing.postListRoute,
+      ...this.routes.postListRoute,
       data: createPostsApiInfo(this.article.contexts)
     };
 
@@ -65,23 +67,19 @@ export class ApiService implements OnModuleInit {
     persistApi(this.postsApiResponse.path, this.postsApiResponse, this.config.dirs.api);
 
     const postsDetailApiInfo = createPostsDetailInfo(this.article.contexts);
-    const postsDetailMapApiResponse = Object.create({});
-    _.each(this.routing.postDetailRouteList, (postDetailRouteInfo) => {
-      postsDetailMapApiResponse[postDetailRouteInfo.path] = {
-        ...postDetailRouteInfo,
-        data: postsDetailApiInfo[postDetailRouteInfo.path]
-      };
+    const postsDetailsApiResponse = mergeByKey(this.routes.postDetailRouteList, postsDetailApiInfo, 'key');
 
-      this.logger.log(`Persisting posts api for path: ${postDetailRouteInfo.path}`);
-      persistApi(postDetailRouteInfo.path, postsDetailMapApiResponse[postDetailRouteInfo.path], this.config.dirs.api);
+    _.each(postsDetailsApiResponse, (postDetailApiResponse) => {
+      this.logger.log(`Persisting posts api for path: ${postDetailApiResponse.path}`);
+      persistApi(postDetailApiResponse.path, postDetailApiResponse, this.config.dirs.api);
     });
 
-    this.postsDetailMapApiResponse = postsDetailMapApiResponse;
+    this.postsDetailMapApiResponse = postsDetailsApiResponse;
   }
 
   buildCategoriesApi() {
     this.categoriesApiResponse = {
-      ...this.routing.categoryListRoute,
+      ...this.routes.categoryListRoute,
       data: createCategoriesApInfo(this.article.contexts)
     };
     this.logger.log(`Persisting categories api for path: ${this.categoriesApiResponse.path}`);
@@ -89,28 +87,22 @@ export class ApiService implements OnModuleInit {
 
     // key is rawCategory
     const categoriesDetailApiInfo = createCategoriesDetailApiInfo(this.article.contexts);
-    const categoriesDetailMapApiResponse = Object.create({});
+    const categoriesDetailsApiResponse = mergeByKey(
+      this.routes.categoryDetailRouteList,
+      categoriesDetailApiInfo,
+      'key'
+    );
 
-    _.each(this.routing.categoryDetailRouteList, (categoryDetailRouteInfo) => {
-      categoriesDetailMapApiResponse[categoryDetailRouteInfo.path] = {
-        ...categoryDetailRouteInfo,
-        data: categoriesDetailApiInfo[categoryDetailRouteInfo.path]
-      };
-
-      this.logger.log(`Persisting categories api for path: ${categoryDetailRouteInfo.path}`);
-      persistApi(
-        categoryDetailRouteInfo.path,
-        categoriesDetailMapApiResponse[categoryDetailRouteInfo.path],
-        this.config.dirs.api
-      );
+    _.each(categoriesDetailsApiResponse, (categoryDetailApiResponse) => {
+      this.logger.log(`Persisting categories api for path: ${categoryDetailApiResponse.path}`);
+      persistApi(categoryDetailApiResponse.path, categoryDetailApiResponse, this.config.dirs.api);
     });
-
-    this.categoriesDetailMapApiResponse = categoriesDetailMapApiResponse;
+    this.categoriesDetailApiResponse = categoriesDetailsApiResponse;
   }
 
   buildTagsApi() {
     this.tagsApiResponse = {
-      ...this.routing.tagListRoute,
+      ...this.routes.tagListRoute,
       data: createTagsApiInfo(this.article.contexts)
     };
     this.logger.log(`Persisting tags api for path: ${this.tagsApiResponse.path}`);
@@ -118,18 +110,13 @@ export class ApiService implements OnModuleInit {
 
     // key is rawTag
     const tagsDetailApiInfo = createTagsDetailApiInfo(this.article.contexts);
-    const tagsDetailMapApiResponse = Object.create({});
+    const tagsDetailApiResponse = mergeByKey(this.routes.tagDetailRouteList, tagsDetailApiInfo, 'key');
 
-    _.each(this.routing.tagDetailRouteList, (tagDetailRouteInfo) => {
-      tagsDetailMapApiResponse[tagDetailRouteInfo.path] = {
-        ...tagDetailRouteInfo,
-        data: tagsDetailApiInfo[tagDetailRouteInfo.path]
-      };
-
-      this.logger.log(`Persisting tags api for path: ${tagDetailRouteInfo.path}`);
-      persistApi(tagDetailRouteInfo.path, tagsDetailMapApiResponse[tagDetailRouteInfo.path], this.config.dirs.api);
+    _.each(tagsDetailApiResponse, (tagDetailApiResponse) => {
+      this.logger.log(`Persisting tags api for path: ${tagDetailApiResponse.path}`);
+      persistApi(tagDetailApiResponse.path, tagsDetailApiResponse, this.config.dirs.api);
     });
 
-    this.tagsDetailMapApiResponse = tagsDetailMapApiResponse;
+    this.tagsDetailApiResponse = tagsDetailApiResponse;
   }
 }

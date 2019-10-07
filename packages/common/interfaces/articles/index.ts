@@ -2,6 +2,7 @@
  * @description article definition from jsonld structured data
  * @see https://jsonld.com/blog-post/
  * */
+
 export interface Article {
   '@context': 'https://schema.org';
   '@type': 'BlogPosting';

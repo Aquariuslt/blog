@@ -2,7 +2,7 @@ import * as _ from 'lodash';
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
 import { ArticleService } from '@/article/article.service';
-import { RoutingExtraOption } from '@blog/routing-tools';
+import { RoutingExtraOption } from '@blog/routes-tools';
 import {
   createCategoryDetailRouteInfo,
   createPostDetailRouteInfo,
@@ -11,13 +11,13 @@ import {
   createTagListRouteInfo,
   createTagDetailRouteInfo,
   createHomeRouteInfo
-} from '@blog/routing-tools';
+} from '@blog/routes-tools';
 
 import { getAllTagsFromContexts, getAllCategoriesFromContexts } from '@blog/article-tools';
 
 @Injectable()
-export class RoutingService implements OnModuleInit {
-  private readonly logger = new Logger(RoutingService.name);
+export class RoutesService implements OnModuleInit {
+  private readonly logger = new Logger(RoutesService.name);
   private $inited = false;
 
   public routes = [];

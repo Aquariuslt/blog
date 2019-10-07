@@ -5,16 +5,15 @@ import { buildPathFromContext, createArticleOverview } from './article.util';
 /** @description simply `/` and `/posts` api response */
 export const createPostsApiInfo = (contexts: ArticleContext[]) => _.map(contexts, createArticleOverview);
 
-export const groupByArticlePath = (contexts: ArticleContext[]) => {
-  const postsMap = Object.create({});
-
-  _.each(contexts, (context) => {
+export const buildPostApiData = (contexts: ArticleContext[]) => {
+  return _.map(contexts, (context) => {
     const postPath = buildPathFromContext(context);
-    postsMap[postPath] = context;
+    return {
+      key: postPath,
+      data: context
+    };
   });
-
-  return postsMap;
 };
 
 /** @description `/posts/:post-id` api response */
-export const createPostsDetailInfo = (contexts: ArticleContext[]) => groupByArticlePath(contexts);
+export const createPostsDetailInfo = (contexts: ArticleContext[]) => buildPostApiData(contexts);

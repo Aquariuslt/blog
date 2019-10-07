@@ -3,7 +3,7 @@ import { ApiService } from '@/api/api.service';
 import { ConfigService } from '@/config/config.service';
 import { MockConfigService } from '@/config/__tests__/__mocks__/mock.config.service';
 import { ArticleService } from '@/article/article.service';
-import { RoutingService } from '@/routing/routing.service';
+import { RoutesService } from '@/routes/routes.service';
 
 describe('ApiService', () => {
   let service: ApiService;
@@ -16,7 +16,7 @@ describe('ApiService', () => {
           useValue: new MockConfigService()
         },
         ArticleService,
-        RoutingService,
+        RoutesService,
         ApiService
       ]
     }).compile();

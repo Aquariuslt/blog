@@ -11,6 +11,8 @@
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
   "dependencies": {
-    "fancy-log": "^1.3.3"
+    "fancy-log": "^1.3.3",
+    "schema-dts": "^0.4.2",
+    "lodash": "^4.17.15"
   }
 }

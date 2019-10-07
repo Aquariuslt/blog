@@ -2,6 +2,7 @@ import { Layout } from './layout';
 
 export enum RoutePathPrefix {
   HOME = '',
+  HOME_ALIAS = 'home', // alias for empty path ``
   TAGS = 'tags',
   CATEGORIES = 'categories',
   POSTS = 'posts',
@@ -9,14 +10,14 @@ export enum RoutePathPrefix {
 }
 
 export interface RouteMeta {
+  /** raw key */
+  key: string;
+
   /** full url including protocol, domain, path */
   url: string;
 
   /** same as layout */
   type: string | Layout;
-
-  /** raw key */
-  key: string;
 
   /** the sub path: like `/categories`, `/tags */
   path: string;
