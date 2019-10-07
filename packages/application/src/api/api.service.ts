@@ -50,7 +50,7 @@ export class ApiService implements OnModuleInit {
 
   buildHomeApi() {
     this.homeApiResponse = {
-      ...this.routes.homeRoute,
+      ...this.routes.home,
       data: createPostsApiInfo(this.article.contexts)
     };
     this.logger.log(`Persisting posts api for path: ${this.homeApiResponse.path}`);
@@ -59,7 +59,7 @@ export class ApiService implements OnModuleInit {
 
   buildPostsApi() {
     this.postsApiResponse = {
-      ...this.routes.postListRoute,
+      ...this.routes.postsOverview,
       data: createPostsApiInfo(this.article.contexts)
     };
 
@@ -67,7 +67,7 @@ export class ApiService implements OnModuleInit {
     persistApi(this.postsApiResponse.path, this.postsApiResponse, this.config.dirs.api);
 
     const postsDetailApiInfo = createPostsDetailInfo(this.article.contexts);
-    const postsDetailsApiResponse = mergeByKey(this.routes.postDetailRouteList, postsDetailApiInfo, 'key');
+    const postsDetailsApiResponse = mergeByKey(this.routes.postDetails, postsDetailApiInfo, 'key');
 
     _.each(postsDetailsApiResponse, (postDetailApiResponse) => {
       this.logger.log(`Persisting posts api for path: ${postDetailApiResponse.path}`);
@@ -79,7 +79,7 @@ export class ApiService implements OnModuleInit {
 
   buildCategoriesApi() {
     this.categoriesApiResponse = {
-      ...this.routes.categoryListRoute,
+      ...this.routes.categoriesOverview,
       data: createCategoriesApInfo(this.article.contexts)
     };
     this.logger.log(`Persisting categories api for path: ${this.categoriesApiResponse.path}`);
@@ -87,11 +87,7 @@ export class ApiService implements OnModuleInit {
 
     // key is rawCategory
     const categoriesDetailApiInfo = createCategoriesDetailApiInfo(this.article.contexts);
-    const categoriesDetailsApiResponse = mergeByKey(
-      this.routes.categoryDetailRouteList,
-      categoriesDetailApiInfo,
-      'key'
-    );
+    const categoriesDetailsApiResponse = mergeByKey(this.routes.categoryDetails, categoriesDetailApiInfo, 'key');
 
     _.each(categoriesDetailsApiResponse, (categoryDetailApiResponse) => {
       this.logger.log(`Persisting categories api for path: ${categoryDetailApiResponse.path}`);
@@ -102,7 +98,7 @@ export class ApiService implements OnModuleInit {
 
   buildTagsApi() {
     this.tagsApiResponse = {
-      ...this.routes.tagListRoute,
+      ...this.routes.tagsOverview,
       data: createTagsApiInfo(this.article.contexts)
     };
     this.logger.log(`Persisting tags api for path: ${this.tagsApiResponse.path}`);
@@ -110,7 +106,7 @@ export class ApiService implements OnModuleInit {
 
     // key is rawTag
     const tagsDetailApiInfo = createTagsDetailApiInfo(this.article.contexts);
-    const tagsDetailApiResponse = mergeByKey(this.routes.tagDetailRouteList, tagsDetailApiInfo, 'key');
+    const tagsDetailApiResponse = mergeByKey(this.routes.tagDetails, tagsDetailApiInfo, 'key');
 
     _.each(tagsDetailApiResponse, (tagDetailApiResponse) => {
       this.logger.log(`Persisting tags api for path: ${tagDetailApiResponse.path}`);

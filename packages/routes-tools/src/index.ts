@@ -3,56 +3,36 @@ import { format } from 'date-fns';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import { RouteMeta, RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { Layout } from '@blog/common/interfaces/routes/layout';
-import { buildTitle } from './title.util';
 import { buildFullURL, buildURLPath } from '@blog/common/utils/path.util';
-import { createTagInfo, createTagsRootInfo } from './tag.util';
-import { createCategoryInfo, createCategoryRootInfo } from './category.util';
-import { createPostListRootInfo } from './post.util';
+import { buildTitle } from './title.util';
+import { createTagDetailRouteItem, createTagsOverviewRouteItem } from './tag.util';
+import { createCategoryDetailRouteItem, createCategoriesOverviewRouteItem } from './category.util';
+import { createPostsOverviewRouteItem } from './post.util';
 import {
   createBreadcrumbList,
   createCategoryDetailBreadcrumbItem,
-  createCategoryListBreadcrumbItem,
+  createCategoriesOverviewBreadcrumbItem,
   createHomeBreadcrumbItem,
   createPostDetailBreadcrumbItem,
-  createPostListBreadcrumbItem,
+  createPostsOverviewBreadcrumbItem,
   createTagDetailBreadcrumbItem,
-  createTagListBreadcrumbItem
+  createTagsOverviewBreadcrumbItem
 } from './breadcrumb.util';
 
-export interface RoutingExtraOption {
+export interface RoutesOptions {
   baseUrl: string;
   baseTitle: string;
   titleSeparator: string;
 }
 
-export const createTagListRouteInfo = (contexts: ArticleContext[], extra?: Partial<RoutingExtraOption>): RouteMeta => {
-  const tagsRootInfo = createTagsRootInfo();
-  const path = buildURLPath(RoutePathPrefix.TAGS);
-  const title = buildTitle(tagsRootInfo.label, extra.baseTitle, extra.titleSeparator);
-  const url = buildFullURL(extra.baseUrl, path);
-
-  return {
-    key: path,
-    url: url,
-    path: path,
-    title: title,
-    breadcrumbs: createBreadcrumbList([
-      createHomeBreadcrumbItem(extra.baseUrl, extra.baseTitle, RoutePathPrefix.HOME),
-      createTagListBreadcrumbItem(extra.baseUrl, title, path)
-    ]),
-    type: Layout.TABLE,
-    meta: undefined,
-    data: undefined
-  };
-};
-export const createCategoryListRouteInfo = (
+export const createTagsOverviewRouteMeta = (
   contexts: ArticleContext[],
-  extra?: Partial<RoutingExtraOption>
+  options?: Partial<RoutesOptions>
 ): RouteMeta => {
-  const categoriesRootInfo = createCategoryRootInfo();
-  const path = buildURLPath(RoutePathPrefix.CATEGORIES);
-  const title = buildTitle(categoriesRootInfo.label, extra.baseTitle, extra.titleSeparator);
-  const url = buildFullURL(extra.baseUrl, path);
+  const tagsOverviewRouteItem = createTagsOverviewRouteItem();
+  const path = buildURLPath(RoutePathPrefix.TAGS);
+  const title = buildTitle(tagsOverviewRouteItem.label, options.baseTitle, options.titleSeparator);
+  const url = buildFullURL(options.baseUrl, path);
 
   return {
     key: path,
@@ -60,19 +40,22 @@ export const createCategoryListRouteInfo = (
     path: path,
     title: title,
     breadcrumbs: createBreadcrumbList([
-      createHomeBreadcrumbItem(extra.baseUrl, extra.baseTitle, RoutePathPrefix.HOME),
-      createCategoryListBreadcrumbItem(extra.baseUrl, title, path)
+      createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
+      createTagsOverviewBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.TABLE,
     meta: undefined,
     data: undefined
   };
 };
-export const createPostListRouteInfo = (contexts: ArticleContext[], extra?: Partial<RoutingExtraOption>): RouteMeta => {
-  const postsRootInfo = createPostListRootInfo();
-  const path = buildURLPath(RoutePathPrefix.POSTS);
-  const title = buildTitle(postsRootInfo.label, extra.baseTitle, extra.titleSeparator);
-  const url = buildFullURL(extra.baseUrl, path);
+export const createCategoriesOverviewRouteMeta = (
+  contexts: ArticleContext[],
+  options?: Partial<RoutesOptions>
+): RouteMeta => {
+  const categoriesOverviewRouteItem = createCategoriesOverviewRouteItem();
+  const path = buildURLPath(RoutePathPrefix.CATEGORIES);
+  const title = buildTitle(categoriesOverviewRouteItem.label, options.baseTitle, options.titleSeparator);
+  const url = buildFullURL(options.baseUrl, path);
 
   return {
     key: path,
@@ -80,8 +63,31 @@ export const createPostListRouteInfo = (contexts: ArticleContext[], extra?: Part
     path: path,
     title: title,
     breadcrumbs: createBreadcrumbList([
-      createHomeBreadcrumbItem(extra.baseUrl, extra.baseTitle, RoutePathPrefix.HOME),
-      createPostListBreadcrumbItem(extra.baseUrl, title, path)
+      createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
+      createCategoriesOverviewBreadcrumbItem(options.baseUrl, title, path)
+    ]),
+    type: Layout.TABLE,
+    meta: undefined,
+    data: undefined
+  };
+};
+export const createPostsOverviewRouteMeta = (
+  contexts: ArticleContext[],
+  options?: Partial<RoutesOptions>
+): RouteMeta => {
+  const postsOverviewRouteItem = createPostsOverviewRouteItem();
+  const path = buildURLPath(RoutePathPrefix.POSTS);
+  const title = buildTitle(postsOverviewRouteItem.label, options.baseTitle, options.titleSeparator);
+  const url = buildFullURL(options.baseUrl, path);
+
+  return {
+    key: path,
+    url: url,
+    path: path,
+    title: title,
+    breadcrumbs: createBreadcrumbList([
+      createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
+      createPostsOverviewBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.LIST,
     meta: undefined,
@@ -89,7 +95,7 @@ export const createPostListRouteInfo = (contexts: ArticleContext[], extra?: Part
   };
 };
 
-export const createHomeRouteInfo = (options?: Partial<RoutingExtraOption>): RouteMeta => {
+export const createHomeRouteMeta = (options?: Partial<RoutesOptions>): RouteMeta => {
   const path = buildURLPath();
   const title = options.baseTitle;
   const url = buildFullURL(options.baseUrl, path);
@@ -109,17 +115,17 @@ export const createHomeRouteInfo = (options?: Partial<RoutingExtraOption>): Rout
 };
 
 // single item
-export const createTagDetailRouteInfo = (
+export const createTagDetailRouteMeta = (
   rawTag: string,
   contexts: ArticleContext[],
-  extra?: Partial<RoutingExtraOption>
+  options?: Partial<RoutesOptions>
 ): RouteMeta => {
-  const tagsRootRouteInfo = createTagListRouteInfo(contexts, extra);
+  const tagsRootRouteInfo = createTagsOverviewRouteMeta(contexts, options);
 
-  const tagInfo = createTagInfo(rawTag);
+  const tagInfo = createTagDetailRouteItem(rawTag);
   const path = buildURLPath(RoutePathPrefix.TAGS, tagInfo.id);
-  const title = buildTitle(tagInfo.label, extra.baseTitle, extra.titleSeparator);
-  const url = buildFullURL(extra.baseUrl, path);
+  const title = buildTitle(tagInfo.label, options.baseTitle, options.titleSeparator);
+  const url = buildFullURL(options.baseUrl, path);
 
   return {
     key: path,
@@ -127,26 +133,26 @@ export const createTagDetailRouteInfo = (
     path: path,
     title: title,
     breadcrumbs: createBreadcrumbList([
-      createHomeBreadcrumbItem(extra.baseUrl, extra.baseTitle, RoutePathPrefix.HOME),
-      createTagListBreadcrumbItem(extra.baseUrl, tagsRootRouteInfo.title, tagsRootRouteInfo.path),
-      createTagDetailBreadcrumbItem(extra.baseUrl, title, path)
+      createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
+      createTagsOverviewBreadcrumbItem(options.baseUrl, tagsRootRouteInfo.title, tagsRootRouteInfo.path),
+      createTagDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.LIST,
     data: undefined
   };
 };
 
-export const createCategoryDetailRouteInfo = (
+export const createCategoryDetailRouteMeta = (
   rawCategory: string,
   contexts: ArticleContext[],
-  extra?: Partial<RoutingExtraOption>
+  options?: Partial<RoutesOptions>
 ): RouteMeta => {
-  const categoriesRootRouteInfo = createCategoryListRouteInfo(contexts, extra);
+  const categoriesRootRouteInfo = createCategoriesOverviewRouteMeta(contexts, options);
 
-  const categoryInfo = createCategoryInfo(rawCategory);
+  const categoryInfo = createCategoryDetailRouteItem(rawCategory);
   const path = buildURLPath(RoutePathPrefix.CATEGORIES, categoryInfo.id);
-  const title = buildTitle(categoryInfo.label, extra.baseTitle, extra.titleSeparator);
-  const url = buildFullURL(extra.baseUrl, path);
+  const title = buildTitle(categoryInfo.label, options.baseTitle, options.titleSeparator);
+  const url = buildFullURL(options.baseUrl, path);
 
   return {
     key: path,
@@ -154,21 +160,25 @@ export const createCategoryDetailRouteInfo = (
     path: path,
     title: title,
     breadcrumbs: createBreadcrumbList([
-      createHomeBreadcrumbItem(extra.baseUrl, extra.baseTitle, RoutePathPrefix.HOME),
-      createCategoryListBreadcrumbItem(extra.baseUrl, categoriesRootRouteInfo.title, categoriesRootRouteInfo.path),
-      createCategoryDetailBreadcrumbItem(extra.baseUrl, title, path)
+      createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
+      createCategoriesOverviewBreadcrumbItem(
+        options.baseUrl,
+        categoriesRootRouteInfo.title,
+        categoriesRootRouteInfo.path
+      ),
+      createCategoryDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.LIST,
     data: undefined
   };
 };
 
-export const createPostDetailRouteInfo = (
+export const createPostDetailRouteMeta = (
   article: ArticleContext,
   contexts: ArticleContext[],
-  extra?: Partial<RoutingExtraOption>
+  options?: Partial<RoutesOptions>
 ): RouteMeta => {
-  const postsRootRouteInfo = createPostListRouteInfo(contexts, extra);
+  const postsRootRouteInfo = createPostsOverviewRouteMeta(contexts, options);
   const created = new Date(article.created);
 
   const year = format(created, 'yyyy');
@@ -177,8 +187,8 @@ export const createPostDetailRouteInfo = (
   const id = article.id;
 
   const path = buildURLPath(RoutePathPrefix.POSTS, year, month, date, id);
-  const title = buildTitle(article.title, extra.baseTitle, extra.titleSeparator);
-  const url = buildFullURL(extra.baseUrl, path);
+  const title = buildTitle(article.title, options.baseTitle, options.titleSeparator);
+  const url = buildFullURL(options.baseUrl, path);
 
   return {
     key: path,
@@ -186,9 +196,9 @@ export const createPostDetailRouteInfo = (
     path: path,
     title: title,
     breadcrumbs: createBreadcrumbList([
-      createHomeBreadcrumbItem(extra.baseUrl, extra.baseTitle, RoutePathPrefix.HOME),
-      createPostListBreadcrumbItem(extra.baseUrl, postsRootRouteInfo.title, postsRootRouteInfo.path),
-      createPostDetailBreadcrumbItem(extra.baseUrl, title, path)
+      createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
+      createPostsOverviewBreadcrumbItem(options.baseUrl, postsRootRouteInfo.title, postsRootRouteInfo.path),
+      createPostDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.DETAIL,
     meta: undefined,
