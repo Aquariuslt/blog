@@ -7,7 +7,7 @@ categories:
   - Others
 tags:
   - Diary
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Year in Review 2016

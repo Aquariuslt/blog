@@ -8,7 +8,7 @@ categories:
 tags:
   - Node
   - JavaScript
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Site 项目结构介绍

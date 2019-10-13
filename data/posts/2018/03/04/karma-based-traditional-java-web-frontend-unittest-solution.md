@@ -15,7 +15,7 @@ tags:
   - Spring
   - JSF
   - SpringMVC
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # 基于 Karma 的非分离式前端单元测试基础方案

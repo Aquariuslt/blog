@@ -7,7 +7,7 @@ categories:
   - Blog
 tags:
   - Diary
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # 蜗居
@@ -26,7 +26,7 @@ cover: ./cover.jpg
 三月初提交的申请,劳动节之后终于通知下来去抽签.
 
 一层的户型图大概如下图: 从结构上分,个人申请只能申请一房一厅或者单身公寓了.  
-![IMG_0916.JPG](./room-architecture.jpg) 抽到了个 08 户型,一房一厅,实用面积才 30 多.
+![IMG_0916.png](./room-architecture.png) 抽到了个 08 户型,一房一厅,实用面积才 30 多.
 
 ## 布置
 
@@ -37,23 +37,23 @@ cover: ./cover.jpg
 
 #### 空洞的过道
 
-![空洞的过道](./passing-route.jpg)
+![空洞的过道](./passing-route.png)
 
 #### 空洞的客厅
 
-![空洞的客厅](./meeting-room.jpg)
+![空洞的客厅](./meeting-room.png)
 
 #### 空洞的睡房
 
-![空洞的睡房](./bedroom.jpg)
+![空洞的睡房](./bedroom.png)
 
 #### 空洞的厨房
 
-![空洞的厨房](./kitchen.jpg)
+![空洞的厨房](./kitchen.png)
 
 #### 空洞的阳台
 
-![空洞的阳台](./sunroom.jpg)
+![空洞的阳台](./sunroom.png)
 
 ### 购置刚需家具
 
@@ -77,38 +77,38 @@ cover: ./cover.jpg
 
 #### 大门过道就加了一个垫子
 
-![21:37:44.jpg](./passing-route-updated.jpg)
+![21:37:44.png](./passing-route-updated.png)
 
 #### 只有骨架的电脑桌
 
-![21:39:14.jpg](./desktop.jpg)
+![21:39:14.png](./desktop.png)
 
 #### 上百螺丝还要反过来装
 
-![21:51:48.jpg](./desktop-installation.jpg)
+![21:51:48.png](./desktop-installation.png)
 
 #### 安装完毕 配上西昊 M18 P2415Q+2414H 强 无敌
 
 #### 原来的电脑桌变成了饭桌
 
-![21:57:22.jpg](./depracted-desktop.jpg)
+![21:57:22.png](./depracted-desktop.png)
 
 #### 室内衣架和一个杂物柜
 
-![21:30:18.jpg](./clothes.jpg)
+![21:30:18.png](./clothes.png)
 
 #### 低到类似榻榻米的床与床头柜
 
-![21:28:49.jpg](./bed.jpg)
+![21:28:49.png](./bed.png)
 
 #### 楼再高一点就是海景啦
 
-![22:01:15.jpg](./see-sea.jpg)
+![22:01:15.png](./see-sea.png)
 
 ## 憧憬
 
-配置齐全 感觉每天晚上专注 ~~学习~~ 的时间变长了. `wakatime`的 report ![22:10:03.jpg](./wakatime.jpg)
+配置齐全 感觉每天晚上专注 ~~学习~~ 的时间变长了. `wakatime`的 report ![22:10:03.png](./wakatime.png)
 
-![22:19:24.jpg](./wakatime-total.jpg)
+![22:19:24.png](./wakatime-total.png)
 
 希望在如此好的环境中,学习和工作效率会变得越来越高~

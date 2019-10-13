@@ -8,7 +8,7 @@ categories:
 tags:
   - Hadoop
   - Linux
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Hadoop 2.7.2 单节点与集群安装部署

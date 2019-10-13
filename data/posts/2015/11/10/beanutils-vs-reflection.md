@@ -8,7 +8,7 @@ categories:
 tags:
   - Java
   - Apache
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # 记一次神奇的优化过程:Java 反射 VS Apache BeanUtils VS Spring BeanUtils

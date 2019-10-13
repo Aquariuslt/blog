@@ -10,7 +10,6 @@ export class ConfigService implements OnModuleInit {
   private readonly configSearchPath;
   private configLocation;
   private config;
-  private configFilePath;
 
   constructor(configSearchPath?: string) {
     this.configSearchPath = configSearchPath;
@@ -18,12 +17,11 @@ export class ConfigService implements OnModuleInit {
   }
 
   onModuleInit() {
-    this.logger.log(`Load Config from : ${this.configFilePath}`);
+    this.logger.log(`Load Config from : ${this.configLocation}`);
   }
 
   loadConfig() {
     const lookupConfigResult = this.explorer.searchSync(this.configSearchPath);
-    this.configFilePath = lookupConfigResult.filePath;
     this.config = lookupConfigResult.config;
     this.configLocation = lookupConfigResult.filepath;
   }

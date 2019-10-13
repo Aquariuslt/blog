@@ -9,7 +9,7 @@ tags:
   - Ubuntu
   - Linux
   - IntelliJ IDEA
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Linux Mean 开发环境搭建

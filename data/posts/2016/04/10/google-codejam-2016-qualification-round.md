@@ -8,7 +8,7 @@ categories:
 tags:
   - Java
   - Google
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Google CodeJam 2016 Qualification

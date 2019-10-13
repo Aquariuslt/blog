@@ -8,7 +8,7 @@ categories:
 tags:
   - Angular
   - JavaScript
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Angular.js 常规性能优化阶段总结

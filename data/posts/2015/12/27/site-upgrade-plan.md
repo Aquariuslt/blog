@@ -10,7 +10,7 @@ tags:
   - Blog
   - VPS
   - Node
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # 网站重构升级计划

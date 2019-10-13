@@ -8,7 +8,7 @@ categories:
 tags:
   - Node
   - Linux
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Node.js oracledb "ORA-21561 - OID generation failed" 解决方案

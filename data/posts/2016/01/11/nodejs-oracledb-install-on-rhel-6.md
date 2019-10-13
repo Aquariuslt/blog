@@ -8,7 +8,7 @@ categories:
 tags:
   - Node
   - Linux
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # RHEL(CentOS)6 环境下安装 node-oracledb

@@ -8,7 +8,7 @@ categories:
 tags:
   - Blog
   - Angular
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Blog Structure Update

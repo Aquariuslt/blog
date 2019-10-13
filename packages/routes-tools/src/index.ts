@@ -6,13 +6,19 @@ import { Layout } from '@blog/common/interfaces/routes/layout';
 import { buildFullURL, buildURLPath } from '@blog/common/utils/path.util';
 import { format } from 'date-fns';
 import { buildTitle } from './title.util';
-import { createTagDetailRouteItem, createTagsOverviewMetas, createTagsOverviewRouteItem } from './tag.route.util';
+import {
+  createTagDetailMetas,
+  createTagDetailRouteItem,
+  createTagsOverviewMetas,
+  createTagsOverviewRouteItem
+} from './tag.route.util';
 import {
   createCategoryDetailRouteItem,
   createCategoriesOverviewRouteItem,
-  createCategoriesOverviewMetas
+  createCategoriesOverviewMetas,
+  createCategoryDetailMetas
 } from './category.route.util';
-import { createPostsOverviewMetas, createPostsOverviewRouteItem } from './post.route.util';
+import { createPostDetailMetas, createPostsOverviewMetas, createPostsOverviewRouteItem } from './post.route.util';
 import {
   createBreadcrumbList,
   createCategoryDetailBreadcrumbItem,
@@ -159,7 +165,7 @@ export const createTagDetailRouteMeta = (
       createTagsOverviewBreadcrumbItem(options.baseUrl, tagsRootRouteInfo.title, tagsRootRouteInfo.path),
       createTagDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
-    metas: undefined,
+    metas: _.concat(createCommonMetas(options), createTagDetailMetas(rawTag)),
     type: Layout.LIST,
     data: undefined
   };
@@ -192,7 +198,7 @@ export const createCategoryDetailRouteMeta = (
       createCategoryDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.LIST,
-    metas: undefined,
+    metas: _.concat(createCommonMetas(options), createCategoryDetailMetas(rawCategory)),
     data: undefined
   };
 };
@@ -225,7 +231,7 @@ export const createPostDetailRouteMeta = (
       createPostDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.DETAIL,
-    metas: undefined,
+    metas: _.concat(createCommonMetas(options), createPostDetailMetas(article)),
     data: undefined
   };
 };

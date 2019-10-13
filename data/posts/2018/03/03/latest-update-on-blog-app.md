@@ -13,7 +13,7 @@ tags:
   - Gulp
   - Github
   - Blog
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Latest Update on Blog App

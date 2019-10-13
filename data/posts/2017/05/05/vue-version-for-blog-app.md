@@ -9,7 +9,7 @@ tags:
   - Blog
   - Vue
   - PWA
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Vue Version Blog App

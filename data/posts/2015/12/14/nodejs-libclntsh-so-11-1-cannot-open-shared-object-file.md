@@ -10,7 +10,7 @@ tags:
   - Linux
   - Oracle
   - Node
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Linux "libclntsh.so.11.1 cannot open shared object file no such file or directory"解决方案

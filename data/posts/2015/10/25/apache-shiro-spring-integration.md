@@ -10,7 +10,7 @@ tags:
   - Security
   - Shiro
   - Java
-cover: ./cover.jpg
+cover: ./cover.png
 ---
 
 # Spring 整合 Apache Shiro 实现各等级的权限管理
