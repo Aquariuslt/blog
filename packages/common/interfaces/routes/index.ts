@@ -28,11 +28,34 @@ export interface RouteMeta {
   title: string;
 
   /** key - value pair of meta */
-  meta?;
+  metas?;
 
   /* breadcrumbs data*/
   breadcrumbs;
 
   /** content data, suppose to be api response */
   data?;
+}
+
+export interface Meta {
+  name?: string;
+  property?: string;
+  content: string;
+}
+
+export enum MetaName {
+  DESCRIPTION = 'description',
+  AUTHOR = 'author',
+
+  OPEN_GRAPH_TITLE = 'og:title',
+  OPEN_GRAPH_DESCRIPTION = 'og:description',
+  OPEN_GRAPH_IMAGE = 'og:image',
+  OPEN_GRAPH_URL = 'og:url',
+  OPEN_GRAPH_TYPE = 'og:type',
+  OPEN_GRAPH_SITE_NAME = 'og:site_name'
+}
+
+export enum MetaValue {
+  WEBSITE = 'website',
+  ARTICLE = 'article'
 }

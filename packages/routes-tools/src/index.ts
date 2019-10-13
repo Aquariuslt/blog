@@ -1,13 +1,18 @@
 // context collection processing
-import { format } from 'date-fns';
+import * as _ from 'lodash';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
-import { RouteMeta, RoutePathPrefix } from '@blog/common/interfaces/routes';
+import { Meta, MetaName, MetaValue, RouteMeta, RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { Layout } from '@blog/common/interfaces/routes/layout';
 import { buildFullURL, buildURLPath } from '@blog/common/utils/path.util';
+import { format } from 'date-fns';
 import { buildTitle } from './title.util';
-import { createTagDetailRouteItem, createTagsOverviewRouteItem } from './tag.route.util';
-import { createCategoryDetailRouteItem, createCategoriesOverviewRouteItem } from './category.route.util';
-import { createPostsOverviewRouteItem } from './post.route.util';
+import { createTagDetailRouteItem, createTagsOverviewMetas, createTagsOverviewRouteItem } from './tag.route.util';
+import {
+  createCategoryDetailRouteItem,
+  createCategoriesOverviewRouteItem,
+  createCategoriesOverviewMetas
+} from './category.route.util';
+import { createPostsOverviewMetas, createPostsOverviewRouteItem } from './post.route.util';
 import {
   createBreadcrumbList,
   createCategoryDetailBreadcrumbItem,
@@ -18,15 +23,29 @@ import {
   createTagDetailBreadcrumbItem,
   createTagsOverviewBreadcrumbItem
 } from './breadcrumb.util';
+import { createHomeMetas } from './home.route.util';
 
+export * from './home.route.util';
 export * from './tag.route.util';
 export * from './category.route.util';
+export * from './post.route.util';
 
 export interface RoutesOptions {
   baseUrl: string;
   baseTitle: string;
   titleSeparator: string;
 }
+
+export const createCommonMetas = (options: Partial<RoutesOptions>): Meta[] => [
+  {
+    name: MetaName.OPEN_GRAPH_SITE_NAME,
+    content: options.baseTitle
+  },
+  {
+    name: MetaName.OPEN_GRAPH_TYPE,
+    content: MetaValue.WEBSITE
+  }
+];
 
 export const createTagsOverviewRouteMeta = (
   contexts: ArticleContext[],
@@ -47,7 +66,7 @@ export const createTagsOverviewRouteMeta = (
       createTagsOverviewBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.TABLE,
-    meta: undefined,
+    metas: _.concat(createTagsOverviewMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -70,7 +89,7 @@ export const createCategoriesOverviewRouteMeta = (
       createCategoriesOverviewBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.TABLE,
-    meta: undefined,
+    metas: _.concat(createCategoriesOverviewMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -93,7 +112,7 @@ export const createPostsOverviewRouteMeta = (
       createPostsOverviewBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.LIST,
-    meta: undefined,
+    metas: _.concat(createPostsOverviewMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -112,7 +131,7 @@ export const createHomeRouteMeta = (options?: Partial<RoutesOptions>): RouteMeta
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME)
     ]),
     type: Layout.LIST,
-    meta: undefined,
+    metas: _.concat(createHomeMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -140,6 +159,7 @@ export const createTagDetailRouteMeta = (
       createTagsOverviewBreadcrumbItem(options.baseUrl, tagsRootRouteInfo.title, tagsRootRouteInfo.path),
       createTagDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
+    metas: undefined,
     type: Layout.LIST,
     data: undefined
   };
@@ -172,6 +192,7 @@ export const createCategoryDetailRouteMeta = (
       createCategoryDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.LIST,
+    metas: undefined,
     data: undefined
   };
 };
@@ -204,7 +225,7 @@ export const createPostDetailRouteMeta = (
       createPostDetailBreadcrumbItem(options.baseUrl, title, path)
     ]),
     type: Layout.DETAIL,
-    meta: undefined,
+    metas: undefined,
     data: undefined
   };
 };

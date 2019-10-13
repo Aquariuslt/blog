@@ -18,5 +18,5 @@
     },
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["node_modules", "dist", "reports", "__mocks__"]
+  "exclude": ["node_modules", "dist", "reports", "__tests__", "**/*.test.ts", "**/*/mock.*.ts"]
 }

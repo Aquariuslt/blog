@@ -14,5 +14,5 @@
     "noImplicitAny": false,
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["node_modules", "dist", "__tests__", "reports"]
+  "exclude": ["node_modules", "dist", "reports", "**/*.test.ts"]
 }
