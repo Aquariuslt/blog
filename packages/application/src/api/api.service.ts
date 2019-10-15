@@ -22,6 +22,7 @@ import { buildURLPath } from '@blog/common/utils/path.util';
 export class ApiService implements OnModuleInit {
   private readonly logger = new Logger(ApiService.name);
 
+  public apiMap;
   private apis: Partial<ApiData>[];
 
   private home: ApiData;
@@ -74,6 +75,8 @@ export class ApiService implements OnModuleInit {
       this.postDetails
     );
 
+    this.apiMap = _.keyBy(this.apis, 'path');
+
     _.each(this.apis, (api) => {
       this.logger.log(`Persisting Api for path: ${api.path}`);
       persistApi(api.path, api, this.config.dirs.api);
@@ -83,13 +86,13 @@ export class ApiService implements OnModuleInit {
   buildHomeApi() {
     return _.merge({}, this.routes.home, {
       path: buildURLPath(RoutePathPrefix.HOME_ALIAS),
-      data: createPostsOverviewApiData
+      data: createPostsOverviewApiData(this.article.contexts)
     });
   }
 
   buildTagsOverviewApi() {
     return _.merge({}, this.routes.tagsOverview, {
-      data: createTagsOverviewApiData
+      data: createTagsOverviewApiData(this.article.contexts)
     });
   }
 
@@ -104,7 +107,7 @@ export class ApiService implements OnModuleInit {
 
   buildCategoriesOverviewApi() {
     return _.merge({}, this.routes.categoriesOverview, {
-      data: createCategoriesOverviewApiData
+      data: createCategoriesOverviewApiData(this.article.contexts)
     });
   }
 
@@ -119,7 +122,7 @@ export class ApiService implements OnModuleInit {
 
   buildPostsOverviewApi() {
     return _.merge({}, this.routes.postsOverview, {
-      data: createPostsOverviewApiData
+      data: createPostsOverviewApiData(this.article.contexts)
     });
   }
 
