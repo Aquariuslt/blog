@@ -37,6 +37,15 @@ export interface RouteMeta {
   data?;
 }
 
+export const EmptyRouteMeta: RouteMeta = {
+  breadcrumbs: [],
+  key: '',
+  path: '',
+  title: '',
+  type: '',
+  url: ''
+};
+
 export interface Meta {
   name?: string;
   property?: string;

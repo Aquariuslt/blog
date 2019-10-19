@@ -22,3 +22,15 @@ export interface Profile {
   email: string;
   url: Map<string, string>;
 }
+
+export const EmptyProfile: Profile = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  email: '',
+  logo: {
+    '@type': 'ImageObject',
+    url: ''
+  },
+  name: '',
+  url: new Map<string, string>()
+};
