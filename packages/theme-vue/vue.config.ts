@@ -15,6 +15,7 @@ module.exports = {
     config.resolve.alias.set('@theme', BASE_DIR);
   },
   devServer: {
-    contentBase: API_BASE_DIR
+    contentBase: API_BASE_DIR,
+    hot: true
   }
 };

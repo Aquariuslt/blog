@@ -1,20 +1,22 @@
 <template>
-  <div class="list"></div>
+  <div class="list">
+    {{ JSON.stringify($data.$meta) }}
+  </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+import { Component, Prop, Provide, Vue, Watch } from 'vue-property-decorator';
 import { loadApi } from '@theme/api';
-import { RouteMeta } from '@blog/common/interfaces/routes';
+import { EmptyRouteMeta, RouteMeta } from '@blog/common/interfaces/routes';
 
 @Component({})
 export default class List extends Vue {
   @Prop() apiPath!: string;
-  @Prop() meta!: RouteMeta;
+  @Provide() $meta: RouteMeta = EmptyRouteMeta;
 
   @Watch('apiPath', { immediate: true, deep: true })
   async onApiPathUpdate(val) {
-    this.meta = await loadApi(val);
+    this.$data.$meta = await loadApi(val);
   }
 
   created() {}
