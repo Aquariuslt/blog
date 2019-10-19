@@ -3,18 +3,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Provide, Vue, Watch } from 'vue-property-decorator';
-import { EmptyRouteMeta, RouteMeta } from '@blog/common/interfaces/routes';
-import { loadApi } from '@theme/api';
+import { Component, Vue } from 'vue-property-decorator';
+import { RouteMixins } from '@theme/mixins/route.mixins';
 
-@Component({})
-export default class Table extends Vue {
-  @Prop() apiPath!: string;
-  @Provide() $meta: RouteMeta = EmptyRouteMeta;
-
-  @Watch('apiPath', { immediate: true, deep: true })
-  async onApiPathUpdate(val) {
-    this.$data.$meta = await loadApi(val);
-  }
-}
+@Component({
+  mixins: [RouteMixins]
+})
+export default class Table extends Vue {}
 </script>

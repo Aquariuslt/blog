@@ -5,7 +5,7 @@
         <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
           <icon value="menu"></icon>
         </md-button>
-        <span class="md-title">Title</span>
+        <span class="md-title">{{ $data.$title }}</span>
       </div>
     </md-app-toolbar>
 
@@ -22,7 +22,7 @@
 
     <!-- main content as router-view -->
     <md-app-content>
-      <router-view> </router-view>
+      <router-view @update:title="updateTitle"> </router-view>
     </md-app-content>
   </md-app>
 </template>
@@ -44,6 +44,7 @@ import About from '@theme/components/About.vue';
   }
 })
 export default class App extends Vue {
+  @Provide() $title: string = '';
   @Provide() $navigation: NavigationItem[] = [];
   @Provide() $profile: Profile = EmptyProfile;
   @Provide() menuVisible = false;
@@ -61,6 +62,10 @@ export default class App extends Vue {
   mounted() {
     this.loadNavigation();
     this.loadProfile();
+  }
+
+  updateTitle(val) {
+    this.$data.$title = val;
   }
 }
 </script>

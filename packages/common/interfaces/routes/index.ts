@@ -33,12 +33,12 @@ export interface RouteMeta {
   /* breadcrumbs data*/
   breadcrumbs;
 
-  /** content data, suppose to be api response */
+  /** content data, supposed to be api response */
   data?;
 }
 
 export const EmptyRouteMeta: RouteMeta = {
-  breadcrumbs: [],
+  breadcrumbs: {},
   key: '',
   path: '',
   title: '',
