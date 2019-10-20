@@ -1,7 +1,7 @@
 <template>
   <div class="detail md-layout md-gutter md-alignment-top-center">
-    <breadcrumbs :data="$data.$routeMeta.breadcrumbs"></breadcrumbs>
-    <article-detail :data="$data.$routeMeta.data"></article-detail>
+    <breadcrumbs :data="$data.$routeMeta.breadcrumbs" class="md-layout-item md-size-100"></breadcrumbs>
+    <article-detail :data="$data.$routeMeta.data" class="md-layout-item md-size-100"></article-detail>
   </div>
 </template>
 

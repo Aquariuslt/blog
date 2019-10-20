@@ -15,6 +15,16 @@ module.exports = {
       }
     }
   },
+  chainWebpack: (conf) => {
+    conf.plugin('html').tap((args) => {
+      args[0].minify = {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: false
+      };
+      return args;
+    });
+  },
   devServer: {
     contentBase: DIST_DIR,
     hot: true

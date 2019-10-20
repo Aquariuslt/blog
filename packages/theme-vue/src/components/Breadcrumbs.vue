@@ -24,14 +24,17 @@ export default class Breadcrumbs extends Vue {
 
 <style scoped lang="less">
 .breadcrumbs {
-  width: 800px;
+  width: 100%;
   max-width: 800px;
 
-  margin: 8px;
+  margin: 4px;
 
   .breadcrumbs-item {
-    margin: 8px;
+    margin: 4px;
     color: #5f6368;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &:hover {
       text-decoration: none !important;

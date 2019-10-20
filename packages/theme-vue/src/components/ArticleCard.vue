@@ -38,7 +38,7 @@ export default class ArticleCard extends Vue {
 <style lang="less" scoped>
 .article-card {
   max-width: 800px;
-  margin: 8px;
+  margin: 4px;
 
   .article-cover {
     img {
