@@ -17,3 +17,9 @@ export const persistApi = (apiPath: string, response, dest: string) => {
   mkdirp.sync(path.dirname(fullFilePath));
   fs.writeFileSync(fullFilePath, JSON.stringify(response));
 };
+
+export const persistFile = (filepath: string, content, dest: string) => {
+  const fullFilePath = path.join(dest, filepath);
+  mkdirp.sync(path.dirname(fullFilePath));
+  fs.writeFileSync(fullFilePath, content);
+};

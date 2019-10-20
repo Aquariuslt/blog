@@ -7,6 +7,7 @@ import { RoutesModule } from '@/routes/routes.module';
 @Module({
   imports: [ArticleModule, RoutesModule],
   providers: [ApiService],
-  controllers: [ApiController]
+  controllers: [ApiController],
+  exports: [ApiService]
 })
 export class ApiModule {}

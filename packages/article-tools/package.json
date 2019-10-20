@@ -42,7 +42,7 @@
     "jest": "^24.9.0",
     "jest-raw-loader": "^1.0.1",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.4"
   },
   "jest": {
     "moduleFileExtensions": [

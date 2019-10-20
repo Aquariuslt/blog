@@ -35,6 +35,7 @@ export * from './home.route.util';
 export * from './tag.route.util';
 export * from './category.route.util';
 export * from './post.route.util';
+export * from './sitemap.util';
 
 export interface RoutesOptions {
   baseUrl: string;
