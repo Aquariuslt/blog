@@ -1,19 +1,21 @@
 <template>
-  <md-card class="article-detail" v-if="article">
-    <md-card-media class="article-cover">
-      <img :src="article.cover" alt="cover" />
-    </md-card-media>
+  <div class="md-layout md-gutter md-alignment-top-center">
+    <md-card class="article-detail" v-if="article">
+      <md-card-media class="article-cover">
+        <img :src="article.cover" alt="cover" />
+      </md-card-media>
 
-    <md-card-content v-html="article.html" class="markdown-body"> </md-card-content>
+      <md-card-content v-html="article.html" class="markdown-body"> </md-card-content>
 
-    <md-card-content>
-      <keyword v-for="item in article.tags" :key="item.id" :data="item"></keyword>
-    </md-card-content>
+      <md-card-content>
+        <keyword v-for="item in article.tags" :key="item.id" :data="item"></keyword>
+      </md-card-content>
 
-    <md-card-content>
-      <comment :data="article['disqus']"></comment>
-    </md-card-content>
-  </md-card>
+      <md-card-content>
+        <comment :data="article['disqus']"></comment>
+      </md-card-content>
+    </md-card>
+  </div>
 </template>
 
 <script lang="ts">
@@ -41,10 +43,8 @@ export default class ArticleDetail extends Vue {
 
 <style scoped lang="less">
 .article-detail {
+  width: 100%;
   max-width: 800px;
-  margin: 8px;
-
-  .article-cover {
-  }
+  margin: 0px;
 }
 </style>

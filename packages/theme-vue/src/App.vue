@@ -1,30 +1,32 @@
 <template>
-  <md-app md-waterfall md-mode="fixed">
-    <md-app-toolbar class="md-primary">
-      <div class="md-toolbar-row">
-        <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
-          <icon value="menu"></icon>
-        </md-button>
-        <span class="md-title">{{ $data.$title }}</span>
-      </div>
-    </md-app-toolbar>
+  <div id="app">
+    <md-app md-waterfall md-mode="fixed">
+      <md-app-toolbar class="md-primary">
+        <div class="md-toolbar-row">
+          <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+            <icon value="menu"></icon>
+          </md-button>
+          <span class="md-title">{{ $data.$title }}</span>
+        </div>
+      </md-app-toolbar>
 
-    <md-app-drawer :md-active.sync="menuVisible">
-      <about :data="$data.$profile"></about>
+      <md-app-drawer :md-active.sync="menuVisible">
+        <about :data="$data.$profile"></about>
 
-      <md-list>
-        <md-list-item v-for="item in $data.$navigation" :key="item.id" :to="item.link" exact>
-          <icon :value="item.icon"></icon>
-          <span class="md-list-item-text">{{ item.label }}</span>
-        </md-list-item>
-      </md-list>
-    </md-app-drawer>
+        <md-list>
+          <md-list-item v-for="item in $data.$navigation" :key="item.id" :to="item.link" exact>
+            <icon :value="item.icon"></icon>
+            <span class="md-list-item-text">{{ item.label }}</span>
+          </md-list-item>
+        </md-list>
+      </md-app-drawer>
 
-    <!-- main content as router-view -->
-    <md-app-content>
-      <router-view @update:title="updateTitle"> </router-view>
-    </md-app-content>
-  </md-app>
+      <!-- main content as router-view -->
+      <md-app-content>
+        <router-view @update:title="updateTitle"> </router-view>
+      </md-app-content>
+    </md-app>
+  </div>
 </template>
 
 <script lang="ts">
