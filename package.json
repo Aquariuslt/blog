@@ -18,11 +18,14 @@
     "test": "jest",
     "pretest:cov": "lerna run clean && lerna run build",
     "test:cov": "jest --coverage",
-    "build": "rimraf dist && lerna run build && lerna run build:prod"
+    "build": "rimraf dist && lerna run build && lerna run build:prod",
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.8",
     "@typescript-eslint/eslint-plugin": "^2.3.1",
@@ -37,6 +40,7 @@
     "rimraf": "^3.0.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
+    "semantic-release": "^15.13.27",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
   },
@@ -137,5 +141,27 @@
     ],
     "testEnvironment": "node",
     "coverageDirectory": "<rootDir>/reports/coverage"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "dist",
+            "docs",
+            "package.json",
+            "README.md",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
   }
 }
