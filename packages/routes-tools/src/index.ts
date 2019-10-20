@@ -69,7 +69,7 @@ export const createTagsOverviewRouteMeta = (
     title: title,
     breadcrumbs: createBreadcrumbList([
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
-      createTagsOverviewBreadcrumbItem(options.baseUrl, title, path)
+      createTagsOverviewBreadcrumbItem(options.baseUrl, tagsOverviewRouteItem.label, path)
     ]),
     type: Layout.TABLE,
     metas: _.concat(createTagsOverviewMetas(), createCommonMetas(options)),
@@ -92,7 +92,7 @@ export const createCategoriesOverviewRouteMeta = (
     title: title,
     breadcrumbs: createBreadcrumbList([
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
-      createCategoriesOverviewBreadcrumbItem(options.baseUrl, title, path)
+      createCategoriesOverviewBreadcrumbItem(options.baseUrl, categoriesOverviewRouteItem.label, path)
     ]),
     type: Layout.TABLE,
     metas: _.concat(createCategoriesOverviewMetas(), createCommonMetas(options)),
@@ -115,7 +115,7 @@ export const createPostsOverviewRouteMeta = (
     title: title,
     breadcrumbs: createBreadcrumbList([
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
-      createPostsOverviewBreadcrumbItem(options.baseUrl, title, path)
+      createPostsOverviewBreadcrumbItem(options.baseUrl, postsOverviewRouteItem.label, path)
     ]),
     type: Layout.LIST,
     metas: _.concat(createPostsOverviewMetas(), createCommonMetas(options)),
@@ -148,7 +148,8 @@ export const createTagDetailRouteMeta = (
   contexts: ArticleContext[],
   options?: Partial<RoutesOptions>
 ): RouteMeta => {
-  const tagsRootRouteInfo = createTagsOverviewRouteMeta(contexts, options);
+  const tagsOverviewRouteItem = createTagsOverviewRouteItem();
+  const tagsOverviewRouteMeta = createTagsOverviewRouteMeta(contexts, options);
 
   const tagInfo = createTagDetailRouteItem(rawTag);
   const path = buildURLPath(RoutePathPrefix.TAGS, tagInfo.id);
@@ -162,8 +163,8 @@ export const createTagDetailRouteMeta = (
     title: title,
     breadcrumbs: createBreadcrumbList([
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
-      createTagsOverviewBreadcrumbItem(options.baseUrl, tagsRootRouteInfo.title, tagsRootRouteInfo.path),
-      createTagDetailBreadcrumbItem(options.baseUrl, title, path)
+      createTagsOverviewBreadcrumbItem(options.baseUrl, tagsOverviewRouteItem.label, tagsOverviewRouteMeta.path),
+      createTagDetailBreadcrumbItem(options.baseUrl, rawTag, path)
     ]),
     metas: _.concat(createCommonMetas(options), createTagDetailMetas(rawTag)),
     type: Layout.LIST,
@@ -176,7 +177,8 @@ export const createCategoryDetailRouteMeta = (
   contexts: ArticleContext[],
   options?: Partial<RoutesOptions>
 ): RouteMeta => {
-  const categoriesRootRouteInfo = createCategoriesOverviewRouteMeta(contexts, options);
+  const categoriesOverviewRouteItem = createCategoriesOverviewRouteItem();
+  const categoriesOverviewRouteMeta = createCategoriesOverviewRouteMeta(contexts, options);
 
   const categoryInfo = createCategoryDetailRouteItem(rawCategory);
   const path = buildURLPath(RoutePathPrefix.CATEGORIES, categoryInfo.id);
@@ -192,10 +194,10 @@ export const createCategoryDetailRouteMeta = (
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
       createCategoriesOverviewBreadcrumbItem(
         options.baseUrl,
-        categoriesRootRouteInfo.title,
-        categoriesRootRouteInfo.path
+        categoriesOverviewRouteItem.label,
+        categoriesOverviewRouteMeta.path
       ),
-      createCategoryDetailBreadcrumbItem(options.baseUrl, title, path)
+      createCategoryDetailBreadcrumbItem(options.baseUrl, rawCategory, path)
     ]),
     type: Layout.LIST,
     metas: _.concat(createCommonMetas(options), createCategoryDetailMetas(rawCategory)),
@@ -208,7 +210,8 @@ export const createPostDetailRouteMeta = (
   contexts: ArticleContext[],
   options?: Partial<RoutesOptions>
 ): RouteMeta => {
-  const postsRootRouteInfo = createPostsOverviewRouteMeta(contexts, options);
+  const postsOverviewRouteItem = createPostsOverviewRouteItem();
+  const postsOverviewRouteMeta = createPostsOverviewRouteMeta(contexts, options);
   const created = new Date(article.created);
 
   const year = format(created, 'yyyy');
@@ -227,8 +230,8 @@ export const createPostDetailRouteMeta = (
     title: title,
     breadcrumbs: createBreadcrumbList([
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
-      createPostsOverviewBreadcrumbItem(options.baseUrl, postsRootRouteInfo.title, postsRootRouteInfo.path),
-      createPostDetailBreadcrumbItem(options.baseUrl, title, path)
+      createPostsOverviewBreadcrumbItem(options.baseUrl, postsOverviewRouteItem.label, postsOverviewRouteMeta.path),
+      createPostDetailBreadcrumbItem(options.baseUrl, article.title, path)
     ]),
     type: Layout.DETAIL,
     metas: _.concat(createCommonMetas(options), createPostDetailMetas(article)),

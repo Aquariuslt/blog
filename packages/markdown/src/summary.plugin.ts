@@ -1,7 +1,7 @@
 import * as MarkdownIt from 'markdown-it';
 import * as cheerio from 'cheerio';
 
-const DEFAULT_SUMMARY_LENGTH = 200;
+const DEFAULT_SUMMARY_LENGTH = 80;
 
 export const SummaryPlugin = (md: MarkdownIt, options?) => {
   md.core.ruler.push('detect_summary', (state): void => {

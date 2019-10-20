@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
 import * as fs from 'fs';
+import * as hljs from 'highlight.js';
 import * as MarkdownIt from 'markdown-it';
 import { metadata, source } from '@blog/markdown';
 import { ImagesDetectionPlugin } from '@blog/markdown/dist/images.plugin';
@@ -12,7 +13,15 @@ export const createArticleContext = (filepath: string) => {
   const meta = metadata(fileContent);
   const src = source(fileContent);
 
-  const md = new MarkdownIt()
+  const md = new MarkdownIt({
+    langPrefix: 'hljs ',
+    highlight: (str, lang): string => {
+      if (lang && hljs.getLanguage(lang)) {
+        return hljs.highlight(lang, str).value;
+      }
+      return '';
+    }
+  })
     .use(ImagesDetectionPlugin)
     .use(ContentItemPlugin)
     .use(SummaryPlugin);

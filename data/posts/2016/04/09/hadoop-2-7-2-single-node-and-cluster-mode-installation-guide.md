@@ -17,10 +17,6 @@ cover: ./cover.png
 
 最近需要做一些大数据相关项目,至少需要搭建 Hadoop 的基本环境. 由于用到的是目前版本号最高的 Hadoop 2.7.2.跟文档比较多的 2.6 以下的版本相比,在部署集群的时候遇见了很多坑. 所以写一份安装指南,记录一下跌坑的过程,以示警惕.
 
-在环境搭建的过程中,参考了以下两篇文章: 其中 Apache 的官方 Wiki 文档写的真难读. 建议直接先看一遍 aws 的指南再动手.
-
-[https://wiki.apache.org/hadoop/GettingStartedWithHadoop](https://wiki.apache.org/hadoop/GettingStartedWithHadoop) [https://rstudio-pubs-static.s3.amazonaws.com/](https://rstudio-pubs-static.s3.amazonaws.com/78508_abe89197267240dfb6f4facb361a20ed.html)
-
 ## Table Of Content
 
 暂不讨论 Hadoop 及基于其应用的场景描述,文本只讨论基本的环境搭建步骤和与之涉及的知识点. 按照顺序总结出本文的内容节点.
@@ -399,3 +395,9 @@ $sudo rm -r /usr/local/hadoop_store/tmp
 $sudo rm -r /usr/local/hadoop_store/hdfs
 $sidp hdfs namenode -format
 ```
+
+## References
+
+在环境搭建的过程中,参考了以下两篇文章: 其中 Apache 的官方 Wiki 文档写的真难读. 建议直接先看一遍 aws 的指南再动手.
+
+[https://wiki.apache.org/hadoop/GettingStartedWithHadoop](https://wiki.apache.org/hadoop/GettingStartedWithHadoop) [https://rstudio-pubs-static.s3.amazonaws.com/](https://rstudio-pubs-static.s3.amazonaws.com/78508_abe89197267240dfb6f4facb361a20ed.html)

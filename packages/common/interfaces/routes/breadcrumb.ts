@@ -7,7 +7,7 @@ export interface BreadcrumbItem {
   /** display name, suppose support i18n */
   name: string;
 
-  /** the url */
+  /** the full url */
   item: string;
 }
 

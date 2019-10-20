@@ -47,9 +47,11 @@ export class ArticleService implements OnModuleInit {
   }
 
   createArticleContexts() {
-    this.postsContexts = this.postsFiles.map((postFile) => {
-      return createArticleContext(postFile);
-    });
+    this.postsContexts = this.postsFiles
+      .map((postFile) => {
+        return createArticleContext(postFile);
+      })
+      .sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime());
   }
 
   get contexts() {
