@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <md-app md-waterfall md-mode="fixed">
-      <md-app-toolbar class="md-primary">
+      <md-app-toolbar class="md-primary" md-elevation="2">
         <div class="md-toolbar-row">
-          <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+          <md-button class="md-icon-button" @click="menuVisible = !menuVisible" aria-label="menu">
             <icon value="menu"></icon>
           </md-button>
-          <span class="md-title">{{ $data.$title }}</span>
+          <span class="md-title app-title">{{ $data.$title }}</span>
         </div>
       </md-app-toolbar>
 
@@ -79,6 +79,10 @@ export default class App extends Vue {
   .md-app-content {
     margin: 0;
     padding: 4px;
+  }
+
+  .app-title {
+    color: #ffffff;
   }
 }
 

@@ -33,7 +33,9 @@ module.exports = {
     name: config.site.baseTitle,
     manifestOptions: {
       name: config.site.baseTitle,
-      short_name: config.site.baseTitle
-    }
+      short_name: config.site.baseTitle,
+      start_url: '/'
+    },
+    themeColor: '#1A73E8'
   }
 };
