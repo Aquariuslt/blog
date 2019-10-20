@@ -3,7 +3,7 @@ import { AppModule } from '@/app.module';
 import { AppLogger } from '@/app.logger';
 
 async function bootstrap() {
-  const port = 5000;
+  const port = 2999;
   const app = await NestFactory.create(AppModule, { logger: false });
   app.useLogger(app.get(AppLogger));
   await app.listen(port);
