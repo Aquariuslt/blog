@@ -16,6 +16,7 @@
     "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node -r ts-node/register -r tsconfig-paths/register dist/main.js\"",
     "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk -r ts-node/register -r tsconfig-paths/register dist/main.js\"",
     "start:prod": "node -r tsconfig-paths/register -r ts-node/register  dist/main.js",
+    "build:prod": "node -r tsconfig-paths/register -r ts-node/register  dist/main.js",
     "prestart:prod": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",

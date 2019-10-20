@@ -7,9 +7,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { RouteMixins } from '@theme/mixins/route.mixins';
-import Breadcrumbs from '@theme/components/Breadcrumbs.vue';
-import ArticleDetail from '@theme/components/ArticleDetail.vue';
+import { RouteMixins } from '@theme-vue/mixins/route.mixins';
+import Breadcrumbs from '@theme-vue/components/Breadcrumbs.vue';
+import ArticleDetail from '@theme-vue/components/ArticleDetail.vue';
 
 @Component({
   components: {

@@ -1,7 +1,7 @@
 import { Component, Emit, Prop, Provide, Vue, Watch } from 'vue-property-decorator';
 import { EmptyRouteMeta, RouteMeta } from '@blog/common/interfaces/routes';
-import { Meta } from '@theme/decoractors/meta';
-import { loadApi } from '@theme/api';
+import { Meta } from '@theme-vue/decoractors/meta';
+import { loadApi } from '@theme-vue/api';
 
 const TYPE_JSON_LD = 'application/ld+json';
 

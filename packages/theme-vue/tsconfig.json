@@ -14,10 +14,10 @@
     "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-      "@theme/*": ["src/*"]
+      "@theme-vue/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "vue.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "vue.config.ts", "package.json"],
   "exclude": ["node_modules"]
 }
