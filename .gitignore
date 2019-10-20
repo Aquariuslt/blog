@@ -8,20 +8,15 @@
 # nodejs
 node_modules
 package-lock.json
-
+yarn.lock
 
 # logs
 *.log
 
 # build & distribution
 .cache
-tsc-build
 build
 dist
 
-
-# test
-coverage
-test/e2e/videos
-junit.xml
+# coverage reports
 reports

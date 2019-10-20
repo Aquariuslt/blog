@@ -1,0 +1,66 @@
+{
+  "name": "@blog/pwa-tools",
+  "version": "6.0.0",
+  "description": "progressive web application tools including workbox + prerendering",
+  "keywords": [
+    "pwa",
+    "workbox",
+    "prerender"
+  ],
+  "author": "aquariuslt <superaquariuslt@gmail.com>",
+  "homepage": "https://github.com/aquariuslt/blog#readme",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "esnext": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquariuslt/blog.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "clean": "rimraf dist",
+    "build:prod": ""
+  },
+  "dependencies": {
+    "@blog/common": "^6.0.0",
+    "@blog/theme-vue": "^6.0.0",
+    "cosmiconfig": "^5.2.1",
+    "workbox-build": "^4.3.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.141",
+    "@types/node": "^12.7.8",
+    "jest": "^24.9.0",
+    "jest-raw-loader": "^1.0.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+  }
+}

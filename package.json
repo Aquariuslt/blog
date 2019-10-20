@@ -1,231 +1,65 @@
 {
   "name": "blog.aquariuslt.com",
-  "version": "5.1.1",
+  "version": "6.0.0",
   "private": true,
   "description": "next generation version blog",
   "repository": "https://github.com/aquariuslt/blog",
-  "author": "Aquariuslt<superaquariuslt@gmail.com>",
+  "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "license": "MIT",
   "keywords": [
     "blog",
-    "vue",
-    "lerna",
     "typescript"
   ],
   "scripts": {
-    "start": "gulp serve",
-    "clean": "gulp clean",
-    "serve": "gulp serve",
-    "build": "gulp build",
-    "test": "gulp test",
-    "lint": "gulp lint",
-    "ci": "gulp ci",
-    "compile": "gulp compile",
-    "analyze": "gulp analyze",
-    "postinstall": "lerna run tsc"
-  },
-  "resolutions": {
-    "@types/react": "^16.9.2"
-  },
-  "dependencies": {
-    "@material-ui/core": "^4.4.2",
-    "@material-ui/icons": "^4.4.1",
-    "axios": "^0.19.0",
-    "classnames": "^2.2.6",
-    "i18next": "17.0.6",
-    "mobx": "^5.13.0",
-    "mobx-react": "^6.1.3",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1",
-    "react-i18next": "^10.12.4",
-    "react-router-dom": "^5.0.1",
-    "typeface-roboto": "^0.0.75"
+    "clean": "lerna run clean",
+    "bootstrap": "lerna bootstrap",
+    "lint": "eslint --fix",
+    "pretest": "lerna run clean && lerna run build",
+    "test": "jest",
+    "pretest:cov": "lerna run clean && lerna run build",
+    "test:cov": "jest --coverage",
+    "build": "rimraf dist && lerna run build && lerna run build:prod"
   },
   "devDependencies": {
-    "@testing-library/react": "^9.1.4",
-    "@types/cheerio": "^0.22.13",
-    "@types/extract-text-webpack-plugin": "^3.0.4",
-    "@types/fancy-log": "^1.3.1",
-    "@types/glob": "^7.1.1",
-    "@types/google.analytics": "^0.0.40",
-    "@types/gulp": "^4.0.6",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@types/jest": "^24.0.18",
-    "@types/lodash": "^4.14.138",
-    "@types/moxios": "^0.4.9",
-    "@types/node": "^12.7.5",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/react-router-dom": "^4.3.5",
-    "@types/sinon": "^7.0.13",
-    "@types/webpack": "^4.39.1",
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
-    "address": "^1.1.2",
-    "ajv": "^6.10.2",
-    "autoprefixer": "^9.6.1",
-    "awesome-typescript-loader": "^5.2.1",
-    "axios-mock-adapter": "^1.17.0",
-    "cheerio": "^1.0.0-rc.3",
-    "connect-history-api-fallback": "^1.6.0",
-    "conventional-changelog-cli": "^2.0.23",
-    "css-loader": "^3.2.0",
-    "cz-conventional-changelog": "^3.0.2",
-    "date-fns": "^1.30.1",
-    "disqus-react": "^1.0.6",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "^6.4.0",
+    "@types/node": "^12.7.8",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "eslint": "^6.5.0",
     "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.14.3",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "fancy-log": "^1.3.3",
-    "favicons-webpack-plugin": "^1.0.2",
-    "feed": "^4.0.0",
-    "file-loader": "^4.2.0",
-    "friendly-errors-webpack-plugin": "^1.7.0",
-    "generate-robotstxt": "^7.1.0",
-    "glob": "^7.1.3",
-    "gts": "^1.1.0",
-    "gulp": "^4.0.1",
-    "gulp-eslint": "^6.0.0",
-    "gulp-inject-string": "^1.1.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-rimraf": "^1.0.0",
-    "gulp-yaml": "^2.0.3",
-    "highlight.js": "^9.15.10",
-    "html-webpack-plugin": "^3.2.0",
-    "http-proxy-middleware": "^0.20.0",
-    "i18next-browser-languagedetector": "^3.0.3",
-    "identity-obj-proxy": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.7",
     "jest": "^24.9.0",
-    "jest-cli": "^24.9.0",
-    "jest-environment-enzyme": "^7.1.1",
-    "jest-enzyme": "^7.1.1",
-    "jest-junit": "^8.0.0",
-    "jest-properties-loader": "^1.0.7",
     "jest-raw-loader": "^1.0.1",
-    "js-yaml": "^3.13.1",
     "lerna": "^3.16.4",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0",
-    "lint-staged": "^9.2.5",
-    "lite-server": "^2.5.4",
-    "lodash": "^4.17.15",
-    "lodash-webpack-plugin": "^0.11.5",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.4",
-    "mini-css-extract-plugin": "^0.8.0",
-    "mkdirp": "^0.5.1",
-    "moxios": "^0.4.0",
-    "normalize.css": "^8.0.1",
-    "offline-plugin": "^5.0.5",
-    "open": "^6.4.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "optimize-js-plugin": "^0.0.4",
-    "ora": "^3.2.0",
-    "postcss": "^7.0.18",
-    "postcss-load-config": "^2.1.0",
-    "postcss-loader": "^3.0.0",
-    "postcss-pxtorem": "^4.0.1",
-    "prerender-spa-plugin": "^3.4.0",
-    "prettier": "^1.18.2",
-    "properties-json-loader": "^1.0.0",
-    "react-hooks-testing-library": "^0.6.0",
-    "react-schemaorg": "^1.0.0",
-    "react-test-renderer": "^16.9.0",
     "rimraf": "^3.0.0",
-    "rss": "^1.2.2",
-    "schema-dts": "^0.4.2",
-    "serve-handler": "^6.1.1",
-    "sinon": "^7.4.2",
-    "sitemap": "^4.1.1",
-    "smooth-scroll": "^16.1.0",
-    "static-site-generator-webpack-plugin": "^3.4.2",
-    "style-loader": "^1.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "ts-jest": "^24.1.0",
-    "ts-loader": "6.1.0",
-    "ts-node": "^8.3.0",
-    "tsconfig-paths-webpack-plugin": "^3.2.0",
-    "typescript": "^3.6.3",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^2.1.0",
-    "uslug": "^1.0.4",
-    "webpack": "^4.40.2",
-    "webpack-bundle-analyzer": "^3.5.0",
-    "webpack-dev-middleware": "^3.7.1",
-    "webpack-dev-server": "^3.8.0",
-    "webpack-hot-middleware": "^2.24.4",
-    "webpack-merge": "^4.2.2",
-    "workbox-webpack-plugin": "^4.3.1",
-    "xml": "^1.0.1",
-    "yorkie": "^2.0.0"
-  },
-  "workspaces": [
-    "packages/@blog/*",
-    "packages/@utils/*",
-    "packages/@theme/*",
-    "packages/@types/*"
-  ],
-  "config": {
-    "base": {
-      "dir": {
-        "src": "src",
-        "build": "build",
-        "tscbuild": "tsc-build",
-        "packages": "packages",
-        "dist": {
-          "root": "dist",
-          "js": "static/js",
-          "css": "static/css",
-          "img": "static/img",
-          "fonts": "static/fonts",
-          "manifest": "static/manifest",
-          "packages": "packages/**/*/dist"
-        },
-        "test": {
-          "unit": "test/unit",
-          "e2e": "test/e2e"
-        }
-      },
-      "dev": {
-        "port": 3000
-      }
-    },
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+    "typescript": "^3.6.3"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "extends": [
       "plugin:@typescript-eslint/recommended",
-      "plugin:react/recommended",
       "prettier/@typescript-eslint"
     ],
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "prettier"
     ],
     "parserOptions": {
       "ecmaVersion": 2018,
       "sourceType": "module"
     },
     "rules": {
-      "function-paren-newline": "off",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/explicit-member-accessibility": "off",
-      "@typescript-eslint/explicit-function-return-type": "off"
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "globals": {
-      "ga": true
+      "@typescript-eslint/no-parameter-properties": "off",
+      "@typescript-eslint/interface-name-prefix": "off"
     }
   },
   "prettier": {
@@ -235,70 +69,73 @@
     "singleQuote": true,
     "printWidth": 120
   },
-  "lint-staged": {
-    "{src,test,packages}/**/*.{ts|tsx}": [
-      "prettier --write",
-      "git add"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "chore",
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "test",
+          "ci",
+          "perf",
+          "revert",
+          "pages",
+          "posts"
+        ]
+      ]
     }
   },
   "jest": {
-    "verbose": true,
-    "cache": false,
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false,
+        "tsConfig": {
+          "experimentalDecorators": true
+        }
+      }
+    },
     "moduleFileExtensions": [
       "ts",
-      "tsx",
       "js",
       "json"
     ],
     "moduleNameMapper": {
-      "@/config.json": "<rootDir>/build/config.json",
-      "^@/(.*)$": "<rootDir>/src/$1",
-      "\\.(css|less)$": "identity-obj-proxy"
+      "^@/(.*)$": "<rootDir>/packages/application/src/$1"
     },
-    "modulePathIgnorePatterns": [
-      "<rootDir>/tsc-build"
-    ],
     "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      ".*\\.md$": "jest-raw-loader",
-      ".*\\.properties$": "jest-properties-loader"
+      "^.+\\.ts$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
     },
-    "setupFilesAfterEnv": [
-      "jest-enzyme"
-    ],
-    "testEnvironment": "enzyme",
-    "testMatch": [
-      "<rootDir>/test/unit/**/*.test.ts",
-      "<rootDir>/packages/@blog/**/*.test.ts",
-      "<rootDir>/packages/@utils/**/*.test.ts",
-      "<rootDir>/packages/@theme/**/*.test.ts?(x)"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "collectCoverage": false,
     "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
-      "packages/@blog/**/lib/**/*.ts",
-      "packages/@utils/**/lib/**/*.ts",
-      "packages/@theme/**/src/**/*.tsx",
-      "!packages/@theme/**/src/index.tsx",
-      "!src/main.ts",
-      "!src/offline.ts",
-      "!src/analytics.ts",
-      "!**/tasks/**",
-      "!**/test/**",
-      "!**/node_modules/**"
+      "!**/__tests__/**",
+      "!**/src/index.ts",
+      "!**/src/main.ts",
+      "!**/src/plugins.ts",
+      "!**/*.module.ts",
+      "!**/migration.ts",
+      "<rootDir>/src/**/*.ts",
+      "<rootDir>/packages/**/src/**/*.ts"
     ],
-    "coverageDirectory": "<rootDir>/reports/coverage",
-    "reporters": [
-      "default",
-      "jest-junit"
-    ]
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts",
+      "<rootDir>/packages/**/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
   }
 }

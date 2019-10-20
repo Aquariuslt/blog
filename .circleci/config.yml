@@ -1,119 +1,19 @@
-version: 2.1
-
-
-jobs:
-  ci:
-    docker:
-      -
-        image: circleci/node:10.16.0-browsers
-    working_directory: ~/blog
-    steps:
-      -
-        checkout:
-          name: SCM
-      -
-        run:
-          name: Install Dependencies
-          command: yarn
-      -
-        run:
-          name: Linting
-          command: yarn lint
-      -
-        run:
-          name: Unit Test & Build
-          command: yarn ci
-      -
-        run:
-          name: Coverage Report
-          command: "bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN"
-      -
-        store_test_results:
-          path: reports/junit
-      -
-        store_artifacts:
-          path: reports/junit
-      -
-        persist_to_workspace:
-          root: ~/blog
-          paths: dist
-
-  deploy:
-    docker:
-      -
-        image: node:10
-    working_directory: ~/blog
-    steps:
-      -
-        checkout:
-          name: Checkout
-      -
-        attach_workspace:
-          at: ~/blog
-      -
-        run:
-          name: Install Deploy Dependencies
-          command: |
-            npm install -g --silent gh-pages
-            git config user.email deploy-bot@circleci.com
-            git config user.name "circleci"
-      -
-        run:
-          name: Deploy docs to gh-pages branch
-          command: >
-            gh-pages
-            --dist dist
-            --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git
-            --branch master
-            --silent
-
-  coding-deploy:
-    docker:
-      -
-        image: node:10
-    working_directory: ~/blog
-    steps:
-      -
-        checkout:
-          name: Checkout
-      -
-        attach_workspace:
-          at: ~/blog
-      -
-        run:
-          name: Install Deploy Dependencies
-          command: |
-            npm install -g --silent gh-pages
-            git config user.email deploy-bot@circleci.com
-            git config user.name "circleci"
-            echo "blogcn.aquariuslt.com" > dist/CNAME
-      -
-        run:
-          name: Deploy docs to gh-pages branch at coding.me
-          command: >
-            gh-pages
-            --dist dist
-            --repo https://aquariuslt:${CODING_TOKEN}@git.coding.net/aquariuslt/aquariuslt.coding.me.git
-            --branch master
-            --silent
+version: 2
 
 workflows:
   version: 2
   build:
     jobs:
       - ci
-      -
-        deploy:
-          requires:
-            - ci
-          filters:
-            branches:
-              only: universal-ts
-      -
-        coding-deploy:
-          requires:
-            - ci
-          filters:
-            branches:
-              only: universal-ts
 
+jobs:
+  ci:
+    docker:
+      - image: circleci/node:10.16.0-browsers
+    working_directory: ~/blog
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn run bootstrap
+      - run: yarn run test
+      - run: yarn run build

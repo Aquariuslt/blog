@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`markdown-it plugins: images # should detect images at env 1`] = `
+Array [
+  "https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png",
+  "./images/sample-image.png",
+]
+`;

@@ -1,0 +1,63 @@
+{
+  "name": "@blog/api-generator",
+  "version": "6.0.0",
+  "description": "> TODO: description",
+  "author": "Aquariuslt <superaquariuslt@gmail.com>",
+  "homepage": "https://github.com/aquariuslt/blog#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquariuslt/blog.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "esnext": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@blog/common": "^6.0.0",
+    "@blog/article-tools": "^6.0.0",
+    "@blog/routes-tools": "^6.0.0",
+    "date-fns": "^2.4.1",
+    "mkdirp": "^0.5.1",
+    "uslug": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/fancy-log": "^1.3.1",
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.141",
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^12.7.8",
+    "jest": "^24.9.0",
+    "jest-raw-loader": "^1.0.1",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+  }
+}
