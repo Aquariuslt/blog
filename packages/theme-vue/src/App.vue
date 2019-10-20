@@ -1,6 +1,6 @@
 <template>
-  <md-app md-waterfall md-mode="overlap">
-    <md-app-toolbar class="md-primary md-large">
+  <md-app md-waterfall md-mode="fixed">
+    <md-app-toolbar class="md-primary">
       <div class="md-toolbar-row">
         <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
           <icon value="menu"></icon>
@@ -70,10 +70,16 @@ export default class App extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .md-app {
-  min-height: 100vh;
+  height: 100vh;
+
+  .md-app-content {
+    margin: 0;
+    padding: 4px;
+  }
 }
+
 .md-list-item-content > .mdi:first-child {
   margin-right: 32px;
 }

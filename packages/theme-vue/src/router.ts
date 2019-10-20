@@ -19,6 +19,20 @@ export default new Router({
       })
     },
     {
+      path: '/posts/:year/:month/:date/:id',
+      name: 'post-detail',
+      component: () => import(/* webpackChunkName: "detail" */ './views/Detail.vue'),
+      props: (route) => ({
+        apiPath: buildURLPath(
+          RoutePathPrefix.POSTS,
+          route.params['year'],
+          route.params['month'],
+          route.params['date'],
+          route.params['id']
+        )
+      })
+    },
+    {
       path: '/posts',
       name: 'posts',
       component: List,
