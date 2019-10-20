@@ -1,9 +1,10 @@
 import * as _ from 'lodash';
 import * as path from 'path';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
-import { buildPathFromContext, createArticleOverview } from './article.util';
+import { createArticleOverview } from './article.util';
 import { createTagDetailLinkItem } from './tags.api.util';
 import { createCategoryLinkItem } from './categories.api.util';
+import { buildPathFromContext } from '@blog/routes-tools';
 
 /** @description simply `/` and `/posts` api response */
 export const createPostsOverviewApiData = (contexts: ArticleContext[]) => _.map(contexts, createArticleOverview);

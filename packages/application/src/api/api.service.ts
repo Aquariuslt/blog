@@ -22,6 +22,8 @@ import { buildURLPath } from '@blog/common/utils/path.util';
 export class ApiService implements OnModuleInit {
   private readonly logger = new Logger(ApiService.name);
 
+  private $inited;
+
   public apiMap;
   private apis: Partial<ApiData>[];
 
@@ -44,9 +46,13 @@ export class ApiService implements OnModuleInit {
     private readonly routes: RoutesService
   ) {}
 
-  onModuleInit() {
+  async onModuleInit() {
+    if (this.$inited) {
+      return;
+    }
     this.routes.onModuleInit();
     this.buildApi();
+    this.$inited = true;
   }
 
   buildApi() {

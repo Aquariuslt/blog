@@ -5,19 +5,31 @@ sources:
   pages: data/pages
   posts: data/posts
 
-
 dirs:
   dest: dist
   assets: dist/static
   posts: dist/posts
+  api: dist/api
 
 site:
   https: true
   domain: blog.aquariuslt.com
   title: Aquariuslt Blog
+  disqus: aquariuslt
+
+profile:
+  name: Aquariuslt
+  logo:
+    url: https://img.aquariuslt.com/social/avator.png
+  email: superaquariuslt@gmail.com
+  url:
+    github: https://github.com/aquariuslt
+    instagram: https://instagram/supaquariuslt
+    twitter: https://twitter.com/superaquariuslt
 
 # article settings
 pages:
-  title_sperator: '|'
+  title_separator: '|'
 
 
+theme: theme-vue

@@ -3,17 +3,18 @@
   "version": "6.0.0",
   "private": true,
   "scripts": {
+    "preserve": "yarn run compile:config",
     "serve": "vue-cli-service serve",
-    "build:prod": "vue-cli-service build --no-clean",
+    "prebuild": "yarn run compile:config",
+    "build": "vue-cli-service build",
     "compile:config": "tsc vue.config.ts --resolveJsonModule",
     "debug:webpack": "vue inspect | tee > webpack.config.js",
-    "postinstall": "tsc vue.config.ts",
     "test": "vue-cli-service test:unit"
   },
   "dependencies": {
     "@blog/common": "^6.0.0",
+    "@blog/config": "^6.0.0",
     "@blog/routes-tools": "^6.0.0",
-    "@blog/application": "^6.0.0",
     "@mdi/font": "^4.5.95",
     "axios": "^0.19.0",
     "date-fns": "^2.5.1",
@@ -29,17 +30,15 @@
   "devDependencies": {
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
-    "@vue/cli-plugin-pwa": "^4.0.4",
     "@vue/cli-plugin-typescript": "^4.0.4",
     "@vue/cli-plugin-unit-jest": "^4.0.4",
     "@vue/cli-service": "^4.0.4",
     "@vue/test-utils": "1.0.0-beta.29",
-    "cosmiconfig": "^5.2.1",
     "copy-webpack-plugin": "^5.0.4",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3",
+    "typescript": "^3.6.4",
     "vue-template-compiler": "^2.6.10"
   },
   "postcss": {

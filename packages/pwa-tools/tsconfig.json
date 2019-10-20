@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": false,
+    "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -12,11 +12,7 @@
     "baseUrl": "./",
     "incremental": true,
     "noImplicitAny": false,
-    "allowJs": true,
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["node_modules", "dist", "reports"]
+  "exclude": ["node_modules", "dist", "reports", "**/*.test.ts"]
 }

@@ -25,6 +25,7 @@
     "@blog/common": "^6.0.0",
     "@blog/article-tools": "^6.0.0",
     "date-fns": "^2.4.1",
+    "sitemap": "^5.0.0",
     "uslug": "^1.0.4",
     "lodash": "^4.17.15"
   },

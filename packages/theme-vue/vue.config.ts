@@ -1,20 +1,13 @@
-import * as cosmiconfig from 'cosmiconfig';
 import * as path from 'path';
-import * as pkg from './package.json';
 
-const explorer = cosmiconfig(`blog`);
-const config = explorer.searchSync().config;
-const configBasePath = path.dirname(explorer.searchSync().filepath);
+import { loadConfig } from '@blog/config';
 
-// TODO: refactor from `@blog/config`
-const DIST_DIR = path.join(configBasePath, config.dirs.dest);
+const config = loadConfig();
+
 const BASE_DIR = path.join(__dirname, 'src');
-
-const USE_CURRENT_THEME = pkg.name.indexOf(config.theme) !== -1;
-console.log(`USE_CURRENT_THEME:`, USE_CURRENT_THEME);
+const DIST_DIR = config.dirs.dest;
 
 module.exports = {
-  outputDir: USE_CURRENT_THEME ? DIST_DIR : undefined,
   configureWebpack: {
     resolve: {
       alias: {
@@ -27,10 +20,10 @@ module.exports = {
     hot: true
   },
   pwa: {
-    name: config.site.title,
+    name: config.site.baseTitle,
     manifestOptions: {
-      name: config.site.title,
-      short_name: config.site.title
+      name: config.site.baseTitle,
+      short_name: config.site.baseTitle
     }
   }
 };
