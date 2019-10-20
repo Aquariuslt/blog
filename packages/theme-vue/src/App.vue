@@ -33,9 +33,9 @@ import { NavigationItem } from '@blog/common/interfaces/navigation';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { EmptyProfile, Profile } from '@blog/common/interfaces/profile';
 import { buildURLPath } from '@blog/common/utils/path.util';
-import { loadApi } from '@theme/api';
-import Icon from '@theme/components/Icon.vue';
-import About from '@theme/components/About.vue';
+import { loadApi } from '@theme-vue/api';
+import Icon from '@theme-vue/components/Icon.vue';
+import About from '@theme-vue/components/About.vue';
 
 @Component({
   components: {

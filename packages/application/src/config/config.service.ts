@@ -57,7 +57,8 @@ export class ConfigService implements OnModuleInit {
     return {
       domain: site.domain,
       baseUrl: baseUrl,
-      baseTitle: site.title
+      baseTitle: site.title,
+      disqus: site.disqus
     };
   }
 

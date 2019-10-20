@@ -128,9 +128,15 @@ export class ApiService implements OnModuleInit {
 
   buildPostDetailsApi() {
     return _.map(this.routes.postDetails, (postDetail) => {
-      return _.merge({}, postDetail, {
-        data: createPostDetailApiData(postDetail.key, this.article.contexts)
+      const data = _.merge({}, createPostDetailApiData(postDetail.key, this.article.contexts), {
+        disqus: {
+          shortname: this.config.site.disqus,
+          url: postDetail.url,
+          identifier: postDetail.path.replace(/\//g, '-')
+        }
       });
+
+      return _.merge({}, postDetail, { data });
     });
   }
 

@@ -1,21 +1,23 @@
 <template>
-  <md-card class="article-card">
-    <md-card-media class="article-cover">
-      <img :src="article.cover" alt="cover" />
-    </md-card-media>
-    <md-card-header>
-      <div class="md-title">{{ article.title }}</div>
-      <div class="md-subhead">{{ formatDate(article.created) }}</div>
-    </md-card-header>
+  <div class="md-layout md-gutter md-alignment-top-center">
+    <md-card class="article-card">
+      <md-card-media class="article-cover">
+        <img :src="article.cover" alt="cover" />
+      </md-card-media>
+      <md-card-header>
+        <div class="md-title">{{ article.title }}</div>
+        <div class="md-subhead">{{ formatDate(article.created) }}</div>
+      </md-card-header>
 
-    <md-card-content>
-      {{ article.summary }}
-    </md-card-content>
+      <md-card-content>
+        {{ article.summary }}
+      </md-card-content>
 
-    <md-card-actions>
-      <md-button :to="article['link']">More</md-button>
-    </md-card-actions>
-  </md-card>
+      <md-card-actions>
+        <md-button :to="article['link']">More</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
 </template>
 
 <script lang="ts">

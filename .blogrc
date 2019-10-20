@@ -15,6 +15,7 @@ site:
   https: true
   domain: blog.aquariuslt.com
   title: Aquariuslt Blog
+  disqus: aquariuslt
 
 profile:
   name: Aquariuslt
@@ -32,5 +33,4 @@ pages:
   title_separator: '|'
 
 
-
-
+theme: theme-vue

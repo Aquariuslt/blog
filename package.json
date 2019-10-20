@@ -17,7 +17,8 @@
     "pretest": "lerna run clean && lerna run build",
     "test": "jest",
     "pretest:cov": "lerna run clean && lerna run build",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "build": "rimraf dist && lerna run build && lerna run build:prod"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -33,6 +34,7 @@
     "jest": "^24.9.0",
     "jest-raw-loader": "^1.0.1",
     "lerna": "^3.16.4",
+    "rimraf": "^3.0.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
     "ts-jest": "^24.1.0",

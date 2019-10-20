@@ -1,9 +1,11 @@
 <template>
-  <div class="breadcrumbs">
-    <span v-for="(item, index) in breadcrumbs.itemListElement" :key="index">
-      <router-link class="breadcrumbs-item" :to="toInternalLink(item.item)" exact> {{ item.name }}</router-link>
-      <span v-if="index !== breadcrumbs.itemListElement.length - 1">></span>
-    </span>
+  <div class="md-layout md-gutter md-alignment-top-center">
+    <div class="breadcrumbs">
+      <span v-for="(item, index) in breadcrumbs.itemListElement" :key="index">
+        <router-link class="breadcrumbs-item" :to="toInternalLink(item.item)" exact> {{ item.name }}</router-link>
+        <span v-if="index !== breadcrumbs.itemListElement.length - 1">></span>
+      </span>
+    </div>
   </div>
 </template>
 
