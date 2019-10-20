@@ -6,7 +6,7 @@
       </md-card-media>
       <md-card-header>
         <div class="md-title">{{ article.title }}</div>
-        <div class="md-subhead">{{ formatDate(article.created) }}</div>
+        <div class="md-subheading">{{ formatDate(article.created) }}</div>
       </md-card-header>
 
       <md-card-content>
@@ -14,7 +14,7 @@
       </md-card-content>
 
       <md-card-actions>
-        <md-button :to="article['link']">More</md-button>
+        <md-button :to="article['link']">Read More</md-button>
       </md-card-actions>
     </md-card>
   </div>
