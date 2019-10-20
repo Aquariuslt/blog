@@ -5,6 +5,12 @@ workflows:
   build:
     jobs:
       - ci
+      - deploy:
+          requires:
+            - ci
+          filters:
+            branches:
+              only: master
 
 jobs:
   ci:
@@ -17,3 +23,27 @@ jobs:
       - run: yarn run bootstrap
       - run: yarn run test
       - run: yarn run build
+      - persist_to_workspace:
+          root: ~/blog
+          paths: dist
+
+  deploy:
+    docker:
+      - image: circleci/node:10.16.0-browsers
+    working_directory: ~/blog
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/blog
+      - run:
+          name: install gh-pages
+          command: |
+            npm install -g --silent gh-pages
+            git config user.email deploy-bot@circleci.com
+            git config user.name "circleci"
+      - run:
+          name: deploy to gh-pages branch
+          command: >
+            gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --silent
+
+      - run: yarn release
