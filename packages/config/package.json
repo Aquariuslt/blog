@@ -1,6 +1,6 @@
 {
   "name": "@blog/config",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "configuration module",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -19,9 +19,9 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
     "cosmiconfig": "^5.2.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
