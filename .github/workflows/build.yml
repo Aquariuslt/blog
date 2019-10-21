@@ -18,7 +18,8 @@ jobs:
       - name: Yarn install, build, and test
         run: |
           yarn
-          yarn ci
+          yarn bootstrap
+          yarn test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.0.0
         with:
