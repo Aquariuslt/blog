@@ -1,3 +1,10 @@
+# [6.2.0](https://github.com/aquariuslt/blog/compare/v6.1.0...v6.2.0) (2019-10-21)
+
+
+### Features
+
+* **release:** add root package.json and lerna.json update logic ([001f432](https://github.com/aquariuslt/blog/commit/001f4327679890bd2810334100010a36f9ec1e7c))
+
 # [6.1.0](https://github.com/aquariuslt/blog/compare/v6.0.1...v6.1.0) (2019-10-21)
 
 
