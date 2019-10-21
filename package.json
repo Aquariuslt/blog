@@ -27,6 +27,7 @@
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/exec": "^3.3.7",
     "@semantic-release/git": "^7.0.16",
+    "@semantic-release/npm": "^5.2.0",
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
@@ -148,6 +149,7 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
+      "@semantic-release/npm",
       "@semantic-release/changelog",
       [
         "@semantic-release/exec",
@@ -161,6 +163,7 @@
           "assets": [
             "docs",
             "packages",
+            "lerna.json",
             "package.json",
             "README.md",
             "CHANGELOG.md"
