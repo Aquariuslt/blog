@@ -1,3 +1,21 @@
+# [6.1.0](https://github.com/aquariuslt/blog/compare/v6.0.1...v6.1.0) (2019-10-21)
+
+
+### Bug Fixes
+
+* **renderer:** add DOCTYPE as html content header ([b30be82](https://github.com/aquariuslt/blog/commit/b30be823d1478ea16f6bb169651cd9ce9f99acca))
+* **theme-vue:** add register-service-worker instead empty sw.js ([8845c39](https://github.com/aquariuslt/blog/commit/8845c39291d43e7b93deacda5019b4f211efb4eb))
+
+
+### Features
+
+* correct version ([f0bc0e7](https://github.com/aquariuslt/blog/commit/f0bc0e7644e7c8d8b2edaecdd76911e815a53712))
+
+
+### Performance Improvements
+
+* covert jpg to png ([5cb9649](https://github.com/aquariuslt/blog/commit/5cb964906134760ed62fc2bb8c343632dcea973f))
+
 ## [6.0.2](https://github.com/aquariuslt/blog/compare/v6.0.1...v6.0.2) (2019-10-21)
 
 ### Bug Fixes
