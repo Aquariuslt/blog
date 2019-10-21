@@ -1,6 +1,6 @@
 {
   "name": "@blog/pwa-tools",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "description": "progressive web application tools including workbox + prerendering",
   "keywords": [
     "pwa",
@@ -28,8 +28,8 @@
     "build:prod": ""
   },
   "dependencies": {
-    "@blog/common": "^6.1.0",
-    "@blog/theme-vue": "^6.1.0",
+    "@blog/common": "^6.2.0",
+    "@blog/theme-vue": "^6.2.0",
     "cosmiconfig": "^5.2.1",
     "lodash": "^4.17.15",
     "workbox-build": "^4.3.1"
