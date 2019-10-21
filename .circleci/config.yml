@@ -44,6 +44,6 @@ jobs:
       - run:
           name: deploy to gh-pages branch
           command: >
-            gh-pages --dist dist --repo https://aquariuslt:${CODING_TOKEN}@git.coding.net/aquariuslt/aquariuslt.coding.me.git --branch master --silent
+            gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --silent
 
       - run: yarn release
