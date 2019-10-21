@@ -1,3 +1,16 @@
+# [6.3.0](https://github.com/aquariuslt/blog/compare/v6.2.0...v6.3.0) (2019-10-21)
+
+
+### Bug Fixes
+
+* **application:** fix typo for generateion `.nojekyll` file ([0914b8d](https://github.com/aquariuslt/blog/commit/0914b8ddba8e9bbe5d2513801e3dd11c9ed3595d))
+* **theme-vue:** correct register-service-worker ([6d59d2a](https://github.com/aquariuslt/blog/commit/6d59d2a3969405481e7b2d30c593a1a4df0618c8))
+
+
+### Features
+
+* **application:** add build `.nojekyll` file in build flow ([7f72697](https://github.com/aquariuslt/blog/commit/7f7269724e79dabc2b1f5d6c50c7dfd0e00e3947))
+
 # [6.2.0](https://github.com/aquariuslt/blog/compare/v6.1.0...v6.2.0) (2019-10-21)
 
 
