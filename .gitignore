@@ -2,6 +2,10 @@
 .idea
 *.iml
 
+# os
+.DS_Store
+
+
 # vscode
 .vscode
 
