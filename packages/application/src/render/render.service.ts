@@ -5,6 +5,8 @@ import { RenderServerModule } from '@/render/render-server.module';
 import * as getPort from 'get-port';
 import * as puppeteer from 'puppeteer';
 
+const DOC_TYPE_HEADER = `<!DOCTYPE html>`;
+
 @Injectable()
 export class RenderService implements OnModuleInit, OnModuleDestroy {
   private readonly logger = new Logger(RenderService.name);
@@ -48,6 +50,6 @@ export class RenderService implements OnModuleInit, OnModuleDestroy {
     this.logger.log(`Capturing html content for ${targetUrl}`);
     const html = await page.evaluate(() => document.documentElement.innerHTML);
     await page.close();
-    return html;
+    return DOC_TYPE_HEADER + html;
   }
 }
