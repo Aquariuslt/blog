@@ -34,7 +34,7 @@ cover: ./cover.png
 
 ### RMBP 15
 
-![Macbook Pro](./macbook-pro.jpg) 出了之前的小 RMBP 入手了顶配+定制显卡的 15 寸新 RMBP。
+![Macbook Pro](./macbook-pro.png) 出了之前的小 RMBP 入手了顶配+定制显卡的 15 寸新 RMBP。
 
 感谢猴子聚聚的员工优惠，可惜下单的时候没注意写成了中文键盘。目前用起来一切完美，就是没出 32G 内存有点可惜。
 

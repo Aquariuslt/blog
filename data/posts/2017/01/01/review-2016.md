@@ -51,7 +51,7 @@ cover: ./cover.png
 
 我一直在等待 WebDriver 的出现带动黑苹果
 
-![6700K+32G+GTX1070](./hardware-info.jpg)
+![6700K+32G+GTX1070](./hardware-info.png)
 
 ## Google Pixel
 
