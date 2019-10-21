@@ -1,0 +1,138 @@
+<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico" /><![endif]--><title>Angular.js常规性能优化阶段总结 | Aquariuslt Blog</title><link href="/css/about.f196d9fa.css" rel="prefetch"><link href="/css/detail.550d548d.css" rel="prefetch"><link href="/js/about.99f68399.js" rel="prefetch"><link href="/js/detail.861168b4.js" rel="prefetch"><link href="/css/app.2d6b9bb1.css" rel="preload" as="style"><link href="/css/chunk-vendors.a179896c.css" rel="preload" as="style"><link href="/js/app.c5ce91f7.js" rel="preload" as="script"><link href="/js/chunk-vendors.e76667cc.js" rel="preload" as="script"><link href="/css/chunk-vendors.a179896c.css" rel="stylesheet"><link href="/css/app.2d6b9bb1.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#1A73E8"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Aquariuslt Blog"><link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#1A73E8"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"><link rel="stylesheet" type="text/css" href="/css/detail.550d548d.css"><script charset="utf-8" src="/js/detail.861168b4.js"></script><meta data-vue-meta="1" name="og:site_name" content="Aquariuslt Blog"><meta data-vue-meta="1" name="og:type" content="website"><meta data-vue-meta="1" name="og:title" content="Angular.js常规性能优化阶段总结"><meta data-vue-meta="1" name="og:description" content="最近在为项目进行性能优化的时候,有总结到一些经验.
+现在梳理一遍,方便以后排查问题.在进行 Angular 页面的性能测试以及学习优化手段之前,查阅了挺多资料.
+其中非常推荐一些前端大牛的博客文章,不仅在技术方面深有造诣,而且表达能力非常清晰,能够条理清晰地将经验传授给大家.
+"><meta data-vue-meta="1" name="og:image" content="./cover.png"><meta data-vue-meta="1" name="og:type" content="article"><script data-vue-meta="1" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://blog.aquariuslt.com","name":"Aquariuslt Blog","position":1},{"@type":"ListItem","item":"https://blog.aquariuslt.com/posts","name":"Posts","position":2},{"@type":"ListItem","item":"https://blog.aquariuslt.com/posts/2016/04/30/angular-ui-performance-tuning-experience","name":"Angular.js常规性能优化阶段总结","position":3}]}</script><script id="embed-disqus" data-timestamp="1571621665591" type="text/javascript" async="" src="//aquariuslt.disqus.com/embed.js"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.953a2bd009935f47a8e815c3ee2bfc5a.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.bdf2715fe3d262793670748c6697b1f3.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.df4113f81691d4ed6cccc5b74c6c17e8.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script src="https://c.disquscdn.com/next/embed/alfalfalfa.0823c767a3bc925f628afd9bed26c958.js" async="" charset="UTF-8"></script></head><body><div data-v-18dadf06="" id="app"><div data-v-18dadf06="" class="md-app md-app-side-drawer md-layout-row md-waterfall md-fixed md-theme-default"><div data-v-18dadf06="" class="md-drawer md-app-drawer md-theme-default md-left md-temporary"><div data-v-ac1b82fe="" data-v-18dadf06="" class="profile"><div data-v-ac1b82fe="" class="md-card md-theme-default"><div data-v-ac1b82fe="" class="md-card-header"><div data-v-ac1b82fe="" class="md-avatar md-theme-default"><img data-v-ac1b82fe="" src="https://img.aquariuslt.com/social/avator.png" alt="Avatar"></div><div data-v-ac1b82fe="" class="md-title">Aquariuslt</div><div data-v-ac1b82fe="" class="md-subhead">superaquariuslt@gmail.com</div></div></div></div><ul data-v-18dadf06="" class="md-list md-theme-default"><li data-v-18dadf06="" to="/" exact="" class="md-list-item"><a data-v-18dadf06="" href="/" class="md-list-item-router md-list-item-container md-button-clean" mdripple="true"><div class="md-list-item-content md-ripple"><i data-v-18dadf06="" class="mdi mdi-24px mdi-home"></i><span data-v-18dadf06="" class="md-list-item-text">Home</span> </div></a></li><li data-v-18dadf06="" to="/categories" exact="" class="md-list-item"><a data-v-18dadf06="" href="/categories" class="md-list-item-router md-list-item-container md-button-clean" mdripple="true"><div class="md-list-item-content md-ripple"><i data-v-18dadf06="" class="mdi mdi-24px mdi-shape"></i><span data-v-18dadf06="" class="md-list-item-text">Categories</span> </div></a></li><li data-v-18dadf06="" to="/tags" exact="" class="md-list-item"><a data-v-18dadf06="" href="/tags" class="md-list-item-router md-list-item-container md-button-clean" mdripple="true"><div class="md-list-item-content md-ripple"><i data-v-18dadf06="" class="mdi mdi-24px mdi-bookmark"></i><span data-v-18dadf06="" class="md-list-item-text">Tags</span> </div></a></li></ul> </div>  <main class="md-app-container md-flex md-layout-column md-theme-default md-scrollbar" style="padding-left: 0px;"><div data-v-18dadf06="" class="md-toolbar md-app-toolbar md-primary md-theme-default md-elevation-2 md-no-elevation" md-elevation="2" style="top: 0px;"><div data-v-18dadf06="" class="md-toolbar-row"><button data-v-18dadf06="" type="button" class="md-button md-icon-button md-theme-default" aria-label="menu"><div class="md-ripple"><div class="md-button-content"><i data-v-18dadf06="" class="mdi mdi-24px mdi-menu"></i></div> </div></button><span data-v-18dadf06="" class="md-title app-title">Angular.js常规性能优化阶段总结 | Aquariuslt Blog</span></div></div> <div class="md-app-scroller md-layout-column md-flex md-theme-default md-scrollbar"><div data-v-18dadf06="" class="md-content md-app-content md-flex md-theme-default"><div data-v-590589f6="" data-v-18dadf06="" class="detail md-layout md-gutter md-alignment-top-center"><div data-v-46cb6cfe="" data-v-590589f6="" class="md-layout md-gutter md-alignment-top-center md-layout-item md-size-100"><div data-v-46cb6cfe="" class="breadcrumbs"><span data-v-46cb6cfe=""><a data-v-46cb6cfe="" href="/" class="breadcrumbs-item"> Aquariuslt Blog</a><span data-v-46cb6cfe="">&gt;</span></span><span data-v-46cb6cfe=""><a data-v-46cb6cfe="" href="/posts" class="breadcrumbs-item"> Posts</a><span data-v-46cb6cfe="">&gt;</span></span><span data-v-46cb6cfe=""><a data-v-46cb6cfe="" href="/posts/2016/04/30/angular-ui-performance-tuning-experience" class="breadcrumbs-item router-link-exact-active router-link-active"> Angular.js常规性能优化阶段总结</a><!----></span></div></div><div data-v-48e13d92="" data-v-590589f6="" class="md-layout md-gutter md-alignment-top-center md-layout-item md-size-100"><div data-v-48e13d92="" class="md-card article-detail md-theme-default"><div data-v-48e13d92="" class="md-card-media article-cover"><img data-v-48e13d92="" src="/posts/2016/04/30/angular-ui-performance-tuning-experience/cover.png" alt="cover"></div><div data-v-48e13d92="" class="md-card-content markdown-body"><h1>Angular.js 常规性能优化阶段总结</h1>
+<h2>Background</h2>
+<p>最近在为项目进行性能优化的时候,有总结到一些经验.<br>
+现在梳理一遍,方便以后排查问题.</p>
+<h2>References</h2>
+<p>在进行 Angular 页面的性能测试以及学习优化手段之前,查阅了挺多资料.<br>
+其中非常推荐一些前端大牛的博客文章,不仅在技术方面深有造诣,而且表达能力非常清晰,能够条理清晰地将经验传授给大家.</p>
+<p>下面是一些推荐阅读的博客,给我提供了很多帮助,加深了对 Angular 的认识.</p>
+<ul>
+<li><a href="https://github.com/xufei/blog/">xufei blog</a> ...准备贴下一个地址的时候,居然发现这个知乎的地址居然也是 xufei 大大的回答. 恩.应该提供最有价值帮助的就是他了.</li>
+</ul>
+<h2>Solutions</h2>
+<h3>Plugins:AngularJS Batarang</h3>
+<p>利用 Angular 官方开发的 Chrome 插件<code>AngularJS Batarang</code>来监控页面性能.<br>
+<a href="https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk">Angular Batarang</a><br>
+<img src="/posts/2016/04/30/angular-ui-performance-tuning-experience/performance.png" alt="运行截图"></p>
+<p>通过<code>Angular Batarang</code>,我们可以轻易的统计在页面的<code>watcher</code>数量,<code>$scope</code>中变量的数量. 还有平均一段时间内<code>angular</code>执行<code>$digest</code>的数量.</p>
+<p>对于代码不熟悉的项目前端,查找分析性能瓶颈的时候,可以通过通过该插件进行二分对于,快速定位出瓶颈处. 当然,如果在对 angular 比较熟悉,在开发的过程中也遵循了常见的性能优化约定,该插件的监控作用就不大. 最后还是只能通过其他手段细化性能瓶颈定位粒度.</p>
+<p>经过本人测试,对于大部分使用 Angular 的页面都支持良好.(可惜不支持 CommonJS 打包成的我的主站的分析)</p>
+<h3>Once Binding</h3>
+<p>在常见的 CRUD 系统中,我们经常会遇到很多数据展示的区域,但是这些数据一旦渲染好,一般不需要强刷新. 比如页面标题,菜单选项等不需要实时更新的情况.所以这时候可以通过<code>Once Binding</code>,即一次绑定,渲染一次即可,不必监控该表达式.</p>
+<p>之前遇到的情况是,我们的页面 header 会有一个通知栏,展开会通知那些已经显示的列表.<br>
+单条通知样子类似于微博的这种:<br>
+<img src="/posts/2016/04/30/angular-ui-performance-tuning-experience/notification.png" alt="通知栏"> 在没优化之前,通知部分的伪代码如下:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"notification"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ng-repeat</span>=<span class="hljs-string">"notification in vm.displayNotifications"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{notification.targetUrl}}"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{notifications.title}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{notifications.summary}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{notifications.time}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>经过一轮生产环境数据统计,某部分用户的未读通知范围会在 200 - 7W 条.<br>
+哈哈看到就尿了,如果这么算的话,7W 条的那个用户页面将会有至少 7W*4 = 28W 的 watcher 在监听他们的变化.<br>
+且不论数据为什么需要全部渲染出来,如果将代码修改成 Once Binding,则页面的长期 watcher 数量将会减少 28W 个.</p>
+<p>特别是对于使用了<code>ng-repeat</code>的元素,一定要考虑将</p>
+<p>使用一次绑定表达式之后如下</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"notification"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">ng-repeat</span>=<span class="hljs-string">"notification in vm.displayNotifications"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{::notification.targetUrl}}"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{::notifications.title}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{::notifications.summary}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{::notifications.time}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h3>Use variable instead function expression</h3>
+<p>之前遇到一个需求,在业务逻辑上需要显示一个模型,这个模型大概是下面这样的:</p>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"businessKeys"</span>: [
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"a"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"aValue"</span>
+    },
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"b"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"bValue"</span>
+    },
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"c"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"cValue"</span>
+    },
+    {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"c"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"cValue"</span>
+    }
+  ],
+  <span class="hljs-attr">"otherInfo"</span>: <span class="hljs-string">"otherInfo..."</span>
+}
+</code></pre>
+<p>在字段里面是有一个不定长的数组,数组里面实际上是一堆 key-value 形式的键值对. 之所以不定长是因为里面有时候有些 key 是没有对应的值的. 在 UI 上显示出来的时候,先前的做法就是绑定一个方法:</p>
+<pre><code>{{vm.getValueByBusinessKeysType(object,keyName)}}
+</code></pre>
+<p>在页面上使用一个方法表达式而不是直接的变量表达式的时候,会导致方法执行多次. 由于这个<code>getValueByBusinessKeysType</code>的方法,需要通过数组查找而不是直接一个 map 所以就会导致性能问题.</p>
+<p>目前的解决方案是:将数据在加载的时候经过扁平化处理,即将 key 直接以 property 的形式直接赋予 Object. 通过直接绑定 property 表达式来显示. 这样也有效提高了一些性能</p>
+<h3>Chain Filter</h3>
+<p>Angular 的 Filter 性能一直不够好. 在刚刚接触 Angular 的时候,阅读文档发现 Filter 的功能还挺好用的,特别是做一些关键字过滤表格数据,格式处理等方面的工作,<br>
+实在是太方便了,于是我们在为我们的 table 的 header 上每个 column 都添加了一个关键字过滤框,使用 angular 的 filter 做分页的工作.</p>
+<p>由于我们的表格需要显示的业务数据比较多,column 数大概在 15-25 左右. 在每一个 header 的 column 上添加独立的关键字过滤框,大概就添加了 20 个.</p>
+<p>假设当前页面的总数据 会有有 30 条. 用户喜欢在几个过滤框上输入一些相关的关键字信息过滤.(filterA,filterB)</p>
+<pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterA</span>(<span class="hljs-params">dataArray, filterCriteria</span>) </span>{
+  <span class="hljs-keyword">return</span> filteredDataArrayByFilterCriteriaA;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterB</span>(<span class="hljs-params">dataArray, filterCriteria</span>) </span>{
+  <span class="hljs-keyword">return</span> filteredDataArrayByFilterCriteriaB;
+}
+</code></pre>
+<p>当每一个过滤框都属于一个单独的 filter 去绑定的话,如果执行 AB filter,将会按照下面的顺序执行</p>
+<blockquote>
+<p><code>dataArray</code> length:30 <code>filteredDataArrayByFilterCriteriaA</code> (至少两次 filterA,此时 length 约 20)<br>
+<code>filteredDataArrayByFilterCriteriaB</code> (至少两次 filterB,此时 length 约 5)</p>
+</blockquote>
+<p>如果我们在计算关键字过滤的时候使用的是遍历查询,以单次对单个元素对比的操作工作量为 1.<br>
+那么在这两重 filter 的总计算工作量就会变成<code>30*2+20*2=100</code>次</p>
+<p>回到实际业务,通过在 filter 中添加 log 来记录 filter 循环运算的次数,惊讶的发现实际上 filter 的运算次数在 25 个 column 的情况下,<br>
+普遍一次过滤框的查询,会导致 3K 左右的运算次数,相当惊人.</p>
+<p>目前的解决方案是通过降低工程代码的可读性,将多个 filter 的功能合并成一个总的 filter,在总的 filter 里面处理一连串的单个 filter 过滤过程.</p>
+<p>之前的代码可能是这样:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">ng-repeat</span>=<span class="hljs-string">"singleData in vm.dataArray | filterA | filterB | filterC ..... | filterZ"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+</code></pre>
+<pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterA</span>(<span class="hljs-params">dataArray</span>) </span>{
+  <span class="hljs-comment">//implement filterA</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterB</span>(<span class="hljs-params">dataArray</span>) </span>{
+  <span class="hljs-comment">//implement filterB</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterC</span>(<span class="hljs-params">dataArray</span>) </span>{
+  <span class="hljs-comment">//implement filterC</span>
+}
+</code></pre>
+<p>合并之后看起来是这样</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">ng-repeat</span>=<span class="hljs-string">"singleData in vm.dataArray | combinedFilter"</span>
+</span></code></pre>
+<pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combinedFilter</span>(<span class="hljs-params">dataArrat</span>) </span>{
+  <span class="hljs-comment">//implement filterA</span>
+  <span class="hljs-comment">//implement filterB</span>
+  <span class="hljs-comment">//implement filterC</span>
+}
+</code></pre>
+<h3>Using ng-model-option delay update</h3>
+<p>因为使用了 angular 的 filter 功能做前端的关键词过滤,实际上所有的查询工作都是同步的. 因为是同步,所以在前端 javascript 进行相对较密集的查询运算的时候,卡顿就会相当明显. 如果对过滤输入框进行了<code>ng-model</code>的绑定,则当输入框的内容进行改变的时候,会立刻出发 filter 运算. 通常用户输入的时候大部分可能是连续的单词或者子字符串的输入,在一次主观上的输入还没有结束的时候,因为输入框中文字的改变,<br>
+而频繁触发查询,实际上页面性能也会相当不好. 这里有一个小 tips 就是为一些实时查询性不是很高的输入区域添加 ng-model-options,增加 angular 检查数据 update 的时间间隔, 相当于可以等用户把想要的搜索关键词输入完毕之后,再执行 js 代码的查询工作.</p>
+<h2>Summary</h2>
+<p>本次结合了一些实际工作中使用 angular 遇到的性能问题的解决方案,当然也有遇到一些与原生 js,socket.io 相关的性能问题. 由于 tag 不同,不混淆在一起说了.</p>
+</div><div data-v-48e13d92="" class="md-card-content"><div data-v-15189bc8="" data-v-48e13d92="" tabindex="0" class="md-chip md-theme-default md-clickable"><div class="md-ripple"><span data-v-15189bc8="" class=""> Angular </span> </div> <!----></div><div data-v-15189bc8="" data-v-48e13d92="" tabindex="0" class="md-chip md-theme-default md-clickable"><div class="md-ripple"><span data-v-15189bc8="" class=""> JavaScript </span> </div> <!----></div></div><div data-v-48e13d92="" class="md-card-content"><div data-v-7fa946ff="" data-v-48e13d92="" class="comment"><div data-v-7fa946ff="" id="disqus_thread"><iframe id="dsq-app9798" name="dsq-app9798" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="https://disqus.com/embed/comments/?base=default&amp;f=aquariuslt&amp;t_i=-posts-2016-04-30-angular-ui-performance-tuning-experience&amp;t_u=https%3A%2F%2Fblog.aquariuslt.com%2Fposts%2F2016%2F04%2F30%2Fangular-ui-performance-tuning-experience&amp;t_d=Angular.js%E5%B8%B8%E8%A7%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%20%7C%20Aquariuslt%20Blog&amp;t_t=Angular.js%E5%B8%B8%E8%A7%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%20%7C%20Aquariuslt%20Blog&amp;s_o=default#version=f274d4b819b5f36115bcd7094ebe0b59" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 394px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div></div></div></div></div></div></div></div></main> <!----></div></div><script src="/service-worker.js"></script><script type="text/javascript" src="/js/chunk-vendors.e76667cc.js"></script><script type="text/javascript" src="/js/app.c5ce91f7.js"></script><iframe style="display: none;"></iframe></body>
