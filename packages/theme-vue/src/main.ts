@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import VueMeta from 'vue-meta';
 import VueDisqus from 'vue-disqus';
-import './plugins/material';
 import App from './App.vue';
+
 import router from './router';
+
+import './plugins/material';
+import './offline';
 
 Vue.config.productionTip = false;
 
