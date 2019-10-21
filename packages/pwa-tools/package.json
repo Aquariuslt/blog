@@ -19,6 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
+  "private": true,
   "scripts": {
     "build": "tsc",
     "test": "jest",

@@ -8,6 +8,7 @@
   "files": [
     "dist"
   ],
+  "private": true,
   "main": "dist/index.js",
   "esnext": "src/index.ts",
   "types": "dist/index.d.ts",
