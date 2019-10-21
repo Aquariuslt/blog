@@ -29,6 +29,7 @@ export class ThemeService implements OnModuleInit {
     await this.renderer.onModuleInit();
     this.logger.log(`Detecting Theme: ${this.config.theme}`);
     this.buildCNAME();
+    this.buildNoJekyll();
     this.buildThemeAssets();
     this.buildFallbackHtml();
     await this.buildPWAAssets();
@@ -40,6 +41,11 @@ export class ThemeService implements OnModuleInit {
     const CNAME = this.config.site.baseUrl;
     this.logger.log(`Persisting CNAME: ${CNAME}`);
     persistFile(`CNAME`, CNAME, this.config.dirs.dest);
+  }
+
+  private buildNoJekyll() {
+    this.logger.log(`Persisting .nojekyll`);
+    persistFile(`nojekyll`, null, this.config.dirs.dest);
   }
 
   private buildThemeAssets() {
