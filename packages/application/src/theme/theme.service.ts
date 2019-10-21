@@ -45,7 +45,7 @@ export class ThemeService implements OnModuleInit {
 
   private buildNoJekyll() {
     this.logger.log(`Persisting .nojekyll`);
-    persistFile(`nojekyll`, null, this.config.dirs.dest);
+    persistFile(`.nojekyll`, null, this.config.dirs.dest);
   }
 
   private buildThemeAssets() {
