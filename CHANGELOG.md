@@ -1,3 +1,15 @@
+## [6.0.2](https://github.com/aquariuslt/blog/compare/v6.0.1...v6.0.2) (2019-10-21)
+
+
+### Bug Fixes
+
+* **renderer:** add DOCTYPE as html content header ([b30be82](https://github.com/aquariuslt/blog/commit/b30be823d1478ea16f6bb169651cd9ce9f99acca))
+
+
+### Performance Improvements
+
+* covert jpg to png ([5cb9649](https://github.com/aquariuslt/blog/commit/5cb964906134760ed62fc2bb8c343632dcea973f))
+
 # [5.3.0](https://github.com/aquariuslt/blog/compare/v5.2.0...v5.3.0) (2019-10-21)
 
 
