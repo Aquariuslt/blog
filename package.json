@@ -19,15 +19,13 @@
     "pretest:cov": "lerna run clean && lerna run build",
     "test:cov": "jest --coverage",
     "build": "rimraf dist && lerna run build && lerna run build:prod",
-    "release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
-  },
-  "resolutions": {
-    "semantic-release-plugin-decorators": "^2.0.0"
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/exec": "^3.3.7",
     "@semantic-release/git": "^7.0.16",
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
@@ -39,12 +37,11 @@
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "jest-raw-loader": "^1.0.1",
-    "lerna": "^3.18.1",
+    "lerna": "3.16.4",
     "prettier": "^1.18.2",
     "pretty-quick": "^2.0.0",
     "rimraf": "^3.0.0",
     "semantic-release": "^15.13.27",
-    "semantic-release-monorepo": "^6.1.1",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
   },
@@ -152,6 +149,12 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
       "@semantic-release/changelog",
+      [
+        "@semantic-release/exec",
+        {
+          "verifyReleaseCmd": "lerna exec -- npm version ${nextRelease.version} --git-tag-version==false --allow-same-version && lerna version ${nextRelease.version}"
+        }
+      ],
       [
         "@semantic-release/git",
         {
