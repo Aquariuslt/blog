@@ -152,7 +152,7 @@
       [
         "@semantic-release/exec",
         {
-          "verifyReleaseCmd": "lerna exec -- npm version ${nextRelease.version} --git-tag-version==false --allow-same-version && lerna version ${nextRelease.version}"
+          "verifyReleaseCmd": "lerna exec --concurrency 1 -- npm version ${nextRelease.version} --git-tag-version==false --allow-same-version && lerna version ${nextRelease.version}"
         }
       ],
       [
