@@ -21,6 +21,9 @@
     "build": "rimraf dist && lerna run build && lerna run build:prod",
     "release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
   },
+  "resolutions": {
+    "semantic-release-plugin-decorators": "^2.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
