@@ -1,3 +1,10 @@
+## [6.3.1](https://github.com/aquariuslt/blog/compare/v6.3.0...v6.3.1) (2019-10-22)
+
+
+### Performance Improvements
+
+* optimize images with `imagemin` ([5a0d5d6](https://github.com/aquariuslt/blog/commit/5a0d5d61cc672293927b374f698a47b01ab48e83))
+
 # [6.3.0](https://github.com/aquariuslt/blog/compare/v6.2.0...v6.3.0) (2019-10-21)
 
 
