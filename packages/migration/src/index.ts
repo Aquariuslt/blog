@@ -1,8 +1,10 @@
 import * as _ from 'lodash';
 import * as fs from 'fs';
 import * as download from 'download';
+import * as glob from 'glob';
 import * as path from 'path';
 import * as logger from 'fancy-log';
+import * as sharp from 'sharp';
 import { metadata } from '@blog/markdown';
 import { lookupMarkdownFiles } from '@blog/article-tools';
 import { lookupImagesInMarkdownFile, isImageHosting } from '@blog/article-tools';
@@ -55,4 +57,41 @@ export const migrateIds = async (baseDir: string) => {
   const markdownFiles = lookupMarkdownFiles(baseDir);
   logger.info(`found ${markdownFiles.length} markdown files`);
   await Promise.all(markdownFiles.map(migrateId));
+};
+
+export const compressImages = async (baseDir: string) => {
+  const PNG_EXTENSION = 'png';
+  const COMPRESS_OPTIONS = {
+    jpeg: { quality: 80 },
+    png: { quality: 80 },
+    webp: { quality: 80 },
+    ignorePaths: ['node_modules/**']
+  };
+
+  const imagePaths = glob.sync(`${baseDir}/**/*.{jpg,png,webp}`, {
+    nodir: true
+  });
+
+  const compressionTasks = imagePaths.map((imagePath) => {
+    return new Promise((resolve, reject) => {
+      logger.info(`Processing ${imagePath}`);
+
+      sharp(imagePath)
+        .png({
+          quality: 80
+        })
+        .resize(800)
+        .toBuffer()
+        .then((processedImageBuffer) => {
+          fs.writeFileSync(imagePath, processedImageBuffer);
+          resolve();
+        })
+        .catch((error) => {
+          logger.error(`Compress Image error:` + error);
+          reject();
+        });
+    });
+  });
+
+  await Promise.all(compressionTasks);
 };
