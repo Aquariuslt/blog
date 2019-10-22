@@ -48,7 +48,7 @@ export class RenderService implements OnModuleInit, OnModuleDestroy {
     await page.goto(targetUrl);
     await sleep();
     this.logger.log(`Capturing html content for ${targetUrl}`);
-    const html = await page.evaluate(() => document.documentElement.innerHTML);
+    const html = await page.evaluate(() => document.documentElement.outerHTML);
     await page.close();
     return DOC_TYPE_HEADER + html;
   }
