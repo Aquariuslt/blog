@@ -1,3 +1,10 @@
+## [6.3.2](https://github.com/aquariuslt/blog/compare/v6.3.1...v6.3.2) (2019-10-22)
+
+
+### Bug Fixes
+
+* **render:** fix rendered html not contains lang attribute ([dd12e78](https://github.com/aquariuslt/blog/commit/dd12e780ad8b6e0303d3340bf5e1a1423a4192e6))
+
 ## [6.3.1](https://github.com/aquariuslt/blog/compare/v6.3.0...v6.3.1) (2019-10-22)
 
 
