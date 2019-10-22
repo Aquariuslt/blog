@@ -5,6 +5,8 @@ import * as glob from 'glob';
 import * as path from 'path';
 import * as logger from 'fancy-log';
 import * as sharp from 'sharp';
+import * as imagemin from 'imagemin';
+import imageminPngquant from 'imagemin-pngquant';
 import { metadata } from '@blog/markdown';
 import { lookupMarkdownFiles } from '@blog/article-tools';
 import { lookupImagesInMarkdownFile, isImageHosting } from '@blog/article-tools';
@@ -60,14 +62,6 @@ export const migrateIds = async (baseDir: string) => {
 };
 
 export const compressImages = async (baseDir: string) => {
-  const PNG_EXTENSION = 'png';
-  const COMPRESS_OPTIONS = {
-    jpeg: { quality: 80 },
-    png: { quality: 80 },
-    webp: { quality: 80 },
-    ignorePaths: ['node_modules/**']
-  };
-
   const imagePaths = glob.sync(`${baseDir}/**/*.{jpg,png,webp}`, {
     nodir: true
   });
@@ -80,11 +74,17 @@ export const compressImages = async (baseDir: string) => {
         .png({
           quality: 80
         })
-        .resize(800)
+        .resize(800, undefined, { withoutEnlargement: true })
         .toBuffer()
         .then((processedImageBuffer) => {
-          fs.writeFileSync(imagePath, processedImageBuffer);
-          resolve();
+          imagemin
+            .buffer(processedImageBuffer, {
+              plugins: [imageminPngquant()]
+            })
+            .then((minifiedImageBuffer) => {
+              fs.writeFileSync(imagePath, minifiedImageBuffer);
+              resolve();
+            });
         })
         .catch((error) => {
           logger.error(`Compress Image error:` + error);
