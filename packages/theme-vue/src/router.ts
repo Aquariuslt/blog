@@ -71,6 +71,14 @@ export default new Router({
       props: () => ({
         apiPath: buildURLPath(RoutePathPrefix.TAGS)
       })
+    },
+    {
+      path: '*',
+      name: '404',
+      component: List,
+      props: () => ({
+        apiPath: buildURLPath(RoutePathPrefix.HOME_ALIAS)
+      })
     }
   ]
 });
