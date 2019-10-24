@@ -1,3 +1,15 @@
+# [6.4.0](https://github.com/aquariuslt/blog/compare/v6.3.2...v6.4.0) (2019-10-24)
+
+
+### Bug Fixes
+
+* **theme-vue:** add fallback route handling in router definition ([a7900f5](https://github.com/aquariuslt/blog/commit/a7900f58fe42b5a219444197d26d4a3bd43daefa))
+
+
+### Features
+
+* **theme-react:** create package `@blog/theme-react` ([7f69529](https://github.com/aquariuslt/blog/commit/7f69529502ae291de7db6b48062f3578cbb6ff78))
+
 ## [6.3.2](https://github.com/aquariuslt/blog/compare/v6.3.1...v6.3.2) (2019-10-22)
 
 
