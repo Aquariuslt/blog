@@ -1,3 +1,10 @@
+# [6.5.0](https://github.com/aquariuslt/blog/compare/v6.4.0...v6.5.0) (2019-10-26)
+
+
+### Features
+
+* **analytics:** inject google-analytics + workbox offline analytics ([523c6ad](https://github.com/aquariuslt/blog/commit/523c6adb34ccdf5ec6402c00a0d4eb44d797aba6))
+
 # [6.4.0](https://github.com/aquariuslt/blog/compare/v6.3.2...v6.4.0) (2019-10-24)
 
 
