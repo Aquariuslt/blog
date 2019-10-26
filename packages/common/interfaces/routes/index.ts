@@ -61,7 +61,10 @@ export enum MetaName {
   OPEN_GRAPH_IMAGE = 'og:image',
   OPEN_GRAPH_URL = 'og:url',
   OPEN_GRAPH_TYPE = 'og:type',
-  OPEN_GRAPH_SITE_NAME = 'og:site_name'
+  OPEN_GRAPH_SITE_NAME = 'og:site_name',
+
+  GOOGLE_SITE_VERIFICATION = 'google-site-verification',
+  GOOGLE_SITE_TRACKING = 'google-analytics'
 }
 
 export enum MetaValue {

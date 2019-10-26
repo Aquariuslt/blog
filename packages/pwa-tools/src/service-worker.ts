@@ -5,6 +5,7 @@ export const buildServiceWorker = async (dest: string) => {
     globDirectory: dest,
     globPatterns: ['**/*.{js,json,css}', '**/*.{jpg,jpeg,png}', '**/*.{ttf,woff,woff2,eot}', 'index.html'],
     importWorkboxFrom: 'local',
-    swDest: `${dest}/service-worker.js`
+    swDest: `${dest}/service-worker.js`,
+    offlineGoogleAnalytics: true
   });
 };

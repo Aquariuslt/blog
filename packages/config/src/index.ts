@@ -25,6 +25,10 @@ export interface Config {
     baseUrl: string;
     baseTitle: string;
     disqus: string; // TODO: refactor as comment/feature?
+    googleAnalytics?: {
+      verification: string;
+      tracking: string;
+    };
   };
   profile;
   pageOptions: {
@@ -71,7 +75,13 @@ export const loadConfig = (id = `blog`, lookupPath?: string): Config => {
       baseTitle: site.title,
       baseUrl: baseUrl,
       disqus: site.disqus,
-      domain: site.domain
+      domain: site.domain,
+      googleAnalytics: config.site['google_analytics']
+        ? {
+            verification: config.site['google_analytics']['verification'],
+            tracking: config.site['google_analytics']['tracking']
+          }
+        : undefined
     },
     profile: config.profile,
     theme: path.join(basePath, detectThemePackage(config.theme)),

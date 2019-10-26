@@ -25,6 +25,7 @@
   "dependencies": {
     "@blog/article-tools": "^6.4.0",
     "@blog/common": "^6.4.0",
+    "@blog/config": "^6.4.0",
     "date-fns": "^2.4.1",
     "lodash": "^4.17.15",
     "sitemap": "^5.0.0",

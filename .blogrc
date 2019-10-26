@@ -16,6 +16,9 @@ site:
   domain: blog.aquariuslt.com
   title: Aquariuslt Blog
   disqus: aquariuslt
+  google_analytics:
+    verification: s3PYm0fCo0ImPqqXoPLiUb_bFdlYODKw54VGSkcFgyE
+    tracking: UA-68904127-1
 
 profile:
   name: Aquariuslt
