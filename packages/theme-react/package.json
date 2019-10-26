@@ -1,0 +1,88 @@
+{
+  "name": "@blog/theme-react",
+  "version": "6.5.0",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "serve": "gulp serve",
+    "build": "gulp build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.1",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.1",
+    "typeface-roboto": "^0.0.75"
+  },
+  "devDependencies": {
+    "@blog/config": "^6.5.0",
+    "@testing-library/react": "^9.1.4",
+    "@types/gulp": "^4.0.6",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/webpack": "^4.39.1",
+    "disqus-react": "^1.0.6",
+    "enzyme": "^3.10.0",
+    "fancy-log": "^1.3.3",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "gulp": "^4.0.2",
+    "gulp-rimraf": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "jest-environment-enzyme": "^7.1.1",
+    "jest-enzyme": "^7.1.1",
+    "jest-properties-loader": "^1.0.7",
+    "jest-raw-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "mkdirp": "^0.5.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss": "^7.0.18",
+    "postcss-load-config": "^2.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1",
+    "properties-json-loader": "^2.2.0",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "6.2.1",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.6.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.40.2",
+    "webpack-bundle-analyzer": "^3.5.0",
+    "webpack-dev-middleware": "^3.7.1",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-hot-middleware": "^2.24.4",
+    "webpack-merge": "^4.2.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "moduleNameMapper": {
+      "^@theme-react/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testMatch": [
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ]
+  }
+}
