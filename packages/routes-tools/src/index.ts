@@ -13,16 +13,16 @@ import {
   createTagsOverviewRouteItem
 } from './tag.route.util';
 import {
-  createCategoryDetailRouteItem,
-  createCategoriesOverviewRouteItem,
   createCategoriesOverviewMetas,
-  createCategoryDetailMetas
+  createCategoriesOverviewRouteItem,
+  createCategoryDetailMetas,
+  createCategoryDetailRouteItem
 } from './category.route.util';
 import { createPostDetailMetas, createPostsOverviewMetas, createPostsOverviewRouteItem } from './post.route.util';
 import {
   createBreadcrumbList,
-  createCategoryDetailBreadcrumbItem,
   createCategoriesOverviewBreadcrumbItem,
+  createCategoryDetailBreadcrumbItem,
   createHomeBreadcrumbItem,
   createPostDetailBreadcrumbItem,
   createPostsOverviewBreadcrumbItem,
@@ -30,6 +30,7 @@ import {
   createTagsOverviewBreadcrumbItem
 } from './breadcrumb.util';
 import { createHomeMetas } from './home.route.util';
+import { loadConfig } from '@blog/config';
 
 export * from './home.route.util';
 export * from './tag.route.util';
@@ -54,6 +55,22 @@ export const createCommonMetas = (options: Partial<RoutesOptions>): Meta[] => [
   }
 ];
 
+export const createGoogleAnalyticsMeta = (): Meta[] => {
+  const config = loadConfig();
+  return config.site.googleAnalytics
+    ? [
+        {
+          name: MetaName.GOOGLE_SITE_VERIFICATION,
+          content: config.site.googleAnalytics.verification
+        },
+        {
+          name: MetaName.GOOGLE_SITE_TRACKING,
+          content: config.site.googleAnalytics.tracking
+        }
+      ]
+    : [];
+};
+
 export const createTagsOverviewRouteMeta = (
   contexts: ArticleContext[],
   options?: Partial<RoutesOptions>
@@ -73,7 +90,7 @@ export const createTagsOverviewRouteMeta = (
       createTagsOverviewBreadcrumbItem(options.baseUrl, tagsOverviewRouteItem.label, path)
     ]),
     type: Layout.TABLE,
-    metas: _.concat(createTagsOverviewMetas(), createCommonMetas(options)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createTagsOverviewMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -96,7 +113,7 @@ export const createCategoriesOverviewRouteMeta = (
       createCategoriesOverviewBreadcrumbItem(options.baseUrl, categoriesOverviewRouteItem.label, path)
     ]),
     type: Layout.TABLE,
-    metas: _.concat(createCategoriesOverviewMetas(), createCommonMetas(options)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createCategoriesOverviewMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -119,7 +136,7 @@ export const createPostsOverviewRouteMeta = (
       createPostsOverviewBreadcrumbItem(options.baseUrl, postsOverviewRouteItem.label, path)
     ]),
     type: Layout.LIST,
-    metas: _.concat(createPostsOverviewMetas(), createCommonMetas(options)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createPostsOverviewMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -138,7 +155,7 @@ export const createHomeRouteMeta = (options?: Partial<RoutesOptions>): RouteMeta
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME)
     ]),
     type: Layout.LIST,
-    metas: _.concat(createHomeMetas(), createCommonMetas(options)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createHomeMetas(), createCommonMetas(options)),
     data: undefined
   };
 };
@@ -167,7 +184,7 @@ export const createTagDetailRouteMeta = (
       createTagsOverviewBreadcrumbItem(options.baseUrl, tagsOverviewRouteItem.label, tagsOverviewRouteMeta.path),
       createTagDetailBreadcrumbItem(options.baseUrl, rawTag, path)
     ]),
-    metas: _.concat(createCommonMetas(options), createTagDetailMetas(rawTag)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createTagDetailMetas(rawTag)),
     type: Layout.LIST,
     data: undefined
   };
@@ -201,7 +218,7 @@ export const createCategoryDetailRouteMeta = (
       createCategoryDetailBreadcrumbItem(options.baseUrl, rawCategory, path)
     ]),
     type: Layout.LIST,
-    metas: _.concat(createCommonMetas(options), createCategoryDetailMetas(rawCategory)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createCategoryDetailMetas(rawCategory)),
     data: undefined
   };
 };
@@ -235,7 +252,7 @@ export const createPostDetailRouteMeta = (
       createPostDetailBreadcrumbItem(options.baseUrl, article.title, path)
     ]),
     type: Layout.DETAIL,
-    metas: _.concat(createCommonMetas(options), createPostDetailMetas(article)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createPostDetailMetas(article)),
     data: undefined
   };
 };
