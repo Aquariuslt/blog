@@ -92,8 +92,13 @@
     "transformIgnorePatterns": [
       "/node_modules/"
     ],
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts"
+    ],
     "testMatch": [
-      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
-    ]
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "coverageDirectory": "<rootDir>/reports/coverage"
   }
 }
