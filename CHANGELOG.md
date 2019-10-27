@@ -1,3 +1,10 @@
+# [6.6.0](https://github.com/aquariuslt/blog/compare/v6.5.0...v6.6.0) (2019-10-27)
+
+
+### Features
+
+* **theme-react:** add package `@blog/theme-react` ([8e2082e](https://github.com/aquariuslt/blog/commit/8e2082e3e3a4e7a0b39071adda4b4380a94a1f11))
+
 # [6.5.0](https://github.com/aquariuslt/blog/compare/v6.4.0...v6.5.0) (2019-10-26)
 
 
