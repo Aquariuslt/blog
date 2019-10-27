@@ -7,6 +7,7 @@ import addEntries from 'webpack-dev-server/lib/utils/addEntries';
 import WebpackDevServer from 'webpack-dev-server';
 
 import { webpackDevConfig } from './webpack/webpack.dev';
+import { webpackProdConfig } from './webpack/webpack.prod';
 import { LOCAL_URL } from './webpack/webpack.dev';
 
 gulp.task('serve', () => {
@@ -22,4 +23,20 @@ gulp.task('serve', () => {
       logger.info('Local: ', LOCAL_URL);
     }
   );
+});
+
+gulp.task('build', (done) => {
+  webpack(webpackProdConfig, (error, stats): void => {
+    logger.info('Webpack build done');
+    if (error || stats.hasErrors()) {
+      logger.error('Webpack build error:', error);
+    }
+    stats
+      .toString(webpackProdConfig.stats)
+      .split('\n')
+      .map((line: string): void => {
+        logger.info(line);
+      });
+    done();
+  });
 });

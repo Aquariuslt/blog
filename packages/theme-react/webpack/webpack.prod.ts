@@ -12,13 +12,13 @@ import { webpackBaseConfig } from './webpack.base';
 import { BASE_DIR } from './webpack.base';
 const THEME_DIST_DIR = resolve(`dist`);
 
-const webpackProdConfig = merge(webpackBaseConfig, {
+export const webpackProdConfig = merge(webpackBaseConfig, {
   mode: 'production',
   devtool: 'source-map',
   output: {
     path: THEME_DIST_DIR,
-    filename: `${THEME_DIST_DIR}/static/js/[name].[chunkhash].js`,
-    chunkFilename: `${THEME_DIST_DIR}/static/js/[id].[chunkhash].js`,
+    filename: `static/js/[name].[chunkhash].js`,
+    chunkFilename: `static/js/[id].[chunkhash].js`,
     publicPath: '/'
   },
   module: {
@@ -99,5 +99,3 @@ const webpackProdConfig = merge(webpackBaseConfig, {
     publicPath: true
   }
 });
-
-export default webpackProdConfig;
