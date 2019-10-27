@@ -64,7 +64,6 @@ export const webpackDevConfig = merge(webpackBaseConfig, {
     host: LOCAL_IP,
     port: LOCAL_PORT,
     historyApiFallback: true,
-    open: true,
     quiet: false,
     noInfo: true,
     stats: {

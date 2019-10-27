@@ -9,7 +9,7 @@ export const DIST_DIR = config.dirs.dest;
 
 export const webpackBaseConfig = {
   entry: {
-    main: resolve(`src/main.ts`)
+    main: resolve(`src/main.tsx`)
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
