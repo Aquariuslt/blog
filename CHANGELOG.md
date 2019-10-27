@@ -1,3 +1,10 @@
+## [6.6.1](https://github.com/aquariuslt/blog/compare/v6.6.0...v6.6.1) (2019-10-27)
+
+
+### Bug Fixes
+
+* **theme-react:** update jest config with `testMatch` ([8f782a2](https://github.com/aquariuslt/blog/commit/8f782a206b9db63f19b7a27c709687a1ea29f80d))
+
 # [6.6.0](https://github.com/aquariuslt/blog/compare/v6.5.0...v6.6.0) (2019-10-27)
 
 
