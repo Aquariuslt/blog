@@ -37,7 +37,7 @@ export const routes = [
   }
 ];
 
-export const RouterView = () => {
+export const RouterView: React.FC = () => {
   return (
     <Router>
       <Switch>

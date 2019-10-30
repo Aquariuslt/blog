@@ -1,26 +1,22 @@
-import webpack from 'webpack';
 import merge from 'webpack-merge';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { resolve } from './path.util';
-import { webpackBaseConfig } from './webpack.base';
-import { BASE_DIR, DIST_DIR } from './webpack.base';
+import { BASE_DIR, DIST_DIR, webpackBaseConfig } from './webpack.base';
 
 const PROTOCOL = 'http://';
-const LOCAL_IP = '127.0.0.1';
+const LOCAL_HOST = 'localhost';
 const LOCAL_PORT = 8080;
-export const LOCAL_URL = `${PROTOCOL}${LOCAL_IP}:${LOCAL_PORT}`;
+export const LOCAL_URL = `${PROTOCOL}${LOCAL_HOST}:${LOCAL_PORT}/`;
 
 export const webpackDevConfig = merge(webpackBaseConfig, {
   mode: 'development',
   output: {
     path: resolve(`build`),
     publicPath: LOCAL_URL,
-    filename: '[name].bundle.js',
-    sourceMapFilename: '[name].bundle.js.map',
-    chunkFilename: '[id].chunk.js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
@@ -48,6 +44,7 @@ export const webpackDevConfig = merge(webpackBaseConfig, {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].bundle.css',
       chunkFilename: '[id].bundle.css',
@@ -57,11 +54,10 @@ export const webpackDevConfig = merge(webpackBaseConfig, {
       template: `${BASE_DIR}/index.html`,
       favicon: `${BASE_DIR}/favicon.ico`
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new FriendlyErrorsPlugin()
   ],
   devServer: {
-    host: LOCAL_IP,
+    host: LOCAL_HOST,
     port: LOCAL_PORT,
     historyApiFallback: true,
     quiet: false,
