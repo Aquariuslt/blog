@@ -19,7 +19,7 @@ export const createPostDetailApiData = (id: string, contexts: ArticleContext[]) 
     html = html.replace(image, path.join(contextPath, image));
   });
 
-  return Object.assign(context, {
+  return Object.assign({}, context, {
     tags: _.map(context.tags, createTagDetailLinkItem),
     categories: _.map(context.categories, createCategoryLinkItem),
     cover: path.join(contextPath, context.cover),
