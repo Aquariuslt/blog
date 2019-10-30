@@ -3,16 +3,16 @@ import * as path from 'path';
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import {
-  createTagsOverviewRouteMeta,
-  createHomeRouteMeta,
+  buildPathFromContext,
   createCategoriesOverviewRouteMeta,
+  createCategoryDetailRouteMeta,
+  createHomeRouteMeta,
+  createPostDetailRouteMeta,
   createPostsOverviewRouteMeta,
   createTagDetailRouteMeta,
-  createCategoryDetailRouteMeta,
-  createPostDetailRouteMeta,
-  buildPathFromContext
+  createTagsOverviewRouteMeta,
+  RoutesOptions
 } from './index';
-import { RoutesOptions } from './index';
 import { getAllCategoriesFromContexts, getAllTagsFromContexts } from '@blog/article-tools';
 
 const CHANGE_FREQ = 'daily';
