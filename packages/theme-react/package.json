@@ -6,7 +6,6 @@
   "scripts": {
     "serve": "gulp serve",
     "build": "gulp clean && gulp build",
-    "clean": "gulp clean",
     "test": "jest"
   },
   "dependencies": {
