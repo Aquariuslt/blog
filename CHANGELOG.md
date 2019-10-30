@@ -1,3 +1,12 @@
+## [6.6.2](https://github.com/aquariuslt/blog/compare/v6.6.1...v6.6.2) (2019-10-30)
+
+
+### Bug Fixes
+
+* **sitemap:** fix sitemap generation issue ([3e61011](https://github.com/aquariuslt/blog/commit/3e610112d56a57a32134d3c1187d356aa2d883d6))
+* **theme-react:** fix webpack configurations ([58afb8a](https://github.com/aquariuslt/blog/commit/58afb8af5c9b83f9dd623c49815580827d0fbe64))
+* correct test issue ([d491722](https://github.com/aquariuslt/blog/commit/d491722882f84980b997e2f951dac902d352f18c))
+
 ## [6.6.1](https://github.com/aquariuslt/blog/compare/v6.6.0...v6.6.1) (2019-10-27)
 
 
