@@ -1,3 +1,10 @@
+## [6.6.3](https://github.com/aquariuslt/blog/compare/v6.6.2...v6.6.3) (2019-10-30)
+
+
+### Bug Fixes
+
+* **theme-react:** fix webpack-dev-server hmr issue ([4d15a4c](https://github.com/aquariuslt/blog/commit/4d15a4cb23112300480d19729260ad771316dc58))
+
 ## [6.6.2](https://github.com/aquariuslt/blog/compare/v6.6.1...v6.6.2) (2019-10-30)
 
 
