@@ -2,14 +2,12 @@ import * as logger from 'fancy-log';
 import * as gulp from 'gulp';
 import rimraf from 'gulp-rimraf';
 import webpack from 'webpack';
-
 /** webpack-dev-server related */
 import addEntries from 'webpack-dev-server/lib/utils/addEntries';
 import WebpackDevServer from 'webpack-dev-server';
 
-import { webpackDevConfig } from './webpack/webpack.dev';
+import { LOCAL_URL, webpackDevConfig } from './webpack/webpack.dev';
 import { webpackProdConfig } from './webpack/webpack.prod';
-import { LOCAL_URL } from './webpack/webpack.dev';
 
 gulp.task('serve', () => {
   logger.info('Webpack building.');
