@@ -1,5 +1,6 @@
 import * as logger from 'fancy-log';
 import * as gulp from 'gulp';
+import rimraf from 'gulp-rimraf';
 import webpack from 'webpack';
 
 /** webpack-dev-server related */
@@ -39,4 +40,12 @@ gulp.task('build', (done) => {
       });
     done();
   });
+});
+
+gulp.task('clean', () => {
+  return gulp
+    .src(`dist`, {
+      allowEmpty: true
+    })
+    .pipe(rimraf());
 });
