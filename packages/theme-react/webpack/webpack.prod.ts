@@ -11,6 +11,7 @@ import { webpackBaseConfig } from './webpack.base';
 
 import { BASE_DIR } from './webpack.base';
 const THEME_DIST_DIR = resolve(`dist`);
+const NODE_MODULES = resolve(`node_modules`);
 
 export const webpackProdConfig = merge(webpackBaseConfig, {
   mode: 'production',
@@ -25,21 +26,21 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
     rules: [
       {
         test: /\.less$/,
-        include: [BASE_DIR],
+        include: [BASE_DIR, NODE_MODULES],
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader']
       },
       {
         test: /\.css$/,
-        include: [BASE_DIR],
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+        include: [BASE_DIR, NODE_MODULES],
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
   plugins: [
     new TerserJSPlugin({}),
     new MiniCssExtractPlugin({
-      filename: `${THEME_DIST_DIR}/static/css/[name].[chunkhash].js`,
-      chunkFilename: `${THEME_DIST_DIR}/static/css/[id].[chunkhash].js`
+      filename: `static/css/[name].[chunkhash].css`,
+      chunkFilename: `static/css/[id].[chunkhash].css`
     }),
     new HtmlWebpackPlugin({
       template: `${BASE_DIR}/index.html`,
@@ -60,7 +61,7 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          filename: `${THEME_DIST_DIR}/static/js/vendor.[chunkhash].js`,
+          filename: `static/js/vendor.[chunkhash].js`,
           chunks: 'all'
         }
       }

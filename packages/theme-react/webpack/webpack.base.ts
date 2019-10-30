@@ -41,7 +41,7 @@ export const webpackBaseConfig = {
         loader: 'file-loader',
         options: {
           limit: 10000,
-          name: `${DIST_DIR}/static/fonts/[name].[ext]`
+          name: `static/fonts/[name].[ext]`
         }
       },
       {
