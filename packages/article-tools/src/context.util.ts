@@ -1,7 +1,9 @@
 import * as _ from 'lodash';
 import * as fs from 'fs';
 import * as hljs from 'highlight.js';
+import * as uslug from 'uslug';
 import * as MarkdownIt from 'markdown-it';
+import * as AnchorPlugin from 'markdown-it-anchor';
 import { metadata, source } from '@blog/markdown';
 import { ImagesDetectionPlugin } from '@blog/markdown/dist/images.plugin';
 import { ContentItemPlugin } from '@blog/markdown/dist/content-item.plugin';
@@ -24,7 +26,10 @@ export const createArticleContext = (filepath: string) => {
   })
     .use(ImagesDetectionPlugin)
     .use(ContentItemPlugin)
-    .use(SummaryPlugin);
+    .use(SummaryPlugin)
+    .use(AnchorPlugin, {
+      slugify: uslug
+    });
 
   const context = Object.assign({}, meta);
   const html = md.render(src, context);

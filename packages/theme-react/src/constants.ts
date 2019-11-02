@@ -13,3 +13,7 @@ export const theme = createMuiTheme({
     }
   }
 });
+
+export const DRAWER_WIDTH = 240;
+export const CARD_MAX_WIDTH = 800;
+export const COVER_HEIGHT = 300;

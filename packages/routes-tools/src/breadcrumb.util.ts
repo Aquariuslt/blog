@@ -4,7 +4,7 @@ export const createHomeBreadcrumbItem = (baseUrl: string, label: string, path: s
   return {
     '@type': 'ListItem',
     item: baseUrl + path,
-    name: label,
+    name: `Home`, // will ignore baseTitle in breadcrumbs
     position: 1
   };
 };
