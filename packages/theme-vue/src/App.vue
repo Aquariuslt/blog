@@ -57,7 +57,7 @@ export default class App extends Vue {
   }
 
   async loadProfile() {
-    const profile = await loadApi(`/profile`);
+    const profile = await loadApi(buildURLPath(RoutePathPrefix.PROFILE));
     this.$data.$profile = profile.data;
   }
 
