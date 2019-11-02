@@ -1,3 +1,10 @@
+# [6.7.0](https://github.com/aquariuslt/blog/compare/v6.6.3...v6.7.0) (2019-11-02)
+
+
+### Features
+
+* **theme-react:** add route with apiPath as props ([d5f406f](https://github.com/aquariuslt/blog/commit/d5f406f9a86dee28454ebdcb6a3fb82a17b1fd59))
+
 ## [6.6.3](https://github.com/aquariuslt/blog/compare/v6.6.2...v6.6.3) (2019-10-30)
 
 
