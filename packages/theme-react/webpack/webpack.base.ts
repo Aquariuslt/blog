@@ -5,6 +5,7 @@ import { resolve } from './path.util';
 const config = loadConfig();
 
 export const BASE_DIR = resolve(`src`);
+export const NODE_MODULES = resolve(`node_modules`);
 export const DIST_DIR = config.dirs.dest;
 
 export const webpackBaseConfig = {
@@ -22,8 +23,6 @@ export const webpackBaseConfig = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        include: [BASE_DIR],
-        exclude: [/node_modules/],
         loader: 'ts-loader'
       },
       {
