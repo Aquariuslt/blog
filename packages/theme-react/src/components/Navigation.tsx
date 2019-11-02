@@ -116,7 +116,9 @@ export const Navigation: React.FC<NavigationProps> = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap></Typography>
+          <Typography variant="h6" noWrap>
+            Aquariuslt Blog
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer

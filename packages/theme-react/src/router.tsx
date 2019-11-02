@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import loadable from '@loadable/component';
 import List from '@theme-react/views/List';
 import { buildURLPath } from '@blog/common/utils/path.util';
@@ -53,17 +53,15 @@ export const routes = [
 
 export const RouterView: React.FC = () => {
   return (
-    <Router>
-      <Switch>
-        {routes.map((route, i) => (
-          <Route
-            key={i}
-            path={route.path}
-            exact={route.exact}
-            render={(props) => <route.component {...props} apiPath={route.apiPath(props.match)} />}
-          />
-        ))}
-      </Switch>
-    </Router>
+    <Switch>
+      {routes.map((route, i) => (
+        <Route
+          key={i}
+          path={route.path}
+          exact={route.exact}
+          render={(props) => <route.component {...props} apiPath={route.apiPath(props.match)} />}
+        />
+      ))}
+    </Switch>
   );
 };
