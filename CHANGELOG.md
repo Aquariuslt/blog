@@ -1,3 +1,15 @@
+# [6.12.0](https://github.com/aquariuslt/blog/compare/v6.11.0...v6.12.0) (2019-11-03)
+
+
+### Bug Fixes
+
+* **theme-react:** fix type conversion for keyword ([ee93ba9](https://github.com/aquariuslt/blog/commit/ee93ba9b894c859941fda3b31ee436de1605efa2))
+
+
+### Features
+
+* **theme-react:** add keyword in article detail ([27ba180](https://github.com/aquariuslt/blog/commit/27ba180f74e0ec77b16514c2a4ac47e9b57baec9))
+
 # [6.11.0](https://github.com/aquariuslt/blog/compare/v6.10.1...v6.11.0) (2019-11-03)
 
 
