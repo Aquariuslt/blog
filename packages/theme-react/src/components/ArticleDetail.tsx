@@ -1,11 +1,14 @@
 import '@theme-react/markdown.css';
 import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
-
+import Divider from '@material-ui/core/Divider';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
+import { Keyword } from '@blog/common/interfaces/articles/article-metadata';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH } from '@theme-react/constants';
 import { Comment } from '@theme-react/components/Comment';
+import { KeywordChip } from '@theme-react/components/KeywordChip';
+import { useEffect, useState } from 'react';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,15 +20,37 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(1)
       }
+    },
+    cover: {
+      width: '100%',
+      maxWidth: '100%'
+    },
+    divider: {
+      marginTop: theme.spacing(2)
     }
   })
 );
 
 export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
   const classes = useStyles();
+  const [keywords, setKeywords] = useState<Keyword[]>([]);
+
+  const buildKeywords = () => {
+    const tags: Keyword[] = [];
+    props.tags &&
+      props.tags.forEach((tag) => {
+        tags.push(tag);
+      });
+    setKeywords(tags);
+  };
+
+  useEffect(() => {
+    buildKeywords();
+  }, [props.id]);
 
   return (
-    <div className={classes.root + ' markdown-body'}>
+    <div className={classes.root}>
+      <img src={props.cover} alt="cover" className={classes.cover} />
       <Typography
         component="div"
         className="markdown-body"
@@ -33,6 +58,12 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
           __html: props.html || ''
         }}
       />
+
+      <div className={classes.divider} />
+
+      {keywords.map((keyword) => (
+        <KeywordChip key={keyword.id} {...keyword} />
+      ))}
       <Comment title={props.title || ''} disqus={props['disqus']} />
     </div>
   );

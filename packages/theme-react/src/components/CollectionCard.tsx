@@ -2,17 +2,11 @@ import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH, COVER_HEIGHT } from '@theme-react/constants';
+import { Keyword } from '@blog/common/interfaces/articles/article-metadata';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from '@material-ui/core/Typography';
-
-export interface CollectionCardProps {
-  id: string;
-  label: string;
-  link: string;
-  total: number;
-}
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const CollectionCard: React.FC<CollectionCardProps> = (props) => {
+export const CollectionCard: React.FC<Keyword> = (props) => {
   const classes = useStyles();
 
   return (
