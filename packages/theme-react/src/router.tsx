@@ -4,6 +4,7 @@ import loadable from '@loadable/component';
 import List from '@theme-react/views/List';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
+import Table from '@theme-react/views/Table';
 
 // I must use Angular Style Routing for stupid react router philosophy
 export const routes = [
@@ -48,6 +49,18 @@ export const routes = [
     exact: true,
     component: List,
     apiPath: (match) => buildURLPath(RoutePathPrefix.TAGS, match.params['tag'])
+  },
+  {
+    path: '/categories/',
+    exact: true,
+    component: Table,
+    apiPath: () => buildURLPath(RoutePathPrefix.CATEGORIES)
+  },
+  {
+    path: '/tags',
+    exact: true,
+    component: Table,
+    apiPath: () => buildURLPath(RoutePathPrefix.TAGS)
   }
 ];
 

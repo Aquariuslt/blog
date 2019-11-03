@@ -13,6 +13,7 @@ import { theme } from '@theme-react/constants';
 export const App: React.FC = () => {
   const [navigationItems, setNavigationItems] = useState([]);
   const [profile, setProfile] = useState(EmptyProfile);
+  const [title] = React.useState(process.env.BASE_TITLE || '');
 
   const loadNavigation = async () => {
     const navigation = await loadApi(buildURLPath(RoutePathPrefix.NAVIGATION));
@@ -32,7 +33,7 @@ export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Navigation profile={profile} menus={navigationItems}>
+        <Navigation title={title} profile={profile} menus={navigationItems}>
           <RouterView />
         </Navigation>
       </Router>

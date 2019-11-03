@@ -35,4 +35,4 @@ pages:
   title_separator: '|'
 
 
-theme: theme-vue
+theme: theme-react

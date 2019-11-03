@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import clsx from 'clsx';
 import { Link as RouterLink } from 'react-router-dom';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
@@ -22,6 +23,7 @@ import { NavigationItem } from '@blog/common/interfaces/navigation';
 import { Icon } from '@theme-react/components/Icon';
 
 export interface NavigationProps {
+  title: string;
   profile: Profile;
   menus: NavigationItem[];
 }
@@ -73,6 +75,7 @@ const useStyles = makeStyles((theme: Theme) =>
         duration: theme.transitions.duration.leavingScreen
       }),
       maxWidth: '100%',
+      minHeight: '100vh',
       backgroundColor: theme.palette.background.paper,
       marginLeft: -drawerWidth
     },
@@ -120,7 +123,7 @@ export const Navigation: React.FC<NavigationProps> = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Aquariuslt Blog
+            {props.title}
           </Typography>
         </Toolbar>
       </AppBar>

@@ -7,20 +7,20 @@ Object {
   ],
   "cover": "./cover.jpg",
   "created": 2019-09-10T00:00:00.000Z,
-  "html": "<h1>A beautiful day</h1>
+  "html": "<h1 id=\\"a-beautiful-day\\">A beautiful day</h1>
 <p>This is an example markdown content with all one-pass test cases.</p>
-<h2>Getting Started</h2>
+<h2 id=\\"getting-started\\">Getting Started</h2>
 <p>Getting started snippet</p>
-<h3>Installing</h3>
+<h3 id=\\"installing\\">Installing</h3>
 <pre><code class=\\"hljs shell\\">yarn add -D properteis-json-loader
 </code></pre>
 <p>or, using npm</p>
 <pre><code class=\\"hljs shell\\">npm install --save-dev properties-json-loader
 </code></pre>
-<h3>Update webpack configuration</h3>
+<h3 id=\\"update-webpack-configuration\\">Update webpack configuration</h3>
 <p>You should use it to load as one of webpack loader configuration matching <code>*.properties</code> file.</p>
-<h2>Deep Understanding</h2>
-<h2>References</h2>
+<h2 id=\\"deep-understanding\\">Deep Understanding</h2>
+<h2 id=\\"references\\">References</h2>
 <p><img src=\\"https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png\\" alt=\\"Absolute Image\\"></p>
 <p><img src=\\"./a-image.jpg\\" alt=\\"Relative Image\\"></p>
 <p><img src=\\"./images/a-image.jpg\\" alt=\\"Relative Image with directory\\"></p>

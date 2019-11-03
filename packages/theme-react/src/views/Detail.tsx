@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { ApiPathProps, loadApi } from '@theme-react/api';
-import { EmptyRouteMeta, RouteMeta } from '@blog/common/interfaces/routes';
+import { EmptyRouteMeta, Meta, RouteMeta } from '@blog/common/interfaces/routes';
 import { BreadcrumbItems } from '@theme-react/components/BreadcrumbItems';
 import { ArticleDetail } from '@theme-react/components/ArticleDetail';
 import { ContentItems } from '@theme-react/components/ContentItems';
-import { DRAWER_WIDTH } from '@theme-react/constants';
+import { DRAWER_WIDTH, TYPE_JSON_LD } from '@theme-react/constants';
 
 import Container from '@material-ui/core/Container';
 import { ContentItem } from '@blog/common/interfaces/articles/content-item';
@@ -19,7 +20,10 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'space-around',
       overflow: 'hidden',
       backgroundColor: theme.palette.background.paper,
-      paddingTop: theme.spacing(1)
+      paddingTop: theme.spacing(1),
+      [theme.breakpoints.down('sm')]: {
+        padding: theme.spacing(1)
+      }
     },
     toc: {
       display: 'flex',
@@ -46,11 +50,13 @@ const useStyles = makeStyles((theme: Theme) =>
 export const Detail: React.FC<ApiPathProps> = (props) => {
   const classes = useStyles();
   const [routeMeta, setRouteMeta] = useState<RouteMeta>(EmptyRouteMeta);
+  const [metas, setMetas] = useState<Meta[]>([]);
   const [contentItems, setContentItems] = useState<ContentItem[]>([]);
 
   const loadData = async () => {
     const routeMeta = await loadApi(props.apiPath);
     setRouteMeta(routeMeta);
+    setMetas(routeMeta.metas);
     setContentItems(routeMeta.data.toc);
   };
 
@@ -60,6 +66,13 @@ export const Detail: React.FC<ApiPathProps> = (props) => {
 
   return (
     <Container className={classes.root}>
+      <Helmet>
+        <title>{routeMeta.title}</title>
+        <script type={TYPE_JSON_LD}>{JSON.stringify(routeMeta.breadcrumbs)}</script>
+        {metas.map((meta, index) => (
+          <meta key={index} {...meta} />
+        ))}
+      </Helmet>
       <div className={classes.content}>
         <BreadcrumbItems {...routeMeta.breadcrumbs} />
         <ArticleDetail {...routeMeta.data} />

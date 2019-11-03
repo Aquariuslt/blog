@@ -9,5 +9,5 @@ export interface ArticleContext extends ArticleMetadata {
   images: string[];
 
   /** other optional field */
-  [key: string]: string | string[] | object;
+  [key: string]: string | string[] | object | any;
 }

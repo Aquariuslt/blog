@@ -1,11 +1,12 @@
+import webpack from 'webpack';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import { loadConfig } from '@blog/config';
 import { resolve } from './path.util';
 
 const config = loadConfig();
 
+export const BASE_TITLE = config.site.baseTitle;
 export const BASE_DIR = resolve(`src`);
-export const NODE_MODULES = resolve(`node_modules`);
 export const DIST_DIR = config.dirs.dest;
 
 export const webpackBaseConfig = {
@@ -49,5 +50,10 @@ export const webpackBaseConfig = {
         loader: 'properties-json-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      BASE_TITLE: BASE_TITLE
+    })
+  ]
 };
