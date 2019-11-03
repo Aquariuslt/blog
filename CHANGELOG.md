@@ -1,3 +1,10 @@
+# [6.9.0](https://github.com/aquariuslt/blog/compare/v6.8.1...v6.9.0) (2019-11-03)
+
+
+### Features
+
+* **theme-react:** re-enable service-worker ([86a5fcd](https://github.com/aquariuslt/blog/commit/86a5fcd9e7ff1fa0dc33531a696f03646398ccec))
+
 ## [6.8.1](https://github.com/aquariuslt/blog/compare/v6.8.0...v6.8.1) (2019-11-03)
 
 
