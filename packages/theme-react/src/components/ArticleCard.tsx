@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Link as RouterLink } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,14 +9,17 @@ import Typography from '@material-ui/core/Typography';
 import { CARD_MAX_WIDTH, COVER_HEIGHT } from '@theme-react/constants';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 
-const useStyles = makeStyles({
-  card: {
-    maxWidth: CARD_MAX_WIDTH
-  },
-  media: {
-    height: COVER_HEIGHT
-  }
-});
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    card: {
+      margin: theme.spacing(1),
+      maxWidth: CARD_MAX_WIDTH
+    },
+    media: {
+      height: COVER_HEIGHT
+    }
+  })
+);
 
 export const ArticleCard: React.FC<Partial<ArticleContext>> = (props) => {
   const classes = useStyles();
