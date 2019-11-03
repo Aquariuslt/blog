@@ -6,6 +6,7 @@ import { ApiPathProps, loadApi } from '@theme-react/api';
 import { ArticleCard } from '@theme-react/components/ArticleCard';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import { BreadcrumbItems } from '@theme-react/components/BreadcrumbItems';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -36,13 +37,13 @@ export const List: React.FC<ApiPathProps> = (props) => {
   }, [props.apiPath]);
 
   return (
-    <div className={classes.root}>
+    <Container className={classes.root}>
       <BreadcrumbItems {...routeMeta.breadcrumbs} />
 
       {articles.map((article) => (
         <ArticleCard key={article.id} {...article} />
       ))}
-    </div>
+    </Container>
   );
 };
 

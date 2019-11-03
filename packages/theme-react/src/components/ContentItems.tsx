@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       overflowX: 'hidden',
       overflowY: 'auto',
       overflowWrap: 'break-word',
-      padding: theme.spacing(2, 2, 2, 0),
+      padding: theme.spacing(1),
       display: 'none',
       [theme.breakpoints.up('md')]: {
         display: 'block'
@@ -39,9 +39,6 @@ const useStyles = makeStyles((theme: Theme) =>
       '&:hover': {
         borderLeft: `4px solid ${theme.palette.grey[200]}`,
         cursor: 'pointer'
-      },
-      '&$active,&:active': {
-        borderLeft: `4px solid ${theme.palette.grey[200]}`
       }
     }
   })

@@ -68,11 +68,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     content: {
       flexGrow: 1,
-      padding: theme.spacing(3),
       transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       }),
+      maxWidth: '100%',
+      backgroundColor: theme.palette.background.paper,
       marginLeft: -drawerWidth
     },
     contentShift: {
@@ -80,6 +81,8 @@ const useStyles = makeStyles((theme: Theme) =>
         easing: theme.transitions.easing.easeOut,
         duration: theme.transitions.duration.enteringScreen
       }),
+      maxWidth: '100%',
+      backgroundColor: theme.palette.background.paper,
       marginLeft: 0
     }
   })
