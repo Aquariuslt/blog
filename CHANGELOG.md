@@ -1,3 +1,10 @@
+## [6.8.1](https://github.com/aquariuslt/blog/compare/v6.8.0...v6.8.1) (2019-11-03)
+
+
+### Bug Fixes
+
+* **theme-react:** remove react-disqus ([09f416c](https://github.com/aquariuslt/blog/commit/09f416cd61d64f507a4c346c1a1f7827f685b203))
+
 # [6.8.0](https://github.com/aquariuslt/blog/compare/v6.7.0...v6.8.0) (2019-11-03)
 
 
