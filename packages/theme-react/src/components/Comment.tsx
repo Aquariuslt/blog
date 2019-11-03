@@ -15,8 +15,8 @@ const EMPTY_DISQUS_CONFIG = {
   shortname: ''
 };
 
-export const Comment: React.FC<CommentProps> = (props) => {
+export const Comment = (props) => {
   const disqusConfig = props.disqus || EMPTY_DISQUS_CONFIG;
 
-  return <React.Fragment></React.Fragment>;
+  return <React.Fragment />;
 };
