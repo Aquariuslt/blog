@@ -30,11 +30,13 @@ export class ThemeService implements OnModuleInit {
     this.logger.log(`Detecting Theme: ${this.config.theme}`);
     this.buildCNAME();
     this.buildNoJekyll();
-    this.buildThemeAssets();
-    this.buildFallbackHtml();
-    await this.buildPWAAssets();
-    await this.buildSitemap();
-    await this.prerender();
+    this.buildSitemap();
+    if (process.env.NODE_ENV === 'production') {
+      this.buildThemeAssets();
+      this.buildFallbackHtml();
+      await this.buildPWAAssets();
+      await this.prerender();
+    }
   }
 
   private buildCNAME() {
