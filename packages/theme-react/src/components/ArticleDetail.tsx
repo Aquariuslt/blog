@@ -3,7 +3,7 @@ import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
 
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
-import { createStyles, makeStyles, Theme } from '@material-ui/core';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH } from '@theme-react/constants';
 import { Comment } from '@theme-react/components/Comment';
 
