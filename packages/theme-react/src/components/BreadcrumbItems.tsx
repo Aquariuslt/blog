@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
@@ -33,7 +34,7 @@ export const BreadcrumbItems: React.FC<BreadcrumbList> = (props) => {
       <Paper elevation={0} className={classes.paper}>
         <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
           {breadcrumbItems.map((item, index) => (
-            <Link key={index} color="inherit" href={item.item}>
+            <Link key={index} color="inherit" component={RouterLink} to={new URL(item.item).pathname}>
               {item.name}
             </Link>
           ))}
