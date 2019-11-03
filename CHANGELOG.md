@@ -1,3 +1,10 @@
+## [6.10.1](https://github.com/aquariuslt/blog/compare/v6.10.0...v6.10.1) (2019-11-03)
+
+
+### Performance Improvements
+
+* **theme-react:** update service-worker config ([be2d9ef](https://github.com/aquariuslt/blog/commit/be2d9ef7c002a132778edf4c873100c73990e6c0))
+
 # [6.10.0](https://github.com/aquariuslt/blog/compare/v6.9.0...v6.10.0) (2019-11-03)
 
 
