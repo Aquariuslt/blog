@@ -1,3 +1,10 @@
+# [6.10.0](https://github.com/aquariuslt/blog/compare/v6.9.0...v6.10.0) (2019-11-03)
+
+
+### Features
+
+* **theme-react:** enable pwa manifest json injection ([4705060](https://github.com/aquariuslt/blog/commit/47050608eec1445c65d295567e20233bc0891491))
+
 # [6.9.0](https://github.com/aquariuslt/blog/compare/v6.8.1...v6.9.0) (2019-11-03)
 
 
