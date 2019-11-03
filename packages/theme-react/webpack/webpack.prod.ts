@@ -5,11 +5,11 @@ import TerserJSPlugin from 'terser-webpack-plugin';
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 
 import { resolve } from './path.util';
-import { webpackBaseConfig } from './webpack.base';
+import { BASE_DIR, BASE_TITLE, webpackBaseConfig } from './webpack.base';
 
-import { BASE_DIR } from './webpack.base';
 const THEME_DIST_DIR = resolve(`dist`);
 const NODE_MODULES = resolve(`node_modules`);
 
@@ -42,9 +42,33 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
       filename: `static/css/[name].[chunkhash].css`,
       chunkFilename: `static/css/[id].[chunkhash].css`
     }),
+    new FaviconsWebpackPlugin({
+      prefix: `static/img`,
+      outputPath: `static/img`,
+      logo: BASE_DIR + `/favicon.svg`,
+      cache: true,
+      inject: true,
+      favicons: {
+        start_url: '/',
+        appName: BASE_TITLE,
+        appShortName: BASE_TITLE,
+        appDescription: ``,
+        theme_color: `#FAFAFA`,
+        background_color: `#FAFAFA`,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          firefox: true,
+          opengraph: true,
+          twitter: true,
+          windows: true
+        }
+      }
+    }),
     new HtmlWebpackPlugin({
       template: `${BASE_DIR}/index.html`,
-      favicon: `${BASE_DIR}/favicon.ico`,
+      favicon: `${BASE_DIR}/favicon.svg`,
       inject: true,
       minify: {
         removeComments: true,
