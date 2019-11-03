@@ -1,7 +1,6 @@
 import '@theme-react/markdown.css';
 import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import { Keyword } from '@blog/common/interfaces/articles/article-metadata';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
@@ -39,7 +38,7 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
     const tags: Keyword[] = [];
     props.tags &&
       props.tags.forEach((tag) => {
-        tags.push(tag);
+        tags.push(JSON.parse(JSON.stringify(tag)));
       });
     setKeywords(tags);
   };

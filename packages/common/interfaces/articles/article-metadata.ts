@@ -11,7 +11,7 @@ export interface ArticleMetadata {
   description: string;
   created: string;
   updated: string;
-  categories: string[] | Keyword[];
-  tags: string[] | Keyword[];
+  categories: string[];
+  tags: string[];
   cover: string;
 }
