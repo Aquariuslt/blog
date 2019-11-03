@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
     card: {
       margin: theme.spacing(1),
       maxWidth: CARD_MAX_WIDTH,
+      width: '100%',
       [theme.breakpoints.down('sm')]: {
         margin: theme.spacing(1, 0, 0, 0)
       }

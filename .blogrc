@@ -14,7 +14,7 @@ dirs:
 site:
   https: true
   domain: blog.aquariuslt.com
-  title: Aquariuslt Blog
+  title: 'TL; DR'
   disqus: aquariuslt
   google_analytics:
     verification: s3PYm0fCo0ImPqqXoPLiUb_bFdlYODKw54VGSkcFgyE

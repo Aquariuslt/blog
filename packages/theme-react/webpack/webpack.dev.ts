@@ -52,7 +52,7 @@ export const webpackDevConfig = merge(webpackBaseConfig, {
     }),
     new HtmlWebpackPlugin({
       template: `${BASE_DIR}/index.html`,
-      favicon: `${BASE_DIR}/favicon.ico`
+      favicon: `${BASE_DIR}/favicon.svg`
     }),
     new FriendlyErrorsPlugin()
   ],
