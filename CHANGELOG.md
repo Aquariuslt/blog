@@ -1,3 +1,10 @@
+# [6.11.0](https://github.com/aquariuslt/blog/compare/v6.10.1...v6.11.0) (2019-11-03)
+
+
+### Features
+
+* **theme-react:** add functional component with disqus api ([14b1c21](https://github.com/aquariuslt/blog/commit/14b1c21b71628f153b770b764785da9f9b79c839))
+
 ## [6.10.1](https://github.com/aquariuslt/blog/compare/v6.10.0...v6.10.1) (2019-11-03)
 
 
