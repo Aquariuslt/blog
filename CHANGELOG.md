@@ -1,3 +1,17 @@
+# [6.8.0](https://github.com/aquariuslt/blog/compare/v6.7.0...v6.8.0) (2019-11-03)
+
+
+### Bug Fixes
+
+* **markdown:** add anchor plugin to generate heading ids ([5871078](https://github.com/aquariuslt/blog/commit/5871078c66143f99eb1bd2e5fc1484eef7ff2ced))
+
+
+### Features
+
+* **theme-react:** add component: navigation ([9648750](https://github.com/aquariuslt/blog/commit/9648750466f711f660180323c32b61f5ee61573c))
+* **theme-react:** add components: ContentItems ([7882342](https://github.com/aquariuslt/blog/commit/7882342e77d76eef53224ff9a3283372742e2b73))
+* **theme-react:** enable theme-react ([cd2a588](https://github.com/aquariuslt/blog/commit/cd2a588e5499f19643876a11cd2bf4c51bb590fa))
+
 # [6.7.0](https://github.com/aquariuslt/blog/compare/v6.6.3...v6.7.0) (2019-11-02)
 
 
