@@ -34,8 +34,8 @@ export class ThemeService implements OnModuleInit {
     if (process.env.NODE_ENV === 'production') {
       this.buildThemeAssets();
       this.buildFallbackHtml();
-      await this.buildPWAAssets();
       await this.prerender();
+      await this.buildPWAAssets();
     }
   }
 
