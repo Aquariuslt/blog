@@ -1,13 +1,18 @@
 import * as React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Link as RouterLink } from 'react-router-dom';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH, COVER_HEIGHT } from '@theme-react/constants';
-import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import Typography from '@material-ui/core/Typography';
+
+export interface CollectionCardProps {
+  id: string;
+  label: string;
+  link: string;
+  total: number;
+}
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,19 +29,19 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const ArticleCard: React.FC<Partial<ArticleContext>> = (props) => {
+export const CollectionCard: React.FC<CollectionCardProps> = (props) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
       <CardActionArea component={RouterLink} to={String(props['link'])}>
-        <CardMedia className={classes.media} image={props.cover} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
+            {props.label}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.summary}
+          <Typography color="textSecondary" gutterBottom>
+            <span>Total:</span>
+            <span>{props.total}</span>
           </Typography>
         </CardContent>
       </CardActionArea>
