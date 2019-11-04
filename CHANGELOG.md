@@ -1,3 +1,10 @@
+## [6.12.1](https://github.com/aquariuslt/blog/compare/v6.12.0...v6.12.1) (2019-11-04)
+
+
+### Bug Fixes
+
+* **theme-react:** fix article-detail.tsx ([68bad92](https://github.com/aquariuslt/blog/commit/68bad92fc7529836759e3655e7646ec0f8b2678c))
+
 # [6.12.0](https://github.com/aquariuslt/blog/compare/v6.11.0...v6.12.0) (2019-11-03)
 
 
