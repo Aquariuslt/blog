@@ -68,7 +68,7 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
     }),
     new HtmlWebpackPlugin({
       template: `${BASE_DIR}/index.html`,
-      favicon: `${BASE_DIR}/favicon.svg`,
+      favicon: `${BASE_DIR}/favicon.ico`,
       inject: true,
       minify: {
         removeComments: true,
