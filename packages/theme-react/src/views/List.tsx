@@ -6,7 +6,7 @@ import { EmptyRouteMeta, Meta, RouteMeta, RoutePathPrefix } from '@blog/common/i
 import { ApiPathProps, loadApi } from '@theme-react/api';
 import { ArticleCard } from '@theme-react/components/ArticleCard';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
-import { BreadcrumbItems } from '@theme-react/components/BreadcrumbItems';
+import { BreadcrumbList } from '@theme-react/components/BreadcrumbList';
 import { TYPE_JSON_LD } from '@theme-react/constants';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import Container from '@material-ui/core/Container';
@@ -57,7 +57,7 @@ export const List: React.FC<ApiPathProps> = (props) => {
         ))}
       </Helmet>
 
-      {showBreadcrumbs && <BreadcrumbItems {...routeMeta.breadcrumbs} />}
+      {showBreadcrumbs && <BreadcrumbList {...routeMeta.breadcrumbs} />}
 
       {articles.map((article) => (
         <ArticleCard key={article.id} {...article} />

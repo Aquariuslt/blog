@@ -44,7 +44,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const ContentItems: React.FC<{ items: ContentItem[] }> = (props) => {
+export interface ContentItemsProps {
+  items: ContentItem[];
+}
+
+export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   const theme = useTheme();
   const classes = useStyles();
 

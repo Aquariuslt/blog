@@ -14,6 +14,5 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const KeywordChip: React.FC<Keyword> = (props) => {
   const classes = useStyles();
-
   return <Chip className={classes.root} label={props.label} component={RouterLink} to={props.link} clickable />;
 };

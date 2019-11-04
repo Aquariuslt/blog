@@ -5,7 +5,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { EmptyRouteMeta, Meta, RouteMeta } from '@blog/common/interfaces/routes';
 import { ApiPathProps, loadApi } from '@theme-react/api';
 import { CARD_MAX_WIDTH, TYPE_JSON_LD } from '@theme-react/constants';
-import { BreadcrumbItems } from '@theme-react/components/BreadcrumbItems';
+import { BreadcrumbList } from '@theme-react/components/BreadcrumbList';
 import { CollectionCard } from '@theme-react/components/CollectionCard';
 import Container from '@material-ui/core/Container';
 
@@ -56,7 +56,7 @@ export const Table: React.FC<ApiPathProps> = (props) => {
         ))}
       </Helmet>
 
-      <BreadcrumbItems {...routeMeta.breadcrumbs} />
+      <BreadcrumbList {...routeMeta.breadcrumbs} />
 
       <div className={classes.content}>
         {collections.map((collection, index) => (
