@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     },
     media: {
-      height: COVER_HEIGHT
+      width: '100%',
+      maxWidth: '100%'
     }
   })
 );
@@ -30,7 +31,13 @@ export const ArticleCard: React.FC<Partial<ArticleContext>> = (props) => {
   return (
     <Card className={classes.card}>
       <CardActionArea component={RouterLink} to={String(props['link'])}>
-        <CardMedia className={classes.media} image={props.cover} />
+        <CardMedia
+          className={classes.media}
+          component="img"
+          image={props.cover}
+          title={props.title}
+          alt={props.title}
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}
