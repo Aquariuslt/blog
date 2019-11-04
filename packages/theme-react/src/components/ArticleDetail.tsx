@@ -6,6 +6,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH } from '@theme-react/constants';
 import { Comment } from '@theme-react/components/Comment';
 import { KeywordChip } from '@theme-react/components/KeywordChip';
+import { Keyword } from '@blog/common/interfaces/articles/article-metadata';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -44,9 +45,7 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
 
       <div className={classes.divider} />
 
-      {(props.tags as any).map((keyword) => (
-        <KeywordChip key={keyword.id} {...keyword} />
-      ))}
+      {props.tags && (props.tags as any).map((keyword) => <KeywordChip key={keyword.id} {...keyword} />)}
       <Comment title={props.title || ''} disqus={props['disqus']} />
     </div>
   );
