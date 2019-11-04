@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { ApiPathProps, loadApi } from '@theme-react/api';
 import { EmptyRouteMeta, Meta, RouteMeta } from '@blog/common/interfaces/routes';
-import { BreadcrumbItems } from '@theme-react/components/BreadcrumbItems';
+import { BreadcrumbList } from '@theme-react/components/BreadcrumbList';
 import { ArticleDetail } from '@theme-react/components/ArticleDetail';
 import { ContentItems } from '@theme-react/components/ContentItems';
 import { DRAWER_WIDTH, TYPE_JSON_LD } from '@theme-react/constants';
@@ -74,7 +74,7 @@ export const Detail: React.FC<ApiPathProps> = (props) => {
         ))}
       </Helmet>
       <div className={classes.content}>
-        <BreadcrumbItems {...routeMeta.breadcrumbs} />
+        <BreadcrumbList {...routeMeta.breadcrumbs} />
         <ArticleDetail {...routeMeta.data} />
       </div>
       <div className={classes.toc}>

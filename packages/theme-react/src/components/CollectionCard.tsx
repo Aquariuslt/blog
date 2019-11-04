@@ -6,7 +6,9 @@ import { Keyword } from '@blog/common/interfaces/articles/article-metadata';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -41,24 +43,26 @@ export const CollectionCard: React.FC<Keyword> = (props) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <div className={classes.head}>
-        <Grid container alignItems="center">
-          <Grid item xs>
-            <Typography gutterBottom variant="h4">
-              {props.label}
+    <Card className={classes.root}>
+      <CardActionArea component={RouterLink} to={props.link}>
+        <CardContent>
+          <div className={classes.head}>
+            <Grid container alignItems="center">
+              <Grid item xs>
+                <Typography gutterBottom variant="h4">
+                  {props.label}
+                </Typography>
+              </Grid>
+            </Grid>
+          </div>
+          <Divider />
+          <div className={classes.desc}>
+            <Typography color="textSecondary" variant="body2">
+              Total: {props.total}
             </Typography>
-          </Grid>
-        </Grid>
-      </div>
-      <Divider />
-      <div className={classes.desc}>
-        <Button className={classes.button} component={RouterLink} to={props.link}>
-          <Typography color="textSecondary" variant="body2">
-            Total: {props.total}
-          </Typography>
-        </Button>
-      </div>
-    </div>
+          </div>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 };

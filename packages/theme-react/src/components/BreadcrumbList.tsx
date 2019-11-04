@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { BreadcrumbList as BreadcrumbListProps } from '@blog/common/interfaces/routes/breadcrumb';
+import { CARD_MAX_WIDTH } from '@theme-react/constants';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import { BreadcrumbList } from '@blog/common/interfaces/routes/breadcrumb';
-import { CARD_MAX_WIDTH } from '@theme-react/constants';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const BreadcrumbItems: React.FC<BreadcrumbList> = (props) => {
+export const BreadcrumbList: React.FC<BreadcrumbListProps> = (props) => {
   const classes = useStyles();
   const breadcrumbItems = props.itemListElement || [];
 
