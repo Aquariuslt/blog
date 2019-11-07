@@ -1,3 +1,10 @@
+## [6.12.2](https://github.com/aquariuslt/blog/compare/v6.12.1...v6.12.2) (2019-11-07)
+
+
+### Bug Fixes
+
+* **theme-react:** add base href meta ([ee92718](https://github.com/aquariuslt/blog/commit/ee9271857ae8d0e8ee82111d2bce8e101d7c5a11))
+
 ## [6.12.1](https://github.com/aquariuslt/blog/compare/v6.12.0...v6.12.1) (2019-11-04)
 
 
