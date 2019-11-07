@@ -8,9 +8,8 @@ import { BreadcrumbList } from '@theme-react/components/BreadcrumbList';
 import { ArticleDetail } from '@theme-react/components/ArticleDetail';
 import { ContentItems } from '@theme-react/components/ContentItems';
 import { DRAWER_WIDTH, TYPE_JSON_LD } from '@theme-react/constants';
-
-import Container from '@material-ui/core/Container';
 import { ContentItem } from '@blog/common/interfaces/articles/content-item';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
