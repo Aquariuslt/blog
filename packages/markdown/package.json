@@ -1,6 +1,6 @@
 {
   "name": "@blog/markdown",
-  "version": "6.12.1",
+  "version": "6.12.2",
   "description": "markdown utils for parsing blog articles",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -22,7 +22,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@blog/common": "^6.12.1",
+    "@blog/common": "^6.12.2",
     "cheerio": "^1.0.0-rc.3",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.15",
