@@ -31,8 +31,6 @@ export const webpackBaseConfig = {
         loader: 'url-loader',
         options: {
           limit: 1000,
-          useRelativePath: true,
-          publicPath: './',
           name: '[name].[ext]'
         }
       },
