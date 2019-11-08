@@ -1,13 +1,17 @@
+import lozad from 'lozad';
 import * as React from 'react';
+import { useEffect, useRef } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Link as RouterLink } from 'react-router-dom';
+import { CARD_MAX_WIDTH } from '@theme-react/constants';
+import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import { CARD_MAX_WIDTH, COVER_HEIGHT } from '@theme-react/constants';
-import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
+
+const placeholder = require('@theme-react/imgs/placeholder.png');
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -27,14 +31,22 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const ArticleCard: React.FC<Partial<ArticleContext>> = (props) => {
   const classes = useStyles();
+  const coverImageElement = useRef(null);
+
+  useEffect(() => {
+    const observer = lozad(coverImageElement.current);
+    observer.observe();
+  }, [props.id]);
 
   return (
     <Card className={classes.card}>
       <CardActionArea component={RouterLink} to={String(props['link'])}>
         <CardMedia
           className={classes.media}
+          ref={coverImageElement}
           component="img"
-          image={props.cover}
+          src={placeholder}
+          data-src={props.cover}
           title={props.title}
           alt={props.title}
         />

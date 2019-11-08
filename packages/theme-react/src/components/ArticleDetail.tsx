@@ -1,4 +1,5 @@
 import '@theme-react/markdown.css';
+import lozad from 'lozad';
 import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
@@ -6,7 +7,10 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH } from '@theme-react/constants';
 import { Comment } from 'react-disqus-components';
 import { KeywordChip } from '@theme-react/components/KeywordChip';
-import { Keyword } from '@blog/common/interfaces/articles/article-metadata';
+import { useRef } from 'react';
+import { useEffect } from 'react';
+
+const placeholder = require('@theme-react/imgs/placeholder.png');
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -32,9 +36,16 @@ const useStyles = makeStyles((theme: Theme) =>
 export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
   const classes = useStyles();
 
+  const coverImageElement = useRef(null);
+
+  useEffect(() => {
+    const observer = lozad(coverImageElement.current);
+    observer.observe();
+  }, [props.id]);
+
   return (
     <div className={classes.root}>
-      <img src={props.cover} alt="cover" className={classes.cover} />
+      <img ref={coverImageElement} src={placeholder} data-src={props.cover} alt="cover" className={classes.cover} />
       <Typography
         component="div"
         className="markdown-body"
