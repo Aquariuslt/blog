@@ -1,3 +1,15 @@
+## [6.12.3](https://github.com/aquariuslt/blog/compare/v6.12.2...v6.12.3) (2019-11-08)
+
+
+### Bug Fixes
+
+* **theme-react:** add missing dependencies ([ae6d2cc](https://github.com/aquariuslt/blog/commit/ae6d2ccbf850c9bfdac75e3407ac85dc2223cfb0))
+
+
+### Performance Improvements
+
+* **theme-react:** add lozad for lazy load image ([501d034](https://github.com/aquariuslt/blog/commit/501d034cb69074bc3a2d19c705bf27403f86086d))
+
 ## [6.12.2](https://github.com/aquariuslt/blog/compare/v6.12.1...v6.12.2) (2019-11-07)
 
 
