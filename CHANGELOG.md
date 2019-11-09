@@ -1,3 +1,10 @@
+## [6.12.6](https://github.com/aquariuslt/blog/compare/v6.12.5...v6.12.6) (2019-11-09)
+
+
+### Performance Improvements
+
+* reduce cover images size ([ba16df8](https://github.com/aquariuslt/blog/commit/ba16df839ec1723fea4722e3eabb1258acdfd1fb))
+
 ## [6.12.5](https://github.com/aquariuslt/blog/compare/v6.12.4...v6.12.5) (2019-11-09)
 
 
