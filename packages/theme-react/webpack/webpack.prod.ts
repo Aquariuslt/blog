@@ -6,6 +6,7 @@ import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
+import PreloadPlugin from 'preload-webpack-plugin';
 
 import { resolve } from './path.util';
 import { BASE_DIR, BASE_TITLE, webpackBaseConfig } from './webpack.base';
@@ -19,7 +20,7 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
   output: {
     path: THEME_DIST_DIR,
     filename: `static/js/[name].[chunkhash].js`,
-    chunkFilename: `static/js/[id].[chunkhash].js`,
+    chunkFilename: `static/js/[name].[chunkhash].js`,
     publicPath: '/'
   },
   module: {
@@ -40,7 +41,7 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
     new TerserJSPlugin({}),
     new MiniCssExtractPlugin({
       filename: `static/css/[name].[chunkhash].css`,
-      chunkFilename: `static/css/[id].[chunkhash].css`
+      chunkFilename: `static/css/[name].[chunkhash].css`
     }),
     new FaviconsWebpackPlugin({
       prefix: `static/img`,
@@ -74,19 +75,28 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
         removeComments: true,
         collapseWhitespace: true,
         removeAttributeQuotes: false
-      },
-      chunksSortMode: 'dependency'
+      }
+    }),
+    new PreloadPlugin({
+      rel: 'preload',
+      include: 'allChunks'
     })
   ],
   optimization: {
     splitChunks: {
-      chunks: 'all',
       cacheGroups: {
         vendors: {
-          test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          filename: `static/js/vendor.[chunkhash].js`,
-          chunks: 'all'
+          test: /[\\\/]node_modules[\\\/]/,
+          priority: -10,
+          chunks: 'initial'
+        },
+        common: {
+          name: 'common',
+          minChunks: 2,
+          priority: -20,
+          chunks: 'initial',
+          reuseExistingChunk: true
         }
       }
     },
