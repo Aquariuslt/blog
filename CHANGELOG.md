@@ -1,3 +1,10 @@
+## [6.12.4](https://github.com/aquariuslt/blog/compare/v6.12.3...v6.12.4) (2019-11-09)
+
+
+### Performance Improvements
+
+* **theme-react:** mark all chunks as preload ([c26889f](https://github.com/aquariuslt/blog/commit/c26889f1f605a3aaaeece920ad55917dd0338e45))
+
 ## [6.12.3](https://github.com/aquariuslt/blog/compare/v6.12.2...v6.12.3) (2019-11-08)
 
 
