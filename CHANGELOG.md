@@ -1,3 +1,10 @@
+## [6.12.5](https://github.com/aquariuslt/blog/compare/v6.12.4...v6.12.5) (2019-11-09)
+
+
+### Bug Fixes
+
+* **theme-react:** fix invalid ref in useEffect() in ArticleDetail ([32140cc](https://github.com/aquariuslt/blog/commit/32140cc59522a5303c5b019bec5ce84485a58fa3))
+
 ## [6.12.4](https://github.com/aquariuslt/blog/compare/v6.12.3...v6.12.4) (2019-11-09)
 
 
