@@ -5,6 +5,7 @@ import Bookmark from '@material-ui/icons/Bookmark';
 import Info from '@material-ui/icons/Info';
 import Link from '@material-ui/icons/Link';
 import Home from '@material-ui/icons/Home';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 export interface IconProps {
   type: string;
@@ -17,7 +18,8 @@ export const Icon: React.FC<IconProps> = (props) => {
     bookmark: <Bookmark />,
     info: <Info />,
     link: <Link />,
-    home: <Home />
+    home: <Home />,
+    up: <KeyboardArrowUpIcon />
   };
 
   const fallbackIcon = <Menu />;
