@@ -1,6 +1,6 @@
 {
   "name": "@blog/routes-tools",
-  "version": "6.12.4",
+  "version": "6.12.5",
   "description": "routing generator tools",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,9 +23,9 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@blog/article-tools": "^6.12.4",
-    "@blog/common": "^6.12.4",
-    "@blog/config": "^6.12.4",
+    "@blog/article-tools": "^6.12.5",
+    "@blog/common": "^6.12.5",
+    "@blog/config": "^6.12.5",
     "date-fns": "^2.4.1",
     "lodash": "^4.17.15",
     "sitemap": "^5.0.0",
