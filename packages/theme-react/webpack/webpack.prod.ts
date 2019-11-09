@@ -7,6 +7,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import PreloadPlugin from 'preload-webpack-plugin';
+import RobotsTxtPlugin from 'robotstxt-webpack-plugin';
 
 import { resolve } from './path.util';
 import { BASE_DIR, BASE_TITLE, webpackBaseConfig } from './webpack.base';
@@ -80,7 +81,8 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
     new PreloadPlugin({
       rel: 'preload',
       include: 'allChunks'
-    })
+    }),
+    new RobotsTxtPlugin()
   ],
   optimization: {
     splitChunks: {
