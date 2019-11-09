@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import * as uslug from 'uslug';
 import { Meta, MetaName, RoutePathPrefix } from '@blog/common/interfaces/routes';
 export const createCategoriesOverviewRouteItem = () => ({
@@ -29,4 +30,4 @@ export const createCategoryDetailOpenGraphMetas = (rawCategory: string): Meta[] 
 
 export const createCategoriesOverviewMetas = (): Meta[] => [createCategoriesOverviewDescMeta()];
 export const createCategoryDetailMetas = (rawCategory: string): Meta[] =>
-  createCategoryDetailOpenGraphMetas(rawCategory);
+  _.concat(createCategoryDetailOpenGraphMetas(rawCategory), [createCategoryDetailDescMeta(rawCategory)]);

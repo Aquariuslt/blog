@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import * as uslug from 'uslug';
 import { Meta, MetaName, RoutePathPrefix } from '@blog/common/interfaces/routes';
 
@@ -29,4 +30,5 @@ export const createTagDetailOpenGraphMetas = (rawTag: string): Meta[] => [
 ];
 
 export const createTagsOverviewMetas = (): Meta[] => [createTagsOverviewDescMeta()];
-export const createTagDetailMetas = (rawTag: string): Meta[] => createTagDetailOpenGraphMetas(rawTag);
+export const createTagDetailMetas = (rawTag: string): Meta[] =>
+  _.concat(createTagDetailOpenGraphMetas(rawTag), [createTagDetailDescMeta(rawTag)]);

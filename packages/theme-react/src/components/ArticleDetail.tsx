@@ -7,7 +7,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH } from '@theme-react/constants';
 import { Comment } from 'react-disqus-components';
 import { KeywordChip } from '@theme-react/components/KeywordChip';
-import { useRef } from 'react';
+import { useCallback, useRef } from 'react';
 import { useEffect } from 'react';
 
 const placeholder = require('@theme-react/imgs/placeholder.png');
@@ -35,13 +35,16 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
   const classes = useStyles();
-
-  const coverImageElement = useRef(null);
-
-  useEffect(() => {
-    const observer = lozad(coverImageElement.current);
-    observer.observe();
-  }, [props.id]);
+  const coverImageElement = useCallback(
+    (node) => {
+      if (node != null) {
+        node.removeAttribute('data-loaded');
+        const observer = lozad(node);
+        observer.observe();
+      }
+    },
+    [props.cover]
+  );
 
   return (
     <div className={classes.root}>
