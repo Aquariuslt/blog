@@ -1,3 +1,10 @@
+## [6.14.1](https://github.com/aquariuslt/blog/compare/v6.14.0...v6.14.1) (2019-11-09)
+
+
+### Bug Fixes
+
+* **theme-react:** update Fab import from ([456d081](https://github.com/aquariuslt/blog/commit/456d0813ba47d6f9468d4403678376848637b649))
+
 # [6.14.0](https://github.com/aquariuslt/blog/compare/v6.13.0...v6.14.0) (2019-11-09)
 
 
