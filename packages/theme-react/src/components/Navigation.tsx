@@ -15,6 +15,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Zoom from '@material-ui/core/Zoom';
+import Fab from '@material-ui/core/Fab';
 /* material icons */
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -22,7 +23,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { Profile } from '@blog/common/interfaces/profile';
 import { NavigationItem } from '@blog/common/interfaces/navigation';
 import { Icon } from '@theme-react/components/Icon';
-import { Fab } from '@material-ui/core';
 
 export interface NavigationProps {
   title: string;
@@ -110,7 +110,6 @@ const ScrollTop: React.FC = (props) => {
     const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector('#back-to-top-anchor');
 
     if (anchor) {
-      console.log(`scrolling to:`, anchor);
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
