@@ -1,9 +1,9 @@
+import loadable from '@loadable/component';
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import loadable from '@loadable/component';
-import List from '@theme-react/views/List';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
+import List from '@theme-react/views/List';
 import Table from '@theme-react/views/Table';
 
 // I must use Angular Style Routing for stupid react router philosophy
