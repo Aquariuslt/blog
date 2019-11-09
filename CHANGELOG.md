@@ -1,3 +1,10 @@
+# [6.14.0](https://github.com/aquariuslt/blog/compare/v6.13.0...v6.14.0) (2019-11-09)
+
+
+### Features
+
+* **theme-react:** add back-to-top FAB button ([2945831](https://github.com/aquariuslt/blog/commit/294583108aa6d32a7fe75238406fe792d1a41630))
+
 # [6.13.0](https://github.com/aquariuslt/blog/compare/v6.12.6...v6.13.0) (2019-11-09)
 
 
