@@ -1,3 +1,10 @@
+# [6.13.0](https://github.com/aquariuslt/blog/compare/v6.12.6...v6.13.0) (2019-11-09)
+
+
+### Features
+
+* **theme-react:** add robots.txt generation ([8fa8490](https://github.com/aquariuslt/blog/commit/8fa84909834591d97a58ca7ba4ca29d6794d9503))
+
 ## [6.12.6](https://github.com/aquariuslt/blog/compare/v6.12.5...v6.12.6) (2019-11-09)
 
 
