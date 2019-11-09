@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import { Meta, MetaName, MetaValue, RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import { format } from 'date-fns';
@@ -53,4 +54,5 @@ export const createPostDetailOpenGraphMetas = (context: ArticleContext): Meta[] 
 ];
 
 export const createPostsOverviewMetas = (): Meta[] => [createPostsOverviewDescMeta()];
-export const createPostDetailMetas = (context: ArticleContext): Meta[] => createPostDetailOpenGraphMetas(context);
+export const createPostDetailMetas = (context: ArticleContext): Meta[] =>
+  _.concat(createPostDetailOpenGraphMetas(context), [createPostDetailDescMeta(context)]);
