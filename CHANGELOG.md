@@ -1,3 +1,10 @@
+## [6.14.4](https://github.com/aquariuslt/blog/compare/v6.14.3...v6.14.4) (2019-11-10)
+
+
+### Bug Fixes
+
+* **theme-react:** bump `react-disqus-comments` version ([a3253f1](https://github.com/aquariuslt/blog/commit/a3253f155800c15fcbf3bb181381f3996cbf7756))
+
 ## [6.14.3](https://github.com/aquariuslt/blog/compare/v6.14.2...v6.14.3) (2019-11-10)
 
 
