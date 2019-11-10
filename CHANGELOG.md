@@ -1,3 +1,10 @@
+## [6.14.8](https://github.com/aquariuslt/blog/compare/v6.14.7...v6.14.8) (2019-11-10)
+
+
+### Performance Improvements
+
+* **theme-react:** enable dynamic import and auto chunk spliting ([095e4d5](https://github.com/aquariuslt/blog/commit/095e4d5f2c320227cc37b64e63ec1c1ef8fa0097))
+
 ## [6.14.7](https://github.com/aquariuslt/blog/compare/v6.14.6...v6.14.7) (2019-11-10)
 
 
