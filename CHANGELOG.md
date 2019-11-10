@@ -1,3 +1,10 @@
+## [6.14.3](https://github.com/aquariuslt/blog/compare/v6.14.2...v6.14.3) (2019-11-10)
+
+
+### Bug Fixes
+
+* **theme-react:** remove basePath seetings ([59241d6](https://github.com/aquariuslt/blog/commit/59241d6eeeab2d0df6c5f73741d3cd5472030efe))
+
 ## [6.14.2](https://github.com/aquariuslt/blog/compare/v6.14.1...v6.14.2) (2019-11-09)
 
 
