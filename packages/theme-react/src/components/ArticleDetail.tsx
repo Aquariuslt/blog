@@ -46,7 +46,7 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
       <div className={classes.divider} />
 
       {props.tags && (props.tags as any).map((keyword) => <KeywordChip key={keyword.id} {...keyword} />)}
-      <Comment title={props.title || ''} {...props['disqus']} />
+      <Comment title={props.title} {...props['disqus']} />
     </div>
   );
 };
