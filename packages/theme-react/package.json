@@ -20,7 +20,7 @@
     "highlightjs": "^9.12.0",
     "lozad": "^1.14.0",
     "react": "^16.11.0",
-    "react-disqus-components": "^1.1.0",
+    "react-disqus-components": "^1.1.1",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
