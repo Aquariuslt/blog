@@ -24,7 +24,10 @@ export const webpackBaseConfig = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        loader: 'ts-loader'
+        loader: 'ts-loader',
+        options: {
+          configFile: 'tsconfig.webpack.json'
+        }
       },
       {
         test: /\.(png|jpe?g|gif|svg|ico)$/,
