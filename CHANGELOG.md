@@ -1,3 +1,10 @@
+## [6.14.9](https://github.com/aquariuslt/blog/compare/v6.14.8...v6.14.9) (2019-11-11)
+
+
+### Performance Improvements
+
+* **theme-react:** bump `react-disqus-components` version ([13cbe18](https://github.com/aquariuslt/blog/commit/13cbe18f68dc194d9754fa66b8ff79fe0f885375))
+
 ## [6.14.8](https://github.com/aquariuslt/blog/compare/v6.14.7...v6.14.8) (2019-11-10)
 
 
