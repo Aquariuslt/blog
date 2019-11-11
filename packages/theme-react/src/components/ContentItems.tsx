@@ -70,9 +70,14 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
         >
           {item.label}
         </Typography>
-        <Typography component="ul" className={classes.ul}>
-          {item.children.length > 0 && item.children.map((child) => <ContentLink key={child.id} {...child} />)}
-        </Typography>
+
+        {item.children.length > 0 && (
+          <Typography component="ul" className={classes.ul}>
+            {item.children.map((child) => (
+              <ContentLink key={child.id} {...child} />
+            ))}
+          </Typography>
+        )}
       </React.Fragment>
     );
   };
