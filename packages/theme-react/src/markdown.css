@@ -1,4 +1,4 @@
-@import '~highlightjs/styles/github.css';
+@import '~highlight.js/styles/dracula.css';
 
 @font-face {
   font-family: octicons-link;
