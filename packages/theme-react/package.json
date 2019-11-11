@@ -17,6 +17,7 @@
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "clsx": "^1.0.4",
+    "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.16.2",
     "lozad": "^1.14.0",
     "react": "^16.11.0",
