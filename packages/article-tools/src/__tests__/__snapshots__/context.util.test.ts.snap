@@ -12,10 +12,10 @@ Object {
 <h2 id=\\"getting-started\\">Getting Started</h2>
 <p>Getting started snippet</p>
 <h3 id=\\"installing\\">Installing</h3>
-<pre><code class=\\"hljs shell\\">yarn add -D properteis-json-loader
+<pre class=\\"hljs\\"><code>yarn add -D properteis-json-loader
 </code></pre>
 <p>or, using npm</p>
-<pre><code class=\\"hljs shell\\">npm install --save-dev properties-json-loader
+<pre class=\\"hljs\\"><code>npm install --save-dev properties-json-loader
 </code></pre>
 <h3 id=\\"update-webpack-configuration\\">Update webpack configuration</h3>
 <p>You should use it to load as one of webpack loader configuration matching <code>*.properties</code> file.</p>
