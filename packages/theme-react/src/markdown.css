@@ -1,5 +1,5 @@
 @import '~github-markdown-css';
-@import '~highlight.js/styles/darcula.css';
+@import '~highlight.js/styles/a11y-dark.css';
 
 /* manual set black background*/
 .markdown-body .highlight pre,

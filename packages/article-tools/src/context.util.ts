@@ -17,11 +17,13 @@ export const createArticleContext = (filepath: string) => {
 
   const md = new MarkdownIt({
     langPrefix: 'hljs ',
-    highlight: (str, lang): string => {
+    highlight: function(str, lang) {
       if (lang && hljs.getLanguage(lang)) {
-        return hljs.highlight(lang, str).value;
+        try {
+          return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>';
+        } catch (__) {}
       }
-      return '';
+      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
     }
   })
     .use(ImagesDetectionPlugin)
