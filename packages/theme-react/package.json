@@ -1,6 +1,6 @@
 {
   "name": "@blog/theme-react",
-  "version": "6.14.9",
+  "version": "6.14.10",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -9,8 +9,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@blog/common": "^6.14.9",
-    "@blog/config": "^6.14.9",
+    "@blog/common": "^6.14.10",
+    "@blog/config": "^6.14.10",
     "@loadable/component": "^5.10.3",
     "@material-ui/core": "^4.6.0",
     "@material-ui/icons": "^4.5.1",
