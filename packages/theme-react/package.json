@@ -26,6 +26,7 @@
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
     "smooth-scroll": "^16.1.0",
+    "typeface-noto-serif-sc": "^0.0.75",
     "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
