@@ -64,6 +64,7 @@ export const createGoogleAnalyticsMeta = (): Meta[] => {
           content: config.site.googleAnalytics.verification
         },
         {
+          id: MetaName.GOOGLE_SITE_TRACKING,
           name: MetaName.GOOGLE_SITE_TRACKING,
           content: config.site.googleAnalytics.tracking
         }

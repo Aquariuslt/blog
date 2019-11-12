@@ -47,6 +47,7 @@ export const EmptyRouteMeta: RouteMeta = {
 };
 
 export interface Meta {
+  id?: string;
   name?: string;
   property?: string;
   content: string;
