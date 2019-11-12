@@ -1,3 +1,10 @@
+## [6.14.11](https://github.com/aquariuslt/blog/compare/v6.14.10...v6.14.11) (2019-11-12)
+
+
+### Bug Fixes
+
+* **route-tools:** add `id` as google-analytics tag ([f6dc172](https://github.com/aquariuslt/blog/commit/f6dc172b4bbe465978ae7e4301d63096550f393f))
+
 ## [6.14.10](https://github.com/aquariuslt/blog/compare/v6.14.9...v6.14.10) (2019-11-11)
 
 
