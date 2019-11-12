@@ -72,7 +72,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
         </Typography>
 
         {item.children.length > 0 && (
-          <Typography component="ul" className={classes.ul}>
+          <Typography component="ol" className={classes.ul}>
             {item.children.map((child) => (
               <ContentLink key={child.id} {...child} />
             ))}
