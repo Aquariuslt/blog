@@ -1,6 +1,6 @@
 {
   "name": "@blog/theme-react",
-  "version": "6.14.11",
+  "version": "6.14.12",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -9,8 +9,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@blog/common": "^6.14.11",
-    "@blog/config": "^6.14.11",
+    "@blog/common": "^6.14.12",
+    "@blog/config": "^6.14.12",
     "@loadable/component": "^5.10.3",
     "@material-ui/core": "^4.6.0",
     "@material-ui/icons": "^4.5.1",
@@ -21,8 +21,8 @@
     "highlight.js": "^9.16.2",
     "lozad": "^1.14.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
     "react-disqus-components": "^1.2.1",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
     "smooth-scroll": "^16.1.0",
