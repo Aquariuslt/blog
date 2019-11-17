@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@blog/common": "^6.14.11",
-    "@blog/theme-vue": "^6.14.11",
     "cosmiconfig": "^5.2.1",
     "lodash": "^4.17.15",
     "workbox-build": "^4.3.1"
