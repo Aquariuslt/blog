@@ -15,6 +15,8 @@ tags:
 cover: ./cover.png
 ---
 
+# Monorepo Practice in TypeScript Projects
+
 ## Background
 
 随着 Node 生态社区的发展，越来越多的 Nodejs 代码仓库开始采用 Monorepo 的形式进行管理。
