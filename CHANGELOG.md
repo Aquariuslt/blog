@@ -1,3 +1,10 @@
+## [6.14.13](https://github.com/aquariuslt/blog/compare/v6.14.12...v6.14.13) (2019-11-17)
+
+
+### Performance Improvements
+
+* add `--add` at `gh-pages` deploy args ([53e9305](https://github.com/aquariuslt/blog/commit/53e93051a04ef288716fa517ca2f2eeeb3ade749))
+
 ## [6.14.12](https://github.com/aquariuslt/blog/compare/v6.14.11...v6.14.12) (2019-11-17)
 
 
