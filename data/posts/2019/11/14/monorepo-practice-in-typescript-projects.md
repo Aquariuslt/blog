@@ -220,6 +220,130 @@ packages
 │       └── yarn.lock
 ```
 
+可以看到，中间标记为工具库一类的类库，都有 `dist` 和 `src` 目录，作为以 TypeScript 为源代码的语言，我给他们人为地设定了基本的 `TypeScript` + `Lib` 的构建路径，所以在单个项目接口来看，他们都具有通用的 `tsconfig.json` 和 jest 使用的 `jest.config` (in package.json).
+
+**tsconfig.json**
+
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "noImplicitAny": false,
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "exclude": ["node_modules", "dist", "reports", "**/*.test.ts"]
+}
+```
+
+**jest.config**
+
+```json
+"jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+}
+```
+
+对于单一一个类库，必定有着两步 npm script: build, test:
+
+- npm run build 将执行命令 tsc，根据 tsconfig.json 的配置，将 `src` 目录下的 ts 文件转译成 `dist` 目录下的 commonjs 文件。
+- npm run test 将执行命令 jest，根据 jest 的配置， 读取 `"<rootDir>/src/**/*.test.ts"` unix path glob pattern 匹配的测试文件执行单元测试。
+
+## Solutions
+
+言归正传，我们回去之前引出的  Monorepo 在实践中诞生的第一个问题
+
+- UnitTesting cross Monorepo
+
+不过我们可以由浅入深，先来看看这些由纯工具类库构造成的 Monorepo 如何执行单元测试，再进化到遇到其他乱七八糟复杂的复杂情况时，应当如何应对。
+
+### UnitTesting cross Monorepo
+
+由于我们可以直接在每个工具类库下单独执行 `npm run test` 来分别执行单元测试，那么则可以在项目根目录下通过 `lerna run test` 执行。
+
+啊哈！思考往往没有这么简单。我们执行单元测试的过程，不仅仅是为了为了分批执行多个子项目的单元测试，判断中间是否有非 0 退出的错误案例，用以快速反馈本次 commit 是否可能造成了破坏性的后果。还能结合很多测试结果相关的 CI 工具，反馈单元测试覆盖率等关键指标。
+
+在开源界免费、支持度比较好覆盖率分析平台，不得不说 [Codecov](https://codecov.io/) 。基本上在尝试过所有类似的、免费的覆盖率报告分析平台后，最后都选择迁移到 Codecov 上。
+
+那这里引发的关键思考点是: 我们分别在每个子项目下分别执行 `npm run test` ，根据各个子项目的 jestconfig, 将会在不同的子项目目录下生成覆盖率报告 (这里特指 jest 生成的 linux 标准的 `[lcov.info](http://lcov.info)` ) 文件。那么我们的 codecov 有办法汇总多个不同的 lcov.info 文件并为 Monorepo 的单个大项目仓库生成一份覆盖率报告吗 ?
+
+我至今还没为这种思路找到经典、合理的解决方案。
+
+如果在 Monorepo 的根目录里执行 `jest` ，接着为整个项目生成一份覆盖率报告，这样来说是不是比较方便的解决这个问题呢?
+
+由于我们的工具类子仓库大部分都觉有相同的目录结构，比如单元测试文件都可以用固定的 glob 表达式进行匹配，因而我们可以在项目根目录里安装 `typescript` 和 `jest` 相关依赖，然后自上而下的查找 sub-packages 中的测试文件执行测试，使得我们可以通过在不同的路径执行 `jest` 而达到不同的效果:
+
+- 在根目录下执行 jest，可以一次执行所有 sub-packages 的测试，并在根目录指定的文件夹下生成覆盖率报告
+- 在单个 sub-package 下执行 jest，可以快速的执行单个 sub-packages 下的测试，执行效率高，且能适配大多数 IDE、Editor 的单元测试执行上下文自动发现
+
+所以这里的解决方案的前置要求便是:
+
+- 每个 sub-package 具有类似的、统一的测试路径结构风格
+- 每个 sub-package 使用到的 jest extension 不允许存在互斥的情况
+- 根目录的 jest 配置是所有 sub-packages 的交集
+
+到了这里，我们可以看一下在这种解决方案下的更目录的 jestconfig:
+
+其中关键的节点是 `testMatch` 与 `collectCoverageFrom` 下的字段，用 `<rootDir>/packages/**/src/**/*` 去匹配所有 sub-packages 下的源代码与测试代码。
+
+```json
+"jest": {
+  "moduleFileExtensions": [
+    "ts",
+    "js",
+    "json"
+  ],
+  "transform": {
+    "^.+\\.ts$": "ts-jest",
+    "^.*\\.md$": "jest-raw-loader"
+  },
+  "collectCoverageFrom": [
+    "!**/__tests__/**",
+    "!**/src/index.ts",
+    "!**/src/main.ts",
+    "!**/src/plugins.ts",
+    "!**/*.module.ts",
+    "!**/migration.ts",
+    "<rootDir>/src/**/*.ts",
+    "<rootDir>/packages/**/src/**/*.ts"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/*.test.ts",
+    "<rootDir>/packages/**/src/**/*.test.ts"
+  ],
+  "testEnvironment": "node",
+  "coverageDirectory": "<rootDir>/reports/coverage"
+}
+```
+
+TODO
+
 ## References
 
 - Lerna at Github [https://github.com/lerna/lerna](https://github.com/lerna/lerna)
