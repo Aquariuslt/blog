@@ -1,3 +1,11 @@
+## [6.14.12](https://github.com/aquariuslt/blog/compare/v6.14.11...v6.14.12) (2019-11-17)
+
+
+### Bug Fixes
+
+* downgrade and lock lerna version for workaround ([af148f6](https://github.com/aquariuslt/blog/commit/af148f6198433681f502ea49312d7062178c9bea))
+* fix posts toc issue ([65f6a6d](https://github.com/aquariuslt/blog/commit/65f6a6d688a53704a182139ae06a21c5fbaf048a))
+
 ## [6.14.11](https://github.com/aquariuslt/blog/compare/v6.14.10...v6.14.11) (2019-11-12)
 
 
