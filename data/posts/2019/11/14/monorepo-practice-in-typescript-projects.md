@@ -248,25 +248,18 @@ packages
 **jest.config**
 
 ```json
-"jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json"
-    ],
+{
+  "jest": {
+    "moduleFileExtensions": ["ts", "js", "json"],
     "transform": {
       "^.+\\.ts$": "ts-jest",
       "^.*\\.md$": "jest-raw-loader"
     },
-    "collectCoverageFrom": [
-      "!**/__tests__/**",
-      "<rootDir>/src/**/*.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/*.test.ts"
-    ],
+    "collectCoverageFrom": ["!**/__tests__/**", "<rootDir>/src/**/*.ts"],
+    "testMatch": ["<rootDir>/src/**/*.test.ts"],
     "testEnvironment": "node",
     "coverageDirectory": "<rootDir>/reports/coverage"
+  }
 }
 ```
 
@@ -306,43 +299,115 @@ packages
 
 - 每个 sub-package 具有类似的、统一的测试路径结构风格
 - 每个 sub-package 使用到的 jest extension 不允许存在互斥的情况
-- 根目录的 jest 配置是所有 sub-packages 的交集
+- 根目录的 jest 配置是所有 sub-packages 的并集
 
 到了这里，我们可以看一下在这种解决方案下的更目录的 jestconfig:
 
 其中关键的节点是 `testMatch` 与 `collectCoverageFrom` 下的字段，用 `<rootDir>/packages/**/src/**/*` 去匹配所有 sub-packages 下的源代码与测试代码。
 
 ```json
-"jest": {
-  "moduleFileExtensions": [
-    "ts",
-    "js",
-    "json"
-  ],
-  "transform": {
-    "^.+\\.ts$": "ts-jest",
-    "^.*\\.md$": "jest-raw-loader"
-  },
-  "collectCoverageFrom": [
-    "!**/__tests__/**",
-    "!**/src/index.ts",
-    "!**/src/main.ts",
-    "!**/src/plugins.ts",
-    "!**/*.module.ts",
-    "!**/migration.ts",
-    "<rootDir>/src/**/*.ts",
-    "<rootDir>/packages/**/src/**/*.ts"
-  ],
-  "testMatch": [
-    "<rootDir>/src/**/*.test.ts",
-    "<rootDir>/packages/**/src/**/*.test.ts"
-  ],
-  "testEnvironment": "node",
-  "coverageDirectory": "<rootDir>/reports/coverage"
+{
+  "jest": {
+    "moduleFileExtensions": ["ts", "js", "json"],
+    "transform": {
+      "^.+\\.ts$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "!**/src/index.ts",
+      "!**/src/main.ts",
+      "!**/src/plugins.ts",
+      "!**/*.module.ts",
+      "!**/migration.ts",
+      "<rootDir>/src/**/*.ts",
+      "<rootDir>/packages/**/src/**/*.ts"
+    ],
+    "testMatch": ["<rootDir>/src/**/*.test.ts", "<rootDir>/packages/**/src/**/*.test.ts"],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+  }
 }
 ```
 
-TODO
+如此一来，我们便解决了基本的问题。
+
+下面我们来看糅合了实际工作中一些复杂的情况：整合带 Path Alias 的子项目。
+
+### Path Alias
+
+这里将会以博客项目中的 `application` 子项目作为讲解。
+
+`application` 子项目是一个使用了 nestjs 作为基本框架的项目，他在整个博客应用中起的作用是:
+
+调用其他类库，并按照一定的顺序执行整个构建工作流，如扫描读取所有 Markdown 文件并提取其元数据，根据元信息构造路由，根据路由信息构造 API 内容 等等。
+
+所以作为整个 Monorepo 中具有唯一性的、没有被其他 sub-package 依赖的调用方项目，我为他设置了一个 Path Alias: `@-> ./src`
+
+在子项目路径  `packages/application` 目录下，tsconfig.json 中的路径别称是:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
+```
+
+在 jestconfig 中也需要声明这个 Path Alias:
+
+```json
+{
+  "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
+  }
+}
+```
+
+为了遵循原先的解决方案需求，为应对这种具有 Path Alias 的子项目，我的实践如下:
+
+- 子项目本身设立 Path Alias
+- 子项目的测试代码结构与其他类库路径风格对齐
+- 根目录在 jestconfig 下添加相关的 Path Alias 设置，即:
+
+```json
+{
+  "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/packages/application/src/$1"
+    }
+  }
+}
+```
+
+这样便能解决 Path Alias x UnitTesting 的问题。
+
+### Summarization
+
+结合在项目中遇到的以上问题以及目前的实践方案，也反向引导出我们在项目中也需要遵循一些认为的、容易接受的约定。
+
+总结这几个问题的解决思路，可以汇总成一下个情景。
+
+我们在遇到 TypeScript + Jest + Monorepo 的场景时，需要遵循以下几种约定:
+
+- 带有 Path Alias 的子项目，尽量不要被其他子项目所依赖
+- 所有子项目的测试文件路径表达式尽量一致
+
+在执行测试和构建方面，则需要注意以下的配置方式:
+
+- 在根目录下执行 Jest，Jest 的配置是所有子项目 Jest 配置的并集
+- 在根目录下执行 Jest，Jest 的配置需要理解带 Path Alias 子项目的路径 Mapping (即需要根目录理解此子项目的 Mapping 配置)
+
+### More Complex Situation
+
+中间还会发现有一些更复杂的情况
+
+- 多个子项目的 tsconfig.json 不尽相同，无法合并出合理的并集?
+- 子项目是一个前端项目，用到了很多不同的 loader 与插件，如 React/Vue ，根目录的配置是否也需要理解并安装这些 loader 呢?
 
 ## References
 
