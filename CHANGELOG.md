@@ -1,3 +1,10 @@
+## [6.15.2](https://github.com/aquariuslt/blog/compare/v6.15.1...v6.15.2) (2019-11-24)
+
+
+### Performance Improvements
+
+* **theme-react:** update active content-item scroll listener ([cfbd23f](https://github.com/aquariuslt/blog/commit/cfbd23f783730d160f0e240f605b09d713859fe6))
+
 ## [6.15.1](https://github.com/aquariuslt/blog/compare/v6.15.0...v6.15.1) (2019-11-24)
 
 
