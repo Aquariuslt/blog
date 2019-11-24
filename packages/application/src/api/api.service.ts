@@ -7,7 +7,7 @@ import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { ApiData } from '@blog/common/interfaces/api';
 import {
   createCategoriesOverviewApiData,
-  createCategorysDetailApiData,
+  createCategoryDetailApiData,
   createPostDetailApiData,
   createPostsOverviewApiData,
   createTagDetailApiData,
@@ -121,7 +121,7 @@ export class ApiService implements OnModuleInit {
     const categoryDetails = this.routes.categoryDetails;
     return _.map(categoryDetails, (categoryDetail) => {
       return _.merge({}, categoryDetail, {
-        data: createCategorysDetailApiData(categoryDetail.key, this.article.contexts)
+        data: createCategoryDetailApiData(categoryDetail.key, this.article.contexts)
       });
     });
   }

@@ -18,6 +18,9 @@ export const createCategoriesOverviewApiData = (contexts: ArticleContext[]) => {
   return _.map(_.keys(categoriesMap), (category) => createCategoryLinkItem(category, categoriesMap[category].length));
 };
 
-export const createCategorysDetailApiData = (rawCategory: string, contexts: ArticleContext[]) => {
-  return _.map(_.filter(contexts, (context) => _.includes(context.categories, rawCategory)), createArticleOverview);
+export const createCategoryDetailApiData = (rawCategory: string, contexts: ArticleContext[]) => {
+  return _.map(
+    _.filter(contexts, (context) => _.includes(context.categories, rawCategory)),
+    createArticleOverview
+  );
 };
