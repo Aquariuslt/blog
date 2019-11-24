@@ -28,6 +28,8 @@ jobs:
           flags: unittests
           name: codecov-umbrella
       - name: Check bundlesize
-        run: yarn build yarn bundlesize
+        run: |
+          yarn build
+          yarn bundlesize
         env:
           BUNDLESIZE_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}
