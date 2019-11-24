@@ -125,7 +125,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
     }
   }, [props]);
 
-  useThrottledOnScroll(findActiveIndex, 166);
+  useThrottledOnScroll(props.items ? findActiveIndex : null, 166);
 
   const ContentLink: React.FC<ContentItem> = (item) => {
     return (
