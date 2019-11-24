@@ -1,4 +1,7 @@
 import * as React from 'react';
+import clsx from 'clsx';
+import throttle from 'lodash/throttle';
+import noop from 'lodash/noop';
 import { createStyles, makeStyles, Theme, useTheme } from '@material-ui/core/styles';
 import { ContentItem } from '@blog/common/interfaces/articles/content-item';
 import { DRAWER_WIDTH } from '@theme-react/constants';
@@ -39,8 +42,12 @@ const useStyles = makeStyles((theme: Theme) =>
       '&:hover': {
         borderLeft: `4px solid ${theme.palette.grey[200]}`,
         cursor: 'pointer'
+      },
+      '&$active,&:active': {
+        borderLeft: `4px solid ${theme.palette.grey[800]}`
       }
-    }
+    },
+    active: {}
   })
 );
 
@@ -48,14 +55,77 @@ export interface ContentItemsProps {
   items: ContentItem[];
 }
 
+const useThrottledOnScroll = (callback, delay) => {
+  const throttledCallback = React.useMemo(() => (callback ? throttle(callback, delay) : noop), [callback, delay]);
+
+  React.useEffect(() => {
+    if (throttledCallback === noop) {
+      return undefined;
+    }
+
+    window.addEventListener('scroll', throttledCallback);
+    return () => {
+      window.removeEventListener('scroll', throttledCallback);
+      throttledCallback.cancel();
+    };
+  }, [throttledCallback]);
+};
+
 export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   const theme = useTheme();
   const classes = useStyles();
+  const [activeState, setActiveState] = React.useState(null);
 
   const scrollTo = (id: string) => () => {
     const scroll = new SmoothScroll();
     scroll.animateScroll(document.getElementById(id));
   };
+
+  const collectAllIds = (rootItem: ContentItem) => {
+    const collectItemIds = (item) => {
+      if (item.children) {
+        let ids = [item.id];
+        item.children.forEach((child) => {
+          ids = ids.concat(collectItemIds(child));
+        });
+        return ids;
+      } else {
+        return [item.id];
+      }
+    };
+
+    return collectItemIds(rootItem);
+  };
+
+  const findActiveIndex = React.useCallback(() => {
+    const ids = collectAllIds(props.items && props.items[0]);
+
+    let activeNode;
+
+    for (let i = ids.length - 1; i >= 0; i--) {
+      // No hash if we're near the top of the page
+      if (document.documentElement.scrollTop < 200) {
+        break;
+      }
+
+      const checkingNode = document.getElementById(ids[i]);
+      if (
+        checkingNode &&
+        checkingNode.offsetTop < document.documentElement.scrollTop + document.documentElement.clientHeight / 8
+      ) {
+        activeNode = checkingNode;
+        break;
+      }
+    }
+
+    if (activeNode && activeState !== activeNode.id) {
+      setActiveState(activeNode.id);
+    } else {
+      ids.length > 0 && setActiveState(ids[0]);
+    }
+  }, [props]);
+
+  useThrottledOnScroll(findActiveIndex, 166);
 
   const ContentLink: React.FC<ContentItem> = (item) => {
     return (
@@ -63,7 +133,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
         <Typography
           onClick={scrollTo(item.id)}
           component="li"
-          className={classes.item}
+          className={clsx(classes.item, activeState === item.id ? classes.active : undefined)}
           style={{
             paddingLeft: theme.spacing(item.level)
           }}
@@ -84,11 +154,9 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
 
   return (
     <nav className={classes.root}>
-      {props.items.map(
-        (item): JSX.Element => (
-          <ContentLink key={item.id} {...item} />
-        )
-      )}
+      {props.items.map((item) => (
+        <ContentLink key={item.id} {...item} />
+      ))}
     </nav>
   );
 };
