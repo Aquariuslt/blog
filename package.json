@@ -19,6 +19,7 @@
     "pretest:cov": "lerna run clean && lerna run build",
     "test:cov": "jest --coverage",
     "build": "rimraf dist && lerna run build && lerna run build:prod",
+    "bundlesize": "bundlesize",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "@types/node": "^12.12.7",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
+    "bundlesize": "^0.18.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
@@ -172,5 +174,15 @@
         }
       ]
     ]
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/static/js/*.js",
+      "maxSize": "30 kB"
+    },
+    {
+      "path": "./dist/static/css/*.css",
+      "maxSize": "400 kB"
+    }
+  ]
 }
