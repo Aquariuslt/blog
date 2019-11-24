@@ -74,11 +74,12 @@ const useThrottledOnScroll = (callback, delay) => {
 export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   const theme = useTheme();
   const classes = useStyles();
-  const [activeState, setActiveState] = React.useState(null);
+  const [activeState, setActiveState] = React.useState<string | null>(null);
 
   const scrollTo = (id: string) => () => {
     const scroll = new SmoothScroll();
     scroll.animateScroll(document.getElementById(id));
+    setActiveState(id);
   };
 
   const collectAllIds = (rootItem: ContentItem) => {
