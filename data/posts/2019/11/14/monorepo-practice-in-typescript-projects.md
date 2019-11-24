@@ -52,7 +52,7 @@ cover: ./cover.png
 - 单元测试的配置应该如何维护? 维护在 Monorepo 的根目录还是单独拆分维护在每个 sub-package 下?
 - 如何像 Multi-Repo 那样与测试覆盖率的 CI 集合起来?
 
-### Path Alias
+### With Path Alias
 
 现代化的 Node 项目(不管是 Node 还是前端项目)，很多时候都有一些 Path-Alias 的技巧。
 
