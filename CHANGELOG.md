@@ -1,3 +1,10 @@
+# [6.15.0](https://github.com/aquariuslt/blog/compare/v6.14.13...v6.15.0) (2019-11-24)
+
+
+### Features
+
+* **theme-react:** add active content-item scroll listener ([c6c70b4](https://github.com/aquariuslt/blog/commit/c6c70b471111a248a60b7f00cf534feb99b38e7b))
+
 ## [6.14.13](https://github.com/aquariuslt/blog/compare/v6.14.12...v6.14.13) (2019-11-17)
 
 
