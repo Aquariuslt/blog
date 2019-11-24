@@ -2,11 +2,11 @@ import * as React from 'react';
 import clsx from 'clsx';
 import throttle from 'lodash/throttle';
 import noop from 'lodash/noop';
+import SmoothScroll from 'smooth-scroll';
+import Typography from '@material-ui/core/Typography';
 import { createStyles, makeStyles, Theme, useTheme } from '@material-ui/core/styles';
 import { ContentItem } from '@blog/common/interfaces/articles/content-item';
 import { DRAWER_WIDTH } from '@theme-react/constants';
-import SmoothScroll from 'smooth-scroll';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
