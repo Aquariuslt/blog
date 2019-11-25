@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
         cursor: 'pointer'
       },
       '&$active,&:active': {
-        borderLeft: `4px solid ${theme.palette.grey[800]}`
+        borderLeft: `4px solid ${theme.palette.grey[200]}`
       }
     },
     active: {}
