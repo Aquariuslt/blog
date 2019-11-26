@@ -1,3 +1,10 @@
+# [6.17.0](https://github.com/aquariuslt/blog/compare/v6.16.0...v6.17.0) (2019-11-26)
+
+
+### Features
+
+* enable webp x <picture> for better performance ([a657c27](https://github.com/aquariuslt/blog/commit/a657c272764a3cb2c1bfdafc6e6c12bae5034754))
+
 # [6.16.0](https://github.com/aquariuslt/blog/compare/v6.15.2...v6.16.0) (2019-11-26)
 
 
