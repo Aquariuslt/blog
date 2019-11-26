@@ -1,3 +1,10 @@
+## [6.17.4](https://github.com/aquariuslt/blog/compare/v6.17.3...v6.17.4) (2019-11-26)
+
+
+### Performance Improvements
+
+* **theme-react:** enable React.hydrate() ([8200f3a](https://github.com/aquariuslt/blog/commit/8200f3a41184295351ca6fb7d1e8a98342b6865d))
+
 ## [6.17.3](https://github.com/aquariuslt/blog/compare/v6.17.2...v6.17.3) (2019-11-26)
 
 
