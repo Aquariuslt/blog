@@ -1,7 +1,7 @@
-import lozad from 'lozad';
+import clsx from 'clsx';
+import LazyLoad from 'vanilla-lazyload';
 import * as React from 'react';
-import { useCallback } from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { useEffect } from 'react';
 
 const placeholder = require('@theme-react/imgs/placeholder.png');
 
@@ -11,48 +11,19 @@ export interface LazyImageProps {
   [key: string]: any;
 }
 
-const useStyles = makeStyles(() =>
-  createStyles({
-    '@keyframes slide': {
-      from: { opacity: 0 },
-      to: { opacity: 1 }
-    },
-    skeleton: {
-      animationName: '$slide',
-      animationDuration: '1.5s',
-      animationTimingFunction: 'ease-in-ease-out',
-      animationIterationCount: 'infinite',
-      animationPlayState: 'running'
-    }
-  })
-);
-
 export const LazyImage: React.FC<LazyImageProps> = (props) => {
-  const classes = useStyles();
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: '.lazy'
+  });
 
-  const imageElement = useCallback(
-    (node) => {
-      if (node != null) {
-        node.removeAttribute('data-loaded');
-        const observer = lozad(node, {
-          loaded: (el) => {
-            el.classList.remove(classes.skeleton);
-          }
-        });
-        observer.observe();
-      }
-    },
-    [props.image]
-  );
+  lazyLoadInstance.update();
+
+  const webpImage = props.image ? props.image.replace('.png', '.webp') : '';
 
   return (
-    <img
-      {...props}
-      ref={imageElement}
-      src={placeholder}
-      data-src={props.image}
-      alt={props.alt}
-      className={`${props.className} ${classes.skeleton}`}
-    />
+    <picture>
+      <source data-srcset={webpImage} type="image/webp" />
+      <img alt={props.alt} className={clsx(props.className, 'lazy')} src={placeholder} data-src={props.image} />
+    </picture>
   );
 };
