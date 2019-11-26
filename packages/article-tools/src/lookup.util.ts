@@ -33,8 +33,11 @@ export const lookupImagesInMarkdownFile = (filepath) => {
 };
 
 export const isImageHosting = (imageUrl: string): boolean => {
-  const MATCHING_PREFIXS = ['https://', 'http://', '//'];
-  return _.includes(_.map(MATCHING_PREFIXS, (prefix) => _.startsWith(imageUrl, prefix)), true);
+  const MATCHING_PREFIXES = ['https://', 'http://', '//'];
+  return _.includes(
+    _.map(MATCHING_PREFIXES, (prefix) => _.startsWith(imageUrl, prefix)),
+    true
+  );
 };
 
 export const getImageFilename = (imageUrl: string): string => {

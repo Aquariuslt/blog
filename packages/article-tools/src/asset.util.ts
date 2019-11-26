@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as mkdirp from 'mkdirp';
+import * as sharp from 'sharp';
 import { metadata } from '@blog/markdown';
 
 /**
@@ -27,5 +28,20 @@ export const copyImagesInMarkdown = (filepath: string, images: string[], baseDir
 
     mkdirp.sync(imageDestinationDir);
     fs.copyFileSync(sourceImagePath, imageDestinationPath);
+
+    // try convert to optimized webp images after
+    optimizeImage(imageDestinationPath);
   });
+};
+
+export const optimizeImage = async (imagePath) => {
+  const imageBuffer = fs.readFileSync(imagePath);
+
+  const imageParsedPath = path.parse(imagePath);
+  const webpImageContent = await sharp(imageBuffer)
+    .webp()
+    .toBuffer();
+
+  const webpImagePath = path.join(imageParsedPath.dir, imageParsedPath.name + '.webp');
+  fs.writeFileSync(webpImagePath, webpImageContent);
 };
