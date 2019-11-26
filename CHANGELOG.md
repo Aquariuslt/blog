@@ -1,3 +1,15 @@
+## [6.17.2](https://github.com/aquariuslt/blog/compare/v6.17.1...v6.17.2) (2019-11-26)
+
+
+### Performance Improvements
+
+* **theme-react:** using vanilla-lazyload instead lozad ([d88019f](https://github.com/aquariuslt/blog/commit/d88019f7be6e0ba58e43504fc894b5ac621b3d63))
+
+
+### Reverts
+
+* **theme-react:** revert lazy image picture tag perf ([396d6d6](https://github.com/aquariuslt/blog/commit/396d6d637b2d37af546d41bb2795fbaa8c5be778))
+
 ## [6.17.1](https://github.com/aquariuslt/blog/compare/v6.17.0...v6.17.1) (2019-11-26)
 
 
