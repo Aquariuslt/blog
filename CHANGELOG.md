@@ -1,3 +1,10 @@
+## [6.17.3](https://github.com/aquariuslt/blog/compare/v6.17.2...v6.17.3) (2019-11-26)
+
+
+### Performance Improvements
+
+* **theme-react:** set active state for TOC after perform scroll animate ([ed36723](https://github.com/aquariuslt/blog/commit/ed36723b5f1db38708cc6c22dd6b26765e6b0e1c))
+
 ## [6.17.2](https://github.com/aquariuslt/blog/compare/v6.17.1...v6.17.2) (2019-11-26)
 
 
