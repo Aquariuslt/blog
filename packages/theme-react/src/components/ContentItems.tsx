@@ -77,9 +77,18 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   const [activeState, setActiveState] = React.useState<string | null>(null);
 
   const scrollTo = (id: string) => () => {
+    const SCROLL_DURATION = 2000;
     const scroll = new SmoothScroll();
-    scroll.animateScroll(document.getElementById(id));
-    setActiveState(id);
+    scroll.animateScroll(document.getElementById(id), {
+      speed: SCROLL_DURATION,
+      speedAsDuration: true
+    });
+
+    setTimeout(() => {
+      if (activeState !== id) {
+        setActiveState(id);
+      }
+    }, SCROLL_DURATION + 500);
   };
 
   const collectAllIds = (rootItem: ContentItem) => {

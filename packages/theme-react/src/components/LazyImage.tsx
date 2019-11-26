@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import LazyLoad from 'vanilla-lazyload';
 import * as React from 'react';
-import { useEffect } from 'react';
 
 const placeholder = require('@theme-react/imgs/placeholder.png');
 
