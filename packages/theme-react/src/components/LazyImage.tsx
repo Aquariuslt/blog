@@ -39,6 +39,7 @@ export const LazyImage: React.FC<LazyImageProps> = (props) => {
             el.classList.remove(classes.skeleton);
             el.lastChild.classList.remove(classes.skeleton);
             el.lastChild.classList.add(props.className);
+            el.lastChild.setAttribute('alt', props.alt || '');
           }
         });
         observer.observe();
