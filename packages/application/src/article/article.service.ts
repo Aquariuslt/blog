@@ -85,7 +85,7 @@ export class ArticleService implements OnModuleInit {
       .sort();
   }
 
-  get contexts() {
+  get postContexts() {
     return this.postsContexts;
   }
 
