@@ -1,7 +1,9 @@
 import lozad from 'lozad';
 import * as React from 'react';
 import { useCallback } from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+
+const placeholder = require('@theme-react/imgs/placeholder.png');
 
 export interface LazyImageProps {
   image?: string;
@@ -30,16 +32,11 @@ export const LazyImage: React.FC<LazyImageProps> = (props) => {
 
   const imageElement = useCallback(
     (node) => {
-      if (node != null && props.image) {
+      if (node != null) {
         node.removeAttribute('data-loaded');
-
-        // lozad <picture/> implementation sucks...
         const observer = lozad(node, {
           loaded: (el) => {
             el.classList.remove(classes.skeleton);
-            el.lastChild.classList.remove(classes.skeleton);
-            el.lastChild.classList.add(props.className);
-            el.lastChild.setAttribute('alt', props.alt || '');
           }
         });
         observer.observe();
@@ -48,25 +45,14 @@ export const LazyImage: React.FC<LazyImageProps> = (props) => {
     [props.image]
   );
 
-  const webpUrl = props.image ? props.image.replace('.png', '.webp') : props.image;
-
   return (
-    <picture ref={imageElement} className={`${props.className} ${classes.skeleton}`}>
-      <source
-        {...props}
-        srcSet={webpUrl}
-        data-alt={props.alt}
-        data-srcset={webpUrl}
-        className={`${props.className} ${classes.skeleton}`}
-        type="image/webp"
-      />
-      <source
-        {...props}
-        srcSet={props.image}
-        data-alt={props.alt}
-        data-srcset={props.image}
-        className={`${props.className} ${classes.skeleton}`}
-      />
-    </picture>
+    <img
+      {...props}
+      ref={imageElement}
+      src={placeholder}
+      data-src={props.image}
+      alt={props.alt}
+      className={`${props.className} ${classes.skeleton}`}
+    />
   );
 };
