@@ -77,35 +77,35 @@ export class RoutesService implements OnModuleInit {
   }
 
   createTagsOverviewRoute() {
-    return createTagsOverviewRouteMeta(this.article.contexts, this.routesOptions);
+    return createTagsOverviewRouteMeta(this.article.postContexts, this.routesOptions);
   }
 
   createTagDetailRoutes() {
-    const tags = getAllTagsFromContexts(this.article.contexts);
+    const tags = getAllTagsFromContexts(this.article.postContexts);
 
     return _.map(tags, (rawTag) => {
-      return createTagDetailRouteMeta(rawTag, this.article.contexts, this.routesOptions);
+      return createTagDetailRouteMeta(rawTag, this.article.postContexts, this.routesOptions);
     });
   }
 
   createCategoriesOverviewRoute() {
-    return createCategoriesOverviewRouteMeta(this.article.contexts, this.routesOptions);
+    return createCategoriesOverviewRouteMeta(this.article.postContexts, this.routesOptions);
   }
 
   createCategoryDetailRoutes() {
-    const categories = getAllCategoriesFromContexts(this.article.contexts);
+    const categories = getAllCategoriesFromContexts(this.article.postContexts);
     return _.map(categories, (rawCategory) => {
-      return createCategoryDetailRouteMeta(rawCategory, this.article.contexts, this.routesOptions);
+      return createCategoryDetailRouteMeta(rawCategory, this.article.postContexts, this.routesOptions);
     });
   }
 
   createPostsOverviewRoute() {
-    return createPostsOverviewRouteMeta(this.article.contexts, this.routesOptions);
+    return createPostsOverviewRouteMeta(this.article.postContexts, this.routesOptions);
   }
 
   createPostDetailRoutes() {
-    return _.map(this.article.contexts, (context) => {
-      return createPostDetailRouteMeta(context, this.article.contexts, this.routesOptions);
+    return _.map(this.article.postContexts, (context) => {
+      return createPostDetailRouteMeta(context, this.article.postContexts, this.routesOptions);
     });
   }
 

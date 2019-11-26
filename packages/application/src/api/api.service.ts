@@ -98,13 +98,13 @@ export class ApiService implements OnModuleInit {
   buildHomeApi() {
     return _.merge({}, this.routes.home, {
       path: buildURLPath(RoutePathPrefix.HOME_ALIAS),
-      data: createPostsOverviewApiData(this.article.contexts)
+      data: createPostsOverviewApiData(this.article.postContexts)
     });
   }
 
   buildTagsOverviewApi() {
     return _.merge({}, this.routes.tagsOverview, {
-      data: createTagsOverviewApiData(this.article.contexts)
+      data: createTagsOverviewApiData(this.article.postContexts)
     });
   }
 
@@ -112,14 +112,14 @@ export class ApiService implements OnModuleInit {
     const tagDetails = this.routes.tagDetails;
     return _.map(tagDetails, (tagDetail) => {
       return _.merge({}, tagDetail, {
-        data: createTagDetailApiData(tagDetail.key, this.article.contexts)
+        data: createTagDetailApiData(tagDetail.key, this.article.postContexts)
       });
     });
   }
 
   buildCategoriesOverviewApi() {
     return _.merge({}, this.routes.categoriesOverview, {
-      data: createCategoriesOverviewApiData(this.article.contexts)
+      data: createCategoriesOverviewApiData(this.article.postContexts)
     });
   }
 
@@ -127,20 +127,20 @@ export class ApiService implements OnModuleInit {
     const categoryDetails = this.routes.categoryDetails;
     return _.map(categoryDetails, (categoryDetail) => {
       return _.merge({}, categoryDetail, {
-        data: createCategoryDetailApiData(categoryDetail.key, this.article.contexts)
+        data: createCategoryDetailApiData(categoryDetail.key, this.article.postContexts)
       });
     });
   }
 
   buildPostsOverviewApi() {
     return _.merge({}, this.routes.postsOverview, {
-      data: createPostsOverviewApiData(this.article.contexts)
+      data: createPostsOverviewApiData(this.article.postContexts)
     });
   }
 
   buildPostDetailsApi() {
     return _.map(this.routes.postDetails, (postDetail) => {
-      const data = _.merge({}, createPostDetailApiData(postDetail.key, this.article.contexts), {
+      const data = _.merge({}, createPostDetailApiData(postDetail.key, this.article.postContexts), {
         disqus: {
           shortname: this.config.site.disqus,
           url: postDetail.url,
