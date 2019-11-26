@@ -6,6 +6,7 @@ import Info from '@material-ui/icons/Info';
 import Link from '@material-ui/icons/Link';
 import Home from '@material-ui/icons/Home';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import NavigateNext from '@material-ui/icons/NavigateNext';
 
 export interface IconProps {
   type: string;
@@ -19,7 +20,8 @@ export const Icon: React.FC<IconProps> = (props) => {
     info: <Info />,
     link: <Link />,
     home: <Home />,
-    up: <KeyboardArrowUpIcon />
+    up: <KeyboardArrowUpIcon />,
+    navigate_next: <NavigateNext />
   };
 
   const fallbackIcon = <Menu />;

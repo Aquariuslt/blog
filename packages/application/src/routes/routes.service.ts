@@ -3,7 +3,7 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
 import { ArticleService } from '@/article/article.service';
 import { RouteMeta } from '@blog/common/interfaces/routes';
-import { RoutesOptions } from '@blog/routes-tools';
+import { createPagesDetailRouteMeta, RoutesOptions } from '@blog/routes-tools';
 import { getAllTagsFromContexts, getAllCategoriesFromContexts } from '@blog/article-tools';
 import {
   createHomeRouteMeta,
@@ -33,6 +33,8 @@ export class RoutesService implements OnModuleInit {
   public postsOverview: RouteMeta;
   public postDetails: RouteMeta[] = [];
 
+  public pageDetails: RouteMeta[] = [];
+
   constructor(private config: ConfigService, private article: ArticleService) {}
 
   onModuleInit() {
@@ -52,6 +54,7 @@ export class RoutesService implements OnModuleInit {
     this.categoryDetails = this.createCategoryDetailRoutes();
     this.postsOverview = this.createPostsOverviewRoute();
     this.postDetails = this.createPostDetailRoutes();
+    this.pageDetails = this.createPageDetailRoutes();
 
     this.routes = _.concat(
       [this.home],
@@ -60,7 +63,8 @@ export class RoutesService implements OnModuleInit {
       [this.postsOverview],
       this.tagDetails,
       this.categoryDetails,
-      this.postDetails
+      this.postDetails,
+      this.pageDetails
     );
 
     _.each(this.routes, (route) => {
@@ -102,6 +106,12 @@ export class RoutesService implements OnModuleInit {
   createPostDetailRoutes() {
     return _.map(this.article.contexts, (context) => {
       return createPostDetailRouteMeta(context, this.article.contexts, this.routesOptions);
+    });
+  }
+
+  createPageDetailRoutes() {
+    return _.map(this.article.pageContexts, (context) => {
+      return createPagesDetailRouteMeta(context, this.routesOptions);
     });
   }
 

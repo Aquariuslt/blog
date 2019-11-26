@@ -24,6 +24,7 @@ import {
   createCategoriesOverviewBreadcrumbItem,
   createCategoryDetailBreadcrumbItem,
   createHomeBreadcrumbItem,
+  createPageDetailBreadcrumbItem,
   createPostDetailBreadcrumbItem,
   createPostsOverviewBreadcrumbItem,
   createTagDetailBreadcrumbItem,
@@ -254,6 +255,26 @@ export const createPostDetailRouteMeta = (
     ]),
     type: Layout.DETAIL,
     metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createPostDetailMetas(article)),
+    data: undefined
+  };
+};
+
+export const createPagesDetailRouteMeta = (article: ArticleContext, options?: Partial<RoutesOptions>): RouteMeta => {
+  const path = buildURLPath(RoutePathPrefix.PAGES, article.id);
+  const title = buildTitle(article.title, options.baseTitle, options.titleSeparator);
+  const url = buildFullURL(options.baseUrl, path);
+
+  return {
+    key: article.id,
+    path: path,
+    title: title,
+    url: url,
+    breadcrumbs: createBreadcrumbList([
+      createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
+      createPageDetailBreadcrumbItem(options.baseUrl, article.title, path)
+    ]),
+    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createPostDetailMetas(article)),
+    type: Layout.DETAIL,
     data: undefined
   };
 };

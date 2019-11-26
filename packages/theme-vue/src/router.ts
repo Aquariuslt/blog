@@ -33,6 +33,14 @@ export default new Router({
       })
     },
     {
+      path: '/pages/:id',
+      name: 'page-detail',
+      component: () => import(/* webpackChunkName: "detail" */ './views/Detail.vue'),
+      props: (route) => ({
+        apiPath: buildURLPath(RoutePathPrefix.PAGES, route.params['id'])
+      })
+    },
+    {
       path: '/posts',
       name: 'posts',
       component: List,

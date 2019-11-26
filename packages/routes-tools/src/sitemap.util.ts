@@ -3,7 +3,7 @@ import * as path from 'path';
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import {
-  buildPathFromContext,
+  buildPostPathFromContext,
   createCategoriesOverviewRouteMeta,
   createCategoryDetailRouteMeta,
   createHomeRouteMeta,
@@ -104,7 +104,7 @@ export const createPostDetailSitemapItem = (
     lastmod: new Date(article.updated).toISOString(),
     keywords: article.tags.join(KEYWORDS_SEPARATOR),
     img: _.map(article.images, (image) => ({
-      url: path.join(buildPathFromContext(article), image)
+      url: path.join(buildPostPathFromContext(article), image)
     }))
   };
 };

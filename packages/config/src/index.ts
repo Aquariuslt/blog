@@ -18,6 +18,7 @@ export interface Config {
     dest: string;
     api: string;
     posts: string;
+    pages: string;
   };
 
   site: {
@@ -69,7 +70,8 @@ export const loadConfig = (id = `blog`, lookupPath?: string): Config => {
     dirs: {
       dest: path.join(basePath, config.dirs.dest),
       api: path.join(basePath, config.dirs.api),
-      posts: path.join(basePath, config.dirs.posts)
+      posts: path.join(basePath, config.dirs.posts),
+      pages: path.join(basePath, config.dirs.pages)
     },
     site: {
       baseTitle: site.title,

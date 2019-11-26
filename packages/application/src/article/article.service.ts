@@ -15,6 +15,9 @@ export class ArticleService implements OnModuleInit {
   private postsFiles: string[] = [];
   private postsContexts = [];
 
+  private pagesFiles: string[] = [];
+  private pagesContexts = [];
+
   constructor(private readonly config: ConfigService) {}
 
   onModuleInit() {
@@ -23,6 +26,7 @@ export class ArticleService implements OnModuleInit {
     }
     this.logger.log(`Article Service inited with config.version: ${this.config.version}`);
     this.buildPostsData();
+    this.buildPagesContexts();
     this.$inited = true;
   }
 
@@ -54,7 +58,38 @@ export class ArticleService implements OnModuleInit {
       .sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime());
   }
 
+  buildPagesContexts() {
+    this.lookupPages();
+    this.copyPagesAssets();
+    this.createPageContexts();
+  }
+
+  lookupPages() {
+    const pagesFiles = lookupMarkdownFiles(this.config.sources.pages);
+    this.logger.log(`Load ${pagesFiles.length} pages from ${this.config.sources.pages}`);
+    this.pagesFiles = pagesFiles;
+  }
+
+  copyPagesAssets() {
+    this.pagesFiles.forEach((pageFile) => {
+      const relativeImages = lookupImagesInMarkdownFile(pageFile).filter((imagePath) => !isImageHosting(imagePath));
+      copyImagesInMarkdown(pageFile, relativeImages, this.config.sources.pages, this.config.dirs.pages);
+    });
+  }
+
+  createPageContexts() {
+    this.pagesContexts = this.pagesFiles
+      .map((pageFile) => {
+        return createArticleContext(pageFile);
+      })
+      .sort();
+  }
+
   get contexts() {
     return this.postsContexts;
+  }
+
+  get pageContexts() {
+    return this.pagesContexts;
   }
 }
