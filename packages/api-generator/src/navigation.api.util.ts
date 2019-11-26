@@ -7,6 +7,7 @@ import {
 } from '@blog/routes-tools';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
+import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 
 export const createCategoriesOverviewNavigationItem = (): NavigationItem => {
   const categoriesOverviewInfo = createCategoriesOverviewRouteItem();
@@ -30,6 +31,15 @@ export const createHomeNavigationItem = (): NavigationItem => {
     icon: 'home',
     link: buildURLPath(RoutePathPrefix.HOME)
   });
+};
+
+export const createPageNavigationItem = (context: ArticleContext): NavigationItem => {
+  return {
+    id: context.id,
+    label: context.title,
+    icon: 'navigate_next',
+    link: buildURLPath(RoutePathPrefix.PAGES, context.id)
+  };
 };
 
 /** @description provide navigation menu options*/

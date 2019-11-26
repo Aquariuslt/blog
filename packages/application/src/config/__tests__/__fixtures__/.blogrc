@@ -9,6 +9,7 @@ dirs:
   dest: dist
   assets: dist/static
   posts: dist/posts
+  pages: dist/pages
   api: dist/api
 
 site:

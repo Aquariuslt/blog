@@ -67,6 +67,15 @@ export const createPostDetailBreadcrumbItem = (baseUrl: string, label: string, p
   };
 };
 
+export const createPageDetailBreadcrumbItem = (baseUrl: string, label: string, path: string): BreadcrumbItem => {
+  return {
+    '@type': 'ListItem',
+    item: baseUrl + path,
+    name: label,
+    position: 2
+  };
+};
+
 export const createBreadcrumbList = (items: BreadcrumbItem[]): BreadcrumbList => {
   return {
     '@context': 'https://schema.org',

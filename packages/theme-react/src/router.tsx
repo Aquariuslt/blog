@@ -33,6 +33,17 @@ export const routes = [
       )
   },
   {
+    path: '/pages/:id',
+    exact: true,
+    component: loadable(() =>
+      import(
+        /* webpackChunkName: "detail" */
+        './views/Detail'
+      )
+    ),
+    apiPath: (match) => buildURLPath(RoutePathPrefix.PAGES, match.params['id'])
+  },
+  {
     path: '/posts',
     exact: true,
     component: List,

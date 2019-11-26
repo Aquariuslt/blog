@@ -4,7 +4,7 @@ import { ArticleContext } from '@blog/common/interfaces/articles/article-context
 import { format } from 'date-fns';
 import { buildURLPath } from '@blog/common/utils/path.util';
 
-export const buildPathFromContext = (context: ArticleContext) => {
+export const buildPostPathFromContext = (context: ArticleContext) => {
   // build link
   const created = new Date(context.created);
   const year = format(created, 'yyyy');
@@ -12,6 +12,10 @@ export const buildPathFromContext = (context: ArticleContext) => {
   const date = format(created, 'dd');
   const id = context.id;
   return buildURLPath(RoutePathPrefix.POSTS, year, month, date, id);
+};
+
+export const buildPagePathFromContext = (context: ArticleContext) => {
+  return buildURLPath(RoutePathPrefix.PAGES, context.id);
 };
 
 export const createPostsOverviewRouteItem = () => ({

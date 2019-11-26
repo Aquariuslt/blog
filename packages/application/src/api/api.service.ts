@@ -14,7 +14,9 @@ import {
   createTagsOverviewApiData,
   createNavigationApiData,
   persistApi,
-  createProfileApiData
+  createProfileApiData,
+  createPageDetailApiData,
+  createPageNavigationItem
 } from '@blog/api-generator';
 import { buildURLPath } from '@blog/common/utils/path.util';
 
@@ -39,6 +41,8 @@ export class ApiService implements OnModuleInit {
 
   private postsOverview: ApiData;
   private postDetails: ApiData[];
+
+  private pageDetails: ApiData[];
 
   constructor(
     private readonly config: ConfigService,
@@ -65,6 +69,7 @@ export class ApiService implements OnModuleInit {
     this.tagDetails = this.buildTagDetailsApi();
     this.categoryDetails = this.buildCategoryDetailsApi();
     this.postDetails = this.buildPostDetailsApi();
+    this.pageDetails = this.buildPageDetailsApi();
 
     this.navigation = this.buildNavigationApi();
     this.profile = this.buildProfileApi();
@@ -78,7 +83,8 @@ export class ApiService implements OnModuleInit {
       [this.profile],
       this.tagDetails,
       this.categoryDetails,
-      this.postDetails
+      this.postDetails,
+      this.pageDetails
     );
 
     this.apiMap = _.keyBy(this.apis, 'path');
@@ -146,10 +152,20 @@ export class ApiService implements OnModuleInit {
     });
   }
 
+  buildPageDetailsApi() {
+    return _.map(this.routes.pageDetails, (pageDetail) => {
+      const context = _.find(this.article.pageContexts, { id: pageDetail.key });
+      const data = _.merge({}, createPageDetailApiData(context));
+      return _.merge({}, pageDetail, { data });
+    });
+  }
+
   buildNavigationApi() {
     return {
       path: buildURLPath(RoutePathPrefix.NAVIGATION),
-      data: createNavigationApiData()
+      data: createNavigationApiData().concat(
+        _.map(this.article.pageContexts, (context) => createPageNavigationItem(context))
+      )
     };
   }
 
