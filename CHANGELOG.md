@@ -1,3 +1,10 @@
+# [6.16.0](https://github.com/aquariuslt/blog/compare/v6.15.2...v6.16.0) (2019-11-26)
+
+
+### Features
+
+* enable pages ([5a047b6](https://github.com/aquariuslt/blog/commit/5a047b64ce811fa77aed10af8b96c2d68876d8b6))
+
 ## [6.15.2](https://github.com/aquariuslt/blog/compare/v6.15.1...v6.15.2) (2019-11-24)
 
 
