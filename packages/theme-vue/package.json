@@ -1,6 +1,6 @@
 {
   "name": "@blog/theme-vue",
-  "version": "6.17.0",
+  "version": "6.17.1",
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
@@ -13,9 +13,9 @@
     "test": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@blog/common": "^6.17.0",
-    "@blog/config": "^6.17.0",
-    "@blog/routes-tools": "^6.17.0",
+    "@blog/common": "^6.17.1",
+    "@blog/config": "^6.17.1",
+    "@blog/routes-tools": "^6.17.1",
     "@mdi/font": "^4.5.95",
     "axios": "^0.19.0",
     "date-fns": "^2.5.1",
