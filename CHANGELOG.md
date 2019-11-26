@@ -1,3 +1,10 @@
+## [6.17.1](https://github.com/aquariuslt/blog/compare/v6.17.0...v6.17.1) (2019-11-26)
+
+
+### Bug Fixes
+
+* **theme-react:** add `alt` attribute at lazy image ([74eba53](https://github.com/aquariuslt/blog/commit/74eba5361f440379f8fcc94bfcccfbeab470ae9f))
+
 # [6.17.0](https://github.com/aquariuslt/blog/compare/v6.16.0...v6.17.0) (2019-11-26)
 
 
