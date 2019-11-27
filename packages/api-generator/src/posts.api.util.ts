@@ -5,6 +5,7 @@ import { createArticleOverview } from './article.util';
 import { createTagDetailLinkItem } from './tags.api.util';
 import { createCategoryLinkItem } from './categories.api.util';
 import { buildPostPathFromContext, buildPagePathFromContext } from '@blog/routes-tools';
+import { isImageHosting } from '@blog/article-tools';
 
 /** @description simply `/` and `/posts` api response */
 export const createPostsOverviewApiData = (contexts: ArticleContext[]) => _.map(contexts, createArticleOverview);
@@ -15,9 +16,12 @@ export const createPostDetailApiData = (id: string, contexts: ArticleContext[]) 
   const contextPath = buildPostPathFromContext(context);
 
   let html = context.html;
-  _.each(context.images, (image) => {
-    html = html.replace(image, path.join(contextPath, image));
-  });
+  _.each(
+    context.images.filter((image) => !isImageHosting(image)),
+    (image) => {
+      html = html.replace(image, path.join(contextPath, image));
+    }
+  );
 
   return Object.assign({}, context, {
     tags: _.map(context.tags, createTagDetailLinkItem),
@@ -30,9 +34,12 @@ export const createPostDetailApiData = (id: string, contexts: ArticleContext[]) 
 export const createPageDetailApiData = (context: ArticleContext) => {
   const contextPath = buildPagePathFromContext(context);
   let html = context.html;
-  _.each(context.images, (image) => {
-    html = html.replace(image, path.join(contextPath, image));
-  });
+  _.each(
+    context.images.filter((image) => !isImageHosting(image)),
+    (image) => {
+      html = html.replace(image, path.join(contextPath, image));
+    }
+  );
 
   return Object.assign({}, context, {
     tags: [],
