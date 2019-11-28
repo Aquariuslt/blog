@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
         cursor: 'pointer'
       },
       '&$active,&:active': {
-        borderLeft: `4px solid ${theme.palette.grey[200]}`
+        borderLeft: `4px solid ${theme.palette.grey[400]}`
       }
     },
     active: {}
@@ -75,20 +75,26 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   const theme = useTheme();
   const classes = useStyles();
   const [activeState, setActiveState] = React.useState<string | null>(null);
+  const [afterClick, setAfterClick] = React.useState<boolean>(false);
 
   const scrollTo = (id: string) => () => {
     const SCROLL_DURATION = 2000;
+    const SCROLL_ANIMATION_DURATION = 500;
     const scroll = new SmoothScroll();
+
+    setAfterClick(true);
+    if (activeState !== id) {
+      setActiveState(id);
+    }
+
     scroll.animateScroll(document.getElementById(id), {
       speed: SCROLL_DURATION,
       speedAsDuration: true
     });
 
     setTimeout(() => {
-      if (activeState !== id) {
-        setActiveState(id);
-      }
-    }, SCROLL_DURATION + 500);
+      setAfterClick(false);
+    }, SCROLL_DURATION + SCROLL_ANIMATION_DURATION);
   };
 
   const collectAllIds = (rootItem: ContentItem) => {
@@ -135,7 +141,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
     }
   }, [props]);
 
-  useThrottledOnScroll(props.items ? findActiveIndex : null, 166);
+  useThrottledOnScroll(!afterClick ? findActiveIndex : null, 166);
 
   const ContentLink: React.FC<ContentItem> = (item) => {
     return (
