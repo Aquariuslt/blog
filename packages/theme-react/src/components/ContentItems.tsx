@@ -79,18 +79,18 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
 
   const scrollTo = (id: string) => () => {
     const SCROLL_DURATION = 2000;
-    const SCROLL_ANIMATION_DURATION = 500;
-    const scroll = new SmoothScroll();
+    const SCROLL_ANIMATION_DURATION = 100;
+    const scroll = new SmoothScroll('a[href*="#"]', {
+      speed: SCROLL_DURATION,
+      speedAsDuration: true
+    });
 
     setAfterClick(true);
     if (activeState !== id) {
       setActiveState(id);
     }
 
-    scroll.animateScroll(document.getElementById(id), {
-      speed: SCROLL_DURATION,
-      speedAsDuration: true
-    });
+    scroll.animateScroll(document.getElementById(id));
 
     setTimeout(() => {
       setAfterClick(false);
