@@ -1,6 +1,6 @@
 {
   "name": "@blog/application",
-  "version": "6.17.4",
+  "version": "6.17.5",
   "description": "core application",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -25,13 +25,13 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@blog/api-generator": "^6.17.4",
-    "@blog/article-tools": "^6.17.4",
-    "@blog/common": "^6.17.4",
-    "@blog/config": "^6.17.4",
-    "@blog/markdown": "^6.17.4",
-    "@blog/pwa-tools": "^6.17.4",
-    "@blog/routes-tools": "^6.17.4",
+    "@blog/api-generator": "^6.17.5",
+    "@blog/article-tools": "^6.17.5",
+    "@blog/common": "^6.17.5",
+    "@blog/config": "^6.17.5",
+    "@blog/markdown": "^6.17.5",
+    "@blog/pwa-tools": "^6.17.5",
+    "@blog/routes-tools": "^6.17.5",
     "@nestjs/common": "^6.8.3",
     "@nestjs/core": "^6.8.3",
     "@nestjs/platform-express": "^6.8.3",
