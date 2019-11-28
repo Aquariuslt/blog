@@ -1,3 +1,10 @@
+## [6.17.6](https://github.com/aquariuslt/blog/compare/v6.17.5...v6.17.6) (2019-11-28)
+
+
+### Performance Improvements
+
+* **theme-react:** toggle scroll callback after click ([4bff76f](https://github.com/aquariuslt/blog/commit/4bff76f724ec51dc8e8e17687451e3d24829cf90))
+
 ## [6.17.5](https://github.com/aquariuslt/blog/compare/v6.17.4...v6.17.5) (2019-11-28)
 
 
