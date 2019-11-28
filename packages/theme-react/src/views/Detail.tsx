@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: 'wrap',
       justifyContent: 'flex-end',
       overflow: 'hidden',
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: theme.palette.background.default,
       [theme.breakpoints.up('md')]: {
         width: DRAWER_WIDTH
       }
