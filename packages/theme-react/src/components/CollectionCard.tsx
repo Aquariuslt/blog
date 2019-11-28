@@ -58,7 +58,7 @@ export const CollectionCard: React.FC<Keyword> = (props) => {
           <Divider />
           <div className={classes.desc}>
             <Typography color="textSecondary" variant="body2">
-              Total: {props.total}
+              {props.total} resources
             </Typography>
           </div>
         </CardContent>

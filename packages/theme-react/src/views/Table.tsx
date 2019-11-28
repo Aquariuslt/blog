@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       maxWidth: CARD_MAX_WIDTH,
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: theme.palette.background.default,
       paddingTop: theme.spacing(1),
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(1)

@@ -7,12 +7,13 @@ export const theme = createMuiTheme({
   palette: {
     primary: {
       light: '#FFFFFF',
-      main: '#FAFAFA',
-      dark: '#C7C7C7',
+      main: '#F5F5F5',
+      dark: '#C2C2C2',
       contrastText: '#000000'
     },
     background: {
-      paper: '#F8F9FA'
+      paper: '#F8F9FA',
+      default: '#F5F5F5'
     }
   }
 });
