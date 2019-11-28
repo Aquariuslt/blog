@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme: Theme) =>
       }),
       maxWidth: '100%',
       minHeight: '100vh',
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: theme.palette.background.default,
       marginLeft: -drawerWidth
     },
     contentShift: {
