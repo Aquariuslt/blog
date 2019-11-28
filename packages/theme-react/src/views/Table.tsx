@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { EmptyRouteMeta, Meta, RouteMeta } from '@blog/common/interfaces/routes';
 import { ApiPathProps, loadApi } from '@theme-react/api';
-import { CARD_MAX_WIDTH, TYPE_JSON_LD } from '@theme-react/constants';
+import { TYPE_JSON_LD } from '@theme-react/constants';
 import { BreadcrumbList } from '@theme-react/components/BreadcrumbList';
 import { CollectionCard } from '@theme-react/components/CollectionCard';
 import Container from '@material-ui/core/Container';
@@ -12,7 +12,10 @@ import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      maxWidth: CARD_MAX_WIDTH,
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-around',
+      overflow: 'hidden',
       backgroundColor: theme.palette.background.default,
       paddingTop: theme.spacing(1),
       [theme.breakpoints.down('sm')]: {
@@ -58,11 +61,9 @@ export const Table: React.FC<ApiPathProps> = (props) => {
 
       <BreadcrumbList {...routeMeta.breadcrumbs} />
 
-      <div className={classes.content}>
-        {collections.map((collection, index) => (
-          <CollectionCard key={index} {...collection} />
-        ))}
-      </div>
+      {collections.map((collection, index) => (
+        <CollectionCard key={index} {...collection} />
+      ))}
     </Container>
   );
 };

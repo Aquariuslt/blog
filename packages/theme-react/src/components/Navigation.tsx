@@ -77,7 +77,6 @@ const useStyles = makeStyles((theme: Theme) =>
         duration: theme.transitions.duration.leavingScreen
       }),
       maxWidth: '100%',
-      minHeight: '100vh',
       backgroundColor: theme.palette.background.default,
       marginLeft: -drawerWidth
     },
