@@ -1,3 +1,10 @@
+## [6.17.7](https://github.com/aquariuslt/blog/compare/v6.17.6...v6.17.7) (2019-11-29)
+
+
+### Performance Improvements
+
+* **theme-react:** use scroll-into-view-if-needed ([5084e36](https://github.com/aquariuslt/blog/commit/5084e36fc063c75067b8764abba38a2df517d218))
+
 ## [6.17.6](https://github.com/aquariuslt/blog/compare/v6.17.5...v6.17.6) (2019-11-28)
 
 
