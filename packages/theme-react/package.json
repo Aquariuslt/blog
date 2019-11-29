@@ -24,7 +24,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
-    "smooth-scroll": "^16.1.0",
+    "scroll-into-view-if-needed": "^2.2.20",
     "typeface-roboto": "^0.0.75",
     "vanilla-lazyload": "^12.4.0"
   },

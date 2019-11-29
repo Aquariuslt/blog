@@ -1,8 +1,8 @@
 import * as React from 'react';
+import scrollIntoView from 'scroll-into-view-if-needed';
 import clsx from 'clsx';
 import throttle from 'lodash/throttle';
 import noop from 'lodash/noop';
-import SmoothScroll from 'smooth-scroll';
 import Typography from '@material-ui/core/Typography';
 import { createStyles, makeStyles, Theme, useTheme } from '@material-ui/core/styles';
 import { ContentItem } from '@blog/common/interfaces/articles/content-item';
@@ -78,19 +78,17 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   const [afterClick, setAfterClick] = React.useState<boolean>(false);
 
   const scrollTo = (id: string) => () => {
-    const SCROLL_DURATION = 2000;
+    const SCROLL_DURATION = 4000;
     const SCROLL_ANIMATION_DURATION = 100;
-    const scroll = new SmoothScroll('a[href*="#"]', {
-      speed: SCROLL_DURATION,
-      speedAsDuration: true
-    });
 
     setAfterClick(true);
     if (activeState !== id) {
       setActiveState(id);
     }
 
-    scroll.animateScroll(document.getElementById(id));
+    scrollIntoView(document.getElementById(id) as Element, {
+      behavior: 'smooth'
+    });
 
     setTimeout(() => {
       setAfterClick(false);
