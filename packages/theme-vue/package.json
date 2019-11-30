@@ -15,7 +15,7 @@
   "dependencies": {
     "@blog/common": "^6.17.8",
     "@blog/config": "^6.17.8",
-    "@blog/routes-tools": "^6.17.8",
+    "@blog/router": "^6.17.8",
     "@mdi/font": "^4.6.95",
     "axios": "^0.19.0",
     "date-fns": "^2.8.1",

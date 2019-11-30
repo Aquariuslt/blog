@@ -17,7 +17,7 @@ import {
   createProfileApiData,
   createPageDetailApiData,
   createPageNavigationItem
-} from '@blog/api-generator';
+} from '@blog/api';
 import { buildURLPath } from '@blog/common/utils/path.util';
 
 @Injectable()
