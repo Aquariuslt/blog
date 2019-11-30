@@ -1,8 +1,11 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { Link as RouterLink } from 'react-router-dom';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import { Link as RouterLink } from 'react-router-dom';
+import { Profile } from '@blog/common/interfaces/profile';
+import { NavigationItem } from '@blog/common/interfaces/navigation';
+import { Icon } from '@theme-react/components/Icon';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,13 +19,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Zoom from '@material-ui/core/Zoom';
 import Fab from '@material-ui/core/Fab';
-/* material icons */
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-
-import { Profile } from '@blog/common/interfaces/profile';
-import { NavigationItem } from '@blog/common/interfaces/navigation';
-import { Icon } from '@theme-react/components/Icon';
 
 export interface NavigationProps {
   title: string;

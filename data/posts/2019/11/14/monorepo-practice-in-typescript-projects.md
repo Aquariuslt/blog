@@ -23,7 +23,7 @@ cover: ./cover.png
 
 我们可以看到一些前端 UI 框架、Web 框架，在新版本/一开始就采用了 monorepo 的形式管理代码。
 
-> Q: 什么是 Monorepo? Monorepo 的基本好处是什么? A: 这里不多阐述，可以参考之湖上的这篇文章: [https://zhuanlan.zhihu.com/p/31289463](https://zhuanlan.zhihu.com/p/31289463)
+> Q: 什么是 Monorepo? Monorepo 的基本好处是什么? A: 这里不多阐述，可以参考知乎上的这篇文章: [https://zhuanlan.zhihu.com/p/31289463](https://zhuanlan.zhihu.com/p/31289463)
 
 由于在其他(这里值一些较较成熟的语言，如 Java)语言的包管理生态圈里已有很多成熟的解决方案，如 Java 世界里的 Maven/Gradle , 其中都有很多较佳时间在各种成熟的开源项目中有所体现。
 

@@ -1,5 +1,5 @@
 import * as path from 'path';
-import * as cosmiconfig from 'cosmiconfig';
+import { cosmiconfigSync } from 'cosmiconfig';
 
 export interface Config {
   /** meta */
@@ -47,8 +47,8 @@ export const detectThemePackage = (theme: string) => {
 };
 
 export const loadConfig = (id = `blog`, lookupPath?: string): Config => {
-  const explorer = cosmiconfig(id);
-  const configLookupResult = explorer.searchSync(lookupPath);
+  const explorer = cosmiconfigSync(id);
+  const configLookupResult = explorer.search(lookupPath);
   const configLocation = configLookupResult.filepath;
   const config = configLookupResult.config;
   const basePath = path.dirname(configLocation);
