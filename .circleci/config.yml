@@ -19,7 +19,7 @@ jobs:
     working_directory: ~/blog
     steps:
       - checkout
-      - run: yarn global add lerna
+      - run: sudo npm install -g lerna
       - run: lerna bootstrap
       - run: yarn run test
       - run: yarn run build
