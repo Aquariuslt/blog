@@ -4,10 +4,7 @@ import * as hljs from 'highlight.js';
 import * as uslug from 'uslug';
 import * as MarkdownIt from 'markdown-it';
 import * as AnchorPlugin from 'markdown-it-anchor';
-import { metadata, source } from '@blog/markdown';
-import { ImagesDetectionPlugin } from '@blog/markdown/dist/images.plugin';
-import { ContentItemPlugin } from '@blog/markdown/dist/content-item.plugin';
-import { SummaryPlugin } from '@blog/markdown/dist/summary.plugin';
+import { ContentItemPlugin, ImagesDetectionPlugin, metadata, source, SummaryPlugin } from '@blog/markdown';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 
 export const createArticleContext = (filepath: string) => {

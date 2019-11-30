@@ -97,7 +97,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
 
   const collectAllIds = (rootItem: ContentItem) => {
     const collectItemIds = (item) => {
-      if (item.children) {
+      if (item && item.children) {
         let ids = [item.id];
         item.children.forEach((child) => {
           ids = ids.concat(collectItemIds(child));

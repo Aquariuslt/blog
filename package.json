@@ -11,16 +11,46 @@
     "typescript"
   ],
   "scripts": {
+    "prebuild::app:prod": "yarn run build:app",
+    "build:app:prod": "cross-env NODE_ENV=production node -r tsconfig-paths/register -r ts-node/register build/main.js",
+    "start:app": "ts-node -r tsconfig-paths/register src/main.ts",
+    "build:app": "rimraf build && tsc -p tsconfig.build.json",
+    "build:lib": "lerna run build:lib --scope @blog/*",
+    "build:theme": "lerna run build:theme --scope @blog/*",
+    "build:all": "yarn build:lib && yarn build:theme && yarn build:app",
+    "build:prod": "yarn build:all && yarn build:app:prod",
     "clean": "lerna run clean",
-    "bootstrap": "lerna bootstrap",
     "lint": "eslint --fix",
-    "pretest": "lerna run clean && lerna run build",
+    "pretest": "yarn build:lib",
     "test": "jest",
-    "pretest:cov": "lerna run clean && lerna run build",
+    "pretest:cov": "yarn build:lib",
     "test:cov": "jest --coverage",
-    "build": "rimraf dist && lerna run build && lerna run build:prod",
     "bundlesize": "bundlesize",
     "release": "semantic-release"
+  },
+  "dependencies": {
+    "@blog/api": "^6.17.9",
+    "@blog/article": "^6.17.9",
+    "@blog/common": "^6.17.9",
+    "@blog/config": "^6.17.9",
+    "@blog/markdown": "^6.17.9",
+    "@blog/pwa": "^6.17.9",
+    "@blog/router": "^6.17.9",
+    "@nestjs/common": "^6.10.3",
+    "@nestjs/core": "^6.10.3",
+    "@nestjs/platform-express": "^6.10.3",
+    "@nestjs/serve-static": "^1.0.2",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.11.0",
+    "cosmiconfig": "^6.0.0",
+    "date-fns": "^2.8.1",
+    "fancy-log": "^1.3.3",
+    "fs-extra": "^8.1.0",
+    "get-port": "^5.0.0",
+    "lodash": "^4.17.15",
+    "puppeteer": "^2.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -29,6 +59,13 @@
     "@semantic-release/exec": "^3.3.8",
     "@semantic-release/git": "^7.0.18",
     "@semantic-release/npm": "^5.3.4",
+    "@nestjs/testing": "^6.10.3",
+    "@types/express": "^4.17.2",
+    "@types/fancy-log": "^1.3.1",
+    "@types/fs-extra": "^8.0.1",
+    "@types/lodash": "^4.14.149",
+    "@types/puppeteer": "^2.0.0",
+    "@types/supertest": "2.0.8",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
@@ -46,7 +83,12 @@
     "rimraf": "^3.0.0",
     "semantic-release": "^15.13.31",
     "ts-jest": "^24.2.0",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "cross-env": "^6.0.3",
+    "supertest": "4.0.2",
+    "ts-node": "8.5.4",
+    "tsc-watch": "4.0.0",
+    "tsconfig-paths": "3.9.0"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -123,7 +165,7 @@
       "json"
     ],
     "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/packages/application/src/$1"
+      "^@/(.*)$": "<rootDir>/src/$1"
     },
     "transform": {
       "^.+\\.ts$": "ts-jest",
@@ -131,11 +173,6 @@
     },
     "collectCoverageFrom": [
       "!**/__tests__/**",
-      "!**/src/index.ts",
-      "!**/src/main.ts",
-      "!**/src/plugins.ts",
-      "!**/*.module.ts",
-      "!**/migration.ts",
       "<rootDir>/src/**/*.ts",
       "<rootDir>/packages/**/src/**/*.ts"
     ],

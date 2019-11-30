@@ -8,15 +8,15 @@
     "resolveJsonModule": true,
     "target": "es6",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
     "incremental": true,
     "noImplicitAny": false,
     "allowJs": true,
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["node_modules", "dist", "reports"]
+  "include": ["src"],
+  "exclude": ["node_modules", "build", "dist", "reports", "**/*.test.ts"]
 }

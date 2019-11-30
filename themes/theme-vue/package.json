@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
+    "test": "vue-cli-service test:unit",
+    "prebuild:theme": "yarn run compile:config",
+    "build:theme": "vue-cli-service build",
     "preserve": "yarn run compile:config",
     "serve": "vue-cli-service serve",
-    "prebuild": "yarn run compile:config",
-    "build": "vue-cli-service build",
     "compile:config": "tsc vue.config.ts --resolveJsonModule",
-    "debug:webpack": "vue inspect | tee > webpack.config.js",
-    "test": "vue-cli-service test:unit"
+    "debug:webpack": "vue inspect | tee > webpack.config.js"
   },
   "dependencies": {
     "@blog/common": "^6.17.9",

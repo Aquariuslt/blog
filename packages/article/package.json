@@ -10,17 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
+  "main": "index.js",
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "esnext": "src/index.ts",
-  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
-    "build": "tsc",
+    "clean": "rimraf dist",
     "test": "jest",
-    "test:cov": "jest --coverage",
-    "clean": "rimraf dist"
+    "build:lib": "tsc"
   },
   "dependencies": {
     "@blog/common": "^6.17.9",

@@ -10,22 +10,22 @@
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "main": "dist/index.js",
-  "esnext": "src/index.ts",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
   "private": true,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "test:cov": "jest --coverage",
     "clean": "rimraf dist",
-    "build:prod": ""
+    "test": "jest",
+    "build:lib": "tsc"
   },
   "dependencies": {
     "@blog/common": "^6.17.9",

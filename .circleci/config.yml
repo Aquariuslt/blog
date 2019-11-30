@@ -19,8 +19,8 @@ jobs:
     working_directory: ~/blog
     steps:
       - checkout
-      - run: yarn
-      - run: yarn run bootstrap
+      - run: yarn global add lerna
+      - run: lerna bootstrap
       - run: yarn run test
       - run: yarn run build
       - persist_to_workspace:
@@ -36,11 +36,11 @@ jobs:
       - attach_workspace:
           at: ~/blog
       - run:
-          name: install gh-pages
+          name: install gh-pages & lerna
           command: |
-            sudo npm install -g --silent gh-pages
+            sudo npm install -g --silent gh-pages lerna
             git config user.email deploy-bot@circleci.com
             git config user.name "circleci"
       - run: sudo gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --add
-      - run: yarn
+      - run: lerna bootstrap
       - run: yarn release

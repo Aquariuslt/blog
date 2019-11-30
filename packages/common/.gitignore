@@ -1,0 +1,14 @@
+# dist
+constants/**/*.d.ts
+constants/**/*.js
+constants/**/*.js.map
+
+interfaces/**/*.d.ts
+interfaces/**/*.js
+interfaces/**/*.js.map
+
+utils/**/*.d.ts
+utils/**/*.js
+utils/**/*.js.map
+
+tsconfig.tsbuildinfo

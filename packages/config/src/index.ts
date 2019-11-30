@@ -8,7 +8,6 @@ export interface Config {
   basePath: string;
 
   /** content */
-
   sources: {
     pages: string;
     posts: string;
@@ -40,10 +39,10 @@ export interface Config {
 
 /**
  * @description detect theme package location by name
- * @example detectThemePackage(`theme-vue`) => BASE_PATH + `/packages/theme-vue`
+ * @example detectThemePackage(`theme-vue`) => BASE_PATH + `/themes/theme-vue`
  **/
 export const detectThemePackage = (theme: string) => {
-  return `/packages/${theme}`;
+  return `/themes/${theme}`;
 };
 
 export const loadConfig = (id = `blog`, lookupPath?: string): Config => {

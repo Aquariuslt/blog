@@ -4,9 +4,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "serve": "gulp serve",
-    "build": "gulp clean && gulp build",
-    "test": "jest"
+    "clean": "gulp clean",
+    "test": "jest",
+    "prebuild:theme": "gulp clean",
+    "build:theme": "gulp build",
+    "serve": "gulp serve"
   },
   "dependencies": {
     "@blog/common": "^6.17.9",

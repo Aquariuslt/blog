@@ -1,23 +1,22 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext",
+    "module": "commonjs",
     "strict": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noImplicitAny": false,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@theme-vue/*": ["src/*"]
+      "@theme-react/*": ["src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["es2018", "es6", "esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "vue.config.ts", "package.json"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "webpack/**/*.ts", "gulpfile.ts", "package.json"],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": false,
+    "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -9,9 +9,7 @@
     "target": "es6",
     "sourceMap": true,
     "incremental": true,
-    "noImplicitAny": false,
-    "allowJs": true,
-    "typeRoots": ["./node_modules/@types"]
+    "noImplicitAny": false
   },
-  "exclude": ["node_modules", "__tests__", "reports"]
+  "exclude": ["node_modules"]
 }

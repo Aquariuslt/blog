@@ -17,8 +17,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Yarn install, build, and test
         run: |
-          yarn
-          yarn bootstrap
+          yarn global add lerna
+          lerna bootstrap
           yarn test:cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.0.3
@@ -29,7 +29,7 @@ jobs:
           name: codecov-umbrella
       - name: Check bundlesize
         run: |
-          yarn build
+          yarn build:prod
           yarn bundlesize
         env:
           BUNDLESIZE_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}

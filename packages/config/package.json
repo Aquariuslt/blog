@@ -5,18 +5,18 @@
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
   "license": "MIT",
+  "private": true,
+  "main": "index.js",
   "files": [
     "dist"
   ],
-  "private": true,
-  "main": "dist/index.js",
-  "esnext": "src/index.ts",
-  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
-    "build": "tsc",
+    "clean": "rimraf dist",
     "test": "jest",
-    "test:cov": "jest --coverage",
-    "clean": "rimraf dist"
+    "build:lib": "tsc"
   },
   "dependencies": {
     "cosmiconfig": "^6.0.0",
