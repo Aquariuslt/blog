@@ -21,8 +21,8 @@ jobs:
       - checkout
       - run: sudo npm install -g lerna
       - run: lerna bootstrap
-      - run: yarn run test
-      - run: yarn run build
+      - run: yarn test
+      - run: yarn build:prod
       - persist_to_workspace:
           root: ~/blog
           paths: dist
