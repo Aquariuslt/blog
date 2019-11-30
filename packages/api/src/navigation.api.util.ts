@@ -1,10 +1,6 @@
 import * as _ from 'lodash';
 import { NavigationItem } from '@blog/common/interfaces/navigation';
-import {
-  createCategoriesOverviewRouteItem,
-  createHomeRouteItem,
-  createTagsOverviewRouteItem
-} from '@blog/routes-tools';
+import { createCategoriesOverviewRouteItem, createHomeRouteItem, createTagsOverviewRouteItem } from '@blog/router';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';

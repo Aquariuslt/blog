@@ -13,7 +13,7 @@ import {
   createTagsOverviewRouteMeta,
   RoutesOptions
 } from './index';
-import { getAllCategoriesFromContexts, getAllTagsFromContexts } from '@blog/article-tools';
+import { getAllCategoriesFromContexts, getAllTagsFromContexts } from '@blog/article';
 
 const CHANGE_FREQ = 'daily';
 const DETAIL_PRIORITY = 1;

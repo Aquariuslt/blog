@@ -1,4 +1,4 @@
-# `@blog/article-tools`
+# `@blog/article`
 
 Tools to processing source markdown files to articles content
 

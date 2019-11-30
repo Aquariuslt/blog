@@ -7,9 +7,9 @@ import { ArticleService } from '@/article/article.service';
 import { RoutesService } from '@/routes/routes.service';
 import { ApiService } from '@/api/api.service';
 import { RenderService } from '@/render/render.service';
-import { createSitemapContent } from '@blog/routes-tools';
-import { persistFile } from '@blog/api-generator';
-import { buildServiceWorker } from '@blog/pwa-tools';
+import { createSitemapContent } from '@blog/router';
+import { persistFile } from '@blog/api';
+import { buildServiceWorker } from '@blog/pwa';
 
 @Injectable()
 export class ThemeService implements OnModuleInit {

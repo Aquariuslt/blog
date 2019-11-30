@@ -16,7 +16,7 @@
     "migration": "tsc && node ./dist/migration"
   },
   "dependencies": {
-    "@blog/article-tools": "^6.17.8",
+    "@blog/article": "^6.17.8",
     "@blog/markdown": "^6.17.8",
     "download": "^7.1.0",
     "fancy-log": "^1.3.3",

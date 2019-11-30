@@ -6,7 +6,7 @@ import {
   copyImagesInMarkdown,
   isImageHosting,
   createArticleContext
-} from '@blog/article-tools';
+} from '@blog/article';
 
 @Injectable()
 export class ArticleService implements OnModuleInit {

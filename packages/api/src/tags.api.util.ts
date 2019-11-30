@@ -3,7 +3,7 @@ import * as uslug from 'uslug';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
-import { groupByArticleTags } from '@blog/article-tools';
+import { groupByArticleTags } from '@blog/article';
 import { createArticleOverview } from './article.util';
 
 export const createTagDetailLinkItem = (rawTag: string, total?: number) => ({
@@ -19,5 +19,8 @@ export const createTagsOverviewApiData = (contexts: ArticleContext[]) => {
 };
 
 export const createTagDetailApiData = (rawTag: string, contexts: ArticleContext[]) => {
-  return _.map(_.filter(contexts, (context) => _.includes(context.tags, rawTag)), createArticleOverview);
+  return _.map(
+    _.filter(contexts, (context) => _.includes(context.tags, rawTag)),
+    createArticleOverview
+  );
 };

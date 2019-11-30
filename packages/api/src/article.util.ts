@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 import * as path from 'path';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
-import { buildPostPathFromContext } from '@blog/routes-tools';
+import { buildPostPathFromContext } from '@blog/router';
 
 /**
  * @description create an overview in optimized size, simply remove `src`, `html`, `toc` field in context

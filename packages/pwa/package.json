@@ -1,5 +1,5 @@
 {
-  "name": "@blog/pwa-tools",
+  "name": "@blog/pwa",
   "version": "6.17.8",
   "description": "progressive web application tools including workbox + prerendering",
   "keywords": [

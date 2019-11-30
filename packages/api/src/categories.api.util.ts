@@ -3,7 +3,7 @@ import * as uslug from 'uslug';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
-import { groupByArticleCategories } from '@blog/article-tools';
+import { groupByArticleCategories } from '@blog/article';
 import { createArticleOverview } from './article.util';
 
 export const createCategoryLinkItem = (rawCategory: string, total?: number) => ({

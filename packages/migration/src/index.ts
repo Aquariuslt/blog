@@ -8,8 +8,8 @@ import * as sharp from 'sharp';
 import * as imagemin from 'imagemin';
 import imageminPngquant from 'imagemin-pngquant';
 import { metadata } from '@blog/markdown';
-import { lookupMarkdownFiles } from '@blog/article-tools';
-import { lookupImagesInMarkdownFile, isImageHosting } from '@blog/article-tools';
+import { lookupMarkdownFiles } from '@blog/article';
+import { lookupImagesInMarkdownFile, isImageHosting } from '@blog/article';
 
 export const migrateImage = async (filepath: string) => {
   const images = lookupImagesInMarkdownFile(filepath);

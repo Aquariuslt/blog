@@ -4,8 +4,8 @@ import { ArticleContext } from '@blog/common/interfaces/articles/article-context
 import { createArticleOverview } from './article.util';
 import { createTagDetailLinkItem } from './tags.api.util';
 import { createCategoryLinkItem } from './categories.api.util';
-import { buildPostPathFromContext, buildPagePathFromContext } from '@blog/routes-tools';
-import { isImageHosting } from '@blog/article-tools';
+import { buildPostPathFromContext, buildPagePathFromContext } from '@blog/router';
+import { isImageHosting } from '@blog/article';
 
 /** @description simply `/` and `/posts` api response */
 export const createPostsOverviewApiData = (contexts: ArticleContext[]) => _.map(contexts, createArticleOverview);

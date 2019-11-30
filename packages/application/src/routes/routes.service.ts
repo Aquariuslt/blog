@@ -3,8 +3,8 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@/config/config.service';
 import { ArticleService } from '@/article/article.service';
 import { RouteMeta } from '@blog/common/interfaces/routes';
-import { createPagesDetailRouteMeta, RoutesOptions } from '@blog/routes-tools';
-import { getAllTagsFromContexts, getAllCategoriesFromContexts } from '@blog/article-tools';
+import { createPagesDetailRouteMeta, RoutesOptions } from '@blog/router';
+import { getAllTagsFromContexts, getAllCategoriesFromContexts } from '@blog/article';
 import {
   createHomeRouteMeta,
   createPostsOverviewRouteMeta,
@@ -13,7 +13,7 @@ import {
   createCategoryDetailRouteMeta,
   createTagsOverviewRouteMeta,
   createTagDetailRouteMeta
-} from '@blog/routes-tools';
+} from '@blog/router';
 
 @Injectable()
 export class RoutesService implements OnModuleInit {

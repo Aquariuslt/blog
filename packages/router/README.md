@@ -1,3 +1,3 @@
-# `@blog/routes-tools`
+# `@blog/router`
 
 Tools for generating routes
