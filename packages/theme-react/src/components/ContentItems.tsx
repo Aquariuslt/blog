@@ -1,12 +1,12 @@
 import * as React from 'react';
-import scrollIntoView from 'scroll-into-view-if-needed';
 import clsx from 'clsx';
 import throttle from 'lodash/throttle';
 import noop from 'lodash/noop';
-import Typography from '@material-ui/core/Typography';
+import scrollIntoView from 'scroll-into-view-if-needed';
 import { createStyles, makeStyles, Theme, useTheme } from '@material-ui/core/styles';
 import { ContentItem } from '@blog/common/interfaces/articles/content-item';
 import { DRAWER_WIDTH } from '@theme-react/constants';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
