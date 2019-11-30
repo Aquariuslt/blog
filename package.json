@@ -19,7 +19,7 @@
     "build:theme": "lerna run build:theme --scope @blog/*",
     "build:all": "yarn build:lib && yarn build:theme && yarn build:app",
     "build:prod": "yarn build:all && yarn build:app:prod",
-    "clean": "lerna run clean",
+    "clean": "lerna run clean --scope @blog/*",
     "lint": "eslint --fix",
     "pretest": "yarn build:lib",
     "test": "jest",

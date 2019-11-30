@@ -4,7 +4,6 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "clean": "gulp clean",
     "test": "jest",
     "prebuild:theme": "gulp clean",
     "build:theme": "gulp build",
