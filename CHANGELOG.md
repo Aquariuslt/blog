@@ -1,3 +1,10 @@
+## [6.17.9](https://github.com/aquariuslt/blog/compare/v6.17.8...v6.17.9) (2019-11-30)
+
+
+### Bug Fixes
+
+* **theme-react:** fix url-loader upgrade to v3 usage ([8e0e983](https://github.com/aquariuslt/blog/commit/8e0e9831204920b298caa357eb776e4c515f5311))
+
 ## [6.17.8](https://github.com/aquariuslt/blog/compare/v6.17.7...v6.17.8) (2019-11-30)
 
 
