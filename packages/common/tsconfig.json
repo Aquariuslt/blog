@@ -8,8 +8,10 @@
     "resolveJsonModule": true,
     "target": "es6",
     "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
     "incremental": true,
     "noImplicitAny": false
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist", "reports", "**/*.test.ts"]
 }

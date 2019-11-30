@@ -11,8 +11,7 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "noImplicitAny": false,
-    "typeRoots": ["./node_modules/@types"]
+    "noImplicitAny": false
   },
   "exclude": ["node_modules", "dist", "reports", "**/*.test.ts"]
 }

@@ -10,7 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
+    "clean": "rimraf dist",
     "build:lib": "tsc"
   },
   "dependencies": {
