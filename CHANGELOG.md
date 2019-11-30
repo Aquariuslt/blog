@@ -1,3 +1,10 @@
+## [6.17.8](https://github.com/aquariuslt/blog/compare/v6.17.7...v6.17.8) (2019-11-30)
+
+
+### Performance Improvements
+
+* disable offline google-analytics ([42815cc](https://github.com/aquariuslt/blog/commit/42815ccedd0022477ad62b61702e69dae371e7f3))
+
 ## [6.17.7](https://github.com/aquariuslt/blog/compare/v6.17.6...v6.17.7) (2019-11-29)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@blog/api-generator",
-  "version": "6.17.7",
+  "version": "6.17.8",
   "description": "> TODO: description",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,9 +23,9 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@blog/article-tools": "^6.17.7",
-    "@blog/common": "^6.17.7",
-    "@blog/routes-tools": "^6.17.7",
+    "@blog/article-tools": "^6.17.8",
+    "@blog/common": "^6.17.8",
+    "@blog/routes-tools": "^6.17.8",
     "date-fns": "^2.8.1",
     "mkdirp": "^0.5.1",
     "uslug": "^1.0.4"

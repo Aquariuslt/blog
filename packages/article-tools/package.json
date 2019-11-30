@@ -1,6 +1,6 @@
 {
   "name": "@blog/article-tools",
-  "version": "6.17.7",
+  "version": "6.17.8",
   "description": "blog markdown article tools",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,8 +23,8 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@blog/common": "^6.17.7",
-    "@blog/markdown": "^6.17.7",
+    "@blog/common": "^6.17.8",
+    "@blog/markdown": "^6.17.8",
     "highlight.js": "^9.16.2",
     "lodash": "^4.17.15",
     "markdown-it": "^10.0.0",
