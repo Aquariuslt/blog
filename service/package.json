@@ -1,0 +1,90 @@
+{
+  "name": "@blog/service",
+  "version": "6.17.9",
+  "description": "core build service",
+  "author": "Aquariuslt <superaquariuslt@gmail.com>",
+  "homepage": "https://github.com/aquariuslt/blog",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquariuslt/blog.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild::service:prod": "yarn run build:service",
+    "build:service:prod": "cross-env NODE_ENV=production node -r tsconfig-paths/register -r ts-node/register dist/main",
+    "prebuild:service": "yarn clean",
+    "build:service": "nest build",
+    "start:service": "nest start",
+    "test": "jest",
+    "test:cov": "jest --coverage"
+  },
+  "dependencies": {
+    "@blog/api": "^6.17.9",
+    "@blog/article": "^6.17.9",
+    "@blog/common": "^6.17.9",
+    "@blog/config": "^6.17.9",
+    "@blog/markdown": "^6.17.9",
+    "@blog/pwa": "^6.17.9",
+    "@blog/router": "^6.17.9",
+    "@nestjs/common": "^6.10.3",
+    "@nestjs/core": "^6.10.3",
+    "@nestjs/platform-express": "^6.10.3",
+    "@nestjs/serve-static": "^1.0.2",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.11.0",
+    "cosmiconfig": "^6.0.0",
+    "date-fns": "^2.8.1",
+    "fancy-log": "^1.3.3",
+    "fs-extra": "^8.1.0",
+    "get-port": "^5.0.0",
+    "lodash": "^4.17.15",
+    "puppeteer": "^2.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^6.12.6",
+    "@nestjs/testing": "^6.10.3",
+    "@types/express": "^4.17.2",
+    "@types/fancy-log": "^1.3.1",
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^24.0.23",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "12.12.14",
+    "@types/puppeteer": "^2.0.0",
+    "@types/supertest": "2.0.8",
+    "cross-env": "^6.0.3",
+    "jest": "24.9.0",
+    "supertest": "4.0.2",
+    "ts-jest": "24.2.0",
+    "ts-node": "8.5.4",
+    "tsc-watch": "4.0.0",
+    "tsconfig-paths": "3.9.0",
+    "typescript": "^3.7.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.ts$": "ts-jest",
+      "^.*\\.md$": "jest-raw-loader"
+    },
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+  }
+}

@@ -118,5 +118,6 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
         canPrint: true
       })
     ]
-  }
+  },
+  stats: 'minimal'
 });
