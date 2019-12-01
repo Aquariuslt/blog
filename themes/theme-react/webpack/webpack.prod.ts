@@ -118,21 +118,5 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
         canPrint: true
       })
     ]
-  },
-  stats: {
-    colors: true,
-    env: true,
-    hash: true,
-    timings: true,
-    chunks: true,
-    chunkModules: false,
-    chunksSort: 'field',
-    children: false,
-    modules: false,
-    reasons: false,
-    warnings: false,
-    assets: false,
-    version: true,
-    publicPath: true
   }
 });

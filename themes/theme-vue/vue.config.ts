@@ -13,7 +13,8 @@ module.exports = {
       alias: {
         '@theme-vue': BASE_DIR
       }
-    }
+    },
+    stats: 'minimal'
   },
   chainWebpack: (conf) => {
     conf.plugin('html').tap((args) => {

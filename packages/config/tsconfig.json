@@ -1,17 +1,9 @@
 {
+  "extends": "../tsconfig.lib.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "target": "es6",
-    "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "noImplicitAny": false
+    "baseUrl": "./"
   },
+  "include": ["src"],
   "exclude": ["node_modules", "dist", "reports", "**/*.test.ts"]
 }
