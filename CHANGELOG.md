@@ -1,3 +1,10 @@
+## [6.17.10](https://github.com/aquariuslt/blog/compare/v6.17.9...v6.17.10) (2019-12-01)
+
+
+### Performance Improvements
+
+* **pwa:** precache manifest including webp ([6f849b8](https://github.com/aquariuslt/blog/commit/6f849b8a0143812dbab963549fe6726bfdcb266b))
+
 ## [6.17.9](https://github.com/aquariuslt/blog/compare/v6.17.8...v6.17.9) (2019-11-30)
 
 
