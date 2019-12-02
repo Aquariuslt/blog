@@ -61,6 +61,6 @@
       "<rootDir>/src/**/*.test.ts"
     ],
     "testEnvironment": "node",
-    "coverageDirectory": "<rootDir>/reports/coverage"
+    "coverageDirectory": "<rootDir>/coverage"
   }
 }

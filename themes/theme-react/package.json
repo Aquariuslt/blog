@@ -114,6 +114,6 @@
     "testMatch": [
       "<rootDir>/src/**/*.test.ts"
     ],
-    "coverageDirectory": "<rootDir>/reports/coverage"
+    "coverageDirectory": "<rootDir>/coverage"
   }
 }

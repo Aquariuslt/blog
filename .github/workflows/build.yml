@@ -24,7 +24,7 @@ jobs:
         uses: codecov/codecov-action@v1.0.3
         with:
           token: ${{secrets.CODECOV_TOKEN}}
-          file: ./reports/coverage/lcov.info
+          file: ./coverage/lcov.info
           flags: unittests
           name: codecov-umbrella
       - name: Check bundlesize

@@ -258,7 +258,7 @@ packages
     "collectCoverageFrom": ["!**/__tests__/**", "<rootDir>/src/**/*.ts"],
     "testMatch": ["<rootDir>/src/**/*.test.ts"],
     "testEnvironment": "node",
-    "coverageDirectory": "<rootDir>/reports/coverage"
+    "coverageDirectory": "<rootDir>/coverage"
   }
 }
 ```
@@ -325,7 +325,7 @@ packages
     ],
     "testMatch": ["<rootDir>/src/**/*.test.ts", "<rootDir>/packages/**/src/**/*.test.ts"],
     "testEnvironment": "node",
-    "coverageDirectory": "<rootDir>/reports/coverage"
+    "coverageDirectory": "<rootDir>/coverage"
   }
 }
 ```
