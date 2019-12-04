@@ -27,12 +27,12 @@ cover: ./about.png
 ## Friend Links
 
 - [wxsm's space](https://wxsm.space): Kary Gor 博客 - 金山前端之神
-- [lz's blog](hhttps://lz5z.com): 振哥博客
-- [lousama](hhttp://lousama.com): 楼鸽鸽博客
-- [koala](hhttp://ikoala.net): 考拉博客 - 君合何大状
-- [supremebb](hhttp://corydon.cc): 13c 博客 - 服装潮人
-- [maview](hhttp://frankxfz.me): 马老师博客 - CMU 未来之星
-- [arhi](hhttps://xuyanxin.top): 阿狸博客
-- [yulai](hhttps://yulaiz.com): Yulai 博客
+- [lz's blog](https://lz5z.com): 振哥博客
+- [lousama](http://lousama.com): 楼鸽鸽博客
+- [koala](http://ikoala.net): 考拉博客 - 君合何大状
+- [supremebb](http://corydon.cc): 13c 博客 - 服装潮人
+- [maview](http://frankxfz.me): 马老师博客 - CMU 未来之星
+- [arhi](https://xuyanxin.top): 阿狸博客
+- [yulai](https://yulaiz.com): Yulai 博客
 
 > 如需添加友情链接，请留言(+Issue/+Pull Request)
