@@ -126,6 +126,8 @@ export const createSitemapContent = async (contexts: ArticleContext[], options?:
   const tagDetailSitemapItems = _.map(allTags, (tag) => createTagDetailSitemapItem(tag, contexts, options));
   const postDetailSitemapItems = _.map(contexts, (article) => createPostDetailSitemapItem(article, contexts, options));
 
+  // TODO: add create page contexts
+
   const allSitemapItems = _.concat(
     [homeSitemapItem],
     [postsOverviewSitemapItem],
