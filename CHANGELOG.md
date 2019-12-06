@@ -1,3 +1,10 @@
+# [6.18.0](https://github.com/aquariuslt/blog/compare/v6.17.10...v6.18.0) (2019-12-06)
+
+
+### Features
+
+* **router:** create sitemap item for pages ([88cbe8a](https://github.com/aquariuslt/blog/commit/88cbe8a5059bfdeafdb5ff5b169b0ecb5a83cbff))
+
 ## [6.17.10](https://github.com/aquariuslt/blog/compare/v6.17.9...v6.17.10) (2019-12-01)
 
 

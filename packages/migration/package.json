@@ -1,6 +1,6 @@
 {
   "name": "@blog/migration",
-  "version": "6.17.10",
+  "version": "6.18.0",
   "description": "migration tools from previous version",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,8 +23,8 @@
     "migration": "tsc && node ./dist/migration"
   },
   "dependencies": {
-    "@blog/article": "^6.17.10",
-    "@blog/markdown": "^6.17.10",
+    "@blog/article": "^6.18.0",
+    "@blog/markdown": "^6.18.0",
     "download": "^7.1.0",
     "fancy-log": "^1.3.3",
     "glob": "^7.1.6",
