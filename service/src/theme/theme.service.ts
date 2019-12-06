@@ -66,7 +66,11 @@ export class ThemeService implements OnModuleInit {
   }
 
   private async buildSitemap() {
-    const sitemap = await createSitemapContent(this.article.postContexts, this.routes.routesOptions);
+    const sitemap = await createSitemapContent(
+      this.article.postContexts,
+      this.article.pageContexts,
+      this.routes.routesOptions
+    );
     this.logger.log(`Persisting Sitemap`);
     persistFile(`sitemap.xml`, sitemap.toString(), this.config.dirs.dest);
   }

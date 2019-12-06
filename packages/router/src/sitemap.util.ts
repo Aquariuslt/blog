@@ -4,9 +4,11 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 import { ArticleContext } from '@blog/common/interfaces/articles/article-context';
 import {
   buildPostPathFromContext,
+  buildPagePathFromContext,
   createCategoriesOverviewRouteMeta,
   createCategoryDetailRouteMeta,
   createHomeRouteMeta,
+  createPagesDetailRouteMeta,
   createPostDetailRouteMeta,
   createPostsOverviewRouteMeta,
   createTagDetailRouteMeta,
@@ -109,24 +111,44 @@ export const createPostDetailSitemapItem = (
   };
 };
 
-export const createSitemapContent = async (contexts: ArticleContext[], options?: Partial<RoutesOptions>) => {
+export const createPageDetailSitemapItem = (article: ArticleContext, options?: Partial<RoutesOptions>) => {
+  const routeMeta = createPagesDetailRouteMeta(article, options);
+
+  return {
+    url: routeMeta.url,
+    changefreq: CHANGE_FREQ,
+    priority: DETAIL_PRIORITY,
+    lastmod: new Date(article.updated).toISOString(),
+    keywords: article.tags.join(KEYWORDS_SEPARATOR),
+    img: _.map(article.images, (image) => ({
+      url: path.join(buildPagePathFromContext(article), image)
+    }))
+  };
+};
+
+export const createSitemapContent = async (
+  postContexts: ArticleContext[],
+  pageContexts: ArticleContext[],
+  options?: Partial<RoutesOptions>
+) => {
   const sitemap = new SitemapStream({ hostname: options.baseUrl });
 
   const homeSitemapItem = createHomeSitemapItem(options);
-  const postsOverviewSitemapItem = createPostsOverviewSitemapItem(contexts, options);
-  const categoriesOverviewSitemapItem = createCategoriesOverviewSitemapItem(contexts, options);
-  const tagsOverviewSitemapItem = createTagsOverviewSitemapItem(contexts, options);
+  const postsOverviewSitemapItem = createPostsOverviewSitemapItem(postContexts, options);
+  const categoriesOverviewSitemapItem = createCategoriesOverviewSitemapItem(postContexts, options);
+  const tagsOverviewSitemapItem = createTagsOverviewSitemapItem(postContexts, options);
 
-  const allCategories = getAllCategoriesFromContexts(contexts);
-  const allTags = getAllTagsFromContexts(contexts);
+  const allCategories = getAllCategoriesFromContexts(postContexts);
+  const allTags = getAllTagsFromContexts(postContexts);
 
   const categoryDetailSitemapItems = _.map(allCategories, (category) =>
-    createCategoryDetailSitemapItem(category, contexts, options)
+    createCategoryDetailSitemapItem(category, postContexts, options)
   );
-  const tagDetailSitemapItems = _.map(allTags, (tag) => createTagDetailSitemapItem(tag, contexts, options));
-  const postDetailSitemapItems = _.map(contexts, (article) => createPostDetailSitemapItem(article, contexts, options));
-
-  // TODO: add create page contexts
+  const tagDetailSitemapItems = _.map(allTags, (tag) => createTagDetailSitemapItem(tag, postContexts, options));
+  const postDetailSitemapItems = _.map(postContexts, (article) =>
+    createPostDetailSitemapItem(article, postContexts, options)
+  );
+  const pageDetailSitemapItems = _.map(pageContexts, (article) => createPageDetailSitemapItem(article, options));
 
   const allSitemapItems = _.concat(
     [homeSitemapItem],
@@ -135,7 +157,8 @@ export const createSitemapContent = async (contexts: ArticleContext[], options?:
     [tagsOverviewSitemapItem],
     categoryDetailSitemapItems,
     tagDetailSitemapItems,
-    postDetailSitemapItems
+    postDetailSitemapItems,
+    pageDetailSitemapItems
   );
 
   _.each(allSitemapItems, (sitemapItem) => {
