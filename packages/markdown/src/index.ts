@@ -1,2 +1,4 @@
 export * from './metadata';
-export * from './plugins';
+export * from './images.plugin';
+export * from './summary.plugin';
+export * from './content-item.plugin';

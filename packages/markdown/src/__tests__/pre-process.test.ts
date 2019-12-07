@@ -1,5 +1,5 @@
 import { read } from '../__tests__/test.fixtures.helper';
-import { metadata, source } from '../metadata';
+import { metadata, source } from '../index';
 
 describe('markdown: preprocess', () => {
   it('# should read file content in pre-process steps', () => {

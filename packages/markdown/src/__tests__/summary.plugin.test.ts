@@ -1,6 +1,6 @@
 import * as MarkdownIt from 'markdown-it';
 import { SummaryPlugin } from '../summary.plugin';
-import { source } from '../metadata';
+import { source } from '../index';
 import { read } from '../__tests__/test.fixtures.helper';
 
 describe('markdown-it plugin: summary', () => {

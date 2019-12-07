@@ -1,5 +1,5 @@
-import { ArticleMetadata } from './article-metadata';
-import { ContentItem } from './content-item';
+import { ArticleMetadata } from '../articles/article-metadata';
+import { ContentItem } from '../articles/content-item';
 
 export interface ArticleContext extends ArticleMetadata {
   src: string;

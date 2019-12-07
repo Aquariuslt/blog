@@ -5,5 +5,5 @@
     "baseUrl": "./",
     "target": "es5"
   },
-  "exclude": ["node_modules", "dist", "reports", "**/*.test.ts"]
+  "exclude": ["node_modules", "dist", "reports", "src/__tests__"]
 }

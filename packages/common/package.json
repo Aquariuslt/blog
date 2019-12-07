@@ -1,7 +1,7 @@
 {
   "name": "@blog/common",
   "version": "6.20.1",
-  "description": "> TODO: description",
+  "description": "common instance and constants",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
   "license": "MIT",

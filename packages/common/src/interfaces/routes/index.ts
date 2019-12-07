@@ -1,4 +1,4 @@
-import { Layout } from './layout';
+import { Layout } from '../routes/layout';
 
 export const RoutesPathRegex = {
   HOME: '/',

@@ -11,7 +11,7 @@ const level = (tag: string) => Number(tag.slice(1));
 const collapseHeading = (headingItems: ContentItem[]): ContentItem[] => {
   const ROOT_PID = -1;
 
-  // 1. fill pid
+  // 1. fill pid.
   headingItems.map((headingItem, index): void => {
     if (headingItem.level === 1) {
       headingItem.pid = ROOT_PID;
@@ -29,7 +29,7 @@ const collapseHeading = (headingItems: ContentItem[]): ContentItem[] => {
     }
   });
 
-  // 2. fill children
+  // 2. fill children.
   const newHeadingItems: ContentItem[] = [];
   headingItems.forEach((headingItem): void => {
     const isRoot = headingItem.pid === ROOT_PID;
