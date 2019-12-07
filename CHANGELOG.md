@@ -1,3 +1,10 @@
+## [6.20.1](https://github.com/aquariuslt/blog/compare/v6.20.0...v6.20.1) (2019-12-07)
+
+
+### Bug Fixes
+
+* resolve test case declaration issue ([7d94ce1](https://github.com/aquariuslt/blog/commit/7d94ce19e222063167e88c0d0936f1b167ac6f07))
+
 # [6.20.0](https://github.com/aquariuslt/blog/compare/v6.19.0...v6.20.0) (2019-12-07)
 
 
