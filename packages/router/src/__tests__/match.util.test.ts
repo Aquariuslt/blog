@@ -30,6 +30,4 @@ describe('match.util', () => {
     const expectedPath = '/posts/2019/12/09/awesome-post';
     expect(detailPath).toEqual(expectedPath);
   });
-
-  it('# should build ');
 });
