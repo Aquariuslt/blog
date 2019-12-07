@@ -1,3 +1,10 @@
+# [6.20.0](https://github.com/aquariuslt/blog/compare/v6.19.0...v6.20.0) (2019-12-07)
+
+
+### Features
+
+* **theme-react:** set hash after click content-item ([be3fb3b](https://github.com/aquariuslt/blog/commit/be3fb3b1d491bc9a2a62e1f3f746fc2ec2dc1837))
+
 # [6.19.0](https://github.com/aquariuslt/blog/compare/v6.18.0...v6.19.0) (2019-12-07)
 
 
