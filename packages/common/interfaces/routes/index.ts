@@ -1,5 +1,16 @@
 import { Layout } from './layout';
 
+export const RoutesPathRegex = {
+  HOME: '/',
+  POSTS: '/posts',
+  POST_DETAIL: '/posts/:year/:month/:date/:id',
+  PAGE_DETAIL: '/pages/:id',
+  TAGS: '/tags',
+  TAG_DETAIL: '/tags/:id',
+  CATEGORIES: '/categories',
+  CATEGORY_DETAIL: '/categories/:id'
+};
+
 export enum RoutePathPrefix {
   HOME = '',
   HOME_ALIAS = 'home', // alias for empty path ``
