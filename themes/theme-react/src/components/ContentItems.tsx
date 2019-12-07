@@ -71,6 +71,20 @@ const useThrottledOnScroll = (callback, delay) => {
   }, [throttledCallback]);
 };
 
+const setHash = (id) => {
+  if (!history.pushState) {
+    return;
+  }
+
+  history.pushState(
+    {
+      anchor: id
+    },
+    document.title,
+    `#${id}`
+  );
+};
+
 export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   const theme = useTheme();
   const classes = useStyles();
@@ -89,6 +103,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
     scrollIntoView(document.getElementById(id) as Element, {
       behavior: 'smooth'
     });
+    setHash(id);
 
     setTimeout(() => {
       setAfterClick(false);
@@ -112,7 +127,11 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   };
 
   const findActiveIndex = React.useCallback(() => {
-    const ids = collectAllIds(props.items && props.items[0]);
+    if (props.items.length <= 0) {
+      return;
+    }
+
+    const ids = collectAllIds(props.items[0]);
 
     let activeNode;
 
@@ -134,10 +153,8 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
 
     if (activeNode && activeState !== activeNode.id) {
       setActiveState(activeNode.id);
-    } else {
-      ids.length > 0 && setActiveState(ids[0]);
     }
-  }, [props]);
+  }, [activeState]);
 
   useThrottledOnScroll(!afterClick ? findActiveIndex : null, 166);
 
