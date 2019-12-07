@@ -1,6 +1,6 @@
 {
   "name": "@blog/markdown",
-  "version": "6.18.0",
+  "version": "6.19.0",
   "description": "markdown utils for parsing blog articles",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,7 +23,7 @@
     "build:lib": "tsc"
   },
   "dependencies": {
-    "@blog/common": "^6.18.0",
+    "@blog/common": "^6.19.0",
     "cheerio": "^1.0.0-rc.3",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.15",

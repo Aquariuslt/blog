@@ -1,3 +1,10 @@
+# [6.19.0](https://github.com/aquariuslt/blog/compare/v6.18.0...v6.19.0) (2019-12-07)
+
+
+### Features
+
+* **migration:** remove migration package ([351c13e](https://github.com/aquariuslt/blog/commit/351c13eb6a22f682197b0e9ab0c7b931b413ba33))
+
 # [6.18.0](https://github.com/aquariuslt/blog/compare/v6.17.10...v6.18.0) (2019-12-06)
 
 
