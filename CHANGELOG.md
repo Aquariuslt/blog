@@ -1,3 +1,10 @@
+## [6.20.3](https://github.com/aquariuslt/blog/compare/v6.20.2...v6.20.3) (2019-12-08)
+
+
+### Bug Fixes
+
+* **theme-react:** update scroll callback trigger deps ([9a2679a](https://github.com/aquariuslt/blog/commit/9a2679acc26a5d2027305e2eab43b9144c10deee))
+
 ## [6.20.2](https://github.com/aquariuslt/blog/compare/v6.20.1...v6.20.2) (2019-12-08)
 
 
