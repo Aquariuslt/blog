@@ -1,3 +1,10 @@
+## [6.20.2](https://github.com/aquariuslt/blog/compare/v6.20.1...v6.20.2) (2019-12-08)
+
+
+### Bug Fixes
+
+* **theme-react:** clear `afterClick` timeout function first ([16f5c9a](https://github.com/aquariuslt/blog/commit/16f5c9a0634b4827ea399b08119fdd0236cef431))
+
 ## [6.20.1](https://github.com/aquariuslt/blog/compare/v6.20.0...v6.20.1) (2019-12-07)
 
 
