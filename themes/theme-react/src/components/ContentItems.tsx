@@ -86,16 +86,23 @@ const setHash = (id) => {
 };
 
 export const ContentItems: React.FC<ContentItemsProps> = (props) => {
+  const EMPTY_TIMEOUT_ID = -1;
   const theme = useTheme();
   const classes = useStyles();
   const [activeState, setActiveState] = React.useState<string | null>(null);
   const [afterClick, setAfterClick] = React.useState<boolean>(false);
+  const [lastClickTimeout, setLastClickTimeout] = React.useState<any>(EMPTY_TIMEOUT_ID);
 
   const scrollTo = (id: string) => () => {
     const SCROLL_DURATION = 4000;
     const SCROLL_ANIMATION_DURATION = 100;
 
     setAfterClick(true);
+
+    if (lastClickTimeout !== EMPTY_TIMEOUT_ID) {
+      clearTimeout(lastClickTimeout);
+    }
+
     if (activeState !== id) {
       setActiveState(id);
     }
@@ -105,9 +112,12 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
     });
     setHash(id);
 
-    setTimeout(() => {
+    const lastTimeoutId = setTimeout(() => {
       setAfterClick(false);
+      setLastClickTimeout(EMPTY_TIMEOUT_ID);
     }, SCROLL_DURATION + SCROLL_ANIMATION_DURATION);
+
+    setLastClickTimeout(lastTimeoutId);
   };
 
   const collectAllIds = (rootItem: ContentItem) => {
