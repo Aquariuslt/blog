@@ -144,7 +144,6 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
     const ids = collectAllIds(props.items[0]);
 
     let activeNode;
-
     for (let i = ids.length - 1; i >= 0; i--) {
       // No hash if we're near the top of the page
       if (document.documentElement.scrollTop < 200) {
@@ -164,7 +163,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
     if (activeNode && activeState !== activeNode.id) {
       setActiveState(activeNode.id);
     }
-  }, [activeState]);
+  }, [props.items]);
 
   useThrottledOnScroll(!afterClick ? findActiveIndex : null, 166);
 
