@@ -74,5 +74,5 @@ jobs:
       - run:
           name: deploy docs to gh-pages branch at coding.me
           command: >
-            gh-pages --dist dist --repo https://${CODING_TOKEN}@coding.net/aquariuslt/aquariuslt.coding.me.git --branch master --silent --add
+            gh-pages --dist dist --repo https://${CODING_TOKEN}@coding.net/aquariuslt/aquariuslt.coding.me.git --branch master --silent
 
