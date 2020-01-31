@@ -11,6 +11,12 @@ workflows:
           filters:
             branches:
               only: master
+      - deplpy-cn:
+          requires:
+            - ci
+          filters:
+            branches:
+              only: master
 
 jobs:
   ci:
@@ -44,3 +50,29 @@ jobs:
       - run: sudo gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --add
       - run: yarn
       - run: yarn release
+  deplpy-cn:
+    docker:
+      - image: circleci/node:12.13-browsers
+    working_directory: ~/blog
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/blog
+      - run:
+          name: update cn domain
+          command: |
+            sed -i -e 's/blog/blogcn/g' .blogrc
+            yarn
+            yarn bootstrap
+            yarn build:prod
+      - run:
+          name: install gh-pages & lerna
+          command: |
+            sudo npm install -g --silent gh-pages
+            git config user.email deploy-bot@circleci.com
+            git config user.name "circleci"
+      - run:
+          name: deploy docs to gh-pages branch at coding.me
+          command: >
+            gh-pages --dist dist --repo https://${CODING_TOKEN}@coding.net/aquariuslt/aquariuslt.coding.me.git --branch master --silent --add
+
