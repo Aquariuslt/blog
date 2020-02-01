@@ -2,7 +2,7 @@
 title: 'About Me'
 id: about
 created: 2019-11-25
-updated: 2019-11-25
+updated: 2020-02-02
 categories:
   - Blog
 tags:
@@ -22,7 +22,7 @@ cover: ./about.png
 
 - [Github](https://github.com/aquariuslt)
 - [Instagram](https://instagram.com/supaquariuslt)
-- [Zhihu](https://zhihu.com/people/aquariuslt)
+- [Zhihu](https://zhihu.com/people/Aquariuslt)
 
 ## Friend Links
 
