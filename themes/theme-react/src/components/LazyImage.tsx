@@ -23,7 +23,7 @@ export const LazyImage: React.FC<LazyImageProps> = (props) => {
 
   return (
     <picture>
-      <source data-srcset={webpImage} type="image/webp" />
+      <source data-srcset={webpImage} type="image/webp" data-was-processed={false} />
       <img alt={props.alt} className={clsx(props.className, 'lazy')} src={placeholder} data-src={props.image} />
     </picture>
   );
