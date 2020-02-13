@@ -1,3 +1,10 @@
+## [6.20.4](https://github.com/aquariuslt/blog/compare/v6.20.3...v6.20.4) (2020-02-13)
+
+
+### Bug Fixes
+
+* lazyload image component issue under pre-render ([5e9dc38](https://github.com/aquariuslt/blog/commit/5e9dc38f1d392b15b4b8e75e5e0e3ff6c5e78db6))
+
 ## [6.20.3](https://github.com/aquariuslt/blog/compare/v6.20.2...v6.20.3) (2019-12-08)
 
 
