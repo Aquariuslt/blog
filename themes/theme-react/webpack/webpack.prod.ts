@@ -44,6 +44,16 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
       filename: `static/css/[name].[chunkhash].css`,
       chunkFilename: `static/css/[name].[chunkhash].css`
     }),
+    new HtmlWebpackPlugin({
+      template: `${BASE_DIR}/index.html`,
+      favicon: `${BASE_DIR}/favicon.ico`,
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: false
+      }
+    }),
     new FaviconsWebpackPlugin({
       prefix: `static/img`,
       outputPath: `static/img`,
@@ -64,16 +74,6 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
           firefox: true,
           windows: true
         }
-      }
-    }),
-    new HtmlWebpackPlugin({
-      template: `${BASE_DIR}/index.html`,
-      favicon: `${BASE_DIR}/favicon.ico`,
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: false
       }
     }),
     new PreloadPlugin({
