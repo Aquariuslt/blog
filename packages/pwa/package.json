@@ -30,17 +30,17 @@
   "dependencies": {
     "@blog/common": "^6.20.5",
     "lodash": "^4.17.15",
-    "workbox-build": "^4.3.1"
+    "workbox-build": "^5.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.23",
+    "@types/jest": "^25.1.2",
     "@types/lodash": "^4.14.149",
-    "@types/node": "^12.12.14",
-    "jest": "^24.9.0",
+    "@types/node": "^13.7.1",
+    "jest": "^25.1.0",
     "jest-raw-loader": "^1.0.1",
-    "rimraf": "^3.0.0",
-    "ts-jest": "^24.2.0",
-    "typescript": "^3.7.3"
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
   },
   "jest": {
     "moduleFileExtensions": [
