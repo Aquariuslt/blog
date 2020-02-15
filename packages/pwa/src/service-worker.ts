@@ -10,7 +10,6 @@ export const buildServiceWorker = async (dest: string) => {
       '**/*.html',
       'index.html'
     ],
-    importWorkboxFrom: 'local',
     swDest: `${dest}/service-worker.js`,
     skipWaiting: true,
     clientsClaim: true
