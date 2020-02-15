@@ -1,3 +1,17 @@
+## [6.20.6](https://github.com/aquariuslt/blog/compare/v6.20.5...v6.20.6) (2020-02-15)
+
+
+### Bug Fixes
+
+* **pwa:** upgrade workbox-build to v5.0.0 ([acdde98](https://github.com/aquariuslt/blog/commit/acdde9828e15816d62a542f2ef1a17e4b0ea7958))
+* webpack-favicons plugin version update issue ([d48fcbc](https://github.com/aquariuslt/blog/commit/d48fcbce77c35d474fb94d6d9b4db0389b481774))
+* webpack-favicons plugin version update issue ([a1a6690](https://github.com/aquariuslt/blog/commit/a1a66903b9c14d6e806131f754a9257137b2d73e))
+
+
+### Performance Improvements
+
+* **post:** optimize image size ([da1e115](https://github.com/aquariuslt/blog/commit/da1e115ac87bbc360b0b59649fe954c21181a1af))
+
 ## [6.20.5](https://github.com/aquariuslt/blog/compare/v6.20.4...v6.20.5) (2020-02-15)
 
 
