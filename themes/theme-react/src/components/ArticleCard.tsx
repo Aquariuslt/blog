@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { format, parseISO } from 'date-fns';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Link as RouterLink } from 'react-router-dom';
 import { CARD_MAX_WIDTH } from '@theme-react/constants';
@@ -21,12 +22,16 @@ const useStyles = makeStyles((theme: Theme) =>
     media: {
       width: '100%',
       maxWidth: '100%'
+    },
+    date: {
+      marginBottom: theme.spacing(1)
     }
   })
 );
 
 export const ArticleCard: React.FC<Partial<ArticleContext>> = (props) => {
   const classes = useStyles();
+
   return (
     <Card className={classes.card}>
       <CardActionArea component={RouterLink} to={String(props['link'])}>
@@ -34,6 +39,9 @@ export const ArticleCard: React.FC<Partial<ArticleContext>> = (props) => {
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}
+          </Typography>
+          <Typography className={classes.date} color="textSecondary">
+            {format(parseISO(props.created || ''), 'yyyy-MM-dd')}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {props.summary}

@@ -29,7 +29,13 @@ export const theme = createMuiTheme({
       root: {
         fontFamily: THEME_FONT_FAMILY
       },
+      body1: {
+        fontFamily: THEME_FONT_FAMILY
+      },
       body2: {
+        fontFamily: THEME_FONT_FAMILY
+      },
+      h5: {
         fontFamily: THEME_FONT_FAMILY
       }
     }
