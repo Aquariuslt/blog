@@ -1,3 +1,10 @@
+## [6.20.5](https://github.com/aquariuslt/blog/compare/v6.20.4...v6.20.5) (2020-02-15)
+
+
+### Bug Fixes
+
+* **theme-react:** use raw img tag instead of lazy load image ([ba89629](https://github.com/aquariuslt/blog/commit/ba8962987bb1ffb75a3af5af86e437a971526b82))
+
 ## [6.20.4](https://github.com/aquariuslt/blog/compare/v6.20.3...v6.20.4) (2020-02-13)
 
 
