@@ -56,14 +56,12 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
         appShortName: BASE_TITLE,
         appDescription: ``,
         theme_color: `#FAFAFA`,
-        background_color: `#FAFAFA`,
+        background: `#FAFAFA`,
         icons: {
           android: true,
           appleIcon: true,
           appleStartup: true,
           firefox: true,
-          opengraph: true,
-          twitter: true,
           windows: true
         }
       }
