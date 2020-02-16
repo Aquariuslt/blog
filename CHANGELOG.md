@@ -1,3 +1,10 @@
+## [6.20.7](https://github.com/aquariuslt/blog/compare/v6.20.6...v6.20.7) (2020-02-16)
+
+
+### Performance Improvements
+
+* optimize png in posts ([e52fff8](https://github.com/aquariuslt/blog/commit/e52fff8ca598cbbbccdb7fd27767d60754f7adab))
+
 ## [6.20.6](https://github.com/aquariuslt/blog/compare/v6.20.5...v6.20.6) (2020-02-15)
 
 
