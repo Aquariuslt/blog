@@ -10,9 +10,13 @@ This repo contains source code of my blog and posts.
 
 ## Screenshots
 
-<img alt="mobile-home" src="./docs/images/screenshot-mobile-home.png" width="360"/>    
-<img alt="mobile-category" src="./docs/images/screenshot-mobile-category.png" width="360"/>    
-<img alt="mobile-detail" src="./docs/images/screenshot-mobile-detail.png" width="360" />
+### Mobile
+
+<img alt="mobile-home" src="./docs/images/screenshot-mobile-home.png" width="240"/><img alt="mobile-category" src="./docs/images/screenshot-mobile-category.png" width="240"/><img alt="mobile-detail" src="./docs/images/screenshot-mobile-detail.png" width="240" />
+
+### Desktop
+
+![](./docs/images/screenshots-desktop-detail.png)
 
 ## Benchmark
 
