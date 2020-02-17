@@ -16,7 +16,7 @@ This repo contains source code of my blog and posts.
 
 ### Desktop
 
-![](./docs/images/screenshots-desktop-detail.png)
+![](./docs/images/screenshot-desktop-detail.png)
 
 ## Benchmark
 
