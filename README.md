@@ -8,6 +8,22 @@
 
 This repo contains source code of my blog and posts.
 
+## Screenshots
+
+<img alt="mobile-home" src="./docs/images/screenshot-mobile-home.png" width="360"/>    
+<img alt="mobile-category" src="./docs/images/screenshot-mobile-category.png" width="360"/>    
+<img alt="mobile-detail" src="./docs/images/screenshot-mobile-detail.png" width="360" />
+
+## Benchmark
+
+### Web.dev Testing
+
+![](./docs/images/web-dot-dev-benchmark.png)
+
+### Local Lighthouse Score
+
+![](./docs/images/lighthouse-result.png)
+
 ## Change Log
 
 See [CHANGELOG.md](./CHANGELOG.md) or [Github Releases](https://github.com/aquariuslt/blog/releases)
