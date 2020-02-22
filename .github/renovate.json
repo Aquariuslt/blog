@@ -1,4 +1,3 @@
 {
-  "extends": ["config:base"],
-  "bumpVersion": "major"
+  "extends": ["config:base"]
 }
