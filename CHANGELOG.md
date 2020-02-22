@@ -1,3 +1,10 @@
+## [6.20.8](https://github.com/aquariuslt/blog/compare/v6.20.7...v6.20.8) (2020-02-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency github-markdown-css to v4 ([395e081](https://github.com/aquariuslt/blog/commit/395e081a7a1ac32dfbabe1aef673c9e9fc03be2d))
+
 ## [6.20.7](https://github.com/aquariuslt/blog/compare/v6.20.6...v6.20.7) (2020-02-16)
 
 
