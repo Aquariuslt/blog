@@ -28,7 +28,7 @@
     "react-router-dom": "5.1.2",
     "scroll-into-view-if-needed": "2.2.24",
     "typeface-roboto": "0.0.75",
-    "vanilla-lazyload": "12.4.0"
+    "vanilla-lazyload": "12.5.0"
   },
   "devDependencies": {
     "@testing-library/react": "9.4.1",
