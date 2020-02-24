@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from '@/app.module';
-import { AppLogger } from '@/app.logger';
+import { CustomLogger } from '@/logger/custom.logger';
 
 async function bootstrap() {
   const port = 2999;
   const app = await NestFactory.create(AppModule, { logger: false });
-  app.useLogger(app.get(AppLogger));
+  app.useLogger(app.get(CustomLogger));
   await app.listen(port);
   await app.close();
 }
