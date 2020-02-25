@@ -1,3 +1,10 @@
+# [6.21.0](https://github.com/aquariuslt/blog/compare/v6.20.12...v6.21.0) (2020-02-25)
+
+
+### Features
+
+* **theme-react:** add pv event after url location changed ([4407ba2](https://github.com/aquariuslt/blog/commit/4407ba24cf0f8f393f82b97efbf33859591176bf))
+
 ## [6.20.12](https://github.com/aquariuslt/blog/compare/v6.20.11...v6.20.12) (2020-02-25)
 
 
