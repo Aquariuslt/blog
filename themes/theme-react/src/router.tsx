@@ -1,6 +1,7 @@
 import loadable from '@loadable/component';
 import * as React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
 import List from '@theme-react/views/List';
@@ -75,7 +76,19 @@ export const routes = [
   }
 ];
 
+const usePageViews = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window['ga']) {
+      window['ga']('set', 'page', location.pathname);
+      window['ga']('send', 'pageview', location.pathname);
+    }
+  }, [location]);
+};
+
 export const RouterView: React.FC = () => {
+  usePageViews();
   return (
     <Switch>
       {routes.map((route, i) => (
