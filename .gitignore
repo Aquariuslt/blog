@@ -16,6 +16,7 @@ yarn.lock
 
 # logs
 *.log
+*.log.*.gz
 
 # build & distribution
 .cache
