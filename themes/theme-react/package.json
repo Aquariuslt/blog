@@ -13,7 +13,7 @@
     "@blog/common": "^6.21.4",
     "@blog/config": "^6.21.4",
     "@loadable/component": "5.12.0",
-    "@material-ui/core": "4.9.4",
+    "@material-ui/core": "4.9.5",
     "@material-ui/icons": "4.9.1",
     "axios": "0.19.2",
     "classnames": "2.2.6",
