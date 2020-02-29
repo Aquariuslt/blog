@@ -11,7 +11,7 @@ tags:
   - NPM
   - Renovate
   - Github
-cover: ./cover.png
+cover: ./revonate.png
 ---
 
 # 使用 renovate 监控第三方依赖更新
