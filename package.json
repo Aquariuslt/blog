@@ -13,7 +13,7 @@
   "scripts": {
     "build:service": "lerna run build:service",
     "build:libs": "lerna run build:lib",
-    "build:themes": "lerna run build:theme",
+    "build:themes": "lerna run build:theme --concurrency 1",
     "build:all": "yarn build:libs && yarn build:themes && yarn build:service",
     "build:prod": "yarn build:all && lerna run build:service:prod",
     "bootstrap": "lerna bootstrap",
