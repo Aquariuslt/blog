@@ -129,6 +129,8 @@ Renovate 是一家名为 WhiteSource 的公司开发的一项适用于多种语�
 
 如果开发者很不爽在项目根目录增添这样一个 json 配置文件，可以按照他们官方配置发现的目录查找顺序，移入到 `.github` 目录下。(具体查找规则，官方有较为详细的说明文档)
 
+![revonate-setup-pull-request](./revonate-setup-pull-request.png)
+
 ### 3. Pin Dependencies
 
 合入第二点的 PR 后，不久变会收到第二个初始化类型的 PR: Pin Dependencies。
@@ -179,11 +181,15 @@ Renovate 是一家名为 WhiteSource 的公司开发的一项适用于多种语�
 
 ### 意外惊喜
 
-意外惊喜的是，在 merge PR 时，renovate 还会增加一个 `conventional commit` 的检测: 如果你在项目中显式地配置了主流的 commit lint 以及 commit message 风格检测，他会按照这些常见的风格来修改 PR 的标题:
+惊喜的是，在 merge PR 时，renovate 还会增加一个 `conventional commit` 的检测: 如果你在项目中显式地配置了主流的 commit lint 以及 commit message 风格检测，他会按照这些常见的风格来修改 PR 的标题:
 
 如: [https://github.com/aquariuslt/blog/pull/38](https://github.com/aquariuslt/blog/pull/38)
 
 标题为: chore(deps): update dependency @types/node to v13.7.7 #38
+
+对于 circleci，也提供了的 CI 环境下的 docker-image 版本监控
+
+![circle-ci-docker-image-support](./revonate-circleci-docker-image-support.png)
 
 ## 结论与思考
 
