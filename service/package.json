@@ -12,7 +12,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "prebuild::service:prod": "yarn run build:service",
+    "prebuild:service:prod": "yarn run build:service",
     "build:service:prod": "cross-env NODE_ENV=production node -r tsconfig-paths/register -r ts-node/register dist/main",
     "prebuild:service": "yarn clean",
     "build:service": "nest build",
