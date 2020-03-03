@@ -35,5 +35,6 @@ cover: ./about.png
 - [arhi](https://xuyanxin.top): 阿狸博客
 - [yulai](https://yulaiz.com): Yulai 博客
 - [witt](https://unix.bio): 维特，吹比工程师，自由开发者。
+- [nancheung's blog](https://blog.nancheung.com/): 一个纯洁天真的男孩。
 
 > 如需添加友情链接，请留言(+Issue/+Pull Request)
