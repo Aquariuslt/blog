@@ -42,6 +42,6 @@ jobs:
             sudo npm install -g --silent gh-pages
             git config user.email deploy-bot@circleci.com
             git config user.name "circleci"
-      - run: sudo gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --add
+      - run: sudo gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update' --add
       - run: yarn
       - run: yarn release
