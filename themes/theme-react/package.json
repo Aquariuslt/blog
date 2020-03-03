@@ -64,7 +64,7 @@
     "postcss": "7.0.27",
     "postcss-load-config": "2.1.0",
     "postcss-loader": "3.0.0",
-    "postcss-pxtorem": "5.0.0",
+    "postcss-pxtorem": "5.1.0",
     "preload-webpack-plugin": "3.0.0-beta.4",
     "properties-json-loader": "2.2.0",
     "robotstxt-webpack-plugin": "7.0.0",
