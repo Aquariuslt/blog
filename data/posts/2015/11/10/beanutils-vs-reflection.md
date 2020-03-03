@@ -25,7 +25,7 @@ cover: ./cover.png
 
 idea 集成了 (应该是 JProfiler 本身就带了 idea 的插件安装) 安装之后就会 在启动服务器运行的 按钮多出一个 使用 JProfiler 运行.
 
-> 由于 JProfiler 本身也是通过 javaagent 的方法更改一些类加载运行时策略,所以会跟 Jrebel 冲突. 所以在使用 JProfiler 监控性能的时候,如果之前在 weblogic 服务器运行配置的过程中添加了 jrebel.jar 作为 javaagent 的参数,务必删掉其余配置 与之前的[Jrebel 插件结合 weblogic](https://blog.aquariuslt.com/posts/2015/10/08/jrebel-configuration-with-weblogic-in-idea/)一样
+> 由于 JProfiler 本身也是通过 javaagent 的方法更改一些类加载运行时策略,所以会跟 Jrebel 冲突. 所以在使用 JProfiler 监控性能的时候,如果之前在 weblogic 服务器运行配置的过程中添加了 jrebel.jar 作为 javaagent 的参数,务必删掉其余配置 与之前的[Jrebel 插件结合 weblogic](https://zexo.dev/posts/2015/10/08/jrebel-configuration-with-weblogic-in-idea/)一样
 
 #### 通过 JProfiler 分析方法执行时间
 

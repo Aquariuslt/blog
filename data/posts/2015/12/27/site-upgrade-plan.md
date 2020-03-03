@@ -35,7 +35,7 @@ cover: ./cover.png
 
 从目前的域名的管理情况来看,应该是打算 这样
 
-> A 域名`aquariuslt.com`作为导航主站,纯手工 MEAN. CNAME`blog.aquariuslt.com`作为主要的博客站,放 Post CNAME`debug.aquariuslt.com`作为主要的跌坑笔记手册 -- CNAME`game.aquariuslt.com`作为我的(粗口)游戏哲学理论 --
+> A 域名`aquariuslt.com`作为导航主站,纯手工 MEAN. CNAME`blog.aquariuslt.com`作为主要的博客站(现已经迁移到 `zexo.dev`),放 Post CNAME`debug.aquariuslt.com`作为主要的跌坑笔记手册 -- CNAME`game.aquariuslt.com`作为我的(粗口)游戏哲学理论 --
 
 [主站](https://aquariuslt.com)正在重建 ing,已经可以访问目前使用的是`iptables`命令进行端口转发当然日后也可能考虑`httpd`转发 or`nginx`.
 

@@ -1,8 +1,8 @@
 {
-  "name": "blog.aquariuslt.com",
+  "name": "zexo.dev",
   "version": "6.21.8",
   "private": true,
-  "description": "blog.aquariuslt.com",
+  "description": "source code of https://zexo.dev",
   "repository": "https://github.com/aquariuslt/blog",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "license": "MIT",

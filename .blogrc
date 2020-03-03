@@ -14,8 +14,8 @@ dirs:
 
 site:
   https: true
-  domain: blog.aquariuslt.com
-  title: 'TL; DR'
+  domain: zexo.dev
+  title: 'zexo.dev'
   disqus: aquariuslt
   google_analytics:
     verification: s3PYm0fCo0ImPqqXoPLiUb_bFdlYODKw54VGSkcFgyE
