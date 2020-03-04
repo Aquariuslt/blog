@@ -46,7 +46,7 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
     }),
     new HtmlWebpackPlugin({
       template: `${BASE_DIR}/index.html`,
-      favicon: `${BASE_DIR}/favicon.ico`,
+      favicon: `${BASE_DIR}/favicon.png`,
       inject: true,
       minify: {
         removeComments: true,
@@ -57,7 +57,7 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
     new FaviconsWebpackPlugin({
       prefix: `static/img`,
       outputPath: `static/img`,
-      logo: BASE_DIR + `/favicon.svg`,
+      logo: BASE_DIR + `/favicon.png`,
       cache: true,
       inject: true,
       favicons: {
@@ -65,8 +65,8 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
         appName: BASE_TITLE,
         appShortName: BASE_TITLE,
         appDescription: ``,
-        theme_color: `#FAFAFA`,
-        background: `#FAFAFA`,
+        theme_color: `#F5F5F5`,
+        background: `#F5F5F5`,
         icons: {
           android: true,
           appleIcon: true,
