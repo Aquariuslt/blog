@@ -1,3 +1,10 @@
+# [6.22.0](https://github.com/aquariuslt/blog/compare/v6.21.9...v6.22.0) (2020-03-04)
+
+
+### Features
+
+* **og:** build full url for og:image meta ([4ac06ad](https://github.com/aquariuslt/blog/commit/4ac06ad79b0981aa132304d8ae9728a8a2f9fc1c))
+
 ## [6.21.9](https://github.com/aquariuslt/blog/compare/v6.21.8...v6.21.9) (2020-03-03)
 
 
