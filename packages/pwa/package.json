@@ -1,6 +1,6 @@
 {
   "name": "@blog/pwa",
-  "version": "6.22.0",
+  "version": "6.22.1",
   "description": "progressive web application tools including workbox + prerendering",
   "keywords": [
     "pwa",
@@ -28,7 +28,7 @@
     "build:lib": "tsc"
   },
   "dependencies": {
-    "@blog/common": "^6.22.0",
+    "@blog/common": "^6.22.1",
     "lodash": "4.17.15",
     "workbox-build": "4.3.1"
   },

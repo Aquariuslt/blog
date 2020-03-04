@@ -1,3 +1,10 @@
+## [6.22.1](https://github.com/aquariuslt/blog/compare/v6.22.0...v6.22.1) (2020-03-04)
+
+
+### Bug Fixes
+
+* **pwa:** revert workbox to v4.3.1 due to unclear document ([38a4e14](https://github.com/aquariuslt/blog/commit/38a4e14d56853ab1a127d82c0bd35714e52777dd))
+
 # [6.22.0](https://github.com/aquariuslt/blog/compare/v6.21.9...v6.22.0) (2020-03-04)
 
 
