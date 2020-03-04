@@ -17,8 +17,8 @@ export class CustomLogger extends NestLogger {
           timestamp: logEvent.startTime,
           pid: logEvent.pid,
           level: logEvent.level.levelStr,
-          message: logEvent.data[0],
-          context: logEvent.data[1] || 'No-Context'
+          message: logEvent.data[1],
+          context: logEvent.data[0] || 'No-Context'
         });
     });
 
@@ -49,18 +49,18 @@ export class CustomLogger extends NestLogger {
   }
 
   debug(message: any, context?: string) {
-    this.internalLogger.debug(message, context);
+    this.internalLogger.debug(context, message);
   }
 
   log(message: string, context?: string) {
-    this.internalLogger.info(message, context);
+    this.internalLogger.info(context, message);
   }
 
   warn(message: any, context?: string) {
-    this.internalLogger.warn(message, context);
+    this.internalLogger.warn(context, message);
   }
 
   error(message: any, trace?: string, context?: string) {
-    this.internalLogger.error(message, context, trace);
+    this.internalLogger.error(context, message, trace);
   }
 }
