@@ -65,8 +65,8 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
         appName: BASE_TITLE,
         appShortName: BASE_TITLE,
         appDescription: ``,
-        theme_color: `#F5F5F5`,
-        background: `#F5F5F5`,
+        theme_color: `#FFFFFF`,
+        background: `#FFFFFF`,
         icons: {
           android: true,
           appleIcon: true,

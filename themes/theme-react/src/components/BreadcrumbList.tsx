@@ -35,7 +35,12 @@ export const BreadcrumbList: React.FC<BreadcrumbListProps> = (props) => {
       <Paper elevation={0} className={classes.paper}>
         <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
           {breadcrumbItems.map((item, index) => (
-            <Link key={index} color="inherit" component={RouterLink} to={new URL(item.item).pathname}>
+            <Link
+              key={item.item}
+              color={index === breadcrumbItems.length - 1 ? 'textPrimary' : 'inherit'}
+              component={RouterLink}
+              to={new URL(item.item).pathname}
+            >
               {item.name}
             </Link>
           ))}

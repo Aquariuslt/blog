@@ -168,6 +168,8 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
   useThrottledOnScroll(!afterClick ? findActiveIndex : null, 166);
 
   const ContentLink: React.FC<ContentItem> = (item) => {
+    const isTitle = item.position === 0;
+
     return (
       <React.Fragment>
         <Typography
@@ -178,7 +180,7 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
             paddingLeft: theme.spacing(item.level)
           }}
         >
-          {item.label}
+          {isTitle ? 'Table of Content' : item.label}
         </Typography>
 
         {item.children.length > 0 && (
