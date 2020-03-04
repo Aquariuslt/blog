@@ -18,7 +18,12 @@ import {
   createCategoryDetailMetas,
   createCategoryDetailRouteItem
 } from './category.route.util';
-import { createPostDetailMetas, createPostsOverviewMetas, createPostsOverviewRouteItem } from './post.route.util';
+import {
+  createPageDetailMetas,
+  createPostDetailMetas,
+  createPostsOverviewMetas,
+  createPostsOverviewRouteItem
+} from './post.route.util';
 import {
   createBreadcrumbList,
   createCategoriesOverviewBreadcrumbItem,
@@ -254,7 +259,7 @@ export const createPostDetailRouteMeta = (
       createPostDetailBreadcrumbItem(options.baseUrl, article.title, path)
     ]),
     type: Layout.DETAIL,
-    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createPostDetailMetas(article)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createPostDetailMetas(article, options)),
     data: undefined
   };
 };
@@ -273,7 +278,7 @@ export const createPagesDetailRouteMeta = (article: ArticleContext, options?: Pa
       createHomeBreadcrumbItem(options.baseUrl, options.baseTitle, RoutePathPrefix.HOME),
       createPageDetailBreadcrumbItem(options.baseUrl, article.title, path)
     ]),
-    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createPostDetailMetas(article)),
+    metas: _.concat(createGoogleAnalyticsMeta(), createCommonMetas(options), createPageDetailMetas(article, options)),
     type: Layout.DETAIL,
     data: undefined
   };
