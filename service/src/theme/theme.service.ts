@@ -36,6 +36,7 @@ export class ThemeService implements OnModuleInit {
       this.buildFallbackHtml();
       await this.prerender();
       await this.buildPWAAssets();
+      await this.buildNowConfig();
     }
   }
 
@@ -79,6 +80,23 @@ export class ThemeService implements OnModuleInit {
     this.logger.log(`Build Service Worker related files to ${this.config.dirs.dest}`);
     await buildServiceWorker(this.config.dirs.dest);
     this.logger.log(`Build Service Worker complete;`);
+  }
+
+  private async buildNowConfig() {
+    this.logger.log(`Build now.json for static routing`);
+    const routes = this.routes.routes
+      .filter((route) => route.path !== `/`)
+      .map((route) => ({
+        src: route.path,
+        dest: `${route.path}/index.html`
+      }));
+    const nowConfiguration = {
+      version: 2,
+      trailingSlash: true,
+      routes
+    };
+    fse.writeFileSync(path.join(this.config.dirs.dest, `/now.json`), JSON.stringify(nowConfiguration));
+    this.logger.log(`Build now.json complete`);
   }
 
   private async prerender() {
