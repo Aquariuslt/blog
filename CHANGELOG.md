@@ -1,3 +1,10 @@
+# [6.23.0](https://github.com/aquariuslt/blog/compare/v6.22.1...v6.23.0) (2020-03-05)
+
+
+### Features
+
+* **now:** add `now.json` generation ([71ac079](https://github.com/aquariuslt/blog/commit/71ac079a5cbd5ee2c3f4c1d7cc94a0dc91c877b0))
+
 ## [6.22.1](https://github.com/aquariuslt/blog/compare/v6.22.0...v6.22.1) (2020-03-04)
 
 
