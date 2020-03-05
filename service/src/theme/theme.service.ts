@@ -84,36 +84,28 @@ export class ThemeService implements OnModuleInit {
 
   private async buildNowConfig() {
     this.logger.log(`Build now.json for static routing`);
-    const routes = this.routes.routes
-      .filter((route) => route.path !== `/`)
-      .map((route) => ({
-        src: route.path,
-        dest: `${route.path}/index.html`
-      }));
     const nowConfiguration = {
       version: 2,
-      trailingSlash: true,
-      routes
+      trailingSlash: true
     };
     fse.writeFileSync(path.join(this.config.dirs.dest, `/now.json`), JSON.stringify(nowConfiguration));
     this.logger.log(`Build now.json complete`);
   }
 
   private async prerender() {
-    const prerenderTasks = _.map(this.routes.routes, (route) => {
-      if (route.path === '/') {
-        return Promise.resolve();
-      }
-      return new Promise((resolve) => {
-        this.captureAndSaveRoute(route.path)
-          .then(() => {
-            resolve();
-          })
-          .catch((error) => {
-            this.logger.error(error.message);
-          });
+    const prerenderTasks = this.routes.routes
+      .filter((route) => route.path !== '/')
+      .map((route) => {
+        return new Promise((resolve) => {
+          this.captureAndSaveRoute(route.path)
+            .then(() => {
+              resolve();
+            })
+            .catch((error) => {
+              this.logger.error(error.message);
+            });
+        });
       });
-    });
 
     await Promise.all(prerenderTasks);
 
