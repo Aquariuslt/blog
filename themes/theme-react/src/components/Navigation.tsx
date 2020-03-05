@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme: Theme) =>
         duration: theme.transitions.duration.leavingScreen
       }),
       maxWidth: '100%',
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.background.paper,
       marginLeft: -drawerWidth
     },
     contentShift: {
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme: Theme) =>
         duration: theme.transitions.duration.enteringScreen
       }),
       maxWidth: '100%',
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.background.paper,
       marginLeft: 0
     },
     scrollToTop: {
