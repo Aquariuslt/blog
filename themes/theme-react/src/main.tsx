@@ -4,4 +4,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { App } from '@theme-react/App';
 
-ReactDOM.hydrate(<App />, document.getElementById('app'));
+if (process.env.NODE_ENV === 'production') {
+  ReactDOM.hydrate(<App />, document.getElementById('app'));
+} else {
+  ReactDOM.render(<App />, document.getElementById('app'));
+}

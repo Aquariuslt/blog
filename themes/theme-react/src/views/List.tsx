@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: 'wrap',
       justifyContent: 'space-around',
       overflow: 'hidden',
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.background.paper,
       paddingTop: theme.spacing(1),
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(1)
