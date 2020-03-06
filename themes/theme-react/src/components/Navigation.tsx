@@ -76,7 +76,8 @@ const useStyles = makeStyles((theme: Theme) =>
       }),
       maxWidth: '100%',
       backgroundColor: theme.palette.background.paper,
-      marginLeft: -drawerWidth
+      marginLeft: -drawerWidth,
+      minHeight: '100vh'
     },
     contentShift: {
       transition: theme.transitions.create('margin', {
@@ -85,7 +86,8 @@ const useStyles = makeStyles((theme: Theme) =>
       }),
       maxWidth: '100%',
       backgroundColor: theme.palette.background.paper,
-      marginLeft: 0
+      marginLeft: 0,
+      minHeight: '100vh'
     },
     scrollToTop: {
       position: 'fixed',
