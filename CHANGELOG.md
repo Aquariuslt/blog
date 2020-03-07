@@ -1,3 +1,10 @@
+## [6.24.1](https://github.com/aquariuslt/blog/compare/v6.24.0...v6.24.1) (2020-03-07)
+
+
+### Performance Improvements
+
+* **api:** reduce home api response size by 10 ([b40bdc9](https://github.com/aquariuslt/blog/commit/b40bdc9ccb61f449e4b3fac671ab360f8fbf85e2))
+
 # [6.24.0](https://github.com/aquariuslt/blog/compare/v6.23.0...v6.24.0) (2020-03-05)
 
 
