@@ -96,9 +96,12 @@ export class ApiService implements OnModuleInit {
   }
 
   buildHomeApi() {
+    const HOME_POSTS_DISPLAY_LENGTH = 10;
     return _.merge({}, this.routes.home, {
       path: buildURLPath(RoutePathPrefix.HOME_ALIAS),
-      data: createPostsOverviewApiData(this.article.postContexts)
+      data: createPostsOverviewApiData(this.article.postContexts).filter(
+        (post, index) => index < HOME_POSTS_DISPLAY_LENGTH
+      )
     });
   }
 
