@@ -1,3 +1,10 @@
+## [6.24.3](https://github.com/aquariuslt/blog/compare/v6.24.2...v6.24.3) (2020-03-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sharp to v0.25.1 ([#69](https://github.com/aquariuslt/blog/issues/69)) ([e3109c3](https://github.com/aquariuslt/blog/commit/e3109c390b296007297b558d572f121e9b4c468b))
+
 ## [6.24.2](https://github.com/aquariuslt/blog/compare/v6.24.1...v6.24.2) (2020-03-07)
 
 
