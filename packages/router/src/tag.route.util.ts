@@ -14,17 +14,20 @@ export const createTagDetailRouteItem = (rawTag: string) => ({
 
 export const createTagsOverviewDescMeta = (): Meta => ({
   name: MetaName.DESCRIPTION,
+  itemprop: MetaName.DESCRIPTION,
   content: `Tags`
 });
 
 export const createTagDetailDescMeta = (rawTag: string): Meta => ({
   name: MetaName.DESCRIPTION,
+  itemprop: MetaName.DESCRIPTION,
   content: `Tag: ${rawTag}`
 });
 
 export const createTagDetailOpenGraphMetas = (rawTag: string): Meta[] => [
   {
     name: MetaName.OPEN_GRAPH_DESCRIPTION,
+    itemprop: MetaName.DESCRIPTION,
     content: `Tag: ${rawTag}`
   }
 ];

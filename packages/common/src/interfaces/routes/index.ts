@@ -60,13 +60,16 @@ export const EmptyRouteMeta: RouteMeta = {
 export interface Meta {
   id?: string;
   name?: string;
+  itemprop?: string;
   property?: string;
   content: string;
 }
 
 export enum MetaName {
+  NAME = 'name',
   DESCRIPTION = 'description',
   AUTHOR = 'author',
+  IMAGE = 'image',
 
   OPEN_GRAPH_TITLE = 'og:title',
   OPEN_GRAPH_DESCRIPTION = 'og:description',

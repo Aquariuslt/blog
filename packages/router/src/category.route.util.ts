@@ -13,17 +13,20 @@ export const createCategoryDetailRouteItem = (rawCategory: string) => ({
 
 export const createCategoriesOverviewDescMeta = (): Meta => ({
   name: MetaName.DESCRIPTION,
+  itemprop: MetaName.DESCRIPTION,
   content: `Categories`
 });
 
 export const createCategoryDetailDescMeta = (rawCategory: string): Meta => ({
   name: MetaName.DESCRIPTION,
+  itemprop: MetaName.DESCRIPTION,
   content: `Category: ${rawCategory}`
 });
 
 export const createCategoryDetailOpenGraphMetas = (rawCategory: string): Meta[] => [
   {
     name: MetaName.OPEN_GRAPH_DESCRIPTION,
+    itemprop: MetaName.DESCRIPTION,
     content: `Category: ${rawCategory}`
   }
 ];

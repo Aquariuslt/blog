@@ -7,6 +7,7 @@ export const createHomeRouteItem = () => ({
 
 export const createHomeDescMeta = (): Meta => ({
   name: MetaName.DESCRIPTION,
+  itemprop: MetaName.DESCRIPTION,
   content: `Home`
 });
 

@@ -32,25 +32,30 @@ export const createPostDetailRouteItem = (context) => ({
 
 export const createPostsOverviewDescMeta = (): Meta => ({
   name: MetaName.DESCRIPTION,
+  itemprop: MetaName.DESCRIPTION,
   content: `Posts`
 });
 
 export const createPostDetailDescMeta = (context: ArticleContext): Meta => ({
   name: MetaName.DESCRIPTION,
+  itemprop: MetaName.DESCRIPTION,
   content: context.summary
 });
 
 export const createPostDetailOpenGraphMetas = (context: ArticleContext, options: Partial<RoutesOptions>): Meta[] => [
   {
     name: MetaName.OPEN_GRAPH_TITLE,
+    itemprop: MetaName.NAME,
     content: context.title
   },
   {
     name: MetaName.OPEN_GRAPH_DESCRIPTION,
+    itemprop: MetaName.DESCRIPTION,
     content: context.summary
   },
   {
     name: MetaName.OPEN_GRAPH_IMAGE,
+    itemprop: MetaName.IMAGE,
     content: path.join(options.baseUrl, buildPostPathFromContext(context), context.cover)
   },
   {
@@ -62,14 +67,17 @@ export const createPostDetailOpenGraphMetas = (context: ArticleContext, options:
 export const createPageDetailOpenGraphMetas = (context: ArticleContext, options: Partial<RoutesOptions>): Meta[] => [
   {
     name: MetaName.OPEN_GRAPH_TITLE,
+    itemprop: MetaName.NAME,
     content: context.title
   },
   {
     name: MetaName.OPEN_GRAPH_DESCRIPTION,
+    itemprop: MetaName.DESCRIPTION,
     content: context.summary
   },
   {
     name: MetaName.OPEN_GRAPH_IMAGE,
+    itemprop: MetaName.IMAGE,
     content: path.join(options.baseUrl, buildPagePathFromContext(context), context.cover)
   },
   {
