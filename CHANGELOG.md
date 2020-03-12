@@ -1,3 +1,10 @@
+## [6.24.5](https://github.com/aquariuslt/blog/compare/v6.24.4...v6.24.5) (2020-03-12)
+
+
+### Performance Improvements
+
+* **pwa:** use `priority-hints` low for precaching ([be94136](https://github.com/aquariuslt/blog/commit/be94136ed853ff5f190163d5579366ceb2209122))
+
 ## [6.24.4](https://github.com/aquariuslt/blog/compare/v6.24.3...v6.24.4) (2020-03-09)
 
 
