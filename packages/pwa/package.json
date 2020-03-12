@@ -1,7 +1,7 @@
 {
   "name": "@blog/pwa",
   "version": "6.24.4",
-  "description": "progressive web application tools including workbox + prerendering",
+  "description": "progressive web application tools including workbox + precaching",
   "keywords": [
     "pwa",
     "workbox",
@@ -25,12 +25,16 @@
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest",
-    "build:lib": "tsc"
+    "build:lib": "tsc",
+    "patch": "patch-package",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@blog/common": "^6.24.4",
     "lodash": "4.17.15",
-    "workbox-build": "4.3.1"
+    "workbox-build": "4.3.1",
+    "patch-package": "^6.2.1",
+    "postinstall-postinstall": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "25.1.4",

@@ -11,11 +11,11 @@
     "typescript"
   ],
   "scripts": {
-    "build:service": "lerna run build:service",
-    "build:libs": "lerna run build:lib",
-    "build:themes": "lerna run build:theme --concurrency 1",
+    "build:service": "lerna run build:service --stream",
+    "build:libs": "lerna run build:lib --stream",
+    "build:themes": "lerna run build:theme --concurrency 1 --stream",
     "build:all": "yarn build:libs && yarn build:themes && yarn build:service",
-    "build:prod": "yarn build:all && lerna run build:service:prod",
+    "build:prod": "yarn build:all && lerna run build:service:prod --stream",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna run clean",
     "lint": "eslint --fix",
