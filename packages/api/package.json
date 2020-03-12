@@ -1,6 +1,6 @@
 {
   "name": "@blog/api",
-  "version": "6.24.6",
+  "version": "6.24.7",
   "description": "> TODO: description",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,9 +23,9 @@
     "build:lib": "tsc"
   },
   "dependencies": {
-    "@blog/article": "^6.24.6",
-    "@blog/common": "^6.24.6",
-    "@blog/router": "^6.24.6",
+    "@blog/article": "^6.24.7",
+    "@blog/common": "^6.24.7",
+    "@blog/router": "^6.24.7",
     "date-fns": "2.10.0",
     "mkdirp": "1.0.3",
     "uslug": "1.0.4"

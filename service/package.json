@@ -1,6 +1,6 @@
 {
   "name": "@blog/service",
-  "version": "6.24.6",
+  "version": "6.24.7",
   "description": "core build service",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog",
@@ -21,13 +21,13 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
-    "@blog/api": "^6.24.6",
-    "@blog/article": "^6.24.6",
-    "@blog/common": "^6.24.6",
-    "@blog/config": "^6.24.6",
-    "@blog/markdown": "^6.24.6",
-    "@blog/pwa": "^6.24.6",
-    "@blog/router": "^6.24.6",
+    "@blog/api": "^6.24.7",
+    "@blog/article": "^6.24.7",
+    "@blog/common": "^6.24.7",
+    "@blog/config": "^6.24.7",
+    "@blog/markdown": "^6.24.7",
+    "@blog/pwa": "^6.24.7",
+    "@blog/router": "^6.24.7",
     "@nestjs/common": "6.11.11",
     "@nestjs/core": "6.11.11",
     "@nestjs/platform-express": "6.11.11",
