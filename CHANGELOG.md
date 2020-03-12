@@ -1,3 +1,10 @@
+## [6.24.6](https://github.com/aquariuslt/blog/compare/v6.24.5...v6.24.6) (2020-03-12)
+
+
+### Bug Fixes
+
+* **pwa:** patch with correct syntax ([70a8a9c](https://github.com/aquariuslt/blog/commit/70a8a9c1c582a2b7e9134ba45d51b28ba43e2bdb))
+
 ## [6.24.5](https://github.com/aquariuslt/blog/compare/v6.24.4...v6.24.5) (2020-03-12)
 
 
