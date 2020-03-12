@@ -29,7 +29,12 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(2),
       paddingLeft: theme.spacing(1.5)
     },
-    ul: {
+    title: {
+      fontSize: 14,
+      padding: theme.spacing(1, 0, 0.5, 1),
+      boxSizing: 'content-box'
+    },
+    ol: {
       padding: 0,
       margin: 0,
       listStyleType: 'none'
@@ -171,34 +176,26 @@ export const ContentItems: React.FC<ContentItemsProps> = (props) => {
     const isTitle = item.position === 0;
 
     return (
-      <React.Fragment>
-        <Typography
-          onClick={scrollTo(item.id)}
-          component="li"
-          className={clsx(classes.item, activeState === item.id ? classes.active : undefined)}
-          style={{
-            paddingLeft: theme.spacing(item.level)
-          }}
-        >
-          {isTitle ? 'Table of Content' : item.label}
-        </Typography>
-
-        {item.children.length > 0 && (
-          <Typography component="ol" className={classes.ul}>
-            {item.children.map((child) => (
-              <ContentLink key={child.id} {...child} />
-            ))}
-          </Typography>
-        )}
-      </React.Fragment>
+      <Typography
+        onClick={scrollTo(item.id)}
+        component="li"
+        className={clsx(isTitle ? classes.title : classes.item, activeState === item.id ? classes.active : undefined)}
+        style={{
+          paddingLeft: theme.spacing(item.level)
+        }}
+      >
+        {isTitle ? 'Contents' : item.label}
+      </Typography>
     );
   };
 
   return (
     <nav className={classes.root}>
-      {props.items.map((item) => (
-        <ContentLink key={item.id} {...item} />
-      ))}
+      <ol className={classes.ol}>
+        {props.items.map((item) => (
+          <ContentLink key={item.id} {...item} />
+        ))}
+      </ol>
     </nav>
   );
 };

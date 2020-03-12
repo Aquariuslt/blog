@@ -29,6 +29,6 @@ describe('markdown-it plugin: content items', (): void => {
     const toc = context['toc'];
 
     expect(toc[0]).toHaveProperty('children');
-    expect(toc[0].children).toHaveLength(3);
+    expect(toc[0].children).toHaveLength(0);
   });
 });

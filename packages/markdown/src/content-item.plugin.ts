@@ -29,22 +29,7 @@ const collapseHeading = (headingItems: ContentItem[]): ContentItem[] => {
     }
   });
 
-  // 2. fill children.
-  const newHeadingItems: ContentItem[] = [];
-  headingItems.forEach((headingItem): void => {
-    const isRoot = headingItem.pid === ROOT_PID;
-    const isChild = headingItem.pid !== ROOT_PID;
-
-    if (isRoot) {
-      newHeadingItems.push(headingItem);
-    }
-
-    if (isChild && headingItem.pid !== undefined) {
-      headingItems[headingItem.pid].children.push(headingItem);
-    }
-  });
-
-  return newHeadingItems;
+  return headingItems;
 };
 
 export const ContentItemPlugin = (md: MarkdownIt) => {

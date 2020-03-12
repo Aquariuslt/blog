@@ -22,6 +22,16 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(1)
       }
+    },
+    breadcrumbs: {
+      '& > ol': {
+        flexWrap: 'nowrap'
+      },
+      '& > ol > li:last-child': {
+        overflowY: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap'
+      }
     }
   })
 );
@@ -33,7 +43,11 @@ export const BreadcrumbList: React.FC<BreadcrumbListProps> = (props) => {
   return (
     <div className={classes.root}>
       <Paper elevation={0} className={classes.paper}>
-        <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
+        <Breadcrumbs
+          separator={<NavigateNextIcon fontSize="small" />}
+          aria-label="breadcrumb"
+          className={classes.breadcrumbs}
+        >
           {breadcrumbItems.map((item, index) => (
             <Link
               key={item.item}
