@@ -1,3 +1,10 @@
+## [6.24.8](https://github.com/aquariuslt/blog/compare/v6.24.7...v6.24.8) (2020-03-12)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([#75](https://github.com/aquariuslt/blog/issues/75)) ([4c78ec5](https://github.com/aquariuslt/blog/commit/4c78ec55677823d26132832bfb2b128442f22e1c))
+
 ## [6.24.7](https://github.com/aquariuslt/blog/compare/v6.24.6...v6.24.7) (2020-03-12)
 
 
