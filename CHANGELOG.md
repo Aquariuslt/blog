@@ -1,3 +1,10 @@
+## [6.24.9](https://github.com/aquariuslt/blog/compare/v6.24.8...v6.24.9) (2020-03-13)
+
+
+### Performance Improvements
+
+* **markdown:** add native lazy image loading support ([55b20cf](https://github.com/aquariuslt/blog/commit/55b20cf71c03fc8fd25ad3a200928247e41c25cb))
+
 ## [6.24.8](https://github.com/aquariuslt/blog/compare/v6.24.7...v6.24.8) (2020-03-12)
 
 
