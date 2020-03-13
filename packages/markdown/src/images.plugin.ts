@@ -25,4 +25,13 @@ export const ImagesDetectionPlugin = (md: MarkdownIt) => {
       state.env.images = images;
     }
   });
+
+  // add native lazy loading attribute
+  const defaultImageRenderer = md.renderer.rules.image;
+
+  md.renderer.rules.image = (tokens, idx, options, env, self) => {
+    const token = tokens[idx];
+    token.attrSet('loading', 'lazy');
+    return defaultImageRenderer(tokens, idx, options, env, self);
+  };
 };
