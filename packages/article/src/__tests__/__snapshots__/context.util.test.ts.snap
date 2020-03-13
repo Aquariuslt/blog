@@ -21,9 +21,9 @@ Object {
 <p>You should use it to load as one of webpack loader configuration matching <code>*.properties</code> file.</p>
 <h2 id=\\"deep-understanding\\">Deep Understanding</h2>
 <h2 id=\\"references\\">References</h2>
-<p><img src=\\"https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png\\" alt=\\"Absolute Image\\"></p>
-<p><img src=\\"./a-image.jpg\\" alt=\\"Relative Image\\"></p>
-<p><img src=\\"./images/a-image.jpg\\" alt=\\"Relative Image with directory\\"></p>
+<p><img src=\\"https://img.aquariuslt.com/posts/2019/08/migrating-github-actions.png\\" alt=\\"Absolute Image\\" loading=\\"lazy\\"></p>
+<p><img src=\\"./a-image.jpg\\" alt=\\"Relative Image\\" loading=\\"lazy\\"></p>
+<p><img src=\\"./images/a-image.jpg\\" alt=\\"Relative Image with directory\\" loading=\\"lazy\\"></p>
 ",
   "id": "introducing-json-properties-loader",
   "images": Array [
