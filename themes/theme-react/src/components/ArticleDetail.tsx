@@ -5,6 +5,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { CARD_MAX_WIDTH } from '@theme-react/constants';
 import { Comment } from 'react-disqus-components';
 import { KeywordChip } from '@theme-react/components/KeywordChip';
+import { ViewsShow } from '@theme-react/components/ViewsShow';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -44,6 +45,7 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
 
       <div className={classes.divider} />
 
+      <ViewsShow domain={location.hostname} />
       {props.tags && (props.tags as any).map((keyword) => <KeywordChip key={keyword.id} {...keyword} />)}
       <Comment title={props.title} {...props['disqus']} />
     </div>
