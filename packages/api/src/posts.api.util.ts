@@ -4,9 +4,11 @@ import { ArticleContext } from '@blog/common/interfaces/articles/article-context
 import { createArticleOverview } from './article.util';
 import { createTagDetailLinkItem } from './tags.api.util';
 import { createCategoryLinkItem } from './categories.api.util';
-import { buildPostPathFromContext, buildPagePathFromContext } from '@blog/router';
+import { buildPagePathFromContext, buildPostPathFromContext } from '@blog/router';
 import { isImageHosting } from '@blog/article';
 
+const PNG_EXTENSION = '.png';
+const WEBP_EXTENSION = '.webp';
 /** @description simply `/` and `/posts` api response */
 export const createPostsOverviewApiData = (contexts: ArticleContext[]) => _.map(contexts, createArticleOverview);
 
@@ -19,7 +21,9 @@ export const createPostDetailApiData = (id: string, contexts: ArticleContext[]) 
   _.each(
     context.images.filter((image) => !isImageHosting(image)),
     (image) => {
+      const webpImage = _.replace(image, PNG_EXTENSION, WEBP_EXTENSION);
       html = html.replace(image, path.join(contextPath, image));
+      html = html.replace(webpImage, path.join(contextPath, webpImage));
     }
   );
 
@@ -37,7 +41,9 @@ export const createPageDetailApiData = (context: ArticleContext) => {
   _.each(
     context.images.filter((image) => !isImageHosting(image)),
     (image) => {
+      const webpImage = _.replace(image, PNG_EXTENSION, WEBP_EXTENSION);
       html = html.replace(image, path.join(contextPath, image));
+      html = html.replace(webpImage, path.join(contextPath, webpImage));
     }
   );
 

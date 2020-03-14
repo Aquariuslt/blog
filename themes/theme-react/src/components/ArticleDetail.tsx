@@ -6,6 +6,7 @@ import { CARD_MAX_WIDTH } from '@theme-react/constants';
 import { Comment } from 'react-disqus-components';
 import { KeywordChip } from '@theme-react/components/KeywordChip';
 import { ViewsShow } from '@theme-react/components/ViewsShow';
+import { LazyImage } from '@theme-react/components/LazyImage';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -34,7 +35,7 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
 
   return (
     <div className={classes.root}>
-      <img src={props.cover} alt={props.title} className={classes.cover} />
+      <LazyImage image={props.cover} alt={props.title} className={classes.cover} />
       <Typography
         component="div"
         className="markdown-body"
