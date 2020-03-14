@@ -35,7 +35,7 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
 
   return (
     <div className={classes.root}>
-      <LazyImage image={props.cover} alt={props.title} className={classes.cover} />
+      <LazyImage image={props.cover} alt={props.title} className={classes.cover} lazy={false} />
       <Typography
         component="div"
         className="markdown-body"
