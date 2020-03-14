@@ -1,3 +1,10 @@
+# [6.25.0](https://github.com/aquariuslt/blog/compare/v6.24.10...v6.25.0) (2020-03-14)
+
+
+### Features
+
+* **theme-react:** integrate ([0dcb175](https://github.com/aquariuslt/blog/commit/0dcb1751c70ff0357d96edcf719e94e0dff2a36c))
+
 ## [6.24.10](https://github.com/aquariuslt/blog/compare/v6.24.9...v6.24.10) (2020-03-14)
 
 
