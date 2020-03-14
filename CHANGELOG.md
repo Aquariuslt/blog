@@ -1,3 +1,10 @@
+## [6.25.1](https://github.com/aquariuslt/blog/compare/v6.25.0...v6.25.1) (2020-03-14)
+
+
+### Bug Fixes
+
+* **theme-react:** resolve wrong usage with views.show key ([de803ce](https://github.com/aquariuslt/blog/commit/de803ce8e8f81ad98101175fb34304d1e3deecc3))
+
 # [6.25.0](https://github.com/aquariuslt/blog/compare/v6.24.10...v6.25.0) (2020-03-14)
 
 
