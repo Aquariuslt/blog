@@ -1,3 +1,10 @@
+## [6.25.3](https://github.com/aquariuslt/blog/compare/v6.25.2...v6.25.3) (2020-03-14)
+
+
+### Performance Improvements
+
+* add image lazyload on all images ([8f4aac1](https://github.com/aquariuslt/blog/commit/8f4aac13867f7ee0271742798330efe3578fbd54))
+
 ## [6.25.2](https://github.com/aquariuslt/blog/compare/v6.25.1...v6.25.2) (2020-03-14)
 
 
