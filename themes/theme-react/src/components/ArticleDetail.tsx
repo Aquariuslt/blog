@@ -45,7 +45,7 @@ export const ArticleDetail: React.FC<Partial<ArticleContext>> = (props) => {
 
       <div className={classes.divider} />
 
-      <ViewsShow domain={location.hostname} />
+      <ViewsShow vkey={props.id || ''} />
       {props.tags && (props.tags as any).map((keyword) => <KeywordChip key={keyword.id} {...keyword} />)}
       <Comment title={props.title} {...props['disqus']} />
     </div>
