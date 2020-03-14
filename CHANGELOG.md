@@ -1,3 +1,10 @@
+## [6.25.2](https://github.com/aquariuslt/blog/compare/v6.25.1...v6.25.2) (2020-03-14)
+
+
+### Performance Improvements
+
+* use picture tag for webp optimize ([c26d1da](https://github.com/aquariuslt/blog/commit/c26d1dab911b629d7c101a5fa6980f668e312990))
+
 ## [6.25.1](https://github.com/aquariuslt/blog/compare/v6.25.0...v6.25.1) (2020-03-14)
 
 
