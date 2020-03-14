@@ -21,7 +21,7 @@ export const LazyImage: React.FC<LazyImageProps> = (props) => {
   lazyLoadInstance.update();
   const webpImage = props.image ? props.image.replace(PNG_EXTENSION, WEBP_EXTENSION) : '';
 
-  const shouldLazy = props.lazy || true;
+  const shouldLazy = props.lazy !== false;
 
   return (
     <picture>
