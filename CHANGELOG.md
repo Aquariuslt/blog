@@ -1,3 +1,10 @@
+## [6.25.6](https://github.com/aquariuslt/blog/compare/v6.25.5...v6.25.6) (2020-03-14)
+
+
+### Bug Fixes
+
+* **theme-react:** force lazy condition fixing ([1b4b713](https://github.com/aquariuslt/blog/commit/1b4b71360ba6b30a72ad9a2848167ddeb987512c))
+
 ## [6.25.5](https://github.com/aquariuslt/blog/compare/v6.25.4...v6.25.5) (2020-03-14)
 
 
