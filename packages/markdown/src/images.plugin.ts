@@ -26,12 +26,17 @@ export const ImagesDetectionPlugin = (md: MarkdownIt) => {
     }
   });
 
-  // add native lazy loading attribute
-  const defaultImageRenderer = md.renderer.rules.image;
-
   md.renderer.rules.image = (tokens, idx, options, env, self) => {
     const token = tokens[idx];
-    token.attrSet('loading', 'lazy');
-    return defaultImageRenderer(tokens, idx, options, env, self);
+    const src = token.attrGet('src');
+    const alt = token.attrGet('alt');
+    const optimizedWebpSrc = _.replace(src, `.png`, `.webp`);
+
+    return `
+        <picture>
+          <source srcset="${optimizedWebpSrc}"  data-srcset="${optimizedWebpSrc}" type="image/webp" data-was-processed="false" />
+          <img alt="${alt}" class="lazy" src="${src}" data-src="${src}" loading="lazy"/>
+        </picture>
+    `;
   };
 };
