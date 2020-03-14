@@ -1,3 +1,10 @@
+## [6.25.7](https://github.com/aquariuslt/blog/compare/v6.25.6...v6.25.7) (2020-03-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nestjs/serve-static to v2.1.0 ([#84](https://github.com/aquariuslt/blog/issues/84)) ([f67708f](https://github.com/aquariuslt/blog/commit/f67708f5586a1c73a6436990724525f0084b7314))
+
 ## [6.25.6](https://github.com/aquariuslt/blog/compare/v6.25.5...v6.25.6) (2020-03-14)
 
 
