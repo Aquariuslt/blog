@@ -1,3 +1,10 @@
+## [6.25.5](https://github.com/aquariuslt/blog/compare/v6.25.4...v6.25.5) (2020-03-14)
+
+
+### Bug Fixes
+
+* **pwa:** resolve globPattern issue ([324032f](https://github.com/aquariuslt/blog/commit/324032f5b903855f96fbd150b771871ad398cbf6))
+
 ## [6.25.4](https://github.com/aquariuslt/blog/compare/v6.25.3...v6.25.4) (2020-03-14)
 
 
