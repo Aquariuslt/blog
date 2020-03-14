@@ -1,3 +1,10 @@
+## [6.25.4](https://github.com/aquariuslt/blog/compare/v6.25.3...v6.25.4) (2020-03-14)
+
+
+### Performance Improvements
+
+* disable article detail cover lazyload ([d5bbb04](https://github.com/aquariuslt/blog/commit/d5bbb044a9b334ba769410b9946d65b42f6db206))
+
 ## [6.25.3](https://github.com/aquariuslt/blog/compare/v6.25.2...v6.25.3) (2020-03-14)
 
 
