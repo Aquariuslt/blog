@@ -1,3 +1,10 @@
+## [6.25.8](https://github.com/aquariuslt/blog/compare/v6.25.7...v6.25.8) (2020-03-15)
+
+
+### Bug Fixes
+
+* **theme-react:** avoid empty string for views.show key ([5895de1](https://github.com/aquariuslt/blog/commit/5895de1589b5a78738e1f27449b26e7533b16596))
+
 ## [6.25.7](https://github.com/aquariuslt/blog/compare/v6.25.6...v6.25.7) (2020-03-14)
 
 
