@@ -1,3 +1,10 @@
+## [6.25.10](https://github.com/aquariuslt/blog/compare/v6.25.9...v6.25.10) (2020-03-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-disqus-components to v1.2.3 ([#88](https://github.com/aquariuslt/blog/issues/88)) ([02c0251](https://github.com/aquariuslt/blog/commit/02c02513c6589d0bb46ae90aa374e9aecbae6541))
+
 ## [6.25.9](https://github.com/aquariuslt/blog/compare/v6.25.8...v6.25.9) (2020-03-15)
 
 
