@@ -24,7 +24,7 @@
     "fancy-log": "1.3.3",
     "lodash": "4.17.15",
     "rimraf": "3.0.2",
-    "schema-dts": "0.5.1"
+    "schema-dts": "0.5.2"
   },
   "devDependencies": {
     "@types/fancy-log": "1.3.1",
