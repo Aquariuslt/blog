@@ -1,3 +1,10 @@
+## [6.25.13](https://github.com/aquariuslt/blog/compare/v6.25.12...v6.25.13) (2020-03-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency schema-dts to v0.5.2 ([#94](https://github.com/aquariuslt/blog/issues/94)) ([4aac8a7](https://github.com/aquariuslt/blog/commit/4aac8a762a1894524d8b292cd2c142e7ad4e9b3a))
+
 ## [6.25.12](https://github.com/aquariuslt/blog/compare/v6.25.11...v6.25.12) (2020-03-17)
 
 
