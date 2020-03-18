@@ -1,3 +1,10 @@
+## [6.25.17](https://github.com/aquariuslt/blog/compare/v6.25.16...v6.25.17) (2020-03-18)
+
+
+### Performance Improvements
+
+* **theme-react:** lazy load image in effects ([8148128](https://github.com/aquariuslt/blog/commit/8148128dbed73e18aa5e7d6cd49c626bee1eedac))
+
 ## [6.25.16](https://github.com/aquariuslt/blog/compare/v6.25.15...v6.25.16) (2020-03-18)
 
 
