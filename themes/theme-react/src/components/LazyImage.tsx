@@ -2,6 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 import LazyLoad from 'vanilla-lazyload';
 import placeholder from '@theme-react/imgs/placeholder.png';
+import { useEffect } from 'react';
 
 export interface LazyImageProps {
   image?: string;
@@ -14,11 +15,14 @@ const PNG_EXTENSION = '.png';
 const WEBP_EXTENSION = '.webp';
 
 export const LazyImage: React.FC<LazyImageProps> = (props) => {
-  const lazyLoadInstance = new LazyLoad({
-    elements_selector: '.lazy'
-  });
+  useEffect(() => {
+    const lazyLoadInstance = new LazyLoad({
+      elements_selector: '.lazy'
+    });
 
-  lazyLoadInstance.update();
+    lazyLoadInstance.update();
+  }, [props.image]);
+
   const webpImage = props.image ? props.image.replace(PNG_EXTENSION, WEBP_EXTENSION) : '';
 
   const shouldLazy = props.lazy !== false;
