@@ -2,7 +2,7 @@
 title: '使用 renovate 监控第三方依赖更新'
 id: keep-your-repo-dependencies-up-to-date-with-renovate
 created: 2020-03-01
-updated: 2020-03-01
+updated: 2020-03-18
 categories:
   - Blog
 tags:
@@ -190,6 +190,33 @@ Renovate 是一家名为 WhiteSource 的公司开发的一项适用于多种语�
 对于 circleci，也提供了的 CI 环境下的 docker-image 版本监控
 
 ![circle-ci-docker-image-support](./revonate-circleci-docker-image-support.png)
+
+> updated at 2020-03-18
+
+在使用了一段时间 renovate 之后，发现 renovate 已经提供了很多 automerge 的判断条件，以减少人工合并这种机械化请求的次数。
+
+我个人来讲，目前使用如下配置，来做到:
+
+1. 不管项目是否使用了的 `semantic-release`，bot 的 PR 风格 commit 也会自带 semantic-release 风格
+2. 在 `dependencies` 非 major 更新时，所有 checking pass 之后，自动 merge
+3. 在 `devDependencies` 有依赖版本更新时，所有 checking pass 之后，自动 merge
+
+```json
+{
+  "semanticCommits": true,
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "automerge": true
+    }
+  ],
+  "extends": ["config:base"]
+}
+```
 
 ## 结论与思考
 

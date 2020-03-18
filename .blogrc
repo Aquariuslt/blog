@@ -33,7 +33,7 @@ profile:
 
 # article settings
 pages:
-  title_separator: '|'
+  title_separator: '-'
 
 
 theme: theme-react
