@@ -1,3 +1,10 @@
+## [6.25.14](https://github.com/aquariuslt/blog/compare/v6.25.13...v6.25.14) (2020-03-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency class-validator to v0.11.1 ([4b81b69](https://github.com/aquariuslt/blog/commit/4b81b691db7354c441bce26fbe52204743a85744))
+
 ## [6.25.13](https://github.com/aquariuslt/blog/compare/v6.25.12...v6.25.13) (2020-03-17)
 
 
