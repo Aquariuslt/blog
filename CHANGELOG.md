@@ -1,3 +1,10 @@
+## [6.25.18](https://github.com/aquariuslt/blog/compare/v6.25.17...v6.25.18) (2020-03-19)
+
+
+### Bug Fixes
+
+* **deps:** update react monorepo to v16.13.1 ([6f92ab1](https://github.com/aquariuslt/blog/commit/6f92ab1be34c73b9b0a00f63db692ed07963b345))
+
 ## [6.25.17](https://github.com/aquariuslt/blog/compare/v6.25.16...v6.25.17) (2020-03-18)
 
 
