@@ -1,3 +1,10 @@
+## [6.25.19](https://github.com/aquariuslt/blog/compare/v6.25.18...v6.25.19) (2020-03-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to v9 ([#102](https://github.com/aquariuslt/blog/issues/102)) ([5d5c0c3](https://github.com/aquariuslt/blog/commit/5d5c0c3566d0d8d97eec8e611962db23654cb58b))
+
 ## [6.25.18](https://github.com/aquariuslt/blog/compare/v6.25.17...v6.25.18) (2020-03-19)
 
 
