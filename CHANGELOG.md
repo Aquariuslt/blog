@@ -1,3 +1,10 @@
+## [6.25.25](https://github.com/aquariuslt/blog/compare/v6.25.24...v6.25.25) (2020-03-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postinstall-postinstall to v2.1.0 ([c7dd680](https://github.com/aquariuslt/blog/commit/c7dd680e75c817b913dd2144a399312970ba85d4))
+
 ## [6.25.24](https://github.com/aquariuslt/blog/compare/v6.25.23...v6.25.24) (2020-03-26)
 
 
