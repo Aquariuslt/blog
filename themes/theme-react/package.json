@@ -52,7 +52,7 @@
     "friendly-errors-webpack-plugin": "1.7.0",
     "gulp": "4.0.2",
     "gulp-rimraf": "1.0.0",
-    "html-webpack-plugin": "4.0.2",
+    "html-webpack-plugin": "4.0.3",
     "jest": "25.2.3",
     "jest-environment-enzyme": "7.1.2",
     "jest-enzyme": "7.1.2",
