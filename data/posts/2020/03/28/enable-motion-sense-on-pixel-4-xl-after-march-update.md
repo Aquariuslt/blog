@@ -11,6 +11,8 @@ tags:
 cover: ./motion-sense-skip-song.png
 ---
 
+# Pixel 4 XL 在中国地区开启 Motion Sense
+
 > 我作为 Nexus 5 / Nexus 7 / Pixel / Pixel 3 XL / Pixel 4 XL 的持有者，为了顺利地在及时更新到最新版本的系统的同时也保证在国内使用 Google 原生系统的大部分体验，必须掌握一手 root 的科学方法。
 
 适逢 Google Pixel 4 带来了新的 Notion Sence 功能 (就是那个摆手切歌的传感器功能)，对系统的破解有着更高的要求，在每次系统打上新的安全补丁后，使用 magisk 执行的 root 都会失效一次，年纪大了机型不太行，每次都得 Google 一番几个月前执行过的操作。此文主要做记录用。
