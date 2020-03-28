@@ -1,14 +1,29 @@
+import { register } from 'register-service-worker';
+
 if (process.env.NODE_ENV === 'production') {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker
-        .register('/service-worker.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.error('SW register failed:', registrationError);
-        });
+    register('/service-worker.js', {
+      ready(registration) {
+        console.log('Service worker is active.');
+      },
+      registered(registration) {
+        console.log('Service worker has been registered.');
+      },
+      cached(registration) {
+        console.log('Content has been cached for offline use.');
+      },
+      updatefound(registration) {
+        console.log('New content is downloading.');
+      },
+      updated(registration) {
+        console.log('New content is available; please refresh.');
+      },
+      offline() {
+        console.log('No internet connection found. App is running in offline mode.');
+      },
+      error(error) {
+        console.error('Error during service worker registration:', error);
+      },
     });
   }
 
@@ -16,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
   if (analyticsTracking) {
     window['ga'] =
       window['ga'] ||
-      function() {
+      function () {
         (window['ga'].q = window['ga'].q || []).push(arguments);
       };
     window['ga'].l = +new Date();

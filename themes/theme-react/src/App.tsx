@@ -6,6 +6,7 @@ import { RouterView } from '@theme-react/router';
 import { Navigation } from '@theme-react/components/Navigation';
 import { EmptyProfile } from '@blog/common/interfaces/profile';
 import { RoutePathPrefix } from '@blog/common/interfaces/routes';
+import { SnackbarProvider } from 'notistack';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { loadApi } from '@theme-react/api';
 import { theme } from '@theme-react/constants';
@@ -32,11 +33,13 @@ export const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Navigation title={title} profile={profile} menus={navigationItems}>
-          <RouterView />
-        </Navigation>
-      </Router>
+      <SnackbarProvider>
+        <Router>
+          <Navigation title={title} profile={profile} menus={navigationItems}>
+            <RouterView />
+          </Navigation>
+        </Router>
+      </SnackbarProvider>
     </ThemeProvider>
   );
 };

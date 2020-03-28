@@ -21,11 +21,13 @@
     "date-fns": "2.11.1",
     "github-markdown-css": "4.0.0",
     "highlight.js": "9.18.1",
+    "notistack": "0.9.9",
     "react": "16.13.1",
     "react-disqus-components": "1.2.3",
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
     "react-router-dom": "5.1.2",
+    "register-service-worker": "1.7.1",
     "scroll-into-view-if-needed": "2.2.24",
     "typeface-roboto": "0.0.75",
     "vanilla-lazyload": "13.0.1"
