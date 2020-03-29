@@ -20,11 +20,8 @@ export const ServiceWorkerNotification: React.FC<ServiceWorkerNotificationProps>
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
       register(swPath, {
-        ready(registration) {
-          enqueueSnackbar('Service worker is active.', { variant: 'success' });
-        },
+        ready(registration) {},
         registered(registration) {
-          enqueueSnackbar('Service worker has been registered', { variant: 'success' });
           setRegistered(true);
         },
         cached(registration) {
