@@ -54,9 +54,7 @@ export const ServiceWorkerNotification: React.FC<ServiceWorkerNotificationProps>
           });
         },
         error(error) {
-          enqueueSnackbar('Error during service worker registration:' + error, {
-            variant: 'error',
-          });
+          console.error('Error during service worker registration:', error);
         },
       });
     }
