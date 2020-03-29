@@ -1,3 +1,10 @@
+## [6.26.1](https://github.com/aquariuslt/blog/compare/v6.26.0...v6.26.1) (2020-03-29)
+
+
+### Bug Fixes
+
+* **theme-react:** update noistack location ([c9d749a](https://github.com/aquariuslt/blog/commit/c9d749ad891fc75e70f559c1992eea8001fd15f7))
+
 # [6.26.0](https://github.com/aquariuslt/blog/compare/v6.25.28...v6.26.0) (2020-03-29)
 
 
