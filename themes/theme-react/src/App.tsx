@@ -38,8 +38,8 @@ export const App: React.FC = () => {
         <Router>
           <Navigation title={title} profile={profile} menus={navigationItems}>
             <RouterView />
+            <ServiceWorkerNotification />
           </Navigation>
-          <ServiceWorkerNotification />
         </Router>
       </SnackbarProvider>
     </ThemeProvider>
