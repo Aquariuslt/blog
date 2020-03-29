@@ -10,6 +10,7 @@ import { SnackbarProvider } from 'notistack';
 import { buildURLPath } from '@blog/common/utils/path.util';
 import { loadApi } from '@theme-react/api';
 import { theme } from '@theme-react/constants';
+import { ServiceWorkerNotification } from '@theme-react/components/ServiceWorkerNotification';
 
 export const App: React.FC = () => {
   const [navigationItems, setNavigationItems] = useState([]);
@@ -38,6 +39,7 @@ export const App: React.FC = () => {
           <Navigation title={title} profile={profile} menus={navigationItems}>
             <RouterView />
           </Navigation>
+          <ServiceWorkerNotification />
         </Router>
       </SnackbarProvider>
     </ThemeProvider>
