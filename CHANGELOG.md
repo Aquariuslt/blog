@@ -1,3 +1,10 @@
+# [6.26.0](https://github.com/aquariuslt/blog/compare/v6.25.28...v6.26.0) (2020-03-29)
+
+
+### Features
+
+* **theme-react:** add service-worker notification ([ed1735a](https://github.com/aquariuslt/blog/commit/ed1735a05731494c9fc38a9a0140fa2cb27414b8))
+
 ## [6.25.28](https://github.com/aquariuslt/blog/compare/v6.25.27...v6.25.28) (2020-03-29)
 
 
