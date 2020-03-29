@@ -1,3 +1,10 @@
+## [6.26.2](https://github.com/aquariuslt/blog/compare/v6.26.1...v6.26.2) (2020-03-29)
+
+
+### Bug Fixes
+
+* **theme-react:** do not show sw error with snackbar ([cfadc3c](https://github.com/aquariuslt/blog/commit/cfadc3cac46727716ee68f0e386767b5bff81b45))
+
 ## [6.26.1](https://github.com/aquariuslt/blog/compare/v6.26.0...v6.26.1) (2020-03-29)
 
 
