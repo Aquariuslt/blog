@@ -1,3 +1,10 @@
+## [6.25.28](https://github.com/aquariuslt/blog/compare/v6.25.27...v6.25.28) (2020-03-29)
+
+
+### Performance Improvements
+
+* resize gitignore cover image ([31eb9fa](https://github.com/aquariuslt/blog/commit/31eb9fa8f8b32d27a0c1133f2fb5e34f55154fa1))
+
 ## [6.25.27](https://github.com/aquariuslt/blog/compare/v6.25.26...v6.25.27) (2020-03-28)
 
 
