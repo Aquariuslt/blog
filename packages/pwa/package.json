@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/jest": "25.1.4",
     "@types/lodash": "4.14.149",
-    "@types/node": "13.9.5",
+    "@types/node": "13.9.6",
     "jest": "25.2.4",
     "jest-raw-loader": "1.0.1",
     "rimraf": "3.0.2",
