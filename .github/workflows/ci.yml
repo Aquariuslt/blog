@@ -27,9 +27,9 @@ jobs:
           file: ./coverage/lcov.info
           flags: unittests
           name: codecov-umbrella
-      - name: Check bundlesize
+      - name: Check bundlewatch
         run: |
           yarn build:prod
-          yarn bundlesize
+          yarn bundlewatch
         env:
-          BUNDLESIZE_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}
+          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}

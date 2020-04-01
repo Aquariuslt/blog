@@ -23,7 +23,7 @@
     "test": "jest",
     "pretest:cov": "yarn build:libs",
     "test:cov": "jest --coverage",
-    "bundlesize": "bundlesize",
+    "bundlewatch": "bundlewatch",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "@types/node": "13.9.8",
     "@typescript-eslint/eslint-plugin": "2.26.0",
     "@typescript-eslint/parser": "2.26.0",
-    "bundlesize": "0.18.0",
+    "bundlewatch": "0.2.6",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.1",
     "eslint-plugin-prettier": "3.1.2",
@@ -176,14 +176,16 @@
       ]
     ]
   },
-  "bundlesize": [
-    {
-      "path": "./dist/static/js/*.js",
-      "maxSize": "400 kB"
-    },
-    {
-      "path": "./dist/static/css/*.css",
-      "maxSize": "30 kB"
-    }
-  ]
+  "bundlewatch": {
+    "files": [
+      {
+        "path": "dist/static/js/*.js",
+        "maxSize": "400 kB"
+      },
+      {
+        "path": "dist/static/css/*.css",
+        "maxSize": "30 kB"
+      }
+    ]
+  }
 }
