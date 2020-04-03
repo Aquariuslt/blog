@@ -43,7 +43,7 @@
     "log4js": "6.1.2",
     "puppeteer": "2.1.1",
     "reflect-metadata": "0.1.13",
-    "rxjs": "6.5.4"
+    "rxjs": "6.5.5"
   },
   "devDependencies": {
     "@nestjs/cli": "7.1.2",
