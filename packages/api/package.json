@@ -27,7 +27,7 @@
     "@blog/common": "^6.26.9",
     "@blog/router": "^6.26.9",
     "date-fns": "2.11.1",
-    "mkdirp": "1.0.3",
+    "mkdirp": "1.0.4",
     "uslug": "1.0.4"
   },
   "devDependencies": {
