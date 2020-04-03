@@ -1,3 +1,10 @@
+## [6.26.9](https://github.com/aquariuslt/blog/compare/v6.26.8...v6.26.9) (2020-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency patch-package to v6.2.2 ([b57a50b](https://github.com/aquariuslt/blog/commit/b57a50b7bb7a0b9a12d2eb24e3b846d5f1020d08))
+
 ## [6.26.8](https://github.com/aquariuslt/blog/compare/v6.26.7...v6.26.8) (2020-04-03)
 
 
