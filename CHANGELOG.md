@@ -1,3 +1,10 @@
+## [6.26.8](https://github.com/aquariuslt/blog/compare/v6.26.7...v6.26.8) (2020-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency rxjs to v6.5.5 ([b98caaa](https://github.com/aquariuslt/blog/commit/b98caaaf888246d6bb7ca61ef541e8118f1d06ba))
+
 ## [6.26.7](https://github.com/aquariuslt/blog/compare/v6.26.6...v6.26.7) (2020-04-01)
 
 
