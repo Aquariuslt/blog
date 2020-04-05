@@ -22,7 +22,7 @@ cover: ./bundlewatch-graph.png
 
 我是从 [https://developers.google.com/web/fundamentals/performance/webpack/](https://developers.google.com/web/fundamentals/performance/webpack/) 中了解到 bundlesize 这个服务的。
 
-由于日久 bundlesize 项目失修，没人维护。以至于我之前接入了 bundlesize 并以此作为 CI Checking 的项目收到了其影响，具体表现为上传数据长时间无响应，影响了整个 CI 构建通知的时间序列。
+由于 bundlesize 项目日久失修，没人维护。以至于我之前接入了 bundlesize 并以此作为 CI Checking 的项目收到了其影响，具体表现为上传数据长时间无响应，影响了整个 CI 构建通知的时间序列。
 
 为此，Github 上自发地来了个新的项目，来代替 bundlesize。
 
