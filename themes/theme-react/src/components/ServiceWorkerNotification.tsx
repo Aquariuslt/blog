@@ -28,7 +28,7 @@ export const ServiceWorkerNotification: React.FC<ServiceWorkerNotificationProps>
           enqueueSnackbar('Content has been cached for offline use.', { variant: 'success' });
         },
         updatefound(registration) {
-          enqueueSnackbar('New content is downloading.', { variant: 'success' });
+          console.log('New content is downloading.');
         },
         updated(registration) {
           enqueueSnackbar('New content is available.', {
