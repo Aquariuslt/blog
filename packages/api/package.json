@@ -26,7 +26,7 @@
     "@blog/article": "^6.26.10",
     "@blog/common": "^6.26.10",
     "@blog/router": "^6.26.10",
-    "date-fns": "2.11.1",
+    "date-fns": "2.12.0",
     "mkdirp": "1.0.4",
     "uslug": "1.0.4"
   },
