@@ -37,5 +37,6 @@ cover: ./about.png
 - [witt](https://unix.bio): 维特，吹比工程师，自由开发者。
 - [reckful](http://reckful.studio/): 小张
 - [nancheung's blog](https://blog.nancheung.com/): 一个纯洁天真的男孩。
+- [yoshino's blog](https://yoshino.now.sh/): Mezzo。
 
 > 如需添加友情链接，请留言(+Issue/+Pull Request)
