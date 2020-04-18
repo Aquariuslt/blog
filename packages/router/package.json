@@ -1,6 +1,6 @@
 {
   "name": "@blog/router",
-  "version": "6.26.17",
+  "version": "6.26.18",
   "description": "routing generator tools",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,9 +23,9 @@
     "build:lib": "tsc"
   },
   "dependencies": {
-    "@blog/article": "^6.26.17",
-    "@blog/common": "^6.26.17",
-    "@blog/config": "^6.26.17",
+    "@blog/article": "^6.26.18",
+    "@blog/common": "^6.26.18",
+    "@blog/config": "^6.26.18",
     "date-fns": "2.12.0",
     "lodash": "4.17.15",
     "path-to-regexp": "6.1.0",
