@@ -1,3 +1,10 @@
+## [6.26.22](https://github.com/aquariuslt/blog/compare/v6.26.21...v6.26.22) (2020-04-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency log4js to v6.2.1 ([248e1bb](https://github.com/aquariuslt/blog/commit/248e1bb6fdca3e35fd85abf88c4f15b384f3d936))
+
 ## [6.26.21](https://github.com/aquariuslt/blog/compare/v6.26.20...v6.26.21) (2020-04-18)
 
 
