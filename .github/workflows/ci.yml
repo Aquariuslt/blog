@@ -21,6 +21,7 @@ jobs:
           yarn bootstrap
           yarn test:cov
       - name: Upload coverage to Codecov
+        if: matrix.node-version == '12.x'
         uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}
@@ -28,6 +29,7 @@ jobs:
           flags: unittests
           name: codecov-umbrella
       - name: Check bundlewatch
+        if: matrix.node-version == '12.x' && github.event_name == 'push'
         run: |
           yarn build:prod
           yarn bundlewatch
