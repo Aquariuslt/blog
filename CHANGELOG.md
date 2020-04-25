@@ -1,3 +1,13 @@
+## [6.26.26](https://github.com/aquariuslt/blog/compare/v6.26.25...v6.26.26) (2020-04-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency class-validator to v0.12.2 ([#237](https://github.com/aquariuslt/blog/issues/237)) ([8d559bf](https://github.com/aquariuslt/blog/commit/8d559bf97e692a67fefec9cc800eda8920f0b551))
+* **deps:** update dependency puppeteer to v3.0.1 ([#234](https://github.com/aquariuslt/blog/issues/234)) ([c28d3a5](https://github.com/aquariuslt/blog/commit/c28d3a5385e55e302980afde2743e12ffbc37995))
+* **deps:** update dependency vue-property-decorator to v8.4.2 ([#243](https://github.com/aquariuslt/blog/issues/243)) ([765b4bd](https://github.com/aquariuslt/blog/commit/765b4bd1acfb62e7edbdb866de62de9c515eed2d))
+* **deps:** update nest monorepo to v7.0.9 ([#239](https://github.com/aquariuslt/blog/issues/239)) ([4a5ed4a](https://github.com/aquariuslt/blog/commit/4a5ed4a59a2708b93c006bc396d90dc9c81a4cce))
+
 ## [6.26.25](https://github.com/aquariuslt/blog/compare/v6.26.24...v6.26.25) (2020-04-25)
 
 
