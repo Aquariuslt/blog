@@ -1,3 +1,10 @@
+## [6.26.25](https://github.com/aquariuslt/blog/compare/v6.26.24...v6.26.25) (2020-04-25)
+
+
+### Bug Fixes
+
+* **deps:** putback @types/express to v4.17.0 ([20c40bd](https://github.com/aquariuslt/blog/commit/20c40bdd4a7c6bbd94c572b544691abdfa48cf59))
+
 ## [6.26.24](https://github.com/aquariuslt/blog/compare/v6.26.23...v6.26.24) (2020-04-23)
 
 
