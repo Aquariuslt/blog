@@ -28,10 +28,3 @@ jobs:
           file: ./coverage/lcov.info
           flags: unittests
           name: codecov-umbrella
-      - name: Check bundlewatch
-        if: matrix.node-version == '12.x' && github.event_name == 'push'
-        run: |
-          yarn build:prod
-          yarn bundlewatch
-        env:
-          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}
