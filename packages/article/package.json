@@ -41,7 +41,7 @@
     "@types/markdown-it": "0.0.9",
     "@types/node": "13.13.4",
     "@types/sharp": "0.25.0",
-    "jest": "25.5.2",
+    "jest": "25.5.3",
     "jest-raw-loader": "1.0.1",
     "ts-jest": "25.4.0",
     "typescript": "3.8.3"
