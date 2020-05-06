@@ -1,3 +1,10 @@
+## [6.26.33](https://github.com/aquariuslt/blog/compare/v6.26.32...v6.26.33) (2020-05-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency puppeteer to v3.0.3 ([f4d6e15](https://github.com/aquariuslt/blog/commit/f4d6e15047c421aa6b984115e04308566d5e315a))
+
 ## [6.26.32](https://github.com/aquariuslt/blog/compare/v6.26.31...v6.26.32) (2020-05-05)
 
 
