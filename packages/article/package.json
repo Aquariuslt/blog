@@ -43,7 +43,7 @@
     "@types/sharp": "0.25.0",
     "jest": "26.0.1",
     "jest-raw-loader": "1.0.1",
-    "ts-jest": "25.5.0",
+    "ts-jest": "25.5.1",
     "typescript": "3.8.3"
   },
   "jest": {
