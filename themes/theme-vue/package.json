@@ -19,7 +19,7 @@
     "@mdi/font": "5.1.45",
     "axios": "0.19.2",
     "date-fns": "2.13.0",
-    "highlight.js": "10.0.2",
+    "highlight.js": "10.0.3",
     "vue": "2.6.11",
     "vue-class-component": "7.2.3",
     "vue-disqus": "3.0.5",
