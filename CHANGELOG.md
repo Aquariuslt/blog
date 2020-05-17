@@ -1,3 +1,10 @@
+## [6.26.49](https://github.com/aquariuslt/blog/compare/v6.26.48...v6.26.49) (2020-05-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency notistack to v0.9.15 ([61f6ac2](https://github.com/aquariuslt/blog/commit/61f6ac2a103582c348b804f08f249c3f1eb3c1fc))
+
 ## [6.26.48](https://github.com/aquariuslt/blog/compare/v6.26.47...v6.26.48) (2020-05-17)
 
 
