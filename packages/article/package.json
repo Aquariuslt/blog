@@ -1,6 +1,6 @@
 {
   "name": "@blog/article",
-  "version": "6.26.50",
+  "version": "6.26.51",
   "description": "blog markdown article tools",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -23,8 +23,8 @@
     "build:lib": "tsc"
   },
   "dependencies": {
-    "@blog/common": "^6.26.50",
-    "@blog/markdown": "^6.26.50",
+    "@blog/common": "^6.26.51",
+    "@blog/markdown": "^6.26.51",
     "highlight.js": "10.0.3",
     "lodash": "4.17.15",
     "markdown-it": "10.0.0",
