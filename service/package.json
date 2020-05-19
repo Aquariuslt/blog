@@ -55,7 +55,7 @@
     "@types/jest": "25.2.3",
     "@types/lodash": "4.14.151",
     "@types/node": "13.13.5",
-    "@types/puppeteer": "2.1.0",
+    "@types/puppeteer": "3.0.0",
     "@types/supertest": "2.0.9",
     "cross-env": "7.0.2",
     "jest": "26.0.1",
