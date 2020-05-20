@@ -64,7 +64,7 @@
     "ts-node": "8.10.1",
     "tsc-watch": "4.2.6",
     "tsconfig-paths": "3.9.0",
-    "typescript": "3.9.2"
+    "typescript": "3.9.3"
   },
   "jest": {
     "moduleFileExtensions": [
