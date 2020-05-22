@@ -27,7 +27,7 @@
     "@blog/markdown": "^6.26.54",
     "highlight.js": "10.0.3",
     "lodash": "4.17.15",
-    "markdown-it": "10.0.0",
+    "markdown-it": "11.0.0",
     "markdown-it-anchor": "5.3.0",
     "mkdirp": "1.0.4",
     "rimraf": "3.0.2",
