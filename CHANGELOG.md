@@ -1,3 +1,11 @@
+## [6.26.55](https://github.com/aquariuslt/blog/compare/v6.26.54...v6.26.55) (2020-05-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdown-it to v11 ([#339](https://github.com/aquariuslt/blog/issues/339)) ([fa48ea9](https://github.com/aquariuslt/blog/commit/fa48ea9060a811881e3bd29523cc83cc97389143))
+* **deps:** update dependency vanilla-lazyload to v16 ([#316](https://github.com/aquariuslt/blog/issues/316)) ([114d472](https://github.com/aquariuslt/blog/commit/114d4726339579bb443acb93a4dbc768f7735d76))
+
 ## [6.26.54](https://github.com/aquariuslt/blog/compare/v6.26.53...v6.26.54) (2020-05-19)
 
 
