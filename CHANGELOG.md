@@ -1,3 +1,10 @@
+## [6.26.57](https://github.com/aquariuslt/blog/compare/v6.26.56...v6.26.57) (2020-05-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @mdi/font to v5.3.45 ([332fd99](https://github.com/aquariuslt/blog/commit/332fd99cce97d518b9b7761ac15c3db9383bc7a1))
+
 ## [6.26.56](https://github.com/aquariuslt/blog/compare/v6.26.55...v6.26.56) (2020-05-23)
 
 
