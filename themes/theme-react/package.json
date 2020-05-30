@@ -40,7 +40,7 @@
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
     "@types/react-router-dom": "5.1.5",
-    "@types/webpack": "4.41.14",
+    "@types/webpack": "4.41.15",
     "autoprefixer": "9.8.0",
     "clean-webpack-plugin": "3.0.0",
     "css-loader": "3.5.3",
