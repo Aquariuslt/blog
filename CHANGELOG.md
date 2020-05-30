@@ -1,3 +1,10 @@
+## [6.26.67](https://github.com/aquariuslt/blog/compare/v6.26.66...v6.26.67) (2020-05-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency clsx to v1.1.1 ([b94adb6](https://github.com/aquariuslt/blog/commit/b94adb6c0e43c2cb4dad8d5bb16a2db008a3f2aa))
+
 ## [6.26.66](https://github.com/aquariuslt/blog/compare/v6.26.65...v6.26.66) (2020-05-29)
 
 
