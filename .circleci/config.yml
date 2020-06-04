@@ -15,7 +15,7 @@ workflows:
 jobs:
   ci:
     docker:
-      - image: circleci/node:12.17-browsers
+      - image: circleci/node:12.18-browsers
     working_directory: ~/blog
     steps:
       - checkout
@@ -30,7 +30,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/node:12.17-browsers
+      - image: circleci/node:12.18-browsers
     working_directory: ~/blog
     steps:
       - checkout
