@@ -1,3 +1,10 @@
+## [6.26.73](https://github.com/aquariuslt/blog/compare/v6.26.72...v6.26.73) (2020-06-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-helmet to v6.1.0 ([a4a12dc](https://github.com/aquariuslt/blog/commit/a4a12dc568858761280e4b243e493f44043e5461))
+
 ## [6.26.72](https://github.com/aquariuslt/blog/compare/v6.26.71...v6.26.72) (2020-06-04)
 
 
