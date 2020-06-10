@@ -1,3 +1,10 @@
+## [6.26.74](https://github.com/aquariuslt/blog/compare/v6.26.73...v6.26.74) (2020-06-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-meta to v2.4.0 ([57bdafd](https://github.com/aquariuslt/blog/commit/57bdafd4c914e99d25a495c78f7221dcbe859330))
+
 ## [6.26.73](https://github.com/aquariuslt/blog/compare/v6.26.72...v6.26.73) (2020-06-08)
 
 
