@@ -25,7 +25,7 @@
   "dependencies": {
     "@blog/common": "^6.26.80",
     "@blog/markdown": "^6.26.80",
-    "highlight.js": "10.0.3",
+    "highlight.js": "10.1.1",
     "lodash": "4.17.15",
     "markdown-it": "11.0.0",
     "markdown-it-anchor": "5.3.0",
