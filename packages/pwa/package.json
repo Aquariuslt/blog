@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@types/jest": "26.0.0",
-    "@types/lodash": "4.14.155",
+    "@types/lodash": "4.14.156",
     "@types/node": "13.13.5",
     "jest": "26.0.1",
     "jest-raw-loader": "1.0.1",
