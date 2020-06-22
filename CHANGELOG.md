@@ -1,3 +1,11 @@
+## [6.26.83](https://github.com/aquariuslt/blog/compare/v6.26.82...v6.26.83) (2020-06-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency puppeteer to v4 ([#417](https://github.com/aquariuslt/blog/issues/417)) ([1c69f49](https://github.com/aquariuslt/blog/commit/1c69f49fb6024a947bc53eb155a7a826f24bb06c))
+* **deps:** update dependency vue-property-decorator to v9 ([#428](https://github.com/aquariuslt/blog/issues/428)) ([0667967](https://github.com/aquariuslt/blog/commit/0667967e7cac65a6b5d786119ad6bc3a302a3d22))
+
 ## [6.26.82](https://github.com/aquariuslt/blog/compare/v6.26.81...v6.26.82) (2020-06-18)
 
 
