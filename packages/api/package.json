@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/fancy-log": "1.3.1",
     "@types/jest": "26.0.2",
-    "@types/lodash": "4.14.156",
+    "@types/lodash": "4.14.157",
     "@types/mkdirp": "1.0.1",
     "@types/node": "13.13.5",
     "jest": "26.1.0",
