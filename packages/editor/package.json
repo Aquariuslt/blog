@@ -1,0 +1,119 @@
+{
+  "name": "@blog/editor",
+  "version": "6.26.86",
+  "description": "online editor for blog",
+  "author": "Aquariuslt <superaquariuslt@gmail.com>",
+  "homepage": "https://github.com/aquariuslt/blog#readme",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquariuslt/blog.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "slate",
+    "markdown",
+    "editor"
+  ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "editor:dev": "gulp serve"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.2.0",
+    "slate": "0.58.3",
+    "slate-history": "0.58.3",
+    "slate-react": "0.58.3",
+    "@material-ui/core": "4.10.2",
+    "@material-ui/icons": "4.9.1",
+    "classnames": "2.2.6",
+    "clsx": "1.1.1",
+    "typeface-roboto": "0.0.75"
+  },
+  "devDependencies": {
+    "@testing-library/react": "10.4.3",
+    "@types/gulp": "4.0.6",
+    "@types/jest": "26.0.3",
+    "@types/node": "13.13.5",
+    "@types/react": "16.9.41",
+    "@types/react-dom": "16.9.8",
+    "@types/react-router-dom": "5.1.5",
+    "@types/webpack": "4.41.18",
+    "autoprefixer": "9.8.4",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "3.6.0",
+    "enzyme": "3.11.0",
+    "fancy-log": "1.3.3",
+    "file-loader": "6.0.0",
+    "friendly-errors-webpack-plugin": "1.7.0",
+    "gulp": "4.0.2",
+    "gulp-rimraf": "1.0.0",
+    "html-webpack-plugin": "4.3.0",
+    "jest": "26.1.0",
+    "jest-environment-enzyme": "7.1.2",
+    "jest-enzyme": "7.1.2",
+    "jest-raw-loader": "1.0.1",
+    "jest-transform-stub": "2.0.0",
+    "lodash": "4.17.15",
+    "mini-css-extract-plugin": "0.9.0",
+    "mkdirp": "1.0.4",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss": "7.0.32",
+    "postcss-load-config": "2.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-pxtorem": "5.1.1",
+    "preload-webpack-plugin": "3.0.0-beta.4",
+    "script-ext-html-webpack-plugin": "2.1.4",
+    "style-loader": "1.2.1",
+    "terser-webpack-plugin": "3.0.6",
+    "ts-jest": "26.1.1",
+    "ts-loader": "7.0.5",
+    "ts-node": "8.10.2",
+    "tsconfig-paths-webpack-plugin": "3.2.0",
+    "typescript": "3.9.5",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "url-loader": "4.1.0",
+    "webpack": "4.43.0",
+    "webpack-bundle-analyzer": "3.8.0",
+    "webpack-dev-middleware": "3.7.2",
+    "webpack-dev-server": "3.11.0",
+    "webpack-hot-middleware": "2.25.0",
+    "webpack-merge": "4.2.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "moduleNameMapper": {
+      "^@theme-react/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "!**/__tests__/**",
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "coverageDirectory": "<rootDir>/coverage"
+  }
+}
