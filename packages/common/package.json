@@ -10,16 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "directory": "dist"
-  },
-  "scripts": {
-    "clean": "rimraf dist",
-    "build:lib": "tsc"
-  },
   "dependencies": {
     "fancy-log": "1.3.3",
     "lodash": "4.17.15",

@@ -19,9 +19,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "clean": "rimraf dist",
     "editor:dev": "gulp serve"

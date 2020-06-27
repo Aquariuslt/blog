@@ -8,7 +8,7 @@ export const RoutesPathRegex = {
   TAGS: '/tags',
   TAG_DETAIL: '/tags/:id',
   CATEGORIES: '/categories',
-  CATEGORY_DETAIL: '/categories/:id'
+  CATEGORY_DETAIL: '/categories/:id',
 };
 
 export enum RoutePathPrefix {
@@ -19,7 +19,7 @@ export enum RoutePathPrefix {
   POSTS = 'posts',
   PAGES = 'pages',
   NAVIGATION = 'navigation',
-  PROFILE = 'profile'
+  PROFILE = 'profile',
 }
 
 export interface RouteMeta {
@@ -54,7 +54,7 @@ export const EmptyRouteMeta: RouteMeta = {
   path: '',
   title: '',
   type: '',
-  url: ''
+  url: '',
 };
 
 export interface Meta {
@@ -79,10 +79,10 @@ export enum MetaName {
   OPEN_GRAPH_SITE_NAME = 'og:site_name',
 
   GOOGLE_SITE_VERIFICATION = 'google-site-verification',
-  GOOGLE_SITE_TRACKING = 'google-analytics'
+  GOOGLE_SITE_TRACKING = 'google-analytics',
 }
 
 export enum MetaValue {
   WEBSITE = 'website',
-  ARTICLE = 'article'
+  ARTICLE = 'article',
 }

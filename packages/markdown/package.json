@@ -10,13 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/aquariuslt/blog.git"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest",

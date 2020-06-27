@@ -6,13 +6,11 @@
   "homepage": "https://github.com/aquariuslt/blog#readme",
   "license": "MIT",
   "private": true,
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest",
