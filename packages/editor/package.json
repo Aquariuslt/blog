@@ -1,6 +1,6 @@
 {
   "name": "@blog/editor",
-  "version": "6.26.86",
+  "version": "6.26.87",
   "description": "online editor for blog",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
@@ -24,16 +24,16 @@
     "editor:dev": "gulp serve"
   },
   "dependencies": {
+    "@material-ui/core": "4.10.2",
+    "@material-ui/icons": "4.9.1",
+    "classnames": "2.2.6",
+    "clsx": "1.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "5.2.0",
     "slate": "0.58.3",
     "slate-history": "0.58.3",
     "slate-react": "0.58.3",
-    "@material-ui/core": "4.10.2",
-    "@material-ui/icons": "4.9.1",
-    "classnames": "2.2.6",
-    "clsx": "1.1.1",
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
