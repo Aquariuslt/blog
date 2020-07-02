@@ -1,3 +1,10 @@
+## [6.26.93](https://github.com/aquariuslt/blog/compare/v6.26.92...v6.26.93) (2020-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @loadable/component to v5.13.1 ([6752423](https://github.com/aquariuslt/blog/commit/6752423abb10df214a162380d25340d1d1061f2d))
+
 ## [6.26.92](https://github.com/aquariuslt/blog/compare/v6.26.91...v6.26.92) (2020-07-02)
 
 
