@@ -1,3 +1,10 @@
+## [6.26.94](https://github.com/aquariuslt/blog/compare/v6.26.93...v6.26.94) (2020-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-disqus to v4.0.1 ([f3d37ef](https://github.com/aquariuslt/blog/commit/f3d37ef17f9d5d7cea03661570a07db0ef9c66b8))
+
 ## [6.26.93](https://github.com/aquariuslt/blog/compare/v6.26.92...v6.26.93) (2020-07-02)
 
 
