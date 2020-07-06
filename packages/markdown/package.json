@@ -30,7 +30,7 @@
     "uslug": "1.0.4"
   },
   "devDependencies": {
-    "@types/cheerio": "0.22.18",
+    "@types/cheerio": "0.22.19",
     "@types/jest": "26.0.4",
     "@types/lodash": "4.14.157",
     "@types/markdown-it": "0.0.9",
