@@ -33,7 +33,7 @@
     "react-router-dom": "5.2.0",
     "slate": "0.58.4",
     "slate-history": "0.58.3",
-    "slate-react": "0.58.3",
+    "slate-react": "0.58.4",
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
