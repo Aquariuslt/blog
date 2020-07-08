@@ -1,3 +1,10 @@
+## [6.26.96](https://github.com/aquariuslt/blog/compare/v6.26.95...v6.26.96) (2020-07-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency slate-react to v0.58.4 ([49b7fc8](https://github.com/aquariuslt/blog/commit/49b7fc89fb187a68dd291ff4366c15b4bc2f4086))
+
 ## [6.26.95](https://github.com/aquariuslt/blog/compare/v6.26.94...v6.26.95) (2020-07-08)
 
 
