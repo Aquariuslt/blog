@@ -1,3 +1,10 @@
+## [6.26.97](https://github.com/aquariuslt/blog/compare/v6.26.96...v6.26.97) (2020-07-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency slate-history to v0.58.4 ([cad87b1](https://github.com/aquariuslt/blog/commit/cad87b13090be609e9ebf80c156a3b7a494b19e5))
+
 ## [6.26.96](https://github.com/aquariuslt/blog/compare/v6.26.95...v6.26.96) (2020-07-08)
 
 
