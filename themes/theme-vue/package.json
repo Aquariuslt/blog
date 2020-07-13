@@ -43,7 +43,7 @@
     "rimraf": "3.0.2",
     "sass-loader": "9.0.2",
     "stats-webpack-plugin": "0.7.0",
-    "ts-jest": "26.1.1",
+    "ts-jest": "26.1.2",
     "typescript": "3.9.6",
     "vue-template-compiler": "2.6.11"
   },
