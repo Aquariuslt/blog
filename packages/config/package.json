@@ -30,7 +30,7 @@
     "jest": "26.1.0",
     "jest-raw-loader": "1.0.1",
     "ts-jest": "26.1.2",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "jest": {
     "moduleFileExtensions": [
