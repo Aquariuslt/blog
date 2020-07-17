@@ -24,7 +24,7 @@
     "@blog/article": "^6.26.101",
     "@blog/common": "^6.26.101",
     "@blog/config": "^6.26.101",
-    "date-fns": "2.14.0",
+    "date-fns": "2.15.0",
     "lodash": "4.17.19",
     "path-to-regexp": "6.1.0",
     "sitemap": "5.1.0",
