@@ -142,6 +142,11 @@ setprop ctl.restart zygote
 
 ![check-motion-sense-at-settings](./check-motion-sense-at-settings.png)
 
+
+> Note: 2020-07-17 已向 Magisk Module Repo 提交相关插件，
+> 目前可以直接使用 [Github Release](https://github.com/aquariuslt/enable-motion-sense/releases) 链接下载 zip 文件进行解压。
+
+
 ## References
 
 - How to root Google Pixel 4 or Pixel 4 XL - XDA [https://www.xda-developers.com/google-pixel-4-root-magisk/](https://www.xda-developers.com/google-pixel-4-root-magisk/)
