@@ -1,3 +1,10 @@
+## [6.26.103](https://github.com/aquariuslt/blog/compare/v6.26.102...v6.26.103) (2020-07-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-class-component to v7.2.4 ([ce42d87](https://github.com/aquariuslt/blog/commit/ce42d8758e5990c32fdf10ba3c8009a83b43601b))
+
 ## [6.26.102](https://github.com/aquariuslt/blog/compare/v6.26.101...v6.26.102) (2020-07-17)
 
 
