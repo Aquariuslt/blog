@@ -41,7 +41,7 @@
     "jest": "26.1.0",
     "jest-raw-loader": "1.0.1",
     "rimraf": "3.0.2",
-    "ts-jest": "26.1.2",
+    "ts-jest": "26.1.4",
     "typescript": "3.9.7"
   },
   "jest": {
