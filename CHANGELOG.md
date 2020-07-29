@@ -1,3 +1,10 @@
+## [6.26.108](https://github.com/aquariuslt/blog/compare/v6.26.107...v6.26.108) (2020-07-29)
+
+
+### Bug Fixes
+
+* **deps:** update nest monorepo to v7.4.0 ([08c9f3c](https://github.com/aquariuslt/blog/commit/08c9f3c01334355c3d7d6dad8507f52dee8ede5c))
+
 ## [6.26.107](https://github.com/aquariuslt/blog/compare/v6.26.106...v6.26.107) (2020-07-26)
 
 
