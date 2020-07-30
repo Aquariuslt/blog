@@ -55,7 +55,7 @@
     "gulp": "4.0.2",
     "gulp-rimraf": "1.0.0",
     "html-webpack-plugin": "4.3.0",
-    "jest": "26.2.0",
+    "jest": "26.2.1",
     "jest-environment-enzyme": "7.1.2",
     "jest-enzyme": "7.1.2",
     "jest-raw-loader": "1.0.1",
