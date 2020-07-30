@@ -34,7 +34,7 @@
     "@types/lodash": "4.14.158",
     "@types/mkdirp": "1.0.1",
     "@types/node": "13.13.5",
-    "jest": "26.1.0",
+    "jest": "26.2.0",
     "jest-raw-loader": "1.0.1",
     "ts-jest": "26.1.4",
     "typescript": "3.9.7"
