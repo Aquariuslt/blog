@@ -1,3 +1,10 @@
+## [6.26.113](https://github.com/aquariuslt/blog/compare/v6.26.112...v6.26.113) (2020-08-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cosmiconfig to v7 ([#554](https://github.com/aquariuslt/blog/issues/554)) ([4457033](https://github.com/aquariuslt/blog/commit/4457033561b2b5f62f8aca790a940128e05abfe2))
+
 ## [6.26.112](https://github.com/aquariuslt/blog/compare/v6.26.111...v6.26.112) (2020-07-31)
 
 
