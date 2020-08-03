@@ -38,5 +38,6 @@ cover: ./about.png
 - [reckful](http://reckful.studio/): 小张
 - [nancheung's blog](https://blog.nancheung.com/): 一个纯洁天真的男孩。
 - [yoshino's blog](https://yoshino.now.sh/): Mezzo。
+- [mifan.im](https://mifan.im): 🍚 米饭 - 区块链大师，老板克星
 
 > 如需添加友情链接，请留言(+Issue/+Pull Request)
