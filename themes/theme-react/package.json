@@ -59,7 +59,7 @@
     "jest-properties-loader": "1.0.8",
     "jest-raw-loader": "1.0.1",
     "jest-transform-stub": "2.0.0",
-    "lodash": "4.17.19",
+    "lodash": "4.17.20",
     "mini-css-extract-plugin": "0.10.0",
     "mkdirp": "1.0.4",
     "optimize-css-assets-webpack-plugin": "5.0.3",
