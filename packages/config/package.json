@@ -19,7 +19,7 @@
   "dependencies": {
     "cosmiconfig": "7.0.0",
     "dotenv": "8.2.0",
-    "lodash": "4.17.19"
+    "lodash": "4.17.20"
   },
   "devDependencies": {
     "@types/dotenv": "8.2.0",
