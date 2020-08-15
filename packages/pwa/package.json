@@ -35,7 +35,7 @@
     "workbox-build": "4.3.1"
   },
   "devDependencies": {
-    "@types/jest": "26.0.9",
+    "@types/jest": "26.0.10",
     "@types/lodash": "4.14.159",
     "@types/node": "13.13.5",
     "jest": "26.4.0",
