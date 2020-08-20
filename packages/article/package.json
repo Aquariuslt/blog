@@ -39,7 +39,7 @@
     "@types/markdown-it": "0.0.9",
     "@types/node": "13.13.5",
     "@types/sharp": "0.25.1",
-    "jest": "26.4.0",
+    "jest": "26.4.1",
     "jest-raw-loader": "1.0.1",
     "ts-jest": "26.2.0",
     "typescript": "3.9.7"

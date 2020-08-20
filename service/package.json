@@ -58,7 +58,7 @@
     "@types/puppeteer": "3.0.1",
     "@types/supertest": "2.0.10",
     "cross-env": "7.0.2",
-    "jest": "26.4.0",
+    "jest": "26.4.1",
     "supertest": "4.0.2",
     "ts-jest": "26.2.0",
     "ts-node": "8.10.2",
