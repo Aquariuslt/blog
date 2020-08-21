@@ -1,3 +1,10 @@
+## [6.26.118](https://github.com/aquariuslt/blog/compare/v6.26.117...v6.26.118) (2020-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v0.20.0 ([2a2aaa9](https://github.com/aquariuslt/blog/commit/2a2aaa9215a543b955c808ba63911eb9b2373655))
+
 ## [6.26.117](https://github.com/aquariuslt/blog/compare/v6.26.116...v6.26.117) (2020-08-11)
 
 
