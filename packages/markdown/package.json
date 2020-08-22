@@ -35,7 +35,7 @@
     "@types/lodash": "4.14.159",
     "@types/markdown-it": "0.0.9",
     "@types/node": "13.13.5",
-    "jest": "26.4.1",
+    "jest": "26.4.2",
     "jest-raw-loader": "1.0.1",
     "rimraf": "3.0.2",
     "ts-jest": "26.2.0",
