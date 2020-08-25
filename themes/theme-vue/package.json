@@ -38,7 +38,7 @@
     "@vue/test-utils": "1.0.4",
     "copy-webpack-plugin": "6.0.3",
     "less": "3.12.2",
-    "less-loader": "6.2.0",
+    "less-loader": "7.0.0",
     "node-sass": "4.14.1",
     "rimraf": "3.0.2",
     "sass-loader": "10.0.0",
