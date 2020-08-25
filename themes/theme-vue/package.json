@@ -1,6 +1,6 @@
 {
   "name": "@blog/theme-vue",
-  "version": "6.26.121",
+  "version": "6.26.122",
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
@@ -13,9 +13,9 @@
     "debug:webpack": "vue inspect | tee > webpack.config.js"
   },
   "dependencies": {
-    "@blog/common": "^6.26.121",
-    "@blog/config": "^6.26.121",
-    "@blog/router": "^6.26.121",
+    "@blog/common": "^6.26.122",
+    "@blog/config": "^6.26.122",
+    "@blog/router": "^6.26.122",
     "@mdi/font": "5.5.55",
     "axios": "0.20.0",
     "date-fns": "2.15.0",
