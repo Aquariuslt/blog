@@ -1,3 +1,10 @@
+## [6.26.123](https://github.com/aquariuslt/blog/compare/v6.26.122...v6.26.123) (2020-08-26)
+
+
+### Bug Fixes
+
+* **deps:** update vue monorepo to v2.6.12 ([779ab1f](https://github.com/aquariuslt/blog/commit/779ab1ff225f9e639a35f893cf752c19e003acaa))
+
 ## [6.26.122](https://github.com/aquariuslt/blog/compare/v6.26.121...v6.26.122) (2020-08-25)
 
 
