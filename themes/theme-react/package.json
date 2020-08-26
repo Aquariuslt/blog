@@ -73,7 +73,7 @@
     "script-ext-html-webpack-plugin": "2.1.4",
     "style-loader": "1.2.1",
     "terser-webpack-plugin": "4.1.0",
-    "ts-jest": "26.2.0",
+    "ts-jest": "26.3.0",
     "ts-loader": "8.0.3",
     "ts-node": "9.0.0",
     "tsconfig-paths-webpack-plugin": "3.3.0",
