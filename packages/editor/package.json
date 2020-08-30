@@ -63,7 +63,7 @@
     "lodash": "4.17.20",
     "mini-css-extract-plugin": "0.10.0",
     "mkdirp": "1.0.4",
-    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "optimize-css-assets-webpack-plugin": "5.0.4",
     "postcss": "7.0.32",
     "postcss-load-config": "2.1.0",
     "postcss-loader": "3.0.0",
