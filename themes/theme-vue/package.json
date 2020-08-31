@@ -36,7 +36,7 @@
     "@vue/cli-plugin-unit-jest": "4.5.4",
     "@vue/cli-service": "4.5.4",
     "@vue/test-utils": "1.0.5",
-    "copy-webpack-plugin": "6.0.4",
+    "copy-webpack-plugin": "6.1.0",
     "less": "3.12.2",
     "less-loader": "7.0.0",
     "node-sass": "4.14.1",
