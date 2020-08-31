@@ -18,7 +18,7 @@
     "@blog/router": "^6.26.123",
     "@mdi/font": "5.5.55",
     "axios": "0.20.0",
-    "date-fns": "2.15.0",
+    "date-fns": "2.16.1",
     "highlight.js": "10.1.2",
     "vue": "2.6.12",
     "vue-class-component": "7.2.5",
