@@ -28,7 +28,7 @@
     "react-helmet": "6.1.0",
     "react-router-dom": "5.2.0",
     "register-service-worker": "1.7.1",
-    "scroll-into-view-if-needed": "2.2.25",
+    "scroll-into-view-if-needed": "2.2.26",
     "typeface-roboto": "0.0.75",
     "vanilla-lazyload": "17.1.2"
   },
