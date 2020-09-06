@@ -1,3 +1,11 @@
+## [6.26.125](https://github.com/aquariuslt/blog/compare/v6.26.124...v6.26.125) (2020-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency notistack to v1 ([#595](https://github.com/aquariuslt/blog/issues/595)) ([44e3cf0](https://github.com/aquariuslt/blog/commit/44e3cf074a126797d110c44fc65ddbc280ea564a))
+* **deps:** update dependency scroll-into-view-if-needed to v2.2.26 ([#631](https://github.com/aquariuslt/blog/issues/631)) ([63e9481](https://github.com/aquariuslt/blog/commit/63e9481ecefee1da8d70d989c11678907a814ff0))
+
 ## [6.26.124](https://github.com/aquariuslt/blog/compare/v6.26.123...v6.26.124) (2020-08-31)
 
 
