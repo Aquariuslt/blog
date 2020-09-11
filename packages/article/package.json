@@ -38,7 +38,7 @@
     "@types/lodash": "4.14.161",
     "@types/markdown-it": "0.0.9",
     "@types/node": "13.13.5",
-    "@types/sharp": "0.25.1",
+    "@types/sharp": "0.26.0",
     "jest": "26.4.2",
     "jest-raw-loader": "1.0.1",
     "ts-jest": "26.3.0",
