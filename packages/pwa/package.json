@@ -1,6 +1,6 @@
 {
   "name": "@blog/pwa",
-  "version": "6.26.126",
+  "version": "6.26.127",
   "description": "progressive web application tools including workbox + precaching",
   "keywords": [
     "pwa",
@@ -28,7 +28,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@blog/common": "^6.26.126",
+    "@blog/common": "^6.26.127",
     "lodash": "4.17.20",
     "patch-package": "6.2.2",
     "postinstall-postinstall": "2.1.0",
