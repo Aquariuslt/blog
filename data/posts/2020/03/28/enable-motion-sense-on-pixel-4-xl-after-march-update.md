@@ -147,6 +147,10 @@ setprop ctl.restart zygote
 > 目前可以直接使用 [Github Release](https://github.com/aquariuslt/enable-motion-sense/releases) 链接下载 zip 文件进行解压。
 
 
+> Note: 2020-09-10 Android 11 更新后，使用 Magisk Canary 版本进行相同操作，成功启用
+> 但 Riru Core 相关模块部分工作不正常。
+
+
 ## References
 
 - How to root Google Pixel 4 or Pixel 4 XL - XDA [https://www.xda-developers.com/google-pixel-4-root-magisk/](https://www.xda-developers.com/google-pixel-4-root-magisk/)
