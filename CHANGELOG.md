@@ -1,3 +1,11 @@
+## [6.26.128](https://github.com/aquariuslt/blog/compare/v6.26.127...v6.26.128) (2020-09-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @loadable/component to v5.13.2 ([034a90e](https://github.com/aquariuslt/blog/commit/034a90ea52a72a970418c31864408cb905719909))
+* **deps:** update dependency markdown-it to v11.0.1 ([15893b8](https://github.com/aquariuslt/blog/commit/15893b8f24a19383f7789297a4f02542bfc08eaf))
+
 ## [6.26.127](https://github.com/aquariuslt/blog/compare/v6.26.126...v6.26.127) (2020-09-12)
 
 
