@@ -21,7 +21,7 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn bootstrap
-      - run: yarn test
+      - run: yarn test -i
       - run: yarn build:prod
       - persist_to_workspace:
           root: ~/blog
