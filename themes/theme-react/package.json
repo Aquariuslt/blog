@@ -63,7 +63,7 @@
     "mini-css-extract-plugin": "0.11.2",
     "mkdirp": "1.0.4",
     "optimize-css-assets-webpack-plugin": "5.0.4",
-    "postcss": "8.0.6",
+    "postcss": "8.0.7",
     "postcss-load-config": "2.1.1",
     "postcss-loader": "4.0.2",
     "postcss-pxtorem": "5.1.1",
