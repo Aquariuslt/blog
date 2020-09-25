@@ -32,7 +32,7 @@
     "react-dom": "16.13.1",
     "react-router-dom": "5.2.0",
     "slate": "0.59.0",
-    "slate-history": "0.58.4",
+    "slate-history": "0.59.0",
     "slate-react": "0.59.0",
     "typeface-roboto": "0.0.75"
   },
