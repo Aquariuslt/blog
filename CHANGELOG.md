@@ -1,3 +1,10 @@
+## [6.26.139](https://github.com/aquariuslt/blog/compare/v6.26.138...v6.26.139) (2020-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency path-to-regexp to v6.2.0 ([ad84641](https://github.com/aquariuslt/blog/commit/ad846410b840fc9dd1eb98ec229514b680c41144))
+
 ## [6.26.138](https://github.com/aquariuslt/blog/compare/v6.26.137...v6.26.138) (2020-09-26)
 
 
