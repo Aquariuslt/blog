@@ -1,3 +1,10 @@
+## [6.26.141](https://github.com/aquariuslt/blog/compare/v6.26.140...v6.26.141) (2020-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdown-it-anchor to v6 ([#712](https://github.com/aquariuslt/blog/issues/712)) ([fc3a22a](https://github.com/aquariuslt/blog/commit/fc3a22a549d7f026ae200415ec67e6a49926b127))
+
 ## [6.26.140](https://github.com/aquariuslt/blog/compare/v6.26.139...v6.26.140) (2020-10-01)
 
 
