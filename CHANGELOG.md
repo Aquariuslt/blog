@@ -1,3 +1,10 @@
+## [6.26.142](https://github.com/aquariuslt/blog/compare/v6.26.141...v6.26.142) (2020-10-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-property-decorator to v9.0.2 ([7637afe](https://github.com/aquariuslt/blog/commit/7637afe102def5573cca7013d55ff8955491c4c3))
+
 ## [6.26.141](https://github.com/aquariuslt/blog/compare/v6.26.140...v6.26.141) (2020-10-02)
 
 
