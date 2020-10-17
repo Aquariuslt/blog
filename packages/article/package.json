@@ -29,7 +29,7 @@
     "markdown-it-anchor": "6.0.0",
     "mkdirp": "1.0.4",
     "rimraf": "3.0.2",
-    "sharp": "0.26.1",
+    "sharp": "0.26.2",
     "uslug": "1.0.4"
   },
   "devDependencies": {
