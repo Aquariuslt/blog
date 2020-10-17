@@ -33,7 +33,7 @@
     "vanilla-lazyload": "17.1.2"
   },
   "devDependencies": {
-    "@testing-library/react": "11.0.4",
+    "@testing-library/react": "11.1.0",
     "@types/gulp": "4.0.7",
     "@types/jest": "26.0.14",
     "@types/node": "13.13.5",
