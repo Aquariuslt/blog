@@ -1,3 +1,10 @@
+## [6.26.149](https://github.com/aquariuslt/blog/compare/v6.26.148...v6.26.149) (2020-10-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vanilla-lazyload to v17.1.3 ([5b1cb63](https://github.com/aquariuslt/blog/commit/5b1cb63dc5fbb9a65e0d1c0c36854e610b6f439a))
+
 ## [6.26.148](https://github.com/aquariuslt/blog/compare/v6.26.147...v6.26.148) (2020-10-17)
 
 
