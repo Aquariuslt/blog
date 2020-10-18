@@ -1,3 +1,10 @@
+## [6.26.150](https://github.com/aquariuslt/blog/compare/v6.26.149...v6.26.150) (2020-10-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency highlight.js to v10.3.1 ([9c5a840](https://github.com/aquariuslt/blog/commit/9c5a8402758118842e8bd1451621d138b946b702))
+
 ## [6.26.149](https://github.com/aquariuslt/blog/compare/v6.26.148...v6.26.149) (2020-10-17)
 
 
