@@ -1,3 +1,10 @@
+## [6.26.151](https://github.com/aquariuslt/blog/compare/v6.26.150...v6.26.151) (2020-10-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency typeface-roboto to v1 ([#740](https://github.com/aquariuslt/blog/issues/740)) ([55e8c82](https://github.com/aquariuslt/blog/commit/55e8c8291c2b2c520f56ebd357fe12da6368ddd5))
+
 ## [6.26.150](https://github.com/aquariuslt/blog/compare/v6.26.149...v6.26.150) (2020-10-18)
 
 
