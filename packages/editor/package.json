@@ -34,7 +34,7 @@
     "slate": "0.59.0",
     "slate-history": "0.59.0",
     "slate-react": "0.59.0",
-    "typeface-roboto": "0.0.75"
+    "typeface-roboto": "1.1.13"
   },
   "devDependencies": {
     "@testing-library/react": "11.1.0",
