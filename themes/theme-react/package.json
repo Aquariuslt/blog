@@ -1,6 +1,6 @@
 {
   "name": "@blog/theme-react",
-  "version": "6.26.151",
+  "version": "6.26.152",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -10,8 +10,8 @@
     "serve": "gulp serve"
   },
   "dependencies": {
-    "@blog/common": "^6.26.151",
-    "@blog/config": "^6.26.151",
+    "@blog/common": "^6.26.152",
+    "@blog/config": "^6.26.152",
     "@loadable/component": "5.14.1",
     "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
