@@ -40,5 +40,6 @@ cover: ./about.png
 - [yoshino's blog](https://yoshino.now.sh/): Mezzo。
 - [mifan.im](https://mifan.im): 🍚 米饭 - 区块链大师，老板克星
 - [shamisen](https://yuanbo.online/hexo/): Soso - 切图仔，不算开发
+- [kisin](https://www.kisin.tech)：还在学习的Kisin，没啥内容的博客
 
 > 如需添加友情链接，请留言(+Issue/+Pull Request)
