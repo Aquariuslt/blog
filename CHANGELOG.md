@@ -1,3 +1,11 @@
+## [6.26.156](https://github.com/aquariuslt/blog/compare/v6.26.155...v6.26.156) (2020-10-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdown-it to v12 ([#760](https://github.com/aquariuslt/blog/issues/760)) ([8b2c667](https://github.com/aquariuslt/blog/commit/8b2c6678fb1f63ef3c45f8a3a9c6f79d870eb1db))
+* **deps:** update react monorepo to v17 ([#780](https://github.com/aquariuslt/blog/issues/780)) ([417b1ad](https://github.com/aquariuslt/blog/commit/417b1ad205ed5da87cf8d5ed5197bbfefbfce07b))
+
 ## [6.26.155](https://github.com/aquariuslt/blog/compare/v6.26.154...v6.26.155) (2020-10-24)
 
 
