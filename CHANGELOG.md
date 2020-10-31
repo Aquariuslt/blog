@@ -1,3 +1,10 @@
+## [6.26.159](https://github.com/aquariuslt/blog/compare/v6.26.158...v6.26.159) (2020-10-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-router to v3.4.8 ([4e56e5e](https://github.com/aquariuslt/blog/commit/4e56e5ec38edaa82a8aba574e4d41e53b581c5b9))
+
 ## [6.26.158](https://github.com/aquariuslt/blog/compare/v6.26.157...v6.26.158) (2020-10-31)
 
 
