@@ -41,7 +41,7 @@
     "get-port": "5.1.1",
     "lodash": "4.17.20",
     "log4js": "6.3.0",
-    "puppeteer": "5.4.1",
+    "puppeteer": "5.5.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "6.6.3"
   },
