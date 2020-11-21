@@ -1,3 +1,11 @@
+## [6.26.163](https://github.com/aquariuslt/blog/compare/v6.26.162...v6.26.163) (2020-11-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nestjs/serve-static to v2.1.4 ([041df41](https://github.com/aquariuslt/blog/commit/041df4135e53a23477ac44872df4823d0c3955f3))
+* **deps:** update dependency markdown-it-anchor to v6.0.1 ([ef2f523](https://github.com/aquariuslt/blog/commit/ef2f5237fa83234f2269fb14f65b934a9b2940df))
+
 ## [6.26.162](https://github.com/aquariuslt/blog/compare/v6.26.161...v6.26.162) (2020-11-21)
 
 
