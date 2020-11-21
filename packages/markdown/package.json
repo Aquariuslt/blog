@@ -26,7 +26,7 @@
     "gray-matter": "4.0.2",
     "lodash": "4.17.20",
     "markdown-it": "12.0.2",
-    "markdown-it-anchor": "6.0.0",
+    "markdown-it-anchor": "6.0.1",
     "uslug": "1.0.4"
   },
   "devDependencies": {
