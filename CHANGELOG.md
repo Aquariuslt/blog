@@ -1,3 +1,10 @@
+## [6.26.167](https://github.com/aquariuslt/blog/compare/v6.26.166...v6.26.167) (2020-11-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @material-ui/core to v4.11.1 ([12a5070](https://github.com/aquariuslt/blog/commit/12a50708a7c7cc44bc35e4b2b355260cd918d5e7))
+
 ## [6.26.166](https://github.com/aquariuslt/blog/compare/v6.26.165...v6.26.166) (2020-11-21)
 
 
