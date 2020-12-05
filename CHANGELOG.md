@@ -1,3 +1,10 @@
+## [6.26.174](https://github.com/aquariuslt/blog/compare/v6.26.173...v6.26.174) (2020-12-05)
+
+
+### Bug Fixes
+
+* **deps:** update mui monorepo to v4.11.2 ([aab1166](https://github.com/aquariuslt/blog/commit/aab1166a85e3043b6aeb9976fa5a963a284c2bdb))
+
 ## [6.26.173](https://github.com/aquariuslt/blog/compare/v6.26.172...v6.26.173) (2020-12-05)
 
 
