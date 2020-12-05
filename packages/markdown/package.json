@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@types/cheerio": "0.22.22",
-    "@types/jest": "26.0.15",
+    "@types/jest": "26.0.16",
     "@types/lodash": "4.14.165",
     "@types/markdown-it": "0.0.9",
     "@types/node": "13.13.5",
