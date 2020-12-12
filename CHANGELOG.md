@@ -1,3 +1,10 @@
+## [6.26.175](https://github.com/aquariuslt/blog/compare/v6.26.174...v6.26.175) (2020-12-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdown-it to v12.0.3 ([4f1cc5f](https://github.com/aquariuslt/blog/commit/4f1cc5fdd1d29c3c1cc287fda82af580fb94fd94))
+
 ## [6.26.174](https://github.com/aquariuslt/blog/compare/v6.26.173...v6.26.174) (2020-12-05)
 
 
