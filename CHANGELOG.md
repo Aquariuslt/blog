@@ -1,3 +1,10 @@
+## [6.26.176](https://github.com/aquariuslt/blog/compare/v6.26.175...v6.26.176) (2020-12-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency register-service-worker to v1.7.2 ([2f981d6](https://github.com/aquariuslt/blog/commit/2f981d66a417e5ad1e9d35fc16e528f6e300afe4))
+
 ## [6.26.175](https://github.com/aquariuslt/blog/compare/v6.26.174...v6.26.175) (2020-12-12)
 
 
