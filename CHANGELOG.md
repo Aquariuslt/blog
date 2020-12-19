@@ -1,3 +1,10 @@
+## [6.26.177](https://github.com/aquariuslt/blog/compare/v6.26.176...v6.26.177) (2020-12-19)
+
+
+### Bug Fixes
+
+* **deps:** update nest monorepo to v7.6.3 ([cae5475](https://github.com/aquariuslt/blog/commit/cae54755c4c7a6cf26cbba5b62d0767fa511513c))
+
 ## [6.26.176](https://github.com/aquariuslt/blog/compare/v6.26.175...v6.26.176) (2020-12-12)
 
 
