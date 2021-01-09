@@ -37,7 +37,7 @@
     "typeface-roboto": "1.1.13"
   },
   "devDependencies": {
-    "@testing-library/react": "11.2.2",
+    "@testing-library/react": "11.2.3",
     "@types/gulp": "4.0.7",
     "@types/jest": "26.0.19",
     "@types/node": "13.13.5",
