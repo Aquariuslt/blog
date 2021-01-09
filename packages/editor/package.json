@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "11.2.3",
-    "@types/gulp": "4.0.7",
+    "@types/gulp": "4.0.8",
     "@types/jest": "26.0.20",
     "@types/node": "13.13.5",
     "@types/react": "17.0.0",
