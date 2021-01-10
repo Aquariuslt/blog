@@ -37,7 +37,7 @@
     "@vue/cli-service": "4.5.10",
     "@vue/test-utils": "1.1.2",
     "copy-webpack-plugin": "7.0.0",
-    "less": "4.0.0",
+    "less": "4.1.0",
     "less-loader": "7.2.1",
     "node-sass": "5.0.0",
     "rimraf": "3.0.2",
