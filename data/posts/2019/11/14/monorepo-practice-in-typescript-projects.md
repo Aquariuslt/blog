@@ -88,7 +88,7 @@ cover: ./cover.png
 ```
 packages
 ├── api-generator      // 工具库 - 根据路由元数据生成 JSON 结构的 API 相应内容
-├── application        // 核心构建流程，讲所有工具库和主题通过一定的构建流程串联在一起
+├── application        // 核心构建流程，将所有工具库和主题通过一定的构建流程串联在一起
 ├── article-tools      // 工具库 - 将 .md 文件结合Markdown工具库转换成文章数据
 ├── common             // 公共接口声明
 ├── config             // 工具库 - 博客项目的配置发现与读取类库
@@ -284,7 +284,7 @@ packages
 
 在开源界免费、支持度比较好覆盖率分析平台，不得不说 [Codecov](https://codecov.io/) 。基本上在尝试过所有类似的、免费的覆盖率报告分析平台后，最后都选择迁移到 Codecov 上。
 
-那这里引发的关键思考点是: 我们分别在每个子项目下分别执行 `npm run test` ，根据各个子项目的 jestconfig, 将会在不同的子项目目录下生成覆盖率报告 (这里特指 jest 生成的 linux 标准的 `[lcov.info](http://lcov.info)` ) 文件。那么我们的 codecov 有办法汇总多个不同的 lcov.info 文件并为 Monorepo 的单个大项目仓库生成一份覆盖率报告吗 ?
+那这里引发的关键思考点是: 我们分别在每个子项目下分别执行 `npm run test` ，根据各个子项目的 jestconfig, 将会在不同的子项目目录下生成覆盖率报告 (这里特指 jest 生成的 linux 标准的 <code>[lcov.info](http://lcov.info)</code> ) 文件。那么我们的 codecov 有办法汇总多个不同的 lcov.info 文件并为 Monorepo 的单个大项目仓库生成一份覆盖率报告吗 ?
 
 我至今还没为这种思路找到经典、合理的解决方案。
 
