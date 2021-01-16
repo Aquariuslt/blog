@@ -1,3 +1,10 @@
+## [6.26.185](https://github.com/aquariuslt/blog/compare/v6.26.184...v6.26.185) (2021-01-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency class-transformer to v0.3.2 ([6332995](https://github.com/aquariuslt/blog/commit/63329953e004f6d21886f0a60f98014cc57eab6f))
+
 ## [6.26.184](https://github.com/aquariuslt/blog/compare/v6.26.183...v6.26.184) (2021-01-03)
 
 
