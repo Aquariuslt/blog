@@ -16,7 +16,7 @@
     "@blog/common": "^6.26.186",
     "@blog/config": "^6.26.186",
     "@blog/router": "^6.26.186",
-    "@mdi/font": "5.8.55",
+    "@mdi/font": "5.9.55",
     "axios": "0.21.1",
     "date-fns": "2.16.1",
     "highlight.js": "10.5.0",
