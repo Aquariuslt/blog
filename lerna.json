@@ -4,6 +4,6 @@
     "service/",
     "themes/*"
   ],
-  "version": "6.26.186",
+  "version": "6.26.187",
   "npmClient": "yarn"
 }
