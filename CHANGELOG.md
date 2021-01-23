@@ -1,3 +1,10 @@
+## [6.26.188](https://github.com/aquariuslt/blog/compare/v6.26.187...v6.26.188) (2021-01-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to v9.1.0 ([969fdf8](https://github.com/aquariuslt/blog/commit/969fdf8101da3e3c33601f015b17fcff73d704fd))
+
 ## [6.26.187](https://github.com/aquariuslt/blog/compare/v6.26.186...v6.26.187) (2021-01-17)
 
 
