@@ -1,3 +1,11 @@
+## [6.26.193](https://github.com/aquariuslt/blog/compare/v6.26.192...v6.26.193) (2021-02-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vanilla-lazyload to v17.3.1 ([8ae785d](https://github.com/aquariuslt/blog/commit/8ae785d5e377dfdd666d6921f2482fc5b6c71718))
+* **deps:** update nest monorepo to v7.6.11 ([e4204ee](https://github.com/aquariuslt/blog/commit/e4204ee7312572c970fa561b6397238b780c74d6))
+
 ## [6.26.192](https://github.com/aquariuslt/blog/compare/v6.26.191...v6.26.192) (2021-01-30)
 
 
