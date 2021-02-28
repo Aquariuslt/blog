@@ -1,3 +1,14 @@
+## [6.26.196](https://github.com/aquariuslt/blog/compare/v6.26.195...v6.26.196) (2021-02-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency class-transformer to v0.4.0 ([82e5684](https://github.com/aquariuslt/blog/commit/82e568491e403d42deab4a084014a59bbe52408a))
+* **deps:** update dependency notistack to v1.0.4 ([b2606b9](https://github.com/aquariuslt/blog/commit/b2606b9600832e53d85d86d0e86feb753334091e))
+* **deps:** update dependency patch-package to v6.4.0 ([ebe102a](https://github.com/aquariuslt/blog/commit/ebe102a18ea0135881d71b7c7764185ac63722d8))
+* **deps:** update dependency rxjs to v6.6.6 ([905d30b](https://github.com/aquariuslt/blog/commit/905d30b8fb788456640e3c2e98e5b062d2f9e08d))
+* **deps:** update dependency sharp to v0.27.2 ([d2c6095](https://github.com/aquariuslt/blog/commit/d2c6095ea4b97262e7fb9810b9be2118c7990e95))
+
 ## [6.26.195](https://github.com/aquariuslt/blog/compare/v6.26.194...v6.26.195) (2021-02-27)
 
 
