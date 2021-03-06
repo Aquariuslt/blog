@@ -30,7 +30,7 @@
   "dependencies": {
     "@blog/common": "^6.26.197",
     "lodash": "4.17.21",
-    "patch-package": "6.4.0",
+    "patch-package": "6.4.5",
     "postinstall-postinstall": "2.1.0",
     "workbox-build": "4.3.1"
   },
