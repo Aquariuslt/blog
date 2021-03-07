@@ -1,3 +1,12 @@
+## [6.26.198](https://github.com/aquariuslt/blog/compare/v6.26.197...v6.26.198) (2021-03-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency date-fns to v2.19.0 ([f6bee4c](https://github.com/aquariuslt/blog/commit/f6bee4c038331a04e359c0ec55377676ab15bc59))
+* **deps:** update dependency notistack to v1.0.5 ([242c45d](https://github.com/aquariuslt/blog/commit/242c45d53c1e3bef3fd74d4cc6abd438359918be))
+* **deps:** update dependency patch-package to v6.4.5 ([4346b73](https://github.com/aquariuslt/blog/commit/4346b73d3fe845dcd2daee6158de52cab531b17d))
+
 ## [6.26.197](https://github.com/aquariuslt/blog/compare/v6.26.196...v6.26.197) (2021-03-01)
 
 
