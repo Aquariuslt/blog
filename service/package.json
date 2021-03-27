@@ -28,9 +28,9 @@
     "@blog/markdown": "^6.26.198",
     "@blog/pwa": "^6.26.198",
     "@blog/router": "^6.26.198",
-    "@nestjs/common": "7.6.13",
-    "@nestjs/core": "7.6.13",
-    "@nestjs/platform-express": "7.6.13",
+    "@nestjs/common": "7.6.15",
+    "@nestjs/core": "7.6.15",
+    "@nestjs/platform-express": "7.6.15",
     "@nestjs/serve-static": "2.1.4",
     "class-transformer": "0.4.0",
     "class-validator": "0.13.1",
@@ -46,7 +46,7 @@
     "rxjs": "6.6.6"
   },
   "devDependencies": {
-    "@nestjs/cli": "7.5.6",
+    "@nestjs/cli": "7.6.0",
     "@nestjs/schematics": "7.2.8",
     "@nestjs/testing": "7.6.13",
     "@types/express": "4.17.11",
