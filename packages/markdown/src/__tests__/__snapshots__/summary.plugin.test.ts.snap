@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`markdown-it plugin: summary # should get summary with more than 120 chars without any options 1`] = `
+"This is an example markdown content with all one-pass test cases.This section should load as summary in parsed data.Getting started snippet
+"
+`;

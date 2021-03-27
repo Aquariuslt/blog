@@ -29,8 +29,8 @@ export const EmptyProfile: Profile = {
   email: '',
   logo: {
     '@type': 'ImageObject',
-    url: ''
+    url: '',
   },
   name: '',
-  url: new Map<string, string>()
+  url: new Map<string, string>(),
 };

@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.lib.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "target": "es5"
+  },
+  "include": ["interfaces", "utils"],
+  "exclude": ["node_modules"]
+}
