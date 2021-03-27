@@ -15,13 +15,13 @@ workflows:
 jobs:
   ci:
     docker:
-      - image: circleci/node:12.16-browsers
+      - image: cimg/node:14-browsers
     working_directory: ~/blog
     steps:
       - checkout
       - run: yarn
       - run: yarn bootstrap
-      - run: yarn test
+      - run: yarn test -i
       - run: yarn build:prod
       - persist_to_workspace:
           root: ~/blog
@@ -30,7 +30,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/node:12.16-browsers
+      - image: cimg/node:14-browsers
     working_directory: ~/blog
     steps:
       - checkout
@@ -42,6 +42,8 @@ jobs:
             sudo npm install -g --silent gh-pages
             git config user.email deploy-bot@circleci.com
             git config user.name "circleci"
-      - run: sudo gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update' --add
+      - run: sudo gh-pages --dist dist --repo https://${GITHUB_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update'
+      - run: sudo rm -rf node_modules
       - run: yarn
       - run: yarn release
+      - run: yarn bundlewatch
