@@ -30,7 +30,7 @@ export class ThemeService implements OnModuleInit {
     this.logger.log(`Detecting Theme: ${this.config.theme}`);
     this.buildCNAME();
     this.buildNoJekyll();
-    this.buildSitemap();
+    await this.buildSitemap();
     if (process.env.NODE_ENV === 'production') {
       this.buildThemeAssets();
       this.buildFallbackHtml();
@@ -48,7 +48,7 @@ export class ThemeService implements OnModuleInit {
 
   private buildNoJekyll() {
     this.logger.log(`Persisting .nojekyll`);
-    persistFile(`.nojekyll`, null, this.config.dirs.dest);
+    persistFile(`.nojekyll`, '', this.config.dirs.dest);
   }
 
   private buildThemeAssets() {
@@ -93,21 +93,11 @@ export class ThemeService implements OnModuleInit {
   }
 
   private async prerender() {
-    const prerenderTasks = this.routes.routes
-      .filter((route) => route.path !== '/')
-      .map((route) => {
-        return new Promise((resolve) => {
-          this.captureAndSaveRoute(route.path)
-            .then(() => {
-              resolve();
-            })
-            .catch((error) => {
-              this.logger.error(error.message);
-            });
-        });
-      });
+    const prerenderRoutes = this.routes.routes.filter((route) => route.path !== '/');
 
-    await Promise.all(prerenderTasks);
+    for (const route of prerenderRoutes) {
+      await this.captureAndSaveRoute(route.path);
+    }
 
     await this.captureAndSaveRoute('/');
   }
