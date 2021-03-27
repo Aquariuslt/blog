@@ -15,7 +15,7 @@ workflows:
 jobs:
   ci:
     docker:
-      - image: cimg/node:14-browsers
+      - image: cimg/node:current-browsers
     working_directory: ~/blog
     steps:
       - checkout
@@ -30,7 +30,7 @@ jobs:
 
   deploy:
     docker:
-      - image: cimg/node:14-browsers
+      - image: cimg/node:current-browsers
     working_directory: ~/blog
     steps:
       - checkout
