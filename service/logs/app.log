@@ -1,0 +1,71 @@
+{"timestamp":"2021-03-28T10:00:01.027Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2018/03/04/karma-based-traditional-java-web-frontend-unittest-solution","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:01.042Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2018/03/04/karma-based-traditional-java-web-frontend-unittest-solution/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:01.043Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2018/03/03/latest-update-on-blog-app","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:02.231Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2018/03/03/latest-update-on-blog-app","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:02.247Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2018/03/03/latest-update-on-blog-app/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:02.248Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2018/01/01/review-2017","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:03.446Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2018/01/01/review-2017","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:03.462Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2018/01/01/review-2017/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:03.464Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2017/05/05/vue-version-for-blog-app","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:04.650Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2017/05/05/vue-version-for-blog-app","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:04.662Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2017/05/05/vue-version-for-blog-app/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:04.666Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2017/03/12/new-version-blog-migration","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:05.848Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2017/03/12/new-version-blog-migration","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:05.856Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2017/03/12/new-version-blog-migration/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:05.857Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2017/01/01/review-2016","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:07.064Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2017/01/01/review-2016","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:07.075Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2017/01/01/review-2016/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:07.076Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/07/05/move-to-new-apartment","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:08.269Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/07/05/move-to-new-apartment","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:08.281Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/07/05/move-to-new-apartment/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:08.283Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/04/30/angular-ui-performance-tuning-experience","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:09.467Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/04/30/angular-ui-performance-tuning-experience","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:09.477Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/04/30/angular-ui-performance-tuning-experience/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:09.479Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/04/10/google-codejam-2016-qualification-round","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:10.661Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/04/10/google-codejam-2016-qualification-round","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:10.674Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/04/10/google-codejam-2016-qualification-round/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:10.677Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/04/09/hadoop-2-7-2-single-node-and-cluster-mode-installation-guide","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:11.863Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/04/09/hadoop-2-7-2-single-node-and-cluster-mode-installation-guide","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:11.879Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/04/09/hadoop-2-7-2-single-node-and-cluster-mode-installation-guide/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:11.880Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/03/06/site-code-structure","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:13.062Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/03/06/site-code-structure","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:13.073Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/03/06/site-code-structure/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:13.075Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/01/12/nodejs-oracledb-ora-21561-solution","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:14.259Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/01/12/nodejs-oracledb-ora-21561-solution","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:14.272Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/01/12/nodejs-oracledb-ora-21561-solution/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:14.272Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/01/11/nodejs-oracledb-install-on-rhel-6","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:15.474Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/01/11/nodejs-oracledb-install-on-rhel-6","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:15.486Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/01/11/nodejs-oracledb-install-on-rhel-6/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:15.487Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2016/01/01/review-2015","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:16.671Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2016/01/01/review-2015","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:16.684Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2016/01/01/review-2015/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:16.685Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2015/12/27/site-upgrade-plan","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:17.887Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2015/12/27/site-upgrade-plan","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:17.900Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2015/12/27/site-upgrade-plan/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:17.901Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2015/12/14/nodejs-libclntsh-so-11-1-cannot-open-shared-object-file","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:19.092Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2015/12/14/nodejs-libclntsh-so-11-1-cannot-open-shared-object-file","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:19.101Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2015/12/14/nodejs-libclntsh-so-11-1-cannot-open-shared-object-file/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:19.102Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2015/12/13/ubuntu-mean-development-environment-setup","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:20.284Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2015/12/13/ubuntu-mean-development-environment-setup","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:20.298Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2015/12/13/ubuntu-mean-development-environment-setup/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:20.300Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2015/11/10/beanutils-vs-reflection","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:21.492Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2015/11/10/beanutils-vs-reflection","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:21.504Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2015/11/10/beanutils-vs-reflection/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:21.510Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/posts/2015/10/25/apache-shiro-spring-integration","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:22.702Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/posts/2015/10/25/apache-shiro-spring-integration","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:22.722Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/posts/2015/10/25/apache-shiro-spring-integration/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:22.724Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/pages/about","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:23.901Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/pages/about","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:23.914Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/pages/about/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:23.916Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/pages/projects","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:25.113Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/pages/projects","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:25.123Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/pages/projects/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:25.125Z","pid":3174,"level":"INFO","message":"Rendering http://localhost:43501/","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:26.325Z","pid":3174,"level":"INFO","message":"Capturing html content for http://localhost:43501/","context":"RenderService"}
+{"timestamp":"2021-03-28T10:00:26.336Z","pid":3174,"level":"INFO","message":"Pre-rendering html content to /home/runner/work/blog/blog/dist/index.html","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:26.337Z","pid":3174,"level":"INFO","message":"Build Service Worker related files to /home/runner/work/blog/blog/dist","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:26.619Z","pid":3174,"level":"INFO","message":"Build Service Worker complete;","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:26.620Z","pid":3174,"level":"INFO","message":"Build now.json for static routing","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:26.621Z","pid":3174,"level":"INFO","message":"Build now.json complete","context":"ThemeService"}
+{"timestamp":"2021-03-28T10:00:26.622Z","pid":3174,"level":"INFO","message":"Load Config from : /home/runner/work/blog/blog/.blogrc","context":"ConfigService"}
+{"timestamp":"2021-03-28T10:00:26.624Z","pid":3174,"level":"INFO","message":"Nest application successfully started","context":"NestApplication"}

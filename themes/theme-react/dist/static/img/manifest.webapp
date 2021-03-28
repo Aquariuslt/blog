@@ -1,0 +1,14 @@
+{
+  "version": "6.26.199",
+  "name": "zexo.dev",
+  "description": "",
+  "icons": {
+    "60": "/static/img/firefox_app_60x60.png",
+    "128": "/static/img/firefox_app_128x128.png",
+    "512": "/static/img/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}
