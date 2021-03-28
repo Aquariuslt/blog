@@ -29,9 +29,10 @@ jobs:
           yarn build:prod
       - name: Deploy to Vercel
         run: |
-          npm install -g --silent gh-pages
+          npm install -g --silent gh-pages semantic-release
           git config user.email deploy-bot@github-actions.com
           git config user.name "deploy-bot"
           gh-pages --dist dist --repo https://${GH_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update'
+          sudo rm -rf node_modules
           yarn release
           yarn bundlewatch
