@@ -1,6 +1,6 @@
 {
   "name": "@blog/pwa",
-  "version": "1.0.0",
+  "version": "6.26.199",
   "description": "progressive web application tools including workbox + precaching",
   "keywords": [
     "pwa",
