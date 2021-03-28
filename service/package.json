@@ -41,7 +41,7 @@
     "get-port": "5.1.1",
     "lodash": "4.17.21",
     "log4js": "6.3.0",
-    "puppeteer": "5.5.0",
+    "puppeteer": "7.1.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "6.6.6"
   },
@@ -55,7 +55,6 @@
     "@types/jest": "26.0.20",
     "@types/lodash": "4.14.168",
     "@types/node": "13.13.45",
-    "@types/puppeteer": "5.4.3",
     "@types/supertest": "2.0.10",
     "cross-env": "7.0.3",
     "jest": "26.6.3",

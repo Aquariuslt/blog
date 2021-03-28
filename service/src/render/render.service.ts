@@ -1,7 +1,7 @@
 import { Injectable, Logger, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { RenderServerModule } from '@/render/render-server.module';
-
+import { Browser } from 'puppeteer';
 import * as getPort from 'get-port';
 import * as puppeteer from 'puppeteer';
 
@@ -17,7 +17,7 @@ export class RenderService implements OnModuleInit, OnModuleDestroy {
   private RENDER_SERVER_HOST;
 
   private server;
-  private browser;
+  private browser: Browser;
 
   async onModuleInit() {
     if (this.$inited) {
@@ -45,7 +45,10 @@ export class RenderService implements OnModuleInit, OnModuleDestroy {
     const targetUrl = `${this.RENDER_SERVER_HOST}${path}`;
     this.logger.log(`Rendering ${targetUrl}`);
     const page = await this.browser.newPage();
-    await page.goto(targetUrl);
+    await page.goto(targetUrl, {
+      timeout: 6000,
+      waitUntil: 'domcontentloaded'
+    });
     await sleep();
     this.logger.log(`Capturing html content for ${targetUrl}`);
     const html = await page.evaluate(() => document.documentElement.outerHTML);

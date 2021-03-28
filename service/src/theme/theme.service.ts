@@ -108,8 +108,13 @@ export class ThemeService implements OnModuleInit {
       fse.removeSync(htmlPath);
     }
     fse.ensureDirSync(path.dirname(htmlPath));
-    const html = await this.renderer.render(p);
-    this.logger.log(`Pre-rendering html content to ${htmlPath}`);
-    fse.writeFileSync(htmlPath, html);
+
+    try {
+      const html = await this.renderer.render(p);
+      this.logger.log(`Pre-rendering html content to ${htmlPath}`);
+      fse.writeFileSync(htmlPath, html);
+    } catch (e) {
+      this.logger.error(`Render error with ${htmlPath}, error:${e.message}`);
+    }
   }
 }
