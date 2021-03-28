@@ -29,10 +29,10 @@ jobs:
           yarn build:prod
       - name: Deploy to Vercel
         run: |
-          sudo npm install -g --silent gh-pages
+          npm install -g --silent gh-pages
           git config user.email deploy-bot@github-actions.com
           git config user.name "deploy-bot"
-          sudo gh-pages --dist dist --repo https://${GH_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update'
-          rm -rf node_modules
+          gh-pages --dist dist --repo https://${GH_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update'
+          sudu rm -rf node_modules
           yarn release
           yarn bundlewatch
