@@ -29,9 +29,7 @@ export class RenderService implements OnModuleInit, OnModuleDestroy {
 
     this.server = await NestFactory.create(RenderServerModule);
     await this.server.listen(this.RENDER_SERVER_PORT);
-    this.browser = await puppeteer.launch({
-      headless: false
-    });
+    this.browser = await puppeteer.launch();
     this.logger.log(`Render Server listen port: ${this.RENDER_SERVER_PORT}`);
     this.$inited = true;
   }
@@ -42,7 +40,7 @@ export class RenderService implements OnModuleInit, OnModuleDestroy {
   }
 
   async render(path: string) {
-    const sleep = () => new Promise((resolve) => setTimeout(resolve, 100));
+    const sleep = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
     const targetUrl = `${this.RENDER_SERVER_HOST}${path}`;
     this.logger.log(`Rendering ${targetUrl}`);
