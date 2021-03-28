@@ -1,6 +1,6 @@
 {
   "name": "@blog/router",
-  "version": "6.26.199",
+  "version": "1.0.0",
   "description": "routing generator tools",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",

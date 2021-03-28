@@ -1,6 +1,6 @@
 {
   "name": "@blog/markdown",
-  "version": "6.26.199",
+  "version": "1.0.0",
   "description": "markdown utils for parsing blog articles",
   "author": "Aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/aquariuslt/blog#readme",
