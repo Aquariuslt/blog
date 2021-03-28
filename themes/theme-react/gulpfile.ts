@@ -27,16 +27,18 @@ gulp.task('serve', () => {
 gulp.task('build', (done) => {
   webpack(webpackProdConfig, (error, stats): void => {
     logger.info('Webpack build done');
-    if (error || stats.hasErrors()) {
+    if (error || stats?.hasErrors()) {
       logger.error('Webpack build error:', error);
       done();
     }
-    stats
-      .toString(webpackProdConfig.stats)
-      .split('\n')
-      .map((line: string): void => {
-        logger.info(line);
-      });
+    if (stats) {
+      stats
+        .toString(webpackProdConfig.stats)
+        .split('\n')
+        .map((line: string): void => {
+          logger.info(line);
+        });
+    }
     done();
   });
 });
