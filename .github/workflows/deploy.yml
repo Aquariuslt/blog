@@ -34,6 +34,7 @@ jobs:
           git config user.name "deploy-bot"
           gh-pages --dist dist --repo https://${GH_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update'
           yarn clean
+          lerna clean -y
       - name: Semantic-Release
         run: |
           yarn
