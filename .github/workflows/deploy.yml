@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{secrets.GH_TOKEN}}
+      BUNDLEWATCH_GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
     strategy:
       matrix:
         node-version: [15.x]
@@ -25,6 +26,7 @@ jobs:
           yarn
           yarn bootstrap
           yarn build:prod
+          yarn bundlewatch
       - name: Deploy to Vercel
         run: |
           npm install -g --silent gh-pages lerna
