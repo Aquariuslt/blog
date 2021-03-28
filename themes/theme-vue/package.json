@@ -1,6 +1,6 @@
 {
   "name": "@blog/theme-vue",
-  "version": "6.26.199",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
