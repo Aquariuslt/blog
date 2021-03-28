@@ -1,0 +1,38 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{secrets.GH_TOKEN}}
+      BUNDLEWATCH_GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+    strategy:
+      matrix:
+        node-version: [15.x]
+    steps:
+      - name: SCM
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Yarn install, build, and test
+        run: |
+          yarn
+          yarn bootstrap
+          yarn test -i
+          yarn build:prod
+      - name: Deploy to Vercel
+        run: |
+          sudo npm install -g --silent gh-pages
+          git config user.email deploy-bot@github-actions.com
+          git config user.name "deploy-bot"
+          sudo gh-pages --dist dist --repo https://${GH_TOKEN}@github.com/aquariuslt/aquariuslt.github.io.git --branch master --message 'chore(release):update'
+          rm -rf node_modules
+          yarn release
+          yarn bundlewatch
