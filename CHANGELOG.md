@@ -1,3 +1,10 @@
+## [6.26.202](https://github.com/aquariuslt/blog/compare/v6.26.201...v6.26.202) (2021-03-28)
+
+
+### Bug Fixes
+
+* **theme-react:** resolve webpack v5 stat type error ([cfb9ddb](https://github.com/aquariuslt/blog/commit/cfb9ddb171bd37dbae8229faf7fcd3ea3492d2cf))
+
 ## [6.26.201](https://github.com/aquariuslt/blog/compare/v6.26.200...v6.26.201) (2021-03-28)
 
 
