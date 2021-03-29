@@ -1,3 +1,10 @@
+## [6.26.203](https://github.com/aquariuslt/blog/compare/v6.26.202...v6.26.203) (2021-03-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency scroll-into-view-if-needed to v2.2.28 ([#1110](https://github.com/aquariuslt/blog/issues/1110)) ([c9f47a2](https://github.com/aquariuslt/blog/commit/c9f47a2b51f6a0cf9891ecb78522f654b433ed55))
+
 ## [6.26.202](https://github.com/aquariuslt/blog/compare/v6.26.201...v6.26.202) (2021-03-28)
 
 
