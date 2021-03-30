@@ -1,3 +1,12 @@
+## [6.26.204](https://github.com/aquariuslt/blog/compare/v6.26.203...v6.26.204) (2021-03-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency highlight.js to v10.7.1 ([#1108](https://github.com/aquariuslt/blog/issues/1108)) ([023f7cf](https://github.com/aquariuslt/blog/commit/023f7cf8151a6b78c5ffcdd867c44f57d12c4a6f))
+* **deps:** update dependency patch-package to v6.4.7 ([#1109](https://github.com/aquariuslt/blog/issues/1109)) ([4a3388b](https://github.com/aquariuslt/blog/commit/4a3388b799e90cf72433f66d153421657d683f91))
+* **deps:** update dependency sharp to v0.28.0 ([#1101](https://github.com/aquariuslt/blog/issues/1101)) ([4297ee6](https://github.com/aquariuslt/blog/commit/4297ee6b182d60e5a2b995f208922f79387f9bac))
+
 ## [6.26.203](https://github.com/aquariuslt/blog/compare/v6.26.202...v6.26.203) (2021-03-29)
 
 
