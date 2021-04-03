@@ -1,3 +1,10 @@
+## [6.26.205](https://github.com/aquariuslt/blog/compare/v6.26.204...v6.26.205) (2021-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency classnames to v2.3.1 ([6df1e9d](https://github.com/aquariuslt/blog/commit/6df1e9d25f21b67677c53e439df144a4e1d92795))
+
 ## [6.26.204](https://github.com/aquariuslt/blog/compare/v6.26.203...v6.26.204) (2021-03-30)
 
 
