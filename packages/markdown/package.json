@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@blog/common": "^6.26.210",
-    "cheerio": "1.0.0-rc.5",
+    "cheerio": "1.0.0-rc.6",
     "gray-matter": "4.0.2",
     "lodash": "4.17.21",
     "markdown-it": "12.0.3",
