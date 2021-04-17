@@ -55,7 +55,7 @@ export const webpackProdConfig = merge(webpackBaseConfig, {
       }
     }),
     new FaviconsWebpackPlugin({
-      prefix: `static/img`,
+      prefix: `static/img/`,
       outputPath: `static/img`,
       logo: BASE_DIR + `/favicon.png`,
       cache: true,
