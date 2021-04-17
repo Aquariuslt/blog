@@ -1,3 +1,10 @@
+## [6.26.214](https://github.com/aquariuslt/blog/compare/v6.26.213...v6.26.214) (2021-04-17)
+
+
+### Bug Fixes
+
+* **deps:** downgrade `less-loader`, `sass-loader` ([16980b8](https://github.com/aquariuslt/blog/commit/16980b856c68e799a78ebc095da697d4c07a5ad1))
+
 ## [6.26.213](https://github.com/aquariuslt/blog/compare/v6.26.212...v6.26.213) (2021-04-10)
 
 
