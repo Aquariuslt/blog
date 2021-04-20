@@ -30,7 +30,7 @@ cover: ./about.png
 - [lz's blog](https://lz5z.com): 振哥博客
 - [lousama](http://lousama.com): 楼鸽鸽博客
 - [koala](http://ikoala.net): 考拉博客 - 君合何大状
-- [supremebb](http://corydon.cc): 13c 博客 - 服装潮人
+- [supremebb](http://supremebb.cc): 13c 博客 - 服装潮人
 - [maview](https://frankxfz.me): 马老师博客 - CMU 未来之星
 - [arhi](https://xuyanxin.top): 阿狸博客
 - [yulai](https://yulaiz.com): Yulai 博客
