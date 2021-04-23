@@ -6,7 +6,7 @@
     "clean": "rimraf dist",
     "test": "vue-cli-service test:unit",
     "prebuild:theme": "yarn run compile:config",
-    "build:theme": "vue-cli-service build",
+    "build:theme-vue": "vue-cli-service build",
     "preserve": "yarn run compile:config",
     "serve": "vue-cli-service serve",
     "compile:config": "tsc vue.config.ts --resolveJsonModule",
