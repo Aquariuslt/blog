@@ -1,3 +1,10 @@
+## [6.26.217](https://github.com/aquariuslt/blog/compare/v6.26.216...v6.26.217) (2021-04-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency gray-matter to v4.0.3 ([ee556ba](https://github.com/aquariuslt/blog/commit/ee556ba65b1777e80da5b5e6d7a858ca857197f4))
+
 ## [6.26.216](https://github.com/aquariuslt/blog/compare/v6.26.215...v6.26.216) (2021-04-18)
 
 
