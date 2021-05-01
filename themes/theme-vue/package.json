@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
-    "@types/node": "13.13.50",
+    "@types/node": "13.13.51",
     "@vue/cli-plugin-pwa": "4.5.12",
     "@vue/cli-plugin-typescript": "4.5.12",
     "@vue/cli-plugin-unit-jest": "4.5.12",
