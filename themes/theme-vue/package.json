@@ -29,7 +29,7 @@
     "vue-router": "3.5.1"
   },
   "devDependencies": {
-    "@types/jest": "26.0.22",
+    "@types/jest": "26.0.23",
     "@types/node": "13.13.50",
     "@vue/cli-plugin-pwa": "4.5.12",
     "@vue/cli-plugin-typescript": "4.5.12",
