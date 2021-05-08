@@ -12,7 +12,7 @@
   "dependencies": {
     "@blog/common": "^6.26.223",
     "@blog/config": "^6.26.223",
-    "@loadable/component": "5.14.1",
+    "@loadable/component": "5.15.0",
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.2",
     "axios": "0.21.1",
