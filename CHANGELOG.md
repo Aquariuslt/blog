@@ -1,3 +1,10 @@
+## [6.26.225](https://github.com/aquariuslt/blog/compare/v6.26.224...v6.26.225) (2021-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v8.6.0 ([367c313](https://github.com/aquariuslt/blog/commit/367c313e2dab8925d2f3a2fb8837be21c9bd103b))
+
 ## [6.26.224](https://github.com/aquariuslt/blog/compare/v6.26.223...v6.26.224) (2021-05-08)
 
 
