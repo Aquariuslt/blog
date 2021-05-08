@@ -1,3 +1,10 @@
+## [6.26.224](https://github.com/aquariuslt/blog/compare/v6.26.223...v6.26.224) (2021-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @loadable/component to v5.15.0 ([6fd207e](https://github.com/aquariuslt/blog/commit/6fd207eec357063df3ca676a604d7ef2ca9b7425))
+
 ## [6.26.223](https://github.com/aquariuslt/blog/compare/v6.26.222...v6.26.223) (2021-05-08)
 
 
