@@ -1,3 +1,10 @@
+## [6.26.220](https://github.com/aquariuslt/blog/compare/v6.26.219...v6.26.220) (2021-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency date-fns to v2.21.3 ([fe9604e](https://github.com/aquariuslt/blog/commit/fe9604e58c20adb1296e6e5fe9d4b7682eec0b19))
+
 ## [6.26.219](https://github.com/aquariuslt/blog/compare/v6.26.218...v6.26.219) (2021-05-08)
 
 
