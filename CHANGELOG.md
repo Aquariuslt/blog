@@ -1,3 +1,10 @@
+## [6.26.219](https://github.com/aquariuslt/blog/compare/v6.26.218...v6.26.219) (2021-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cheerio to v1.0.0-rc.9 ([7fa58ab](https://github.com/aquariuslt/blog/commit/7fa58ab831ea39759a3a6637c023c5b07b3e639f))
+
 ## [6.26.218](https://github.com/aquariuslt/blog/compare/v6.26.217...v6.26.218) (2021-05-01)
 
 
