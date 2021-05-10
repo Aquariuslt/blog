@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "cosmiconfig": "7.0.0",
-    "dotenv": "8.6.0",
+    "dotenv": "9.0.2",
     "lodash": "4.17.21"
   },
   "devDependencies": {
