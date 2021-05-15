@@ -1,3 +1,10 @@
+## [6.26.226](https://github.com/aquariuslt/blog/compare/v6.26.225...v6.26.226) (2021-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sharp to v0.28.2 ([fd68143](https://github.com/aquariuslt/blog/commit/fd681435c6b4454d29ece8a704f749fd3c29f2ae))
+
 ## [6.26.225](https://github.com/aquariuslt/blog/compare/v6.26.224...v6.26.225) (2021-05-08)
 
 
