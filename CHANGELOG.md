@@ -1,3 +1,10 @@
+## [6.26.253](https://github.com/aquariuslt/blog/compare/v6.26.252...v6.26.253) (2021-08-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency slate-history to v0.65.3 ([888a0b8](https://github.com/aquariuslt/blog/commit/888a0b83438e4eef7feb6917d71404998ca17d51))
+
 ## [6.26.252](https://github.com/aquariuslt/blog/compare/v6.26.251...v6.26.252) (2021-08-14)
 
 
