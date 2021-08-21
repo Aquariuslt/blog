@@ -17,7 +17,7 @@
     "build:lib": "tsc"
   },
   "dependencies": {
-    "cosmiconfig": "7.0.0",
+    "cosmiconfig": "7.0.1",
     "dotenv": "8.6.0",
     "lodash": "4.17.21"
   },
