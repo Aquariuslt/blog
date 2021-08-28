@@ -1,3 +1,10 @@
+## [6.26.257](https://github.com/aquariuslt/blog/compare/v6.26.256...v6.26.257) (2021-08-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-router-dom to v5.2.1 ([5d43e92](https://github.com/aquariuslt/blog/commit/5d43e92277821cc05acccdf462b3140125151824))
+
 ## [6.26.256](https://github.com/aquariuslt/blog/compare/v6.26.255...v6.26.256) (2021-08-22)
 
 
