@@ -1,3 +1,10 @@
+## [6.26.264](https://github.com/aquariuslt/blog/compare/v6.26.263...v6.26.264) (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency slate to v0.66.1 ([1a59020](https://github.com/aquariuslt/blog/commit/1a5902014250177475ea723e87523ee84d0a2ea2))
+
 ## [6.26.263](https://github.com/aquariuslt/blog/compare/v6.26.262...v6.26.263) (2021-09-18)
 
 
