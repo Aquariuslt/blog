@@ -84,7 +84,7 @@
     "webpack": "5.52.1",
     "webpack-bundle-analyzer": "4.4.2",
     "webpack-dev-middleware": "5.1.0",
-    "webpack-dev-server": "4.2.0",
+    "webpack-dev-server": "4.2.1",
     "webpack-hot-middleware": "2.25.0",
     "webpack-merge": "4.2.2"
   },
