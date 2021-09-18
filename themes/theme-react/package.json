@@ -18,7 +18,7 @@
     "axios": "0.21.4",
     "classnames": "2.3.1",
     "clsx": "1.1.1",
-    "date-fns": "2.23.0",
+    "date-fns": "2.24.0",
     "github-markdown-css": "4.0.0",
     "highlight.js": "10.7.3",
     "notistack": "1.0.10",
