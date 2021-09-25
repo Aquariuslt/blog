@@ -45,7 +45,7 @@
     "@types/react-dom": "17.0.9",
     "@types/react-router-dom": "5.1.9",
     "@types/webpack": "5.28.0",
-    "autoprefixer": "10.3.4",
+    "autoprefixer": "10.3.5",
     "clean-webpack-plugin": "4.0.0",
     "css-loader": "6.3.0",
     "enzyme": "3.11.0",
