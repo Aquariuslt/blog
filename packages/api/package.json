@@ -33,7 +33,7 @@
     "@types/jest": "27.0.2",
     "@types/lodash": "4.14.174",
     "@types/mkdirp": "1.0.2",
-    "@types/node": "14.17.18",
+    "@types/node": "14.17.19",
     "jest": "26.6.3",
     "jest-raw-loader": "1.0.1",
     "ts-jest": "26.5.6",
