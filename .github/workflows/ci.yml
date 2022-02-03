@@ -22,7 +22,7 @@ jobs:
           yarn test:cov
       - name: Upload coverage to Codecov
         if: matrix.node-version == '15.x'
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2
         with:
           token: ${{secrets.CODECOV_TOKEN}}
           file: ./coverage/lcov.info
