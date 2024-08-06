@@ -29,7 +29,7 @@
     "@blog/pwa": "^6.26.272",
     "@blog/router": "^6.26.272",
     "@nestjs/common": "7.6.18",
-    "@nestjs/core": "7.6.18",
+    "@nestjs/core": "9.0.5",
     "@nestjs/platform-express": "7.6.18",
     "@nestjs/serve-static": "2.2.2",
     "class-transformer": "0.4.0",
